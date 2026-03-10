@@ -1,0 +1,42 @@
+# build output
+dist/
+
+# internal context
+.context/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# turbo
+.turbo
+
+# vitest
+coverage/
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# vendor folders
+.netlify
+.vercel
+.wrangler
+
+# yalc
+packages/*/yalc.lock
+packages/*/.yalc/

@@ -1,0 +1,166 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import "../../styles/starwind.css";
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const featuredPost = posts[0];
+const remainingPosts = posts.slice(1);
+
+const uniqueCategories = [...new Set(posts.map((post: any) => post.data.category).filter(Boolean))];
+
+// Formatting category slug back to human readable
+const formatCategoryTitle = (slug: string) => {
+    return slug
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+};
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<BaseHead title={`Blog | ${SITE_TITLE}`} description="Latest strategies and guides on making money online." />
+	</head>
+	<body class="bg-background text-foreground scheme-dark min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-grow docs-site-container border-x pb-24">
+			
+			<!-- Blog Hero -->
+			<section class="py-16 md:py-24 px-4 max-w-7xl mx-auto text-center animate-fade-in-down">
+				<div class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+					Knowledge Base
+				</div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+					The <span class="bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent">Hustle</span> Blog
+				</h1>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+					Deep-dive case studies, step-by-step guides, and the exact strategies we use to build profitable online income streams.
+				</p>
+
+				<!-- Search Input -->
+				<div class="max-w-xl mx-auto relative group">
+					<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+						<svg class="h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+						</svg>
+					</div>
+					<input 
+						type="text" 
+						placeholder="Search for articles, guides, strategies..." 
+						class="block w-full pl-11 pr-4 py-4 border border-border rounded-xl leading-5 bg-card/60 backdrop-blur text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-lg transition-all shadow-sm hover:border-primary/50"
+					/>
+				</div>
+			</section>
+
+			<div class="max-w-[1200px] mx-auto px-4">
+				
+				<!-- Featured Post (Massive Card) -->
+				{featuredPost && (
+					<div class="mb-16 animate-fade-in-up" style="animation-delay: 150ms;">
+						<a href={`/blog/${featuredPost.id}/`} class="group relative block overflow-hidden rounded-[2rem] border border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_50px_rgba(79,70,229,0.15)]">
+							<div class="flex flex-col lg:flex-row">
+								<div class="lg:w-3/5 overflow-hidden relative aspect-video lg:aspect-auto">
+									<img 
+										src={featuredPost.data.heroImage?.src || featuredPost.data.heroImage} 
+										alt={featuredPost.data.title} 
+										class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+									/>
+									<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent lg:hidden"></div>
+								</div>
+								<div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-card">
+									<div class="flex items-center gap-3 mb-6">
+										<span class="px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 rounded-full border border-primary/20">
+											Featured
+										</span>
+										<span class="text-sm font-medium text-muted-foreground">
+											<FormattedDate date={featuredPost.data.pubDate} />
+										</span>
+									</div>
+									<h2 class="text-3xl lg:text-4xl font-extrabold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
+										{featuredPost.data.title}
+									</h2>
+									<p class="text-lg text-muted-foreground mb-8 line-clamp-3">
+										{featuredPost.data.description}
+									</p>
+									<div class="mt-auto">
+										<span class="inline-flex items-center font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+											Read Article <span class="ml-2">&rarr;</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				)}
+
+				<!-- Category Filters (Visual) -->
+				<div class="flex flex-nowrap overflow-x-auto items-center gap-3 mb-10 pb-6 border-b border-border/50 animate-fade-in-up no-scrollbar" style="animation-delay: 300ms;">
+					<a href="/blog" class="px-5 py-2 whitespace-nowrap rounded-full text-sm font-semibold transition-colors shadow-sm bg-primary text-white border border-primary">
+						All Posts
+					</a>
+					{uniqueCategories.map((cat: any) => (
+						<a href={`/blog/category/${cat}`} class="px-5 py-2 whitespace-nowrap rounded-full text-sm font-semibold transition-colors shadow-sm bg-card border border-border text-foreground hover:border-primary/50 hover:text-primary">
+							{formatCategoryTitle(cat)}
+						</a>
+					))}
+				</div>
+
+				<!-- Grid for Remaining Posts -->
+				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+					{
+						remainingPosts.map((post, i) => (
+							<a href={`/blog/${post.id}/`} class="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-fade-in-up" style={`animation-delay: ${400 + (i * 100)}ms;`}>
+								<!-- Image Container -->
+								<div class="aspect-[16/10] overflow-hidden relative bg-muted">
+									<img 
+										src={post.data.heroImage?.src || post.data.heroImage} 
+										alt={post.data.title} 
+										class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+									/>
+									<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+								</div>
+								<!-- Text Content -->
+								<div class="p-6 flex flex-col flex-grow">
+									<div class="text-xs font-medium text-muted-foreground mb-4 flex items-center justify-between">
+										<FormattedDate date={post.data.pubDate} />
+									</div>
+									<h3 class="text-xl font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
+										{post.data.title}
+									</h3>
+									<p class="text-muted-foreground line-clamp-2 mb-6 text-sm flex-grow">
+										{post.data.description}
+									</p>
+									<div class="mt-auto pt-4 border-t border-border/50">
+										<span class="text-sm font-bold text-primary inline-flex items-center group-hover:translate-x-1 transition-transform">
+											Read full guide <span class="ml-1">&rarr;</span>
+										</span>
+									</div>
+								</div>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+/* Hide scrollbar for category pills wrapper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>

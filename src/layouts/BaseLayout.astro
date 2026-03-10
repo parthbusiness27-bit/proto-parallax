@@ -1,0 +1,60 @@
+---
+/**
+ * BaseLayout.astro
+ * 
+ * A global layout component that consolidates BaseHead + Header + Footer.
+ * Every page should use this layout instead of manually importing those three.
+ * 
+ * Usage:
+ *   <BaseLayout title="Page Title" description="Page description">
+ *     <main>...page content...</main>
+ *   </BaseLayout>
+ */
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { ImageMetadata } from 'astro';
+import '../styles/starwind.css';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: ImageMetadata;
+	author?: string;
+	publishedDate?: Date;
+	updatedDate?: Date;
+	/** Extra classes applied to <body> e.g. a specific page color scheme */
+	bodyClass?: string;
+}
+
+const {
+	title,
+	description,
+	image,
+	author,
+	publishedDate,
+	updatedDate,
+	bodyClass = '',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<BaseHead
+			title={title}
+			description={description}
+			image={image}
+			author={author}
+			publishedDate={publishedDate}
+			updatedDate={updatedDate}
+		/>
+		<!-- Named slot for per-page head injections (SEO schemas, preloads, etc.) -->
+		<slot name="head" />
+	</head>
+	<body class={`bg-background text-foreground scheme-dark min-h-screen flex flex-col ${bodyClass}`}>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>

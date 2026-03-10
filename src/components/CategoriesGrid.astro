@@ -1,0 +1,106 @@
+---
+const categories = [
+  {
+    title: "Side Hustles for Students 📚",
+    slug: "side-hustles",
+    description: "Good for low experience, flexible hours, phone/laptop work.",
+    skills: ["Data Entry", "Transcription", "Social Media", "Surveys", "Tutoring", "Gaming"]
+  },
+  {
+    title: "Skill-Based Income 🎯",
+    slug: "skill-based",
+    description: "Requires learning a specific high-demand skill.",
+    skills: ["Graphic Design", "Video Editing", "Copywriting", "SEO Writing", "Marketing"]
+  },
+  {
+    title: "Tech & Programming 👨‍💻",
+    slug: "tech-programming",
+    description: "For people who learn coding or technical skills.",
+    skills: ["Web Dev", "App Dev", "WordPress", "Shopify", "API & SaaS Dev"]
+  },
+  {
+    title: "Content Creator Income 🎥",
+    slug: "content-creator",
+    description: "Making money by building an audience online.",
+    skills: ["YouTube", "Shorts/TikToks", "Podcasting", "Blogging", "Tech Reviews"]
+  },
+  {
+    title: "Digital Product Businesses 📦",
+    slug: "digital-products",
+    description: "Create once → sell many times (highly scalable).",
+    skills: ["E-books", "Online Courses", "Notion Templates", "Stock Media"]
+  },
+  {
+    title: "Online Business Models 🏪",
+    slug: "online-business",
+    description: "E-commerce and scalable digital businesses.",
+    skills: ["Dropshipping", "Print-on-demand", "Niche Blogs", "Directories"]
+  },
+  {
+    title: "AI-Powered Income 🤖",
+    slug: "ai-income",
+    description: "The fastest growing sector in online earning.",
+    skills: ["Prompt Engineering", "AI Chatbots", "AI Images", "AI Video Editing"]
+  },
+  {
+    title: "Virtual Assistant & Support 🧑‍💻",
+    slug: "virtual-assistant",
+    description: "Admin, business support, and operations management.",
+    skills: ["Calendar Mgmt", "Customer Support", "Research", "Lead Gen"]
+  },
+  {
+    title: "Affiliate & Monetization 💸",
+    slug: "affiliate",
+    description: "Earn passive commissions and monetize audiences.",
+    skills: ["Review Blogs", "Coupon Sites", "Paid Newsletters", "Paid Communities"]
+  },
+  {
+    title: "Digital Assets & Trading 📈",
+    slug: "digital-assets",
+    description: "Higher risk but massive scalability.",
+    skills: ["Crypto & Stocks", "Domain Flipping", "Website Flipping"]
+  },
+  {
+    title: "Automation & Tools ⚙️",
+    slug: "automation",
+    description: "Perfect for developers and technical entrepreneurs.",
+    skills: ["Chrome extensions", "Scrapers", "Micro SaaS", "Workflow Bots"]
+  }
+];
+---
+
+<section id="pathways" class="docs-site-container border-x py-24 bg-card/30">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="text-center mb-16 animate-fade-in-up">
+            <h2 class="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 mb-4 tracking-tight">
+                Where do you want to start?
+            </h2>
+            <p class="text-muted-foreground text-xl max-w-2xl mx-auto">
+                Explore the top 11 proven pathways to generating an online income. Find your niche, develop your skills, and start building your empire today.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {categories.map((category, i) => (
+                <a 
+                    href={`/blog/category/${category.slug}`}
+                    class={`group relative p-5 md:p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1 flex flex-col h-full animate-fade-in-up`}
+                    style={`animation-delay: ${i * 50}ms;`}
+                >
+                    <div class="flex-grow">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 text-foreground tracking-tight group-hover:text-primary transition-colors">{category.title}</h3>
+                        <p class="text-sm text-muted-foreground mb-4 leading-relaxed flex-grow">{category.description}</p>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-2">
+                            {category.skills.map(skill => (
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary-600 dark:text-primary-400 border border-primary/20 transition-colors group-hover:bg-primary/20">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

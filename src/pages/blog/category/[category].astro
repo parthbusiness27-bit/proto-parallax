@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../../components/FormattedDate.astro';
+
+export async function getStaticPaths() {
+	// Include all known category slugs so that pages always exist
+	// even if no posts exist for a category yet
+	const allKnownCategories = [
+		'side-hustles',
+		'skill-based',
+		'tech-programming',
+		'content-creator',
+		'digital-products',
+		'online-business',
+		'ai-income',
+		'virtual-assistant',
+		'affiliate',
+		'digital-assets',
+		'automation',
+	];
+
+	const allPosts = await getCollection('blog');
+
+	return allKnownCategories.map((category) => {
+		const filteredPosts = allPosts
+			.filter((post) => post.data.category === category)
+			.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+		return {
+			params: { category },
+			props: { posts: filteredPosts, category },
+		};
+	});
+}
+
+const { posts, category } = Astro.props;
+
+// Category metadata — emoji, label, and subtitle for each slug
+const categoryMeta: Record<string, { emoji: string; label: string; subtitle: string }> = {
+	'side-hustles':      { emoji: '📚', label: 'Side Hustles for Students', subtitle: 'Flexible hours & low experience required' },
+	'skill-based':       { emoji: '🎯', label: 'Skill-Based Income',          subtitle: 'Design, writing, SEO & marketing' },
+	'tech-programming':  { emoji: '👨‍💻', label: 'Tech & Programming',      subtitle: 'Web, App & Shopify development' },
+	'content-creator':   { emoji: '🎥', label: 'Content Creator Income',      subtitle: 'YouTube, Blogging & Social media' },
+	'digital-products':  { emoji: '📦', label: 'Digital Product Businesses',  subtitle: 'E-books, courses & templates' },
+	'online-business':   { emoji: '🏪', label: 'Online Business Models',      subtitle: 'E-commerce & digital businesses' },
+	'ai-income':         { emoji: '🤖', label: 'AI-Powered Income',            subtitle: 'Prompt engineering & AI tools' },
+	'virtual-assistant': { emoji: '🧑‍💻', label: 'Virtual Assistant & Support', subtitle: 'Admin, ops & lead generation' },
+	'affiliate':         { emoji: '💸', label: 'Affiliate & Monetization',    subtitle: 'Passive commissions & audiences' },
+	'digital-assets':    { emoji: '📈', label: 'Digital Assets & Trading',    subtitle: 'Crypto, domains & flipping' },
+	'automation':        { emoji: '⚙️', label: 'Automation & Tools',          subtitle: 'SaaS, scrapers & bots' },
+};
+
+const meta = categoryMeta[category] ?? {
+	emoji: '📖',
+	label: category.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+	subtitle: 'Explore guides in this category',
+};
+---
+
+<BaseLayout
+	title={`${meta.label} Guides | ${SITE_TITLE}`}
+	description={`Explore all of our high-value strategies and comprehensive masterclasses for ${meta.label.toLowerCase()}.`}
+>
+	<main class="flex-grow docs-site-container border-x pb-24">
+
+		<section class="py-16 md:py-24 px-4 max-w-7xl mx-auto text-center animate-fade-in-down">
+			<div class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+				Guides Category
+			</div>
+			<h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+				<span class="mr-3">{meta.emoji}</span><span class="bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent">{meta.label}</span>
+			</h1>
+			<p class="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">{meta.subtitle}</p>
+			<p class="text-muted-foreground max-w-2xl mx-auto mb-10">
+				Explore all of our high-value strategies and comprehensive masterclasses for {meta.label.toLowerCase()}.
+			</p>
+			<a href="/blog" class="inline-block text-primary font-medium hover:underline mb-8">
+				← Back to All Guides
+			</a>
+		</section>
+
+		<div class="max-w-[1200px] mx-auto px-4">
+			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+				{posts.length === 0 ? (
+					<div class="col-span-full text-center py-20 bg-card rounded-2xl border border-border">
+						<div class="text-5xl mb-4">{meta.emoji}</div>
+						<h2 class="text-2xl font-bold text-foreground mb-4">No guides published yet.</h2>
+						<p class="text-muted-foreground mb-6">We're working on in-depth guides for {meta.label}. Check back soon!</p>
+						<a href="/blog" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-colors">
+							← Browse All Guides
+						</a>
+					</div>
+				) : (
+					posts.map((post: any, i: number) => (
+						<a href={`/blog/${post.id}/`} class="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-fade-in-up" style={`animation-delay: ${100 + (i * 100)}ms;`}>
+							<!-- Image Container -->
+							<div class="aspect-[16/10] overflow-hidden relative bg-muted">
+								<img
+									src={post.data.heroImage?.src || post.data.heroImage}
+									alt={post.data.title}
+									class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+								/>
+								<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							</div>
+							<!-- Text Content -->
+							<div class="p-6 flex flex-col flex-grow">
+								<div class="text-xs font-medium text-muted-foreground mb-4 flex items-center justify-between">
+									<FormattedDate date={post.data.pubDate} />
+									<span class="uppercase tracking-wider text-primary font-bold">{post.data.category}</span>
+								</div>
+								<h3 class="text-xl font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2">
+									{post.data.title}
+								</h3>
+								<p class="text-muted-foreground line-clamp-2 mb-6 text-sm flex-grow">
+									{post.data.description}
+								</p>
+								<div class="mt-auto pt-4 border-t border-border/50">
+									<span class="text-sm font-bold text-primary inline-flex items-center group-hover:translate-x-1 transition-transform">
+										Read full guide <span class="ml-1">→</span>
+									</span>
+								</div>
+							</div>
+						</a>
+					))
+				)}
+			</div>
+		</div>
+	</main>
+</BaseLayout>

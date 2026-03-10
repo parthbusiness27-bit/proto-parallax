@@ -1,0 +1,122 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Affiliate Disclosure';
+const description = 'Learn about our affiliate relationships and how we monetize Hustle Teacher.';
+import "@/styles/starwind.css";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-background text-foreground scheme-dark min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-grow docs-site-container border-x">
+			<article class="prose prose-invert prose-lg max-w-4xl mx-auto py-16 px-4">
+				<h1>Affiliate Disclosure</h1>
+				<p class="text-muted-foreground"><strong>Last Updated: March 9, 2026</strong></p>
+
+				<div class="bg-primary/20 border-l-4 border-primary p-4 my-6 rounded-md">
+					<strong>⚠️ Transparency Notice:</strong> This website contains affiliate links. If you click on a link and make a purchase,
+					we may earn a small commission at no additional cost to you. This helps support our site and keep content free for readers.
+				</div>
+
+				<h2>1. What are Affiliate Links?</h2>
+				<p>
+					Affiliate links are special URLs that track when you click on them and make a purchase. When you buy through our
+					affiliate link, the seller (e.g., Amazon, affiliate networks) gives us a small percentage of the sale. You are never
+					charged extra — the price is always the same for you.
+				</p>
+
+				<h2>2. Which Products Do We Recommend?</h2>
+				<p>We include affiliate links for products and services we genuinely believe in, including:</p>
+				<ul>
+					<li><strong>Learning Platforms:</strong> Udemy, Coursera, Skillshare courses</li>
+					<li><strong>Software Tools:</strong> Project management, writing, design tools</li>
+					<li><strong>Web Hosting & Domains:</strong> Domain registrars, web hosts</li>
+					<li><strong>Amazon Products:</strong> Tech, office supplies, books</li>
+					<li><strong>Email Marketing:</strong> Mailchimp, Brevo, ConvertKit</li>
+				</ul>
+
+				<h2>3. Our Affiliate Networks</h2>
+				<ul>
+					<li>Amazon Associates</li>
+					<li>ShareASale</li>
+					<li>Impact</li>
+					<li>Udemy Affiliate Program</li>
+					<li>Skillshare Affiliate Program</li>
+					<li>Individual brand affiliate programs</li>
+				</ul>
+
+				<h2>4. How We Use Commission Revenue</h2>
+				<p>The commissions we earn help us:</p>
+				<ul>
+					<li>Keep the website free for all readers</li>
+					<li>Pay for web hosting and domain renewal</li>
+					<li>Invest in tools to create better content</li>
+					<li>Continue improving the site</li>
+				</ul>
+
+				<h2>5. Our Commitment to Honesty</h2>
+				<p>We promise to:</p>
+				<ul>
+					<li>🟢 Only recommend products we genuinely use and believe in</li>
+					<li>🟢 Clearly mark affiliate links where possible</li>
+					<li>🟢 Never recommend something just for commission</li>
+					<li>🟢 Be transparent about our relationships with partners</li>
+					<li>🟢 Provide honest reviews, including pros and cons</li>
+				</ul>
+
+				<h2>6. Identifying Affiliate Links</h2>
+				<p>
+					When you hover over links in our content, some may show "affiliate link" or have alternative text. However, not all
+					affiliate links are always clearly marked, so it's good practice to assume any product recommendation could be
+					affiliated.
+				</p>
+
+				<h2>7. FTC Compliance (US)</h2>
+				<p>
+					This website complies with the Federal Trade Commission (FTC) guidelines on endorsements and testimonials. We
+					disclose our affiliate relationships to meet the "Endorsements Guide" requirements set by the FTC.
+				</p>
+				<p>
+					<a href="https://www.ftc.gov/business-guidance/endorsements-testimonials" target="_blank" class="text-primary hover:text-primary/80 no-underline">
+						Read the FTC's Endorsements &amp; Testimonials Guide →
+					</a>
+				</p>
+
+				<h2>8. Earning Potential</h2>
+				<p>
+					<strong>Important Note:</strong> Affiliate commissions are typically very small (1-10% of sales). We do not claim
+					that affiliate commissions are a significant revenue source or that you will earn money by following our
+					recommendations. We share affiliate links purely on merit.
+				</p>
+
+				<h2>9. Your Privacy</h2>
+				<p>
+					When you click an affiliate link, the destination site may place cookies on your device and may collect data about
+					your browsing. Please review their privacy policies before making a purchase.
+				</p>
+
+				<h2>10. Questions?</h2>
+				<p>
+					If you have any questions about our affiliate relationships or policies, please contact us at:
+					<br />
+					<strong>Email:</strong> contact@hustleteacher.com
+				</p>
+
+				<hr class="border-t border-border my-8" />
+
+				<p class="text-center text-sm text-muted-foreground">
+					<strong>Bottom Line:</strong> We value your trust. We'll never push products just for commission. Our goal is to help you
+					make smart decisions and find tools that genuinely improve your online earning journey.
+				</p>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

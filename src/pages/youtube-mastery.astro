@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseLayout title={`YouTube Mastery | ${SITE_TITLE}`} description="Learn how to build a YouTube empire.">
+	<main class="flex-grow docs-site-container border-x">
+		<section class="py-20 md:py-32 px-4 max-w-4xl mx-auto">
+            <div class="mb-12">
+                <a href="/" class="text-muted-foreground hover:text-foreground inline-flex items-center mb-6 text-sm transition-colors">
+                    &larr; Back to Home
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6">🎥 YouTube Mastery</h1>
+                <p class="text-xl text-muted-foreground">The complete playbook to building an automated ad-revenue machine.</p>
+            </div>
+            
+            <div class="prose prose-invert prose-lg max-w-none">
+                <p>Building a successful YouTube channel is no longer about getting lucky. It's a calculated formula combining high-retention editing, CTR-optimised thumbnails, and search-friendly SEO.</p>
+                
+                <h2 class="text-2xl mt-12 mb-4 font-bold">1. Niche Selection</h2>
+                <p>Before you upload your first video, you must determine your target audience. We recommend "Evergreen Wealth" niches like Finance, Tech, or Education because they command high CPMs.</p>
+
+                <h2 class="text-2xl mt-12 mb-4 font-bold">2. The 10-Minute Script Framework</h2>
+                <p>Stop rambling. Hook your viewers in the first 15 seconds, deliver the core value by minute 3, and keep retention high using "open loops" to ensure they watch until the very end.</p>
+                
+                <div class="mt-12 p-6 bg-primary/10 border border-primary/20 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-2">Pro Tip</h3>
+                    <p class="text-sm">Always ask for engagement (likes, comments) organically during high-value moments, not at the very end when viewers have already clicked off.</p>
+                </div>
+            </div>
+		</section>
+	</main>
+</BaseLayout>

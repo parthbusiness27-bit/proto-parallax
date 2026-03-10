@@ -1,0 +1,6 @@
+Contact: security@HustleTeacher.vercel.app
+Expires: 2027-03-09T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://HustleTeacher.vercel.app/.well-known/security.txt
+Policy: https://HustleTeacher.vercel.app/privacy-policy/
+Acknowledgments: https://HustleTeacher.vercel.app/security/

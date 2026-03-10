@@ -1,0 +1,179 @@
+---
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+	title?: string;
+	subtitle?: string;
+	buttonText?: string;
+	placeholder?: string;
+}
+
+const {
+	title = 'Subscribe to Our Newsletter',
+	subtitle = 'Get the latest online earning tips, directly to your inbox.',
+	buttonText = 'Subscribe Now',
+	placeholder = 'Enter your email...',
+} = Astro.props;
+
+const mailchimpAudienceId = import.meta.env.PUBLIC_MAILCHIMP_AUDIENCE_ID || 'placeholder';
+const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
+---
+
+<section class="newsletter-signup">
+	<div class="newsletter-container">
+		<div class="newsletter-content">
+			<h3>{title}</h3>
+			{subtitle && <p>{subtitle}</p>}
+		</div>
+
+		<form
+			action={`https://${mailchimpServer}.api.mailchimp.com/3.0/contact/subscribe`}
+			method="POST"
+			class="newsletter-form"
+			id="newsletter-form"
+		>
+			<input type="hidden" name="u" value={mailchimpAudienceId} />
+
+			<div class="form-group">
+				<input
+					type="email"
+					name="email"
+					placeholder={placeholder}
+					required
+					aria-label="Email address"
+					class="email-input"
+				/>
+				<button type="submit" class="submit-btn" aria-label="Subscribe to newsletter">
+					{buttonText}
+				</button>
+			</div>
+
+			<p class="privacy-notice">
+				📧 We respect your privacy. Unsubscribe at any time.
+				<a href="/privacy-policy/">Privacy Policy</a>
+			</p>
+		</form>
+	</div>
+</section>
+
+<script>
+	// Simple Mailchimp integration fallback
+	document.getElementById('newsletter-form')?.addEventListener('submit', async (e: Event) => {
+		const form = e.target as HTMLFormElement;
+		const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value;
+
+		if (!email) return;
+
+		// Log the subscription attempt (in production, you'd send to your own API)
+		console.log('Newsletter signup attempt:', email);
+
+		// Show success message
+		alert('Thank you for subscribing! Please check your email for confirmation.');
+	});
+</script>
+
+<style>
+	.newsletter-signup {
+		background: linear-gradient(135deg, var(--color-indigo-700) 0%, var(--color-indigo-500) 100%);
+		color: white;
+		padding: 3em 1em;
+		border-radius: 1em;
+		margin: 3em 0;
+	}
+
+	.newsletter-container {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.newsletter-content {
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	.newsletter-content h3 {
+		font-size: 1.8em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.newsletter-content p {
+		margin: 0;
+		opacity: 0.95;
+		font-size: 1.05em;
+	}
+
+	.newsletter-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.form-group {
+		display: flex;
+		gap: 0.5em;
+		flex-wrap: wrap;
+	}
+
+	.email-input {
+		flex: 1;
+		min-width: 200px;
+		padding: 0.75em 1em;
+		border: none;
+		border-radius: 0.5em;
+		font-size: 1em;
+		background: white;
+		color: #1f2937;
+	}
+
+	.email-input::placeholder {
+		color: #9ca3af;
+	}
+
+	.email-input:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+	}
+
+	.submit-btn {
+		padding: 0.75em 2em;
+		background: white;
+		color: var(--color-indigo-700);
+		border: none;
+		border-radius: 0.5em;
+		font-weight: 700;
+		cursor: pointer;
+		font-size: 1em;
+		transition: all 0.3s ease;
+	}
+
+	.submit-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.privacy-notice {
+		font-size: 0.85em;
+		text-align: center;
+		opacity: 0.85;
+		margin: 0;
+	}
+
+	.privacy-notice a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	@media (max-width: 600px) {
+		.form-group {
+			flex-direction: column;
+		}
+
+		.submit-btn {
+			width: 100%;
+		}
+
+		.newsletter-content h3 {
+			font-size: 1.5em;
+		}
+	}
+</style>

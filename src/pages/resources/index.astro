@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResourceCard from '../../components/cards/ResourceCard.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+
+// Fetch all resource entries
+const allResources = await getCollection('resources');
+
+// Separate into Free and Premium arrays
+const freeResources = allResources.filter(res => !res.data.isPremium);
+const premiumResources = allResources.filter(res => res.data.isPremium);
+---
+
+<BaseLayout title={`Downloads & Templates | ${SITE_TITLE}`} description="Free templates, Notion trackers, and premium digital products to accelerate your online business journey.">
+	<main class="flex-grow pt-24 pb-20">
+        <div class="docs-site-container">
+                            
+            <!-- Header Section -->
+            <div class="mb-16">
+                <div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm animate-fade-in-down">
+                    📦 Digital Arsenal
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up tracking-tight uppercase">
+                    Creator <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Resources</span>
+                </h1>
+                <p class="text-xl text-muted-foreground max-w-2xl animate-fade-in-up" style="animation-delay: 150ms;">
+                    Grab our highest-converting Notion templates, checklists, and premium ebooks to jumpstart your hustle today.
+                </p>
+            </div>
+
+            <!-- Free Resources Section -->
+            {freeResources.length > 0 && (
+                <div class="mb-20 animate-fade-in-up" style="animation-delay: 300ms;">
+                    <h2 class="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
+                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">🎁</span>
+                        Free Downloads
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {freeResources.map(res => (
+                            <ResourceCard 
+                                title={res.data.title}
+                                description={res.data.description}
+                                url={res.data.url}
+                                icon={res.data.icon}
+                                isPremium={false}
+                            />
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            <!-- Premium Resources Section -->
+            {premiumResources.length > 0 && (
+                <div class="animate-fade-in-up" style="animation-delay: 450ms;">
+                    <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
+                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">💎</span>
+                        Premium Products
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {premiumResources.map(res => (
+                            <ResourceCard 
+                                title={res.data.title}
+                                description={res.data.description}
+                                url={res.data.url}
+                                icon={res.data.icon}
+                                isPremium={true}
+                                price={res.data.price}
+                            />
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {allResources.length === 0 && (
+                <div class="py-20 text-center border border-dashed border-border rounded-2xl bg-muted/30">
+                    <p class="text-muted-foreground">Resources are currently being updated. Check back soon!</p>
+                </div>
+            )}
+
+        </div>
+	</main>
+</BaseLayout>

@@ -1,0 +1,40 @@
+# Hustle Teacher - SEO & Crawler Guidelines
+# Allow all reputable search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Default behavior
+User-agent: *
+Allow: /
+
+# Disallow bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemaps
+Sitemap: https://HustleTeacher.vercel.app/sitemap-index.xml
+
+# Important paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/

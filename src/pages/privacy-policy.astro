@@ -1,0 +1,137 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Privacy Policy';
+const description = 'Privacy Policy for Hustle Teacher. Learn how we collect, use, and protect your personal data.';
+import "@/styles/starwind.css";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-background text-foreground scheme-dark min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-grow docs-site-container border-x">
+			<article class="prose prose-invert prose-lg max-w-4xl mx-auto py-16 px-4">
+				<h1>Privacy Policy</h1>
+				<p class="text-muted-foreground"><strong>Last Updated: March 9, 2026</strong></p>
+
+				<h2>1. Introduction</h2>
+				<p>
+					Welcome to Hustle Teacher ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy
+					Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+				</p>
+
+				<h2>2. Information We Collect</h2>
+				<h3>2.1 Information You Provide</h3>
+				<ul>
+					<li><strong>Contact Forms:</strong> Name, email, message content</li>
+					<li><strong>Email Subscriptions:</strong> Email address (collected via Mailchimp)</li>
+					<li><strong>Comments:</strong> Name, email, comment text</li>
+				</ul>
+
+				<h3>2.2 Automatically Collected Information</h3>
+				<ul>
+					<li>IP address and browser information</li>
+					<li>Pages visited and time spent on site</li>
+					<li>Referral sources</li>
+					<li>Device type (mobile, desktop, tablet)</li>
+					<li>Approximate location (country/city level)</li>
+				</ul>
+
+				<h3>2.3 Analytics & Heat Mapping</h3>
+				<p>
+					We use Google Analytics 4 and Microsoft Clarity to understand how users interact with our site. These tools
+					collect anonymized data about user behavior.
+				</p>
+
+				<h2>3. How We Use Your Information</h2>
+				<ul>
+					<li>To respond to your inquiries and provide customer support</li>
+					<li>To send marketing emails (only if you subscribed)</li>
+					<li>To improve our website and user experience</li>
+					<li>To comply with legal obligations</li>
+					<li>To detect and prevent fraud or abuse</li>
+				</ul>
+
+				<h2>4. Data Retention</h2>
+				<ul>
+					<li><strong>Contact Form Data:</strong> Deleted after 30 days unless requested otherwise</li>
+					<li><strong>Email List:</strong> Retained until you unsubscribe</li>
+					<li><strong>Analytics Data:</strong> Retained for 14 months by default</li>
+				</ul>
+
+				<h2>5. Third-Party Services</h2>
+				<p>We use the following third-party services:</p>
+				<ul>
+					<li><strong>Mailchimp:</strong> Email marketing platform - <a href="https://mailchimp.com/legal/privacy/" target="_blank">Privacy Policy</a></li>
+					<li><strong>Google Analytics:</strong> Website analytics - <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+					<li><strong>Microsoft Clarity:</strong> Heatmap analytics - <a href="https://clarity.microsoft.com/" target="_blank">Privacy Policy</a></li>
+					<li><strong>Vercel:</strong> Hosting provider - <a href="https://vercel.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+					<li><strong>Google reCAPTCHA:</strong> Spam protection - <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+				</ul>
+
+				<h2>6. GDPR & CCPA Compliance</h2>
+				<h3>6.1 EU Visitors (GDPR)</h3>
+				<p>If you're in the EU, you have the right to:</p>
+				<ul>
+					<li>Access your personal data</li>
+					<li>Correct inaccurate data</li>
+					<li>Request deletion ("right to be forgotten")</li>
+					<li>Opt-out of marketing emails anytime</li>
+				</ul>
+
+				<h3>6.2 California Residents (CCPA)</h3>
+				<p>You have the right to:</p>
+				<ul>
+					<li>Know what personal information is collected</li>
+					<li>Know whether your personal information is sold or disclosed</li>
+					<li>Say no to the sale or sharing of personal information</li>
+					<li>Access and delete information</li>
+				</ul>
+
+				<h2>7. Cookies</h2>
+				<p>
+					Our site uses cookies for analytics and functionality. You can control cookies through your browser settings.
+					By using our site, you consent to our use of cookies as described in our Cookie Policy.
+				</p>
+
+				<h2>8. Security</h2>
+				<p>
+					We implement industry-standard security measures (SSL/HTTPS, firewalls) to protect your information. However,
+					no system is 100% secure. We cannot guarantee absolute security.
+				</p>
+
+				<h2>9. Your Privacy Rights</h2>
+				<p>You can:</p>
+				<ul>
+					<li>Request a copy of your data</li>
+					<li>Update or correct your information</li>
+					<li>Request deletion of your data</li>
+					<li>Unsubscribe from our email list anytime</li>
+				</ul>
+				<p>To exercise these rights, email us at <strong>contact@hustleteacher.com</strong></p>
+
+				<h2>10. Contact Us</h2>
+				<p>
+					If you have questions about this Privacy Policy, please contact us at:
+					<br />
+					<strong>Email:</strong> contact@hustleteacher.com
+					<br />
+					<strong>Website:</strong> https://HustleTeacher.vercel.app
+				</p>
+
+				<h2>11. Changes to This Policy</h2>
+				<p>
+					We may update this Privacy Policy occasionally. We will notify you of significant changes by posting the new
+					policy on our site and updating the "Last Updated" date.
+				</p>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

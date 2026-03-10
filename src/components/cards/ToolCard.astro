@@ -1,0 +1,30 @@
+---
+// ToolCard.astro
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  icon?: string;
+  isPremium?: boolean;
+  price?: string;
+}
+
+const { title, description, url, icon, isPremium = false, price } = Astro.props;
+---
+
+<a href={url} class={`group relative overflow-hidden flex items-start gap-4 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${isPremium ? 'bg-gradient-to-br from-card to-primary/5 border border-primary/20 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(79,70,229,0.15)]' : 'bg-card border border-border hover:border-emerald-500/50 hover:shadow-md'}`}>
+  {isPremium && price && (
+    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-xl shadow-sm">
+      {price}
+    </div>
+  )}
+  
+  <div class={`text-3xl p-4 rounded-xl transition-all origin-center ${isPremium ? 'bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-110' : 'bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500/20'}`}>
+    {icon || (isPremium ? '💎' : '🎁')}
+  </div>
+  
+  <div class="flex-1 pr-4">
+    <h4 class="font-bold text-lg text-foreground mb-1 mt-1 group-hover:text-primary transition-colors">{title}</h4>
+    <p class="text-sm text-muted-foreground leading-relaxed line-clamp-2">{description}</p>
+  </div>
+</a>

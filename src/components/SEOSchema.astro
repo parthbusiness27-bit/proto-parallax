@@ -1,0 +1,125 @@
+---
+import { ORGANIZATION, SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from '../consts';
+
+interface Props {
+	type?: 'Article' | 'BlogPosting' | 'Organization' | 'BreadcrumbList' | 'FAQPage';
+	title?: string;
+	description?: string;
+	image?: string;
+	publishedDate?: Date;
+	updatedDate?: Date;
+	author?: string;
+	breadcrumbs?: Array<{ name: string; url: string }>;
+	faqs?: Array<{ question: string; answer: string }>;
+}
+
+const {
+	type = 'Article',
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+	image = `${SITE_URL}/favicon.svg`,
+	publishedDate,
+	updatedDate,
+	author = 'Hustle Teacher',
+	breadcrumbs = [],
+	faqs = [],
+} = Astro.props;
+
+let schema: object = {};
+
+// Organization Schema
+if (type === 'Organization') {
+	schema = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: ORGANIZATION.name,
+		description: ORGANIZATION.description,
+		url: ORGANIZATION.url,
+		logo: ORGANIZATION.logo,
+		email: ORGANIZATION.email,
+		sameAs: ORGANIZATION.sameAs,
+		contactPoint: {
+			'@type': 'ContactPoint',
+			contactType: 'Customer Service',
+			email: ORGANIZATION.email,
+			availableLanguage: ['en'],
+		},
+	};
+}
+
+// Article/BlogPosting Schema
+if (type === 'Article' || type === 'BlogPosting') {
+	schema = {
+		'@context': 'https://schema.org',
+		'@type': type,
+		headline: title,
+		description: description,
+		image: image,
+		author: {
+			'@type': 'Person',
+			name: author,
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: SITE_TITLE,
+			logo: {
+				'@type': 'ImageObject',
+				url: ORGANIZATION.logo,
+			},
+		},
+		datePublished: publishedDate?.toISOString(),
+		dateModified: updatedDate?.toISOString() || publishedDate?.toISOString(),
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': Astro.url.href,
+		},
+	};
+}
+
+// Breadcrumb Schema
+if (type === 'BreadcrumbList' && breadcrumbs.length > 0) {
+	schema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: breadcrumbs.map((item, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: item.name,
+			item: item.url,
+		})),
+	};
+}
+
+// FAQ Schema
+if (type === 'FAQPage' && faqs.length > 0) {
+	schema = {
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: faq.answer,
+			},
+		})),
+	};
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<!-- Also render Organization schema on every page -->
+{type !== 'Organization' && (
+	<script
+		type="application/ld+json"
+		set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: ORGANIZATION.name,
+			url: ORGANIZATION.url,
+			logo: ORGANIZATION.logo,
+			sameAs: ORGANIZATION.sameAs,
+		})}
+	/>
+)}

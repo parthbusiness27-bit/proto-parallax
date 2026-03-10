@@ -1,0 +1,54 @@
+---
+// BlogCard.astro
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../FormattedDate.astro';
+
+interface Props {
+  post: CollectionEntry<'blog' | 'guides'>;
+}
+
+const { post } = Astro.props;
+// Dynamic route based on collection type
+const routeBase = post.collection === 'blog' ? '/blog/' : '/guides/';
+---
+
+<a href={`${routeBase}${post.id}/`} class="group block relative rounded-2xl border border-border bg-card overflow-hidden hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
+    <div class="aspect-[16/9] w-full relative overflow-hidden bg-muted">
+        {post.data.heroImage ? (
+            <img 
+                width={720} 
+                height={360} 
+                src={post.data.heroImage} 
+                alt={post.data.title} 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+        ) : (
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/20 to-emerald-500/20 flex items-center justify-center">
+                <span class="text-4xl opacity-50">📰</span>
+            </div>
+        )}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
+    
+    <div class="p-6 relative">
+        <div class="flex items-center gap-3 text-sm text-muted-foreground mb-4">
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium text-xs">
+                {post.data.category || (post.collection === 'blog' ? 'Article' : 'Guide')}
+            </span>
+            <FormattedDate date={post.data.pubDate} />
+        </div>
+        
+        <h3 class="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+            {post.data.title}
+        </h3>
+        
+        <p class="text-muted-foreground line-clamp-2 text-sm leading-relaxed mb-4">
+            {post.data.description}
+        </p>
+        
+        <div class="flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform">
+            Read {post.collection === 'blog' ? 'Article' : 'Guide'} <span class="ml-1">→</span>
+        </div>
+    </div>
+</a>

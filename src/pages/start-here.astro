@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoriesGrid from '../components/CategoriesGrid.astro';
+import FreeToolsHub from '../components/FreeToolsHub.astro';
+import DigitalProducts from '../components/DigitalProducts.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<BaseLayout title={`Start Here | ${SITE_TITLE}`} description="Your journey to making money online starts right here.">
+	<main class="flex-grow">
+			
+            <!-- Hero Section -->
+			<section class="py-20 md:py-32 px-4 max-w-4xl mx-auto text-center border-x docs-site-container animate-fade-in-down">
+                <div class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/20 tracking-wide">
+					Onboarding
+				</div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight">
+                    Welcome to <br class="hidden md:block" />
+                    <span class="bg-gradient-to-r from-primary via-indigo-400 to-emerald-500 bg-clip-text text-transparent">Hustle Teacher</span>
+                </h1>
+                
+                <div class="prose prose-invert prose-lg md:prose-xl mx-auto text-muted-foreground leading-relaxed">
+                    <p>If this is your first time visiting the website, this page will help you understand how everything works and how to navigate the platform effectively.</p>
+                    <p>Hustle Teacher is built to help people explore online opportunities, learn new digital skills, and understand different ways to build income streams using the internet.</p>
+                    <p class="font-medium text-foreground">Instead of overwhelming you with too much information at once, the website is organized into structured sections so you can easily find the guides, tools, and resources you need.</p>
+                </div>
+			</section>
+
+            <!-- How It Works Architecture -->
+            <section class="py-24 bg-card/30 border-y border-border relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+                <div class="max-w-5xl mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16 animate-fade-in-up">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">How Hustle Teacher Works</h2>
+                        <p class="text-xl text-muted-foreground">The website is built around three main components.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Component 1 -->
+                        <div class="bg-card border border-border p-8 rounded-3xl shadow-lg hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="h-14 w-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">📚</div>
+                            <h3 class="text-2xl font-bold text-foreground mb-3">Guides</h3>
+                            <p class="text-muted-foreground leading-relaxed">Detailed articles that explain concepts, strategies, and step-by-step processes.</p>
+                        </div>
+                        <!-- Component 2 -->
+                        <div class="bg-card border border-border p-8 rounded-3xl shadow-lg hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="h-14 w-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">🛠️</div>
+                            <h3 class="text-2xl font-bold text-foreground mb-3">Tools</h3>
+                            <p class="text-muted-foreground leading-relaxed">Practical tools designed to help with planning, research, and productivity.</p>
+                        </div>
+                        <!-- Component 3 -->
+                        <div class="bg-card border border-border p-8 rounded-3xl shadow-lg hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2 group">
+                            <div class="h-14 w-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">💎</div>
+                            <h3 class="text-2xl font-bold text-foreground mb-3">Resources</h3>
+                            <p class="text-muted-foreground leading-relaxed">Additional materials such as downloadable guides and useful learning assets.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 1: Guides -->
+            <section class="py-24 max-w-7xl mx-auto px-4 relative">
+                <div class="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Step 1</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Explore the Guides</h2>
+                    <div class="prose prose-invert prose-lg mx-auto text-muted-foreground">
+                        <p>The best place to begin is the <a href="/blog" class="text-primary hover:underline">Guides page</a>.</p>
+                        <p>The Guides section organizes content into different domains and categories so you can explore topics that interest you. Each guide focuses on explaining concepts in a clear and structured way.</p>
+                        <p>These guides are designed to provide knowledge, explain strategies, and help you understand how different online opportunities work. If you're not sure where to begin, simply explore the categories below.</p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="/blog" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-xl hover:bg-primary/90 transition-all hover:scale-105 shadow-[0_0_40px_rgba(79,70,229,0.3)]">
+                            Browse All Guides &rarr;
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Reusing the Grid to display Categories visual layout -->
+                <div class="-mx-4 md:mx-0">
+                    <CategoriesGrid />
+                </div>
+            </section>
+
+            <!-- Step 2: Tools -->
+            <section class="py-24 bg-card/30 border-y border-border">
+                <div class="max-w-7xl mx-auto px-4 relative">
+                    <div class="flex flex-col lg:flex-row items-center gap-16 mb-16">
+                        <div class="lg:w-1/3 animate-fade-in-up">
+                            <span class="text-emerald-500 font-bold tracking-widest uppercase text-sm mb-4 block">Step 2</span>
+                            <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Use the Tools</h2>
+                            <div class="prose prose-invert prose-lg text-muted-foreground mb-8">
+                                <p>The website also includes a growing collection of tools that are designed to make things easier and more efficient.</p>
+                                <p>These tools can help with tasks such as generating ideas, planning projects, estimating results, or organizing work. The tools section is continuously expanding as new utilities are added to support different types of online activities.</p>
+                            </div>
+                            <a href="/tools" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-emerald-600 rounded-xl hover:bg-emerald-500 transition-all hover:scale-105 shadow-[0_0_40px_rgba(16,185,129,0.2)]">
+                                Try Out Tools &rarr;
+                            </a>
+                        </div>
+                        <div class="lg:w-2/3 w-full">
+                            <!-- Inject Tools module -->
+                            <div class="bg-background rounded-3xl border border-border p-4 md:p-8 shadow-2xl">
+                                <FreeToolsHub />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 3: Resources -->
+            <section class="py-24 max-w-7xl mx-auto px-4 relative">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16 mb-16">
+                    <div class="lg:w-1/3 animate-fade-in-up">
+                        <span class="text-purple-500 font-bold tracking-widest uppercase text-sm mb-4 block">Step 3</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Explore Resources</h2>
+                        <div class="prose prose-invert prose-lg text-muted-foreground mb-8">
+                            <p>The Resources section contains additional learning materials and downloadable content.</p>
+                            <p>These resources may include guides, documents, or other materials that provide deeper insights into certain topics. They are designed to complement the articles and tools available on the website.</p>
+                        </div>
+                        <a href="/resources" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-purple-600 rounded-xl hover:bg-purple-500 transition-all hover:scale-105 shadow-[0_0_40px_rgba(168,85,247,0.2)]">
+                            View All Resources &rarr;
+                        </a>
+                    </div>
+                    <div class="lg:w-2/3 w-full">
+                        <!-- Inject Resources Module -->
+                        <div class="bg-background rounded-3xl border border-border overflow-hidden shadow-2xl">
+                             <DigitalProducts />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 4: Stay Updated & Closing -->
+            <section class="py-24 bg-card/30 border-t border-border mt-12 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent pointer-events-none"></div>
+                
+                <div class="max-w-3xl mx-auto px-4 relative z-10">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Step 4</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Stay Updated</h2>
+                    <p class="text-xl text-muted-foreground mb-12">New guides, tools, and resources are added regularly. Subscribe to the newsletter to receive updates directly.</p>
+                    
+                    <div class="bg-card border border-border p-8 rounded-3xl shadow-xl max-w-xl mx-auto mb-20 text-left">
+                        <h3 class="text-2xl font-bold mb-4">How to Use This Website:</h3>
+                        <ol class="space-y-4 text-muted-foreground text-lg list-decimal list-inside marker:text-primary marker:font-bold">
+                            <li>Visit the <a href="/blog" class="text-primary hover:underline">Guides page</a> and explore different domains.</li>
+                            <li>Use the <a href="/tools" class="text-emerald-500 hover:underline">tools</a> when you need help planning or generating ideas.</li>
+                            <li>Check the <a href="/resources" class="text-purple-500 hover:underline">resources</a> section for additional materials.</li>
+                            <li>Return regularly to discover new content and updates.</li>
+                        </ol>
+                    </div>
+
+                    <div class="pt-8 border-t border-border/50">
+                        <h3 class="text-3xl font-bold text-foreground mb-8">Continue Your Journey</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="/blog" class="px-6 py-3 bg-primary/10 text-primary border border-primary/20 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors">
+                                📚 Guides
+                            </a>
+                            <a href="/tools" class="px-6 py-3 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 rounded-xl font-bold hover:bg-emerald-600 hover:text-white transition-colors">
+                                🛠️ Tools
+                            </a>
+                            <a href="/resources" class="px-6 py-3 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-xl font-bold hover:bg-purple-600 hover:text-white transition-colors">
+                                💎 Resources
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+	</main>
+</BaseLayout>

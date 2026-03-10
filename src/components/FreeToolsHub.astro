@@ -1,0 +1,61 @@
+---
+const freeTools = [
+  { name: "Side Hustle Idea Generator", icon: "💡", link: "#" },
+  { name: "YouTube Earnings Calculator", icon: "💰", link: "#" },
+  { name: "Blog Title Generator", icon: "✍️", link: "#" },
+  { name: "Affiliate Profit Calculator", icon: "📊", link: "#" }
+];
+
+const paidTools = [
+  { name: "SEO Keyword Scraper Pro", icon: "🔎", link: "#", price: "$29" },
+  { name: "Automated Cold Emailer", icon: "📧", link: "#", price: "$49" },
+  { name: "Thumbnail Split-Tester", icon: "🖼️", link: "#", price: "$19" },
+  { name: "TikTok Trend Analyzer", icon: "📱", link: "#", price: "$39" }
+];
+---
+
+<section class="docs-site-container border-x py-24">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="text-center mb-16 animate-fade-in-up">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Free <span class="bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent">Tools</span>
+            </h2>
+            <p class="text-muted-foreground text-xl max-w-2xl mx-auto">
+                Calculate your earnings and generate ideas instantly.
+            </p>
+        </div>
+
+        <!-- Free Tools Section -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
+                <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">🎁</span>
+                Free Tools
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {freeTools.map((tool, i) => (
+                    <a href={tool.link} class={`group flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover:border-emerald-500/50 transition-all duration-300 hover:shadow-md hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 100}ms;`}>
+                        <div class="text-2xl bg-emerald-500/10 text-emerald-500 p-3 rounded-lg group-hover:bg-emerald-500/20 transition-colors">{tool.icon}</div>
+                        <span class="font-bold text-foreground">{tool.name}</span>
+                    </a>
+                ))}
+            </div>
+        </div>
+
+        <!-- Premium Tools Section -->
+        <div>
+            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
+                <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">💎</span>
+                Premium Tools
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {paidTools.map((tool, i) => (
+                    <a href={tool.link} class={`group relative overflow-hidden flex items-center gap-4 p-4 bg-gradient-to-br from-card to-primary/5 border border-primary/20 rounded-xl hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(79,70,229,0.15)] hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${(i * 100) + 200}ms;`}>
+                        <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg shadow-sm">{tool.price}</div>
+                        <div class="text-2xl bg-primary/10 text-primary p-3 rounded-lg group-hover:bg-primary/20 group-hover:scale-110 transition-all origin-center">{tool.icon}</div>
+                        <span class="font-bold text-foreground pr-4 relative z-10">{tool.name}</span>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

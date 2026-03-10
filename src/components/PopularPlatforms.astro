@@ -1,0 +1,131 @@
+---
+const platforms = [
+  {
+    name: "YouTube",
+    url: "https://studio.youtube.com",
+    icon: "▶️",
+    desc: "Best for content creation, ad revenue, and long-term sponsorships.",
+    color: "from-red-500/20 to-red-600/5",
+    textClass: "text-red-500",
+    shadowColor: "hover:shadow-red-500/20"
+  },
+  {
+    name: "Fiverr",
+    url: "https://www.fiverr.com",
+    icon: "💼",
+    desc: "Best for freelancers selling digital services and one-off gigs.",
+    color: "from-green-500/20 to-green-600/5",
+    textClass: "text-green-500",
+    shadowColor: "hover:shadow-green-500/20"
+  },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com",
+    icon: "🤝",
+    desc: "Premium freelancing platform for landing high-paying client contracts.",
+    color: "from-emerald-600/20 to-emerald-700/5",
+    textClass: "text-emerald-500",
+    shadowColor: "hover:shadow-emerald-500/20"
+  },
+  {
+    name: "Shopify",
+    url: "https://www.shopify.com",
+    icon: "🛍️",
+    desc: "The gold standard for e-commerce, dropshipping, and physical products.",
+    color: "from-lime-500/20 to-lime-600/5",
+    textClass: "text-lime-500",
+    shadowColor: "hover:shadow-lime-500/20"
+  },
+  {
+    name: "Amazon Associates",
+    url: "https://affiliate-program.amazon.com",
+    icon: "🛒",
+    desc: "Top choice for affiliate marketing through niche blogs and review sites.",
+    color: "from-orange-500/20 to-orange-600/5",
+    textClass: "text-orange-500",
+    shadowColor: "hover:shadow-orange-500/20"
+  },
+  {
+    name: "Twitter / X",
+    url: "https://x.com",
+    icon: "🐦",
+    desc: "Ideal for audience building, paid newsletters, and selling digital products.",
+    color: "from-sky-500/20 to-sky-600/5",
+    textClass: "text-sky-500",
+    shadowColor: "hover:shadow-sky-500/20"
+  },
+  {
+    name: "Gumroad",
+    url: "https://gumroad.com",
+    icon: "📦",
+    desc: "The easiest way to sell digital products, eBooks, and courses directly.",
+    color: "from-pink-500/20 to-pink-600/5",
+    textClass: "text-pink-500",
+    shadowColor: "hover:shadow-pink-500/20"
+  },
+  {
+    name: "Binance",
+    url: "https://www.binance.com",
+    icon: "📈",
+    desc: "Leading cryptocurrency exchange for trading and long-term holding.",
+    color: "from-yellow-500/20 to-yellow-600/5",
+    textClass: "text-yellow-500",
+    shadowColor: "hover:shadow-yellow-500/20"
+  },
+  {
+    name: "Notion",
+    url: "https://notion.so",
+    icon: "🗒️",
+    desc: "Build highly profitable premium templates and productivity systems.",
+    color: "from-neutral-500/20 to-neutral-600/5",
+    textClass: "text-neutral-500",
+    shadowColor: "hover:shadow-neutral-500/20"
+  }
+];
+---
+
+<section class="docs-site-container border-x py-24 relative overflow-hidden">
+    <!-- Background glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+    <div class="mx-auto max-w-7xl px-4 relative z-10">
+        <div class="text-center mb-16 animate-fade-in-up">
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+                Most Popular <span class="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">Platforms</span>
+            </h2>
+            <p class="text-muted-foreground text-xl max-w-2xl mx-auto">
+                Where the top earners are making their money. Pick a platform that aligns with your skills, click to visit, and start building.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+            {platforms.map((platform, i) => (
+                <a 
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class={`group block relative overflow-hidden rounded-2xl border border-border bg-card p-8 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${platform.shadowColor} animate-zoom-in cursor-pointer`}
+                    style={`animation-delay: ${i * 75}ms;`}
+                >
+                    <!-- Gradient Background on hover -->
+                    <div class={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${platform.color} transition-opacity duration-500 ease-out z-0`}></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class={`text-4xl ${platform.textClass} group-hover:scale-110 transition-transform duration-300`}>
+                                {platform.icon}
+                            </div>
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0 text-muted-foreground">
+                                ↗
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-foreground tracking-tight group-hover:text-primary transition-colors">{platform.name}</h3>
+                        <p class="text-muted-foreground leading-relaxed">
+                            {platform.desc}
+                        </p>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

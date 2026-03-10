@@ -1,0 +1,12 @@
+# Ads.txt file for HustleTeacher
+# Used to prevent ad fraud and unauthorized ad networks from selling ads on this site
+# Add your Google AdSense publisher ID after approval
+
+# Google AdSense - Add your ID here
+# google.com, [YOUR-PUBLISHER-ID], DIRECT, [VERIFICATION-CODE]
+
+# Once you get approved for Google AdSense, follow these steps:
+# 1. Go to your AdSense account
+# 2. Find your Publisher ID (ca-pub-xxxxx)
+# 3. Return to this file and add:
+#    google.com, ca-pub-xxxxx, DIRECT, [verification-code]
