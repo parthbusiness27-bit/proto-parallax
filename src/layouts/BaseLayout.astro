@@ -13,6 +13,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 import type { ImageMetadata } from 'astro';
 import '../styles/starwind.css';
 
@@ -56,5 +57,6 @@ const {
 		<Header />
 		<slot />
 		<Footer />
+		<SpeedInsights />
 	</body>
 </html>
