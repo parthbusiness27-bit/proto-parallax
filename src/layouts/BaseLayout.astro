@@ -10,6 +10,7 @@
  *     <main>...page content...</main>
  *   </BaseLayout>
  */
+import Analytics from '@vercel/analytics/astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -49,6 +50,7 @@ const {
 			publishedDate={publishedDate}
 			updatedDate={updatedDate}
 		/>
+		<Analytics />
 		<!-- Named slot for per-page head injections (SEO schemas, preloads, etc.) -->
 		<slot name="head" />
 	</head>
