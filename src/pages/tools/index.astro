@@ -13,57 +13,59 @@ const premiumTools = allTools.filter(tool => tool.data.isPremium);
 ---
 
 <BaseLayout title={`Best Side Hustle Tools | ${SITE_TITLE}`} description="Discover the best free and premium tools to grow your online income, boost productivity, and automate your side hustle.">
-	<main class="flex-grow pt-24 pb-20 relative overflow-hidden">
-		<!-- Global Animated Background -->
+	<main class="flex-grow pt-24 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Global Mesh Gradients -->
 		<div class="absolute inset-0 pointer-events-none -z-10">
-			<div class="absolute top-[10%] left-[5%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px] animate-pulse"></div>
-			<div class="absolute bottom-[20%] right-[5%] w-[30%] h-[40%] bg-emerald-500/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50" style="animation-duration: 8s;"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-emerald-500/15 rounded-full blur-[140px] animate-pulse opacity-40" style="animation-duration: 10s;"></div>
+			<div class="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-purple-500/10 rounded-full blur-[120px] animate-pulse" style="animation-duration: 12s;"></div>
 		</div>
 
         <div class="docs-site-container relative z-10">
                              
 			<!-- Header Section -->
-			<div class="mb-20 text-center md:text-left">
-				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-[0_0_15px_rgba(79,70,229,0.2)] animate-fade-in-down">
-					🛠️ Productivity Suite
+			<div class="mb-24 text-center">
+				<div class="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-emerald-500/10 text-primary-400 px-6 py-2.5 rounded-full text-xs font-black mb-8 border border-white/10 shadow-[0_0_20px_rgba(79,70,229,0.15)] animate-fade-in-down uppercase tracking-tighter">
+					<span class="flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
+					{allTools.length} Tools Available
 				</div>
-				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 animate-fade-in-up uppercase tracking-tighter">
-					Creator <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Toolkit</span>
+				<h1 class="text-5xl md:text-8xl font-black mb-8 animate-fade-in-up uppercase tracking-tighter leading-[0.9]">
+					Creator <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-emerald-500">Toolkit</span>
 				</h1>
-				<p class="text-xl text-muted-foreground max-w-2xl animate-fade-in-up mb-12" style="animation-delay: 150ms;">
-					The ultimate collection of calculators, generators, and side hustle engines built to help you scale your digital empire.
+				<p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto animate-fade-in-up mb-14 font-medium" style="animation-delay: 150ms;">
+					Elite generators, smarter calculators, and the roadmap to your first <span class="text-white font-bold">$10,000</span> online.
 				</p>
 
-				<!-- Search Bar with Glow -->
-				<div class="relative max-w-2xl mx-auto md:mx-0 animate-fade-in-up group" style="animation-delay: 200ms;">
-					<div class="absolute -inset-1 bg-gradient-to-r from-primary to-emerald-500 rounded-2xl blur opacity-25 group-focus-within:opacity-50 transition-opacity duration-500"></div>
-					<div class="relative flex items-center bg-card/80 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-						<div class="pl-6 flex items-center pointer-events-none">
-							<span class="text-2xl">🔍</span>
-						</div>
+				<!-- Ultra Premium Search Bar -->
+				<div class="relative max-w-3xl mx-auto animate-fade-in-up group" style="animation-delay: 200ms;">
+					<div class="absolute -inset-2 bg-gradient-to-r from-primary via-emerald-500 to-purple-600 rounded-[2.5rem] blur-2xl opacity-10 group-focus-within:opacity-30 transition-opacity duration-1000"></div>
+					<div class="relative flex items-center bg-black/60 backdrop-blur-3xl border border-white/10 rounded-[2rem] shadow-2xl overflow-hidden p-1">
+						<div class="pl-8 text-3xl">🔍</div>
 						<input 
 							id="toolSearch" 
 							type="text" 
-							placeholder="Search tools (e.g. money, youtube, blog)..." 
-							class="w-full bg-transparent pl-4 pr-6 py-5 text-xl outline-none text-foreground placeholder:text-muted-foreground/50 transition-all font-medium"
+							placeholder="What are you building today?" 
+							class="w-full bg-transparent pl-4 pr-10 py-7 text-2xl outline-none text-white placeholder:text-gray-600 transition-all font-bold tracking-tight"
 						/>
 					</div>
 				</div>
 			</div>
 
-			<!-- Free Tools Section -->
-			<div id="freeSection" class={`mb-24 animate-fade-in-up ${freeTools.length === 0 ? 'hidden' : ''}`} style="animation-delay: 300ms;">
-				<div class="flex items-center gap-4 mb-10">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
-					<h2 class="text-2xl font-black text-foreground flex items-center gap-3 px-4 uppercase tracking-widest whitespace-nowrap">
-						<span class="text-3xl">🎁</span>
-						Free Tools
+			<!-- Sections with Section Dividers -->
+			<div id="freeSection" class={`mb-32 animate-fade-in-up ${freeTools.length === 0 ? 'hidden' : ''}`} style="animation-delay: 300ms;">
+				<div class="flex flex-col items-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-black text-white flex items-center gap-4 uppercase tracking-tighter mb-4">
+						<span class="text-4xl">🚀</span>
+						Ignition Stack
 					</h2>
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
+					<div class="h-1 w-24 bg-gradient-to-r from-primary to-emerald-500 rounded-full"></div>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 tools-grid">
-					{freeTools.map(tool => (
-						<div class="tool-card-wrapper transition-all duration-500" data-title={tool.data.title.toLowerCase()} data-desc={tool.data.description.toLowerCase()}>
+					{freeTools.map((tool, index) => (
+						<div class="tool-card-wrapper transition-all duration-700" 
+							 style={`transition-delay: ${index * 100}ms;`}
+							 data-title={tool.data.title.toLowerCase()} 
+							 data-desc={tool.data.description.toLowerCase()}>
 							<ToolCard 
 								title={tool.data.title}
 								description={tool.data.description}
@@ -76,19 +78,20 @@ const premiumTools = allTools.filter(tool => tool.data.isPremium);
 				</div>
 			</div>
 
-			<!-- Premium Tools Section -->
 			<div id="premiumSection" class={`animate-fade-in-up ${premiumTools.length === 0 ? 'hidden' : ''}`} style="animation-delay: 450ms;">
-				<div class="flex items-center gap-4 mb-10">
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-					<h2 class="text-2xl font-black text-primary flex items-center gap-3 px-4 uppercase tracking-widest whitespace-nowrap">
-						<span class="text-3xl text-primary">💎</span>
-						Premium Software
+				<div class="flex flex-col items-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-black text-primary flex items-center gap-4 uppercase tracking-tighter mb-4">
+						<span class="text-4xl">💎</span>
+						Growth Engine
 					</h2>
-					<div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+					<div class="h-1 w-24 bg-gradient-to-r from-primary to-purple-600 rounded-full"></div>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 tools-grid">
-					{premiumTools.map(tool => (
-						<div class="tool-card-wrapper transition-all duration-500" data-title={tool.data.title.toLowerCase()} data-desc={tool.data.description.toLowerCase()}>
+					{premiumTools.map((tool, index) => (
+						<div class="tool-card-wrapper transition-all duration-700" 
+							 style={`transition-delay: ${index * 100 + 300}ms;`}
+							 data-title={tool.data.title.toLowerCase()} 
+							 data-desc={tool.data.description.toLowerCase()}>
 							<ToolCard 
 								title={tool.data.title}
 								description={tool.data.description}
@@ -102,10 +105,11 @@ const premiumTools = allTools.filter(tool => tool.data.isPremium);
 				</div>
 			</div>
 
-			<div id="noResults" class="hidden py-32 text-center border border-dashed border-primary/20 rounded-3xl bg-primary/5 backdrop-blur-sm">
-				<div class="text-6xl mb-6 opacity-30">🕵️‍♂️</div>
-				<p class="text-muted-foreground text-2xl font-bold">Nothing matches your search.</p>
-				<button onclick="document.getElementById('toolSearch').value=''; document.getElementById('toolSearch').dispatchEvent(new Event('input'))" class="mt-6 text-primary hover:underline font-bold text-lg">Clear search & show all tools</button>
+			<div id="noResults" class="hidden py-40 text-center border border-dashed border-white/10 rounded-[3rem] bg-white/[0.02] backdrop-blur-2xl">
+				<div class="text-8xl mb-10 animate-bounce">🔭</div>
+				<h3 class="text-4xl font-black text-white mb-4 uppercase tracking-tighter">Zero Discovery</h3>
+				<p class="text-gray-400 text-xl font-medium max-w-sm mx-auto mb-10">We couldn't find any tools matching your specific search criteria.</p>
+				<button onclick="document.getElementById('toolSearch').value=''; document.getElementById('toolSearch').dispatchEvent(new Event('input'))" class="bg-white text-black font-black px-10 py-5 rounded-2xl hover:scale-110 active:scale-95 transition-all shadow-2xl">Return to Library</button>
 			</div>
 
 			{allTools.length === 0 && (
@@ -113,47 +117,53 @@ const premiumTools = allTools.filter(tool => tool.data.isPremium);
 					<p class="text-muted-foreground">Tools are currently being updated. Check back soon!</p>
 				</div>
 			)}
-
 		</div>
-	</main>v>
-	</main>
-</BaseLayout>
 
-<script is:inline>
-	document.addEventListener('DOMContentLoaded', () => {
-		const searchInput = document.getElementById('toolSearch');
-		const cardWrappers = document.querySelectorAll('.tool-card-wrapper');
-		const freeSection = document.getElementById('freeSection');
-		const premiumSection = document.getElementById('premiumSection');
-		const noResults = document.getElementById('noResults');
+		<script is:inline>
+			(function() {
+				const init = () => {
+					const searchInput = document.getElementById('toolSearch');
+					const cardWrappers = document.querySelectorAll('.tool-card-wrapper');
+					const freeSection = document.getElementById('freeSection');
+					const premiumSection = document.getElementById('premiumSection');
+					const noResults = document.getElementById('noResults');
 
-		searchInput?.addEventListener('input', (e) => {
-			const query = e.target.value.toLowerCase();
-			let visibleFree = 0;
-			let visiblePremium = 0;
+					if (!searchInput) return;
 
-			cardWrappers.forEach(wrapper => {
-				const title = wrapper.getAttribute('data-title');
-				const desc = wrapper.getAttribute('data-desc');
-				const isVisible = title.includes(query) || desc.includes(query);
-				
-				wrapper.classList.toggle('hidden', !isVisible);
-				
-				if (isVisible) {
-					if (wrapper.closest('#freeSection')) visibleFree++;
-					if (wrapper.closest('#premiumSection')) visiblePremium++;
+					searchInput.addEventListener('input', (e) => {
+						const query = e.target.value.toLowerCase();
+						let visibleFree = 0;
+						let visiblePremium = 0;
+
+						cardWrappers.forEach(wrapper => {
+							const title = wrapper.getAttribute('data-title');
+							const desc = wrapper.getAttribute('data-desc');
+							const isVisible = title.includes(query) || desc.includes(query);
+							
+							wrapper.style.display = isVisible ? 'block' : 'none';
+							
+							if (isVisible) {
+								if (wrapper.closest('#freeSection')) visibleFree++;
+								if (wrapper.closest('#premiumSection')) visiblePremium++;
+							}
+						});
+
+						if (freeSection) freeSection.style.display = (visibleFree === 0 && query !== '') ? 'none' : 'block';
+						if (premiumSection) premiumSection.style.display = (visiblePremium === 0 && query !== '') ? 'none' : 'block';
+						
+						if (noResults) {
+							const totalVisible = visibleFree + visiblePremium;
+							noResults.classList.toggle('hidden', totalVisible > 0 || query === '');
+						}
+					});
+				};
+
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', init);
+				} else {
+					init();
 				}
-			});
-
-			// Hide/show headers if no tools are visible in that category
-			if (freeSection) freeSection.classList.toggle('hidden', visibleFree === 0 && query !== '');
-			if (premiumSection) premiumSection.classList.toggle('hidden', visiblePremium === 0 && query !== '');
-			
-			// Global no results message
-			if (noResults) {
-				const totalVisible = visibleFree + visiblePremium;
-				noResults.classList.toggle('hidden', totalVisible > 0 || query === '');
-			}
-		});
-	});
-</script>
+			})();
+		</script>
+	</main>
+</BaseLayout>
