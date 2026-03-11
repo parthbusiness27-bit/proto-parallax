@@ -4,14 +4,7 @@
   "installCommand": "npm install",
   "framework": "astro",
   "outputDirectory": "dist",
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "hustle-teacher.vercel.app" }],
-      "destination": "https://hustleteacher.vercel.app/$1",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/(.*)",
