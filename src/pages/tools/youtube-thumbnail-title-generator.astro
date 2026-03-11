@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+
+const title = "YouTube Thumbnail Title Generator";
+const description = "Generate high-CTR text ideas for your thumbnails that stop the scroll.";
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-emerald-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-pink-500/20 uppercase tracking-widest shadow-[0_0_20px_rgba(236,72,153,0.1)]">
+					🖼️ Growth Hacker
+				</div>
+				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+					Thumbnail <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Title</span>
+				</h1>
+				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
+					Thumbnails are the entrance to your video. Generate high-impact, short, and punchy text ideas that increase your click-through rate (CTR).
+				</p>
+			</div>
+
+			<!-- Tool UI -->
+			<div class="space-y-8">
+				<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+					<div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					
+					<div class="relative space-y-8">
+						<div class="flex flex-col md:flex-row gap-4">
+							<div class="flex-1 relative">
+								<input 
+									type="text" 
+									id="topic" 
+									placeholder="Enter video topic (e.g. Passive Income, Morning Routine)" 
+									class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-xl text-white outline-none focus:border-pink-500/50 transition-all font-bold"
+								/>
+							</div>
+							<button id="generateBtn" class="bg-white text-black font-black px-10 py-6 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl uppercase tracking-tighter">
+								Generate 
+							</button>
+						</div>
+
+						<div id="resultsArea" class="hidden animate-fade-in grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+							<!-- Titles injected here -->
+						</div>
+
+                        <div class="bg-pink-500/5 rounded-3xl p-8 border border-pink-500/20 text-center">
+                            <h4 class="text-pink-400 font-black text-sm uppercase tracking-widest mb-2">💡 Thumbnail Tip</h4>
+                            <p class="text-gray-400 font-medium leading-relaxed">
+                                Use high-contrast colors for these titles. Keep text to under 4 words for maximum impact on mobile screens.
+                            </p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const topicInput = document.getElementById('topic');
+		const generateBtn = document.getElementById('generateBtn');
+		const resultsArea = document.getElementById('resultsArea');
+
+		const strategies = [
+			"THE {topic} SECRET", "STOP DOING {topic}", "REAL {topic} RESULTS",
+			"{topic} IS DEAD?", "I TRIED {topic}", "FIX YOUR {topic}",
+			"7 BEST {topic}", "{topic} HACK!", "EASY {topic}",
+			"SCARY {topic}", "WHY {topic}?", "UNBELIEVABLE {topic}"
+		];
+
+		generateBtn.addEventListener('click', () => {
+			const topic = topicInput.value.trim().toUpperCase();
+			if (!topic) return;
+
+			generateBtn.textContent = 'Generating...';
+			generateBtn.disabled = true;
+
+			setTimeout(() => {
+				resultsArea.innerHTML = '';
+				
+				const results = strategies.sort(() => 0.5 - Math.random()).slice(0, 9);
+				
+				results.forEach(text => {
+					const title = text.replace('{topic}', topic);
+					const div = document.createElement('div');
+					div.className = 'group/card relative bg-black/40 border border-white/10 p-6 rounded-[2rem] hover:border-pink-500/40 transition-all cursor-pointer text-center flex flex-col items-center justify-center min-h-[140px]';
+					div.innerHTML = `
+						<div class="text-2xl font-black text-white uppercase tracking-tighter leading-tight mb-2 group-hover/card:scale-110 transition-transform">${title}</div>
+						<span class="text-[10px] font-black text-pink-400 opacity-0 group-hover/card:opacity-100 transition-opacity uppercase tracking-widest">Copy Text</span>
+					`;
+					div.onclick = () => {
+						navigator.clipboard.writeText(title);
+						const span = div.querySelector('span:last-child');
+						span.textContent = 'Copied!';
+						setTimeout(() => span.textContent = 'Copy Text', 2000);
+					};
+					resultsArea.appendChild(div);
+				});
+
+				resultsArea.classList.remove('hidden');
+				generateBtn.textContent = 'Generate';
+				generateBtn.disabled = false;
+			}, 600);
+		});
+	});
+</script>

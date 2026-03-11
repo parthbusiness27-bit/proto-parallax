@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+
+const title = "Instagram Bio Generator";
+const description = "Create optimized, professional, and personality-rich Instagram bios.";
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-emerald-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-white/10 uppercase tracking-widest shadow-[0_0_20px_rgba(236,72,153,0.1)]">
+					📸 Profile Optimizer
+				</div>
+				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+					Insta <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400">Bio</span>
+				</h1>
+				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
+					First impressions matter. Generate bios that tell your story, showcase your value, and drive followers to your links.
+				</p>
+			</div>
+
+			<!-- Tool UI -->
+			<div class="space-y-8">
+				<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+					<div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					
+					<div class="relative space-y-8">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div class="space-y-4">
+								<label class="text-[10px] font-black text-gray-500 uppercase tracking-widest block px-2">What do you do?</label>
+								<input 
+									type="text" 
+									id="niche" 
+									placeholder="e.g. Graphic Designer, Chef, Coach" 
+									class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-pink-500/50 transition-all font-bold"
+								/>
+							</div>
+							<div class="space-y-4">
+								<label class="text-[10px] font-black text-gray-500 uppercase tracking-widest block px-2">Call to Action</label>
+								<input 
+									type="text" 
+									id="cta" 
+									placeholder="e.g. Shop my link, Join the club" 
+									class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-pink-500/50 transition-all font-bold"
+								/>
+							</div>
+						</div>
+						
+						<button id="generateBtn" class="w-full bg-white text-black font-black py-6 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl uppercase tracking-tighter">
+							Generate Bio Ideas
+						</button>
+
+						<div id="resultsArea" class="hidden animate-fade-in space-y-4">
+							<!-- Bios injected here -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const nicheInput = document.getElementById('niche');
+		const ctaInput = document.getElementById('cta');
+		const generateBtn = document.getElementById('generateBtn');
+		const resultsArea = document.getElementById('resultsArea');
+
+		const emojis = ['✨', '🚀', '📈', '💡', '🔥', '📍', '💎', '🎨', '💼', '🌟'];
+
+		generateBtn.addEventListener('click', () => {
+			const niche = nicheInput.value.trim();
+			const cta = ctaInput.value.trim() || 'Check it out ⬇️';
+			if (!niche) return;
+
+			generateBtn.textContent = 'Designing Profiles...';
+			generateBtn.disabled = true;
+
+			setTimeout(() => {
+				resultsArea.innerHTML = '';
+				
+				const bios = [
+					`${emojis[0]} ${niche}\n${emojis[1]} Helping you grow\n${emojis[2]} Results oriented\n${cta}`,
+					`Professional ${niche} ${emojis[7]}\nBuilding the future ${emojis[0]}\nStay creative ${emojis[9]}\n${cta}`,
+					`${niche} Expert ${emojis[8]}\nBased in the ☁️\nPassion for innovation ${emojis[3]}\nJoin us: ${cta}`,
+					`${emojis[4]} Passionate about ${niche}\nEmpowering others ${emojis[1]}\nLevel up your life ${emojis[6]}\n${cta}`
+				];
+				
+				bios.forEach(bio => {
+					const div = document.createElement('div');
+					div.className = 'group relative bg-black/40 border border-white/10 p-8 rounded-[2rem] hover:border-pink-500/40 transition-all cursor-pointer';
+                    div.innerHTML = `
+                        <pre class="font-sans text-white text-lg font-bold whitespace-pre-wrap mb-4">${bio}</pre>
+                        <div class="flex justify-end">
+                            <span class="text-[10px] font-black text-pink-400 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Copy Bio</span>
+                        </div>
+                    `;
+					div.onclick = () => {
+						navigator.clipboard.writeText(bio);
+						const span = div.querySelector('span');
+						span.textContent = 'Copied!';
+						setTimeout(() => span.textContent = 'Copy Bio', 2000);
+					};
+					resultsArea.appendChild(div);
+				});
+
+				resultsArea.classList.remove('hidden');
+				generateBtn.textContent = 'Generate Bio Ideas';
+				generateBtn.disabled = false;
+			}, 800);
+		});
+	});
+</script>

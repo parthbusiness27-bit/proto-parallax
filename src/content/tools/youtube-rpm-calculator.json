@@ -1,0 +1,7 @@
+{
+  "title": "YouTube RPM Calculator",
+  "description": "Calculate your actual revenue per 1000 views (RPM) after YouTube's share. The most accurate metric for tracking your channel's profitability.",
+  "icon": "📈",
+  "url": "/tools/youtube-rpm-calculator",
+  "isPremium": false
+}

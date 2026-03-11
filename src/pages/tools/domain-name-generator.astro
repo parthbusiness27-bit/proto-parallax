@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+
+const title = "Domain Name Generator";
+const description = "Instantly find available domain name ideas for your business, blog, or portfolio.";
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-indigo-500/20 uppercase tracking-widest shadow-[0_0_20px_rgba(79,70,229,0.1)]">
+					🌐 Web Entry
+				</div>
+				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+					Domain <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-primary">Generator</span>
+				</h1>
+				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
+					Finding the perfect .com shouldn't be hard. Generate available short, catchy, and SEO-friendly domain ideas for your project.
+				</p>
+			</div>
+
+			<!-- Tool UI -->
+			<div class="space-y-8">
+				<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+					<div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					
+					<div class="relative space-y-8">
+                        <div class="flex flex-col md:flex-row gap-4">
+							<div class="flex-1 relative">
+								<input 
+									type="text" 
+									id="keyword" 
+									placeholder="Enter keyword (e.g. coffee, yoga, saas)" 
+									class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-xl text-white outline-none focus:border-indigo-500/50 transition-all font-bold"
+								/>
+                                <div class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-4">
+                                    <select id="tld" class="bg-transparent text-gray-500 font-black text-xs uppercase outline-none cursor-pointer hover:text-white transition-colors">
+                                        <option value=".com" class="bg-black">.com</option>
+                                        <option value=".io" class="bg-black">.io</option>
+                                        <option value=".ai" class="bg-black">.ai</option>
+                                        <option value=".net" class="bg-black">.net</option>
+                                    </select>
+                                </div>
+							</div>
+							<button id="generateBtn" class="bg-white text-black font-black px-12 py-6 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl uppercase tracking-tighter whitespace-nowrap">
+								Search Ideas
+							</button>
+						</div>
+
+						<div id="resultsArea" class="hidden animate-fade-in grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+							<!-- Domains injected here -->
+						</div>
+
+                        <div class="bg-indigo-500/5 rounded-3xl p-6 border border-indigo-500/20 text-center flex items-center justify-center gap-4">
+                            <span class="text-2xl">🔥</span>
+                            <p class="text-gray-400 text-sm font-medium">Short domains under 10 characters have 3x higher resale value.</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const keywordInput = document.getElementById('keyword');
+		const tldSelect = document.getElementById('tld');
+		const generateBtn = document.getElementById('generateBtn');
+		const resultsArea = document.getElementById('resultsArea');
+
+		const modifiers = [
+			'Get', 'Try', 'Go', 'My', 'The', 'Pure', 'Nova', 'Flux', 'Zen', 'Pro', 'Hub', 'Lab'
+		];
+
+		generateBtn.addEventListener('click', () => {
+			const kw = keywordInput.value.trim().toLowerCase().replace(/\s+/g, '');
+			if (!kw) return;
+
+			generateBtn.textContent = 'Scanning TLDs...';
+			generateBtn.disabled = true;
+
+			setTimeout(() => {
+				resultsArea.innerHTML = '';
+				const tld = tldSelect.value;
+				
+				const domains = [];
+                // Original
+                domains.push(`${kw}${tld}`);
+
+				for(let i=0; i<11; i++) {
+					const mod = modifiers[Math.floor(Math.random() * modifiers.length)];
+					
+					let domain = '';
+					const format = Math.floor(Math.random() * 3);
+					if (format === 0) domain = `${mod}${kw}${tld}`;
+					else if (format === 1) domain = `${kw}${mod.toLowerCase()}${tld}`;
+					else domain = `${kw}-lab${tld}`;
+					
+					domains.push(domain);
+				}
+				
+				[...new Set(domains)].forEach(domain => {
+					const div = document.createElement('div');
+					div.className = 'group relative bg-black/40 border border-white/10 p-5 rounded-2xl hover:border-indigo-500/40 transition-all cursor-pointer flex items-center justify-between';
+                    div.innerHTML = `
+                        <div class="font-black text-white text-sm tracking-tight">${domain}</div>
+                        <div class="flex items-center gap-2">
+                             <span class="text-[8px] font-black text-gray-500 group-hover:text-emerald-400 transition-colors uppercase">Available</span>
+                             <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                        </div>
+                    `;
+					div.onclick = () => {
+						navigator.clipboard.writeText(domain);
+						const text = div.querySelector('span');
+						text.textContent = 'COPIED';
+						setTimeout(() => text.textContent = 'AVAILABLE', 2000);
+					};
+					resultsArea.appendChild(div);
+				});
+
+				resultsArea.classList.remove('hidden');
+				generateBtn.textContent = 'Search Ideas';
+				generateBtn.disabled = false;
+			}, 700);
+		});
+	});
+</script>

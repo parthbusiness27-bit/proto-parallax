@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+
+const title = "AdSense Revenue Calculator";
+const description = "Estimate your website's ad revenue potential based on page views, CTR, and CPC.";
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-amber-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-amber-500/20 uppercase tracking-widest shadow-[0_0_20px_rgba(245,158,11,0.1)]">
+					💸 Ad Revenue
+				</div>
+				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+					AdSense <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-primary">Earnings</span>
+				</h1>
+				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
+					Turn your traffic into data. Estimate how much your blog or website can earn through Google AdSense based on key performance metrics.
+				</p>
+			</div>
+
+			<!-- Tool UI -->
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+				<!-- Left Column: Inputs -->
+				<div class="lg:col-span-7 space-y-6">
+					<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl relative overflow-hidden group">
+						<div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+						
+						<div class="relative space-y-10">
+							<!-- Page Views -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label class="text-xs font-black text-gray-400 uppercase tracking-widest">Monthly Page Views</label>
+									<span class="text-3xl font-black text-white" id="views-display">10,000</span>
+								</div>
+								<input type="range" id="views-slider" min="1000" max="1000000" step="1000" value="10000" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-amber-500" />
+							</div>
+
+							<!-- Click Through Rate (CTR) -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label class="text-xs font-black text-gray-400 uppercase tracking-widest">Ad CTR (%)</label>
+									<span class="text-3xl font-black text-amber-400" id="ctr-display">1.5%</span>
+								</div>
+								<input type="range" id="ctr-slider" min="0.1" max="10" step="0.1" value="1.5" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-amber-500" />
+							</div>
+
+							<!-- Cost Per Click (CPC) -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label class="text-xs font-black text-gray-400 uppercase tracking-widest">Avg. CPC ($)</label>
+									<span class="text-3xl font-black text-white" id="cpc-display">$0.50</span>
+								</div>
+								<input type="range" id="cpc-slider" min="0.01" max="5" step="0.01" value="0.5" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-white" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Results -->
+				<div class="lg:col-span-5">
+					<div class="bg-gradient-to-br from-amber-500/10 to-primary/10 backdrop-blur-3xl border border-amber-500/20 rounded-[2.5rem] p-10 shadow-2xl sticky top-32 text-center group overflow-hidden">
+						<div class="absolute -right-10 -top-10 text-[10rem] opacity-5 group-hover:scale-110 transition-transform duration-700">💸</div>
+						
+						<div class="relative space-y-8">
+							<div>
+								<span class="text-xs font-black uppercase tracking-widest text-amber-400 mb-2 block">Monthly Ad Revenue</span>
+								<div class="text-6xl md:text-7xl font-black text-white" id="revenue-result">$75.00</div>
+							</div>
+
+							<div class="grid grid-cols-1 gap-4">
+								<div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+									<span class="text-[10px] font-black uppercase tracking-tighter text-gray-400 mb-2 block">Yearly Potential</span>
+									<div class="text-3xl font-black text-emerald-400" id="yearly-result">$900.00</div>
+								</div>
+							</div>
+
+							<div class="bg-amber-500/5 rounded-2xl p-4 border border-amber-500/20 text-left">
+                                <p class="text-[10px] font-bold text-gray-400 leading-relaxed uppercase tracking-widest">
+                                    AdSense revenue varies by niche. Finance, Tech, and Real Estate usually have higher CPCs.
+                                </p>
+                            </div>
+
+							<button class="w-full bg-amber-500 text-white font-black py-5 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl uppercase tracking-tighter">
+								Boost Site CPC
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	/* Custom Range styling */
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 24px;
+		height: 24px;
+		background: #ffffff;
+		border: 4px solid #f59e0b;
+		border-radius: 50%;
+		cursor: pointer;
+		box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+		transition: transform 0.2s;
+	}
+
+	input[type='range']::-webkit-slider-thumb:hover {
+		transform: scale(1.15);
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const viewsSlider = document.getElementById('views-slider');
+		const viewsDisplay = document.getElementById('views-display');
+
+		const ctrSlider = document.getElementById('ctr-slider');
+		const ctrDisplay = document.getElementById('ctr-display');
+
+		const cpcSlider = document.getElementById('cpc-slider');
+		const cpcDisplay = document.getElementById('cpc-display');
+
+		const revenueRes = document.getElementById('revenue-result');
+		const yearlyRes = document.getElementById('yearly-result');
+
+		function updateCalculations() {
+			const views = parseFloat(viewsSlider.value);
+			const ctr = parseFloat(ctrSlider.value) / 100;
+			const cpc = parseFloat(cpcSlider.value);
+
+			// Sync displays
+			viewsDisplay.textContent = views.toLocaleString();
+			ctrDisplay.textContent = (ctr * 100).toFixed(1) + '%';
+			cpcDisplay.textContent = '$' + cpc.toFixed(2);
+
+			// Logic: Views * CTR * CPC
+			const monthly = views * ctr * cpc;
+			const yearly = monthly * 12;
+
+			// Update Results
+			revenueRes.textContent = '$' + monthly.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+			yearlyRes.textContent = '$' + yearly.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+		}
+
+		// Input events
+		viewsSlider.addEventListener('input', updateCalculations);
+		ctrSlider.addEventListener('input', updateCalculations);
+		cpcSlider.addEventListener('input', updateCalculations);
+
+		// Initial Run
+		updateCalculations();
+	});
+</script>

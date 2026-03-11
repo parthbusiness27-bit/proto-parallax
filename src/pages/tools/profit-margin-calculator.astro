@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+
+const title = "Profit Margin Calculator";
+const description = "Calculate your net profit margins, cost of goods, and markup to ensure your business remains profitable.";
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-emerald-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-emerald-500/20 uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+					💹 Business Health
+				</div>
+				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+					Profit <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-primary">Margin</span>
+				</h1>
+				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
+					Smarter pricing starts here. Calculate your profit percentage, total profit, and markup to ensure your products generate the revenue you deserve.
+				</p>
+			</div>
+
+			<!-- Tool UI -->
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+				<!-- Left Column: Inputs -->
+				<div class="lg:col-span-6 space-y-6">
+					<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl relative overflow-hidden group">
+						<div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+						
+						<div class="relative space-y-8">
+							<div class="space-y-4">
+								<label class="text-xs font-black text-gray-400 uppercase tracking-widest block px-2">Cost of Item ($)</label>
+								<div class="relative">
+									<span class="absolute left-6 top-1/2 -translate-y-1/2 text-2xl font-black text-gray-500">$</span>
+									<input 
+										type="number" 
+										id="cost" 
+										value="50" 
+										class="w-full bg-white/5 border border-white/10 rounded-2xl pl-12 pr-8 py-6 text-3xl font-black text-white outline-none focus:border-emerald-500/50 transition-all"
+									/>
+								</div>
+							</div>
+
+							<div class="space-y-4">
+								<label class="text-xs font-black text-gray-400 uppercase tracking-widest block px-2">Selling Price ($)</label>
+								<div class="relative">
+									<span class="absolute left-6 top-1/2 -translate-y-1/2 text-2xl font-black text-gray-500">$</span>
+									<input 
+										type="number" 
+										id="price" 
+										value="100" 
+										class="w-full bg-white/5 border border-white/10 rounded-2xl pl-12 pr-8 py-6 text-3xl font-black text-white outline-none focus:border-emerald-500/50 transition-all"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Results -->
+				<div class="lg:col-span-6">
+					<div class="bg-gradient-to-br from-emerald-500/10 to-primary/10 backdrop-blur-3xl border border-emerald-500/20 rounded-[2.5rem] p-10 shadow-2xl sticky top-32 text-center group overflow-hidden">
+						<div class="absolute -right-10 -top-10 text-[10rem] opacity-5 group-hover:scale-110 transition-transform duration-700">💹</div>
+						
+						<div class="relative space-y-8">
+							<div class="grid grid-cols-1 gap-6">
+								<div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+									<span class="text-xs font-black uppercase tracking-widest text-emerald-400 mb-2 block">Net Profit Margin</span>
+									<div class="text-6xl md:text-7xl font-black text-white" id="margin-result">50%</div>
+								</div>
+								
+								<div class="grid grid-cols-2 gap-4">
+									<div class="bg-black/40 rounded-2xl p-6 border border-white/5">
+										<span class="text-[10px] font-black uppercase tracking-tighter text-gray-400 mb-2 block">Profit Amount</span>
+										<div class="text-3xl font-black text-white" id="profit-result">$50.00</div>
+									</div>
+									<div class="bg-black/40 rounded-2xl p-6 border border-white/5">
+										<span class="text-[10px] font-black uppercase tracking-tighter text-gray-400 mb-2 block">Markup</span>
+										<div class="text-3xl font-black text-primary-400" id="markup-result">100%</div>
+									</div>
+								</div>
+							</div>
+
+							<button class="w-full bg-emerald-500 text-white font-black py-5 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl uppercase tracking-tighter">
+								Analyze Pricing Strategy
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const costInput = document.getElementById('cost');
+		const priceInput = document.getElementById('price');
+
+		const marginRes = document.getElementById('margin-result');
+		const profitRes = document.getElementById('profit-result');
+		const markupRes = document.getElementById('markup-result');
+
+		function updateCalculations() {
+			const cost = parseFloat(costInput.value) || 0;
+			const price = parseFloat(priceInput.value) || 0;
+
+			// Logic
+			const profit = price - cost;
+			const margin = price > 0 ? (profit / price) * 100 : 0;
+			const markup = cost > 0 ? (profit / cost) * 100 : 0;
+
+			// Update Results
+			marginRes.textContent = margin.toFixed(1) + '%';
+			profitRes.textContent = '$' + profit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+			markupRes.textContent = markup.toFixed(1) + '%';
+		}
+
+		// Input events
+		costInput.addEventListener('input', updateCalculations);
+		priceInput.addEventListener('input', updateCalculations);
+
+		// Initial Run
+		updateCalculations();
+	});
+</script>
