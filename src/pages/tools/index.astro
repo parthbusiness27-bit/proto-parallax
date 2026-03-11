@@ -8,12 +8,13 @@ const allTools = await getCollection('tools');
 
 // Categorization Logic
 const categories = [
-    { id: 'youtube', name: 'YouTube Tools', icon: '📺' },
-    { id: 'social', name: 'Social Media Tools', icon: '📱' },
-    { id: 'business', name: 'Business & Finance', icon: '💹' },
-    { id: 'branding', name: 'Startup & Branding', icon: '🚀' },
-	{ id: 'writing', name: 'Writing & Content', icon: '✍️' },
-    { id: 'seo', name: 'SEO & Keyword', icon: '📈' }
+    { id: 'bio', name: 'Bio Generators', icon: '📸' },
+    { id: 'description', name: 'Description Generators', icon: '📝' },
+    { id: 'name', name: 'Name Generators', icon: '🚀' },
+    { id: 'idea', name: 'Idea Generators', icon: '💡' },
+    { id: 'revenue', name: 'Revenue Generators', icon: '💹' },
+	{ id: 'writing', name: 'Writing Generators', icon: '✍️' },
+    { id: 'seo', name: 'SEO Generators', icon: '📈' }
 ];
 
 const groupedTools = categories.map(cat => ({
