@@ -5,6 +5,8 @@ import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE, SITE_AUTHOR } from '../consts';
+import Analytics from '@vercel/analytics/astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
 	title: string;
@@ -26,8 +28,8 @@ const {
 	updatedDate,
 } = Astro.props;
 
-const gaId = import.meta.env.PUBLIC_GA_ID;
-const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
+const gaId = import.meta.env.PUBLIC_GA_ID || "";
+const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "";
 ---
 
 <!-- ======================== -->
@@ -117,8 +119,8 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
 <!-- Google Analytics 4 -->
 {gaId && (
 	<>
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-		<script is:inline define:vars={{ gaId }}>
+		<script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+		<script type="text/partytown" define:vars={{ gaId }}>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
@@ -132,7 +134,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
 
 <!-- Microsoft Clarity -->
 {clarityId && clarityId !== 'your-clarity-project-id' && (
-	<script is:inline define:vars={{ clarityId }}>
+	<script type="text/partytown" define:vars={{ clarityId }}>
 		(function(c,l,a,r,i,t,y){
 			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
 			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -142,8 +144,17 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
 )}
 
 <!-- reCAPTCHA Script -->
-<script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/partytown" src="https://www.google.com/recaptcha/api.js"></script>
 
 <!-- Generator -->
 <meta name="generator" content={Astro.generator} />
+
+<!-- Ahrefs Analytics -->
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="ABvv/lPKJqYU90luw2eHUg" async></script>
+
+<!-- Vercel Analytics -->
+<Analytics />
+
+<!-- Vercel Speed Insights -->
+<SpeedInsights />
 

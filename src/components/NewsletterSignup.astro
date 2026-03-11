@@ -35,7 +35,9 @@ const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
 			<input type="hidden" name="u" value={mailchimpAudienceId} />
 
 			<div class="form-group">
+				<label for="newsletter-email" class="sr-only">Email address</label>
 				<input
+					id="newsletter-email"
 					type="email"
 					name="email"
 					placeholder={placeholder}

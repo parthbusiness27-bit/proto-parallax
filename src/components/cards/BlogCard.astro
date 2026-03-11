@@ -20,7 +20,9 @@ const routeBase = post.collection === 'blog' ? '/blog/' : '/guides/';
                 width={720} 
                 height={360} 
                 src={post.data.heroImage} 
-                alt={post.data.title} 
+                alt={post.data.title}
+                loading="lazy"
+                decoding="async"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
         ) : (

@@ -11,6 +11,12 @@ interface ContactFormData {
 	message: string;
 	'g-recaptcha-response': string;
 }
+export const GET: APIRoute = async () => {
+	return new Response(JSON.stringify({ error: 'Method not allowed. Use POST to submit the contact form.' }), {
+		status: 405,
+		headers: { 'Content-Type': 'application/json' },
+	});
+};
 
 export const POST: APIRoute = async ({ request }) => {
 	// Only accept POST requests

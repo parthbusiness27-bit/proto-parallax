@@ -4,23 +4,17 @@
   "installCommand": "npm install",
   "framework": "astro",
   "outputDirectory": "dist",
-  "env": {
-    "PUBLIC_GA_ID": {
-      "description": "Google Analytics 4 Measurement ID",
-      "default": "G-XXXXXXXXXX"
-    },
-    "PUBLIC_CLARITY_ID": {
-      "description": "Microsoft Clarity Project ID",
-      "default": "placeholder"
-    },
-    "RECAPTCHA_SECRET_KEY": {
-      "description": "reCAPTCHA Secret Key",
-      "default": "your-recaptcha-secret"
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "hustle-teacher.vercel.app" }],
+      "destination": "https://hustleteacher.vercel.app/$1",
+      "permanent": true
     }
-  },
+  ],
   "headers": [
     {
-      "source": "/(.)*",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
