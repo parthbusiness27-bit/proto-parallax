@@ -1,7 +1,9 @@
 {
   "title": "Content Idea Generator",
-  "description": "Never run out of inspiration with fresh content ideas for your blog, social media, or videos.",
-  "icon": "🧠",
+  "description": "Never run out of content ideas again.",
+  "longDescription": "Generates a massive list of trending content topics tailored to your niche. Uses viral patterns from across the web.",
+  "category": "Writing & Content",
+  "icon": "💡",
   "url": "/tools/content-idea-generator",
-  "isPremium": false
+  "isPremium": true
 }

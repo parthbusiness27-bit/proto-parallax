@@ -1,7 +1,9 @@
 {
   "title": "YouTube Earnings Calculator",
-  "description": "Estimate your potential YouTube income based on views and industry-specific CPM rates.",
-  "icon": "📹",
+  "description": "Calculate your channel revenue potential.",
+  "longDescription": "In-depth tool to forecast monthly and yearly earnings based on niche, engagement, and viewing habits of your audience.",
+  "category": "YouTube Tools",
+  "icon": "🪙",
   "url": "/tools/youtube-earnings-calculator",
   "isPremium": false
 }

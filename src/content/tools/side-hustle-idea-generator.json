@@ -1,7 +1,9 @@
 {
   "title": "Side Hustle Idea Generator",
-  "description": "Unlock unique side hustle ideas tailored to your specific skills, interests, and budget.",
-  "icon": "💡",
+  "description": "Find the perfect side hustle for your skills.",
+  "longDescription": "Generates personalized side hustle ideas based on your available time, skills, and income goals. Start building your second income.",
+  "category": "Startup & Branding",
+  "icon": "⚡",
   "url": "/tools/side-hustle-idea-generator",
-  "isPremium": false
+  "isPremium": true
 }

@@ -1,6 +1,8 @@
 {
   "title": "TikTok Username Generator",
-  "description": "Generate cool, available, and memorable username ideas for your TikTok profile.",
+  "description": "Generate catchy handles for your TikTok profile.",
+  "longDescription": "Find available and memorable usernames that fit your personality or brand. Stand out in the TikTok algorithm from day one.",
+  "category": "Social Media Tools",
   "icon": "📱",
   "url": "/tools/tiktok-username-generator",
   "isPremium": false

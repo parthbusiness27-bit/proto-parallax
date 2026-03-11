@@ -1,6 +1,8 @@
 {
   "title": "Domain Name Generator",
-  "description": "Instantly find available domain name ideas for your business, blog, or portfolio.",
+  "description": "Find available domain name ideas.",
+  "longDescription": "Generate short, brandable, and available .com, .io, and .ai domain names for your next big project or business.",
+  "category": "Startup & Branding",
   "icon": "🌐",
   "url": "/tools/domain-name-generator",
   "isPremium": false

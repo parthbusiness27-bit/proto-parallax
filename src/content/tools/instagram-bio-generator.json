@@ -1,6 +1,8 @@
 {
   "title": "Instagram Bio Generator",
-  "description": "Create optimized, professional, and personality-rich Instagram bios that convert visitors into followers.",
+  "description": "Create optimized personality-rich bios.",
+  "longDescription": "Craft professional Instagram bios that convert profile visitors into loyal followers with effective CTAs and emojis.",
+  "category": "Social Media Tools",
   "icon": "📸",
   "url": "/tools/instagram-bio-generator",
   "isPremium": false

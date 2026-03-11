@@ -1,6 +1,8 @@
 {
   "title": "YouTube CPM Calculator",
-  "description": "Calculate your estimated earnings based on Cost Per Mille (CPM) and total views. Essential for creators planning their revenue strategy.",
+  "description": "Estimate earnings based on CPM and views.",
+  "longDescription": "Analyze your potential ad revenue by simulating different CPM scenarios. Perfect for creators looking to understand their earning power.",
+  "category": "YouTube Tools",
   "icon": "💰",
   "url": "/tools/youtube-cpm-calculator",
   "isPremium": false

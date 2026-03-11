@@ -1,7 +1,9 @@
 {
   "title": "YouTube Description Generator",
-  "description": "Create SEO-optimized descriptions for your videos to improve search ranking and conversions.",
-  "icon": "📄",
+  "description": "Create SEO-friendly video descriptions.",
+  "longDescription": "Build comprehensive video descriptions with timestamps, links, and keywords. Boost your search ranking and viewer engagement.",
+  "category": "YouTube Tools",
+  "icon": "📝",
   "url": "/tools/youtube-description-generator",
   "isPremium": false
 }

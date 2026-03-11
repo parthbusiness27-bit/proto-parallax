@@ -1,6 +1,8 @@
 {
   "title": "Profit Margin Calculator",
-  "description": "Calculate your net profit margins, cost of goods, and markup to ensure your business remains profitable.",
+  "description": "Calculate net profit margins and markups.",
+  "longDescription": "Professional margin calculator for products and services. Understand your gross vs net profit to make better business decisions.",
+  "category": "Business & Finance",
   "icon": "💹",
   "url": "/tools/profit-margin-calculator",
   "isPremium": false

@@ -22,6 +22,8 @@ const tools = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		longDescription: z.string().optional(),
+		category: z.string().default('General'),
 		icon: z.string().optional(),
 		url: z.string(),
 		isPremium: z.boolean().default(false),

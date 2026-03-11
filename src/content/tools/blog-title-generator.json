@@ -1,6 +1,8 @@
 {
   "title": "Blog Title Generator",
-  "description": "Instantly create catchy, SEO-friendly headlines for your next blog post or article.",
+  "description": "Generate catchy blog post headlines.",
+  "longDescription": "Create scroll-stopping blog titles designed for high CTR and viral potential. Uses proven emotional triggers and power words.",
+  "category": "Writing & Content",
   "icon": "✍️",
   "url": "/tools/blog-title-generator",
   "isPremium": false

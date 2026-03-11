@@ -1,6 +1,8 @@
 {
   "title": "Hashtag Generator",
-  "description": "Generate trending and relevant hashtags for TikTok, Instagram, and Twitter to maximize your social reach.",
+  "description": "Generate trending hashtags for social media.",
+  "longDescription": "Instantly find high-reach hashtags for TikTok, Instagram, and LinkedIn. Boost your viral potential and feed visibility.",
+  "category": "Social Media Tools",
   "icon": "＃",
   "url": "/tools/hashtag-generator",
   "isPremium": false

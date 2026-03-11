@@ -1,6 +1,8 @@
 {
   "title": "YouTube Thumbnail Title Generator",
-  "description": "Generate high-CTR text ideas for your thumbnails that stop the scroll and get clicks.",
+  "description": "Generate scroll-stopping thumbnail text.",
+  "longDescription": "Creates punchy 2-4 word phrases for your thumbnails. Optimized for mobile readability and high click-through rates.",
+  "category": "YouTube Tools",
   "icon": "🖼️",
   "url": "/tools/youtube-thumbnail-title-generator",
   "isPremium": false

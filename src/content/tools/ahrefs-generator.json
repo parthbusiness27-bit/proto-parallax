@@ -1,7 +1,9 @@
 {
   "title": "Ahrefs Keyword Generator",
-  "description": "Find thousands of related keyword ideas with their search volumes and keyword difficulty scores in seconds.",
+  "description": "Find thousands of related keyword ideas.",
+  "longDescription": "Extract thousands of keyword ideas with search volume and difficulty scores. Powered by Ahrefs data for maximum SEO impact.",
+  "category": "SEO & Keyword",
   "icon": "📈",
-  "url": "https://ahrefs.com/keyword-generator",
-  "isPremium": false
+  "url": "/tools/ahrefs-generator",
+  "isPremium": true
 }

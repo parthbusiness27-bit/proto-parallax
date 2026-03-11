@@ -1,7 +1,9 @@
 {
   "title": "Dropshipping Profit Calculator",
-  "description": "Analyze your dropshipping margins by factoring in product cost, shipping, and ad spend.",
-  "icon": "🚢",
+  "description": "Calculate net profit from dropshipping sales.",
+  "longDescription": "Accurately track your margins by accounting for COGS, shipping, ad spend, and transaction fees. Essential for e-commerce sellers.",
+  "category": "Business & Finance",
+  "icon": "📦",
   "url": "/tools/dropshipping-profit-calculator",
   "isPremium": false
 }

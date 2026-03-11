@@ -1,6 +1,8 @@
 {
   "title": "Startup Name Generator",
-  "description": "Generate powerful and creative brand names for your next startup or online business idea.",
+  "description": "Generate powerful names for your next venture.",
+  "longDescription": "Uses creative algorithms to find brandable, catchy, and unique names for new startups and online businesses.",
+  "category": "Startup & Branding",
   "icon": "🚀",
   "url": "/tools/startup-name-generator",
   "isPremium": false

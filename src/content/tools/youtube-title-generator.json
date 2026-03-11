@@ -1,7 +1,9 @@
 {
   "title": "YouTube Title Generator",
-  "description": "Generate high-CTR titles for your YouTube videos using proven viral patterns and psychology.",
-  "icon": "🎬",
+  "description": "Create viral-worthy video titles.",
+  "longDescription": "Generate irresistible titles using proven psychological triggers. Designed to maximize impressions and viewers for any niche.",
+  "category": "YouTube Tools",
+  "icon": "📺",
   "url": "/tools/youtube-title-generator",
-  "isPremium": false
+  "isPremium": true
 }

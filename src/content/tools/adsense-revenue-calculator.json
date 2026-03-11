@@ -1,6 +1,8 @@
 {
   "title": "AdSense Revenue Calculator",
-  "description": "Estimate your website's ad revenue potential based on page views, CTR, and average CPC.",
+  "description": "Estimate your website's ad revenue potential.",
+  "longDescription": "Detailed breakdown of potential earnings through Google AdSense based on page views, CTR, and average CPC. Perfect for bloggers and publishers.",
+  "category": "Business & Finance",
   "icon": "💸",
   "url": "/tools/adsense-revenue-calculator",
   "isPremium": false

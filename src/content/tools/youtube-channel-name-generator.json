@@ -1,6 +1,8 @@
 {
   "title": "YouTube Channel Name Generator",
-  "description": "Find unique, catchy, and brandable channel name ideas tailored to your niche and content style.",
+  "description": "Find brandable names for your YouTube channel.",
+  "longDescription": "Create unique channel names tailored to your niche. Designed for readability, memorability, and long-term branding success.",
+  "category": "YouTube Tools",
   "icon": "📛",
   "url": "/tools/youtube-channel-name-generator",
   "isPremium": false
