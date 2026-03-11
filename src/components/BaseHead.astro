@@ -84,17 +84,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
   "@context": "https://schema.org/",
   "@type": "WebSite",
   "name": "Hustle Teacher",
-  "url": "https://hustleteacher.vercel.app/",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "848",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
+  "url": "https://hustle-teacher.vercel.app/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://hustleteacher.vercel.app/search?q={search_term_string}",
+    "target": "https://hustle-teacher.vercel.app/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 })} />
@@ -170,7 +163,18 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta name="generator" content={Astro.generator} />
 
 <!-- Ahrefs Analytics -->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="ABvv/lPKJqYU90luw2eHUg" async></script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="ABvv/lPKJqYU90luw2eHUg" defer></script>
+
+<!-- Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // SW registration failed silently - no console errors
+      });
+    });
+  }
+</script>
 
 <!-- Vercel Analytics -->
 <Analytics />
