@@ -5,7 +5,7 @@ export const SITE_TITLE = 'Hustle Teacher';
 export const SITE_DESCRIPTION = 'Learn proven ways to earn money from home. Simple guides for students and beginners. Start your side hustle today and grow your digital income step by step.';
 export const SITE_URL = 'https://hustleteacher.vercel.app';
 export const SITE_AUTHOR = 'Parth';
-export const SITE_EMAIL = 'contact@hustleteacher.com';
+export const SITE_EMAIL = 'parthbusiness27@gmail.com';
 
 // SEO & Social
 export const SOCIAL_TWITTER = '@HustleTeacher';

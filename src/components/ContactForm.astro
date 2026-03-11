@@ -6,10 +6,11 @@ interface Props {
 
 const {
 	title = 'Get in Touch',
-	subtitle = 'Have a question? We\'d love to hear from you.',
+	subtitle = "Have a question? We'd love to hear from you.",
 } = Astro.props;
 
-const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '6LfGooYsAAAAAKrgUWaxS-5IjK7hFHsjwuPfKPs7';
+// Formspree endpoint — forwards submissions to parthbusiness27@gmail.com
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwpokrvg';
 ---
 
 <section class="contact-section">
@@ -19,7 +20,15 @@ const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '6LfGooYsAAAAAKrgUW
 			{subtitle && <p>{subtitle}</p>}
 		</div>
 
-		<form id="contact-form" class="contact-form" method="POST">
+		<form
+			id="contact-form"
+			class="contact-form"
+			method="POST"
+			action={FORMSPREE_ENDPOINT}
+		>
+			<!-- Honeypot to prevent spam -->
+			<input type="text" name="_gotcha" style="display:none" />
+
 			<div class="form-group">
 				<label for="name">Name *</label>
 				<input type="text" id="name" name="name" required placeholder="Your name" />
@@ -40,20 +49,19 @@ const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '6LfGooYsAAAAAKrgUW
 				<textarea id="message" name="message" required placeholder="Your message..." rows="6"></textarea>
 			</div>
 
-			<!-- reCAPTCHA -->
-			<div class="recaptcha-container">
-				<div
-					class="g-recaptcha"
-					data-sitekey={siteKey}
-					data-theme="light"
-					data-size="normal"
-				></div>
+			<div id="form-success" class="form-success" style="display:none">
+				✅ Message sent! We'll get back to you within 24–48 hours.
 			</div>
 
-			<button type="submit" class="submit-btn">Send Message</button>
+			<div id="form-error" class="form-error" style="display:none">
+				❌ Something went wrong. Please email us directly at
+				<a href="mailto:parthbusiness27@gmail.com">parthbusiness27@gmail.com</a>
+			</div>
+
+			<button type="submit" id="submit-btn" class="submit-btn">Send Message</button>
 
 			<p class="form-notice">
-				We'll get back to you within 24-48 hours. Check our
+				We'll get back to you within 24–48 hours. Check our
 				<a href="/privacy-policy/">Privacy Policy</a>
 				for how we handle your data.
 			</p>
@@ -62,42 +70,36 @@ const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '6LfGooYsAAAAAKrgUW
 </section>
 
 <script>
-	document.getElementById('contact-form')?.addEventListener('submit', async (e: Event) => {
-		const form = e.target as HTMLFormElement;
+	const form = document.getElementById('contact-form') as HTMLFormElement;
+	const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+	const successMsg = document.getElementById('form-success') as HTMLElement;
+	const errorMsg = document.getElementById('form-error') as HTMLElement;
+
+	form?.addEventListener('submit', async (e: Event) => {
 		e.preventDefault();
-
-		// Get reCAPTCHA token
-		const recaptchaToken = (window as any).grecaptcha?.getResponse?.();
-
-		if (!recaptchaToken) {
-			alert('Please complete the reCAPTCHA verification');
-			return;
-		}
-
-		const formData = new FormData(form);
-		formData.append('g-recaptcha-response', recaptchaToken);
+		submitBtn.disabled = true;
+		submitBtn.textContent = 'Sending…';
 
 		try {
-			// In a real implementation, you'd send this to your backend API
-			const response = await fetch('/api/contact', {
+			const res = await fetch(form.action, {
 				method: 'POST',
-				body: formData,
+				body: new FormData(form),
+				headers: { Accept: 'application/json' },
 			});
 
-			if (response.ok) {
-				alert("Thank you for your message! We'll be in touch soon.");
+			if (res.ok) {
+				successMsg.style.display = 'block';
+				errorMsg.style.display = 'none';
 				form.reset();
-				(window as any).grecaptcha?.reset?.();
+				submitBtn.textContent = 'Sent!';
 			} else {
-				alert('There was an error sending your message. Please try again.');
+				throw new Error('Server error');
 			}
-		} catch (error) {
-			console.error('Form submission error:', error);
-			// Fallback: even if API doesn't exist, show success to prevent user frustration
-			alert(
-				'Message received! Due to server limitations, we cannot confirm delivery in real-time. We will try to respond soon.'
-			);
-			form.reset();
+		} catch {
+			errorMsg.style.display = 'block';
+			successMsg.style.display = 'none';
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Send Message';
 		}
 	});
 </script>
@@ -211,6 +213,30 @@ const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '6LfGooYsAAAAAKrgUW
 	}
 
 	.form-notice a:hover {
+		text-decoration: underline;
+	}
+
+	.form-success {
+		padding: 1em;
+		background: #d1fae5;
+		border: 1px solid #6ee7b7;
+		color: #065f46;
+		border-radius: 0.5em;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.form-error {
+		padding: 1em;
+		background: #fee2e2;
+		border: 1px solid #fca5a5;
+		color: #991b1b;
+		border-radius: 0.5em;
+		text-align: center;
+	}
+
+	.form-error a {
+		color: #991b1b;
 		text-decoration: underline;
 	}
 

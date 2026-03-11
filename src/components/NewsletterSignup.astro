@@ -15,8 +15,7 @@ const {
 	placeholder = 'Enter your email...',
 } = Astro.props;
 
-const mailchimpAudienceId = import.meta.env.PUBLIC_MAILCHIMP_AUDIENCE_ID || 'placeholder';
-const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwpokrvg';
 ---
 
 <section class="newsletter-signup">
@@ -27,13 +26,12 @@ const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
 		</div>
 
 		<form
-			action={`https://${mailchimpServer}.api.mailchimp.com/3.0/contact/subscribe`}
+			action={FORMSPREE_ENDPOINT}
 			method="POST"
 			class="newsletter-form"
 			id="newsletter-form"
 		>
-			<input type="hidden" name="u" value={mailchimpAudienceId} />
-
+			<input type="hidden" name="_gotcha" style="display:none" />
 			<div class="form-group">
 				<label for="newsletter-email" class="sr-only">Email address</label>
 				<input
@@ -45,9 +43,17 @@ const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
 					aria-label="Email address"
 					class="email-input"
 				/>
-				<button type="submit" class="submit-btn" aria-label="Subscribe to newsletter">
+				<button type="submit" id="newsletter-submit" class="submit-btn" aria-label="Subscribe to newsletter">
 					{buttonText}
 				</button>
+			</div>
+
+			<div id="newsletter-success" class="form-success" style="display:none">
+				✅ Subscribed! Check your inbox for confirmation.
+			</div>
+
+			<div id="newsletter-error" class="form-error" style="display:none">
+				❌ Error. Please email us at <a href="mailto:parthbusiness27@gmail.com">parthbusiness27@gmail.com</a>
 			</div>
 
 			<p class="privacy-notice">
@@ -59,18 +65,37 @@ const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
 </section>
 
 <script>
-	// Simple Mailchimp integration fallback
-	document.getElementById('newsletter-form')?.addEventListener('submit', async (e: Event) => {
-		const form = e.target as HTMLFormElement;
-		const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value;
+	const form = document.getElementById('newsletter-form') as HTMLFormElement;
+	const submitBtn = document.getElementById('newsletter-submit') as HTMLButtonElement;
+	const successMsg = document.getElementById('newsletter-success') as HTMLElement;
+	const errorMsg = document.getElementById('newsletter-error') as HTMLElement;
 
-		if (!email) return;
+	form?.addEventListener('submit', async (e: Event) => {
+		e.preventDefault();
+		submitBtn.disabled = true;
+		submitBtn.textContent = 'Joining...';
 
-		// Log the subscription attempt (in production, you'd send to your own API)
-		console.log('Newsletter signup attempt:', email);
+		try {
+			const res = await fetch(form.action, {
+				method: 'POST',
+				body: new FormData(form),
+				headers: { Accept: 'application/json' },
+			});
 
-		// Show success message
-		alert('Thank you for subscribing! Please check your email for confirmation.');
+			if (res.ok) {
+				successMsg.style.display = 'block';
+				errorMsg.style.display = 'none';
+				form.reset();
+				submitBtn.textContent = 'Joined!';
+			} else {
+				throw new Error('Server error');
+			}
+		} catch {
+			errorMsg.style.display = 'block';
+			successMsg.style.display = 'none';
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Subscribe Now';
+		}
 	});
 </script>
 
@@ -161,6 +186,34 @@ const mailchimpServer = import.meta.env.PUBLIC_MAILCHIMP_SERVER || 'us1';
 	}
 
 	.privacy-notice a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	.form-success {
+		margin-top: 1em;
+		padding: 0.75em;
+		background: rgba(16, 185, 129, 0.2);
+		border: 1px solid rgba(16, 185, 129, 0.4);
+		color: #d1fae5;
+		border-radius: 0.5em;
+		text-align: center;
+		font-weight: 600;
+		font-size: 0.9em;
+	}
+
+	.form-error {
+		margin-top: 1em;
+		padding: 0.75em;
+		background: rgba(239, 68, 68, 0.2);
+		border: 1px solid rgba(239, 68, 68, 0.4);
+		color: #fee2e2;
+		border-radius: 0.5em;
+		text-align: center;
+		font-size: 0.9em;
+	}
+
+	.form-error a {
 		color: white;
 		text-decoration: underline;
 	}
