@@ -119,15 +119,14 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <!-- Google Analytics 4 -->
 {gaId && (
 	<>
-		<script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-		<script type="text/partytown" define:vars={{ gaId }}>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', gaId, {
-				'anonymize_ip': true,
-				'cookie_flags': 'SameSite=None;Secure'
-			});
+		<!-- Google tag (gtag.js) -->
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+		<script define:vars={{ gaId }}>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', gaId);
 		</script>
 	</>
 )}
