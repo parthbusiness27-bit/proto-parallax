@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-1.jpg'
 category: 'automation'
 ---
 
-# Introduction to Automation & Tools
+## Introduction to Automation & Tools
 
 Welcome to Part 3 of our definitive guide on **Automation & Tools**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

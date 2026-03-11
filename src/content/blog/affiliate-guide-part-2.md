@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-5.jpg'
 category: 'affiliate'
 ---
 
-# Introduction to Affiliate & Monetization
+## Introduction to Affiliate & Monetization
 
 Welcome to Part 2 of our definitive guide on **Affiliate & Monetization**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

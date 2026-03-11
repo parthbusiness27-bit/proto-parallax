@@ -1,7 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Hustle Teacher | Master Making Money Online';
+export const SITE_TITLE = 'Hustle Teacher';
 export const SITE_DESCRIPTION = 'Learn proven ways to earn money from home. Simple guides for students and beginners. Start your side hustle today and grow your digital income step by step.';
 export const SITE_URL = 'https://hustleteacher.vercel.app';
 export const SITE_AUTHOR = 'Parth';

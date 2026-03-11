@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-3.jpg'
 category: 'digital-products'
 ---
 
-# Introduction to Digital Product Businesses
+## Introduction to Digital Product Businesses
 
 Welcome to Part 2 of our definitive guide on **Digital Product Businesses**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

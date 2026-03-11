@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-4.jpg'
 category: 'side-hustles'
 ---
 
-# Introduction to Side Hustles for Students
+## Introduction to Side Hustles for Students
 
 Welcome to Part 2 of our definitive guide on **Side Hustles for Students**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-1.jpg'
 category: 'tech-programming'
 ---
 
-# Introduction to Tech & Programming
+## Introduction to Tech & Programming
 
 Welcome to Part 3 of our definitive guide on **Tech & Programming**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

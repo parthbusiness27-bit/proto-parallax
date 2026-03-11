@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-3.jpg'
 category: 'skill-based'
 ---
 
-# Introduction to Skill-Based Income
+## Introduction to Skill-Based Income
 
 Welcome to Part 2 of our definitive guide on **Skill-Based Income**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-2.jpg'
 category: 'virtual-assistant'
 ---
 
-# Introduction to Virtual Assistant & Support
+## Introduction to Virtual Assistant & Support
 
 Welcome to Part 2 of our definitive guide on **Virtual Assistant & Support**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

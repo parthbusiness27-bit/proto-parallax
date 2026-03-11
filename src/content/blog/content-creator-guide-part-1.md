@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-5.jpg'
 category: 'content-creator'
 ---
 
-# Introduction to Content Creator Income
+## Introduction to Content Creator Income
 
 Welcome to Part 1 of our definitive guide on **Content Creator Income**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

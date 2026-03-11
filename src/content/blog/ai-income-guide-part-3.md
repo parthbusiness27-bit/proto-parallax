@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-4.jpg'
 category: 'ai-income'
 ---
 
-# Introduction to AI-Powered Income
+## Introduction to AI-Powered Income
 
 Welcome to Part 3 of our definitive guide on **AI-Powered Income**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

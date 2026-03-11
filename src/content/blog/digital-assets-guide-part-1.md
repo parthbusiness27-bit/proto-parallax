@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-4.jpg'
 category: 'digital-assets'
 ---
 
-# Introduction to Digital Assets & Trading
+## Introduction to Digital Assets & Trading
 
 Welcome to Part 1 of our definitive guide on **Digital Assets & Trading**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

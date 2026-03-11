@@ -6,7 +6,7 @@ heroImage: '../../assets/blog-placeholder-4.jpg'
 category: 'online-business'
 ---
 
-# Introduction to Online Business Models
+## Introduction to Online Business Models
 
 Welcome to Part 1 of our definitive guide on **Online Business Models**. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
