@@ -61,9 +61,9 @@ export const POST: APIRoute = async ({ request }) => {
 			);
 		}
 
-		// Verify reCAPTCHA (only in production with secret key)
-		const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-		if (secretKey && secretKey !== 'your-secret-key') {
+		// Verify reCAPTCHA
+		const secretKey = process.env.RECAPTCHA_SECRET_KEY || '6LfGooYsAAAAAFmfwK_PFD_XmdGluxKOcq6B6tR3';
+		if (secretKey) {
 			try {
 				const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
 					method: 'POST',
