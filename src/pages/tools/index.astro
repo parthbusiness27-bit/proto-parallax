@@ -16,68 +16,124 @@ const premiumTools = allTools.filter(tool => tool.data.isPremium);
 	<main class="flex-grow pt-24 pb-20">
         <div class="docs-site-container">
                             
-            <!-- Header Section -->
-            <div class="mb-16">
-                <div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm animate-fade-in-down">
-                    🚀 Your Creator Stack
-                </div>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up uppercase tracking-tight">
-                    Side Hustle <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Tools</span>
-                </h1>
-                <p class="text-xl text-muted-foreground max-w-2xl animate-fade-in-up" style="animation-delay: 150ms;">
-                    The ultimate directory of software, calculators, and generators to help you build and scale your online income faster.
-                </p>
-            </div>
+			<!-- Header Section -->
+			<div class="mb-12">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm animate-fade-in-down">
+					🚀 Your Creator Stack
+				</div>
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up uppercase tracking-tight">
+					Side Hustle <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Tools</span>
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl animate-fade-in-up mb-10" style="animation-delay: 150ms;">
+					The ultimate directory of software, calculators, and generators to help you build and scale your online income faster.
+				</p>
 
-            <!-- Free Tools Section -->
-            {freeTools.length > 0 && (
-                <div class="mb-20 animate-fade-in-up" style="animation-delay: 300ms;">
-                    <h2 class="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
-                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">🎁</span>
-                        Free Tools
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {freeTools.map(tool => (
-                            <ToolCard 
-                                title={tool.data.title}
-                                description={tool.data.description}
-                                url={tool.data.url}
-                                icon={tool.data.icon}
-                                isPremium={false}
-                            />
-                        ))}
-                    </div>
-                </div>
-            )}
+				<!-- Search Bar -->
+				<div class="relative max-w-xl animate-fade-in-up" style="animation-delay: 200ms;">
+					<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+						<span class="text-2xl opacity-50">🔍</span>
+					</div>
+					<input 
+						id="toolSearch" 
+						type="text" 
+						placeholder="Search for tools (e.g. calculator, YouTube, blog)..." 
+						class="w-full bg-card/50 backdrop-blur-xl border border-border rounded-2xl pl-12 pr-4 py-4 text-lg outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-lg"
+					/>
+				</div>
+			</div>
 
-            <!-- Premium Tools Section -->
-            {premiumTools.length > 0 && (
-                <div class="animate-fade-in-up" style="animation-delay: 450ms;">
-                    <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
-                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">💎</span>
-                        Premium Software
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {premiumTools.map(tool => (
-                            <ToolCard 
-                                title={tool.data.title}
-                                description={tool.data.description}
-                                url={tool.data.url}
-                                icon={tool.data.icon}
-                                isPremium={true}
-                                price={tool.data.price}
-                            />
-                        ))}
-                    </div>
-                </div>
-            )}
+			<!-- Free Tools Section -->
+			<div id="freeSection" class={`mb-20 animate-fade-in-up ${freeTools.length === 0 ? 'hidden' : ''}`} style="animation-delay: 300ms;">
+				<h2 class="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
+					<span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">🎁</span>
+					Free Tools
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tools-grid">
+					{freeTools.map(tool => (
+						<div class="tool-card-wrapper" data-title={tool.data.title.toLowerCase()} data-desc={tool.data.description.toLowerCase()}>
+							<ToolCard 
+								title={tool.data.title}
+								description={tool.data.description}
+								url={tool.data.url}
+								icon={tool.data.icon}
+								isPremium={false}
+							/>
+						</div>
+					))}
+				</div>
+			</div>
 
-            {allTools.length === 0 && (
-                <div class="py-20 text-center border border-dashed border-border rounded-2xl bg-muted/30">
-                    <p class="text-muted-foreground">Tools are currently being updated. Check back soon!</p>
-                </div>
-            )}
+			<!-- Premium Tools Section -->
+			<div id="premiumSection" class={`animate-fade-in-up ${premiumTools.length === 0 ? 'hidden' : ''}`} style="animation-delay: 450ms;">
+				<h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
+					<span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">💎</span>
+					Premium Software
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tools-grid">
+					{premiumTools.map(tool => (
+						<div class="tool-card-wrapper" data-title={tool.data.title.toLowerCase()} data-desc={tool.data.description.toLowerCase()}>
+							<ToolCard 
+								title={tool.data.title}
+								description={tool.data.description}
+								url={tool.data.url}
+								icon={tool.data.icon}
+								isPremium={true}
+								price={tool.data.price}
+							/>
+						</div>
+					))}
+				</div>
+			</div>
 
-        </div>
+			<div id="noResults" class="hidden py-20 text-center border border-dashed border-border rounded-2xl bg-muted/30">
+				<p class="text-muted-foreground text-xl">No tools match your search. Try a different keyword!</p>
+			</div>
+
+			{allTools.length === 0 && (
+				<div class="py-20 text-center border border-dashed border-border rounded-2xl bg-muted/30">
+					<p class="text-muted-foreground">Tools are currently being updated. Check back soon!</p>
+				</div>
+			)}
+
+		</div>
 	</main>
 </BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const searchInput = document.getElementById('toolSearch');
+		const cardWrappers = document.querySelectorAll('.tool-card-wrapper');
+		const freeSection = document.getElementById('freeSection');
+		const premiumSection = document.getElementById('premiumSection');
+		const noResults = document.getElementById('noResults');
+
+		searchInput?.addEventListener('input', (e) => {
+			const query = e.target.value.toLowerCase();
+			let visibleFree = 0;
+			let visiblePremium = 0;
+
+			cardWrappers.forEach(wrapper => {
+				const title = wrapper.getAttribute('data-title');
+				const desc = wrapper.getAttribute('data-desc');
+				const isVisible = title.includes(query) || desc.includes(query);
+				
+				wrapper.classList.toggle('hidden', !isVisible);
+				
+				if (isVisible) {
+					if (wrapper.closest('#freeSection')) visibleFree++;
+					if (wrapper.closest('#premiumSection')) visiblePremium++;
+				}
+			});
+
+			// Hide/show headers if no tools are visible in that category
+			if (freeSection) freeSection.classList.toggle('hidden', visibleFree === 0 && query !== '');
+			if (premiumSection) premiumSection.classList.toggle('hidden', visiblePremium === 0 && query !== '');
+			
+			// Global no results message
+			if (noResults) {
+				const totalVisible = visibleFree + visiblePremium;
+				noResults.classList.toggle('hidden', totalVisible > 0 || query === '');
+			}
+		});
+	});
+</script>

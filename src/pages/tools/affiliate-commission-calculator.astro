@@ -1,0 +1,220 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Affiliate Commission Calculator | Hustle Teacher"
+	description="Estimate your total affiliate earnings based on product price, commission percentage, and sales volume."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container">
+			<!-- Header -->
+			<div class="text-center mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					💰 Profit Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					Affiliate <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Commission</span> Calculator
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					Plan your affiliate marketing strategy by projecting potential revenue across different commission structures.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+				<div class="lg:col-span-2 space-y-8 animate-fade-in-up" style="animation-delay: 150ms;">
+					<div class="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden group">
+						<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-50"></div>
+						
+						<div class="relative z-10 space-y-10">
+							<!-- Product Price -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label for="price" class="text-lg font-bold text-foreground">Product Price ($)</label>
+									<span class="text-2xl font-black text-primary" id="price-display">$100.00</span>
+								</div>
+								<div class="relative">
+									<input 
+										type="range" 
+										id="price-slider" 
+										min="1" 
+										max="5000" 
+										step="1" 
+										value="100"
+										class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
+									/>
+									<input 
+										id="price" 
+										type="number" 
+										value="100" 
+										class="w-full mt-4 bg-background/50 border border-border rounded-xl px-5 py-3 text-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+									/>
+								</div>
+							</div>
+
+							<!-- Commission Rate -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label for="commission" class="text-lg font-bold text-foreground">Commission Rate (%)</label>
+									<span class="text-2xl font-black text-emerald-500" id="commission-display">10%</span>
+								</div>
+								<div class="relative">
+									<input 
+										type="range" 
+										id="commission-slider" 
+										min="0.1" 
+										max="100" 
+										step="0.1" 
+										value="10"
+										class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-emerald-500"
+									/>
+									<input 
+										id="commission" 
+										type="number" 
+										value="10" 
+										class="w-full mt-4 bg-background/50 border border-border rounded-xl px-5 py-3 text-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+									/>
+								</div>
+							</div>
+
+							<!-- Monthly Sales -->
+							<div class="space-y-4">
+								<div class="flex justify-between items-end">
+									<label for="sales" class="text-lg font-bold text-foreground">Monthly Sales</label>
+									<span class="text-2xl font-black text-indigo-400" id="sales-display">50</span>
+								</div>
+								<div class="relative">
+									<input 
+										type="range" 
+										id="sales-slider" 
+										min="1" 
+										max="10000" 
+										step="1" 
+										value="50"
+										class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-indigo-400"
+									/>
+									<input 
+										id="sales" 
+										type="number" 
+										value="50" 
+										class="w-full mt-4 bg-background/50 border border-border rounded-xl px-5 py-3 text-lg focus:ring-2 focus:ring-indigo-400 focus:border-transparent outline-none transition-all"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Guide Section -->
+					<div class="prose prose-invert max-w-none bg-card/30 border border-border rounded-3xl p-8 md:p-10">
+						<h2>Typical Affiliate Commission Rates</h2>
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-4 not-prose">
+							<div class="p-4 rounded-xl bg-background/50 border border-border text-center">
+								<div class="text-xs uppercase font-bold text-muted-foreground mb-1">Amazon</div>
+								<div class="text-xl font-bold text-foreground">1% - 10%</div>
+							</div>
+							<div class="p-4 rounded-xl bg-background/50 border border-border text-center">
+								<div class="text-xs uppercase font-bold text-muted-foreground mb-1">SaaS</div>
+								<div class="text-xl font-bold text-foreground">20% - 40%</div>
+							</div>
+							<div class="p-4 rounded-xl bg-background/50 border border-border text-center">
+								<div class="text-xs uppercase font-bold text-muted-foreground mb-1">Courses</div>
+								<div class="text-xl font-bold text-foreground">30% - 50%</div>
+							</div>
+							<div class="p-4 rounded-xl bg-background/50 border border-border text-center">
+								<div class="text-xs uppercase font-bold text-muted-foreground mb-1">Hosting</div>
+								<div class="text-xl font-bold text-foreground">$50 - $150</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Stats Side -->
+				<div class="space-y-6 animate-fade-in-up" style="animation-delay: 300ms;">
+					<h2 class="text-2xl font-bold px-2">Earnings Summary</h2>
+					
+					<div class="bg-card border border-border rounded-2xl p-6 shadow-lg">
+						<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Earnings Per Sale</span>
+						<div class="text-4xl font-black text-foreground mt-1" id="per-sale-result">$10.00</div>
+					</div>
+
+					<div class="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 rounded-3xl p-8 shadow-xl relative overflow-hidden group">
+						<div class="absolute -right-4 -top-4 text-7xl opacity-10 group-hover:scale-125 transition-transform">💵</div>
+						<span class="text-sm font-bold uppercase tracking-widest text-primary">Monthly Commission</span>
+						<div class="text-5xl font-black text-foreground mt-2" id="monthly-result">$500.00</div>
+						<p class="text-xs text-muted-foreground mt-4">Total revenue from projected sales</p>
+					</div>
+
+					<div class="bg-card border border-border rounded-2xl p-6 shadow-lg">
+						<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Estimated Yearly Income</span>
+						<div class="text-4xl font-black text-foreground mt-1" id="yearly-result">$6,000.00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background: #ffffff;
+		border: 4px solid var(--primary);
+		border-radius: 50%;
+		cursor: pointer;
+		transition: transform 0.2s;
+	}
+	input[type='range']#commission-slider::-webkit-slider-thumb { border-color: #10b981; }
+	input[type='range']#sales-slider::-webkit-slider-thumb { border-color: #818cf8; }
+</style>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const priceInput = document.getElementById('price');
+		const priceSlider = document.getElementById('price-slider');
+		const priceDisplay = document.getElementById('price-display');
+
+		const commInput = document.getElementById('commission');
+		const commSlider = document.getElementById('commission-slider');
+		const commDisplay = document.getElementById('commission-display');
+
+		const salesInput = document.getElementById('sales');
+		const salesSlider = document.getElementById('sales-slider');
+		const salesDisplay = document.getElementById('sales-display');
+
+		const perSaleRes = document.getElementById('per-sale-result');
+		const monthlyRes = document.getElementById('monthly-result');
+		const yearlyRes = document.getElementById('yearly-result');
+
+		function update() {
+			const price = parseFloat(priceInput.value) || 0;
+			const comm = (parseFloat(commInput.value) || 0) / 100;
+			const sales = parseFloat(salesInput.value) || 0;
+
+			priceDisplay.textContent = '$' + price.toLocaleString(undefined, { minimumFractionDigits: 2 });
+			commDisplay.textContent = Math.round(comm * 100) + '%';
+			salesDisplay.textContent = Math.round(sales).toLocaleString();
+
+			const perSale = price * comm;
+			const monthly = perSale * sales;
+			const yearly = monthly * 12;
+
+			perSaleRes.textContent = '$' + perSale.toLocaleString(undefined, { minimumFractionDigits: 2 });
+			monthlyRes.textContent = '$' + monthly.toLocaleString(undefined, { minimumFractionDigits: 2 });
+			yearlyRes.textContent = '$' + yearly.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+		}
+
+		[priceSlider, priceInput, commSlider, commInput, salesSlider, salesInput].forEach(el => {
+			el.addEventListener('input', (e) => {
+				const targetId = el.id.replace('-slider', '');
+				const other = document.getElementById(targetId + (el.id.includes('slider') ? '' : '-slider'));
+				if (other) other.value = el.value;
+				update();
+			});
+		});
+
+		update();
+	});
+</script>

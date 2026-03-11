@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="YouTube Description Generator | Hustle Teacher"
+	description="Quickly create optimized, structured YouTube descriptions that rank higher in search."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container">
+			<div class="text-center mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					📄 SEO Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					YouTube <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Description</span> Generator
+				</h1>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+				<div class="bg-card border border-border rounded-3xl p-8 shadow-xl space-y-6">
+					<div class="space-y-4">
+						<label class="font-bold">What is this video about?</label>
+						<input id="topic" type="text" placeholder="e.g. 5 Secrets to Passive Income" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+					</div>
+					<div class="space-y-4">
+						<label class="font-bold">Primary Keywords (comma separated)</label>
+						<input id="keywords" type="text" placeholder="passive income, side hustle, investing" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+					</div>
+					<button id="genBtn" class="w-full bg-primary text-white font-black py-4 rounded-xl shadow-lg">GENERATE DESCRIPTION</button>
+				</div>
+
+				<div class="bg-card/30 border border-border rounded-3xl p-8 relative min-h-[400px]">
+					<div class="flex justify-between items-center mb-4">
+						<h3 class="font-bold">Generated Description</h3>
+						<button id="copyBtn" class="text-primary font-bold hover:underline">Copy All</button>
+					</div>
+					<textarea id="output" readonly class="w-full h-[500px] bg-background/50 border border-border rounded-xl p-6 font-mono text-sm leading-relaxed resize-none"></textarea>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const btn = document.getElementById('genBtn');
+		const topic = document.getElementById('topic');
+		const keywords = document.getElementById('keywords');
+		const output = document.getElementById('output');
+		const copy = document.getElementById('copyBtn');
+
+		btn.addEventListener('click', () => {
+			const t = topic.value || '[Topic]';
+			const k = keywords.value || '[Keywords]';
+			
+			const desc = `🔥 In this video, we're diving deep into ${t}! 
+
+Mastering ${t} is essential if you want to grow as a creator. We'll cover everything from the basic concepts to advanced strategies you won't find anywhere else.
+
+📌 CHAPTERS:
+0:00 Intro
+2:15 The Basics of ${t}
+5:30 Hidden Secrets
+8:45 Advanced Strategies
+12:10 Conclusion & Next Steps
+
+🚀 KEYWORDS MENTIONED:
+${k.split(',').map(s => '#'+s.trim().replace(/\s+/g,'')).join(' ')}
+
+👇 FREE RESOURCES:
+- Join our Newsletter: https://hustleteacher.vercel.app
+- Get our Side Hustle Guide: [Link]
+
+Don't forget to SUBSCRIBE for more content about ${t} and digital income!
+
+#${t.replace(/\s+/g,'')} #creator #hustleteacher #tutorial`;
+
+			output.value = desc;
+		});
+
+		copy.addEventListener('click', () => {
+			output.select();
+			document.execCommand('copy');
+            copy.textContent = 'COPIED!';
+            setTimeout(() => copy.textContent = 'Copy All', 2000);
+		});
+	});
+</script>

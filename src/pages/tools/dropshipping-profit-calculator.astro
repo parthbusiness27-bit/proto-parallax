@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Dropshipping Profit Calculator | Hustle Teacher"
+	description="Calculate dropshipping profit margins by accounting for product cost, shipping, ad spend, and transaction fees."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container">
+			<div class="text-center mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					📦 E-commerce Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					Dropshipping <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Profit</span> Calculator
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					Analyze your unit economics to ensure every sale is profitable after ads and fees.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+				<div class="lg:col-span-2 space-y-6">
+					<div class="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 shadow-2xl space-y-8">
+						<!-- Unit Economics -->
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+							<div class="space-y-4">
+								<label class="font-bold">Selling Price ($)</label>
+								<input id="price" type="number" value="49.99" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+							</div>
+							<div class="space-y-4">
+								<label class="font-bold">Product Cost ($)</label>
+								<input id="cost" type="number" value="15.00" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+							</div>
+							<div class="space-y-4">
+								<label class="font-bold">Shipping Cost ($)</label>
+								<input id="shipping" type="number" value="5.00" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+							</div>
+							<div class="space-y-4">
+								<label class="font-bold">Ad Spend Per Sale (CPA) ($)</label>
+								<input id="ads" type="number" value="12.00" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+							</div>
+						</div>
+						<div class="space-y-4">
+							<label class="font-bold">Transaction Fee (%)</label>
+							<input id="fee" type="number" value="2.9" step="0.1" class="w-full bg-background border border-border rounded-xl px-4 py-3" />
+						</div>
+					</div>
+				</div>
+
+				<div class="space-y-6 animate-fade-in-up">
+					<div class="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 rounded-3xl p-8 shadow-xl">
+						<span class="text-sm font-bold uppercase tracking-widest text-primary">Profit Per Unit</span>
+						<div class="text-5xl font-black text-foreground mt-2" id="profit-result">$15.54</div>
+						<div class="mt-4 inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-500 font-bold text-sm" id="margin-result">31% Margin</div>
+					</div>
+
+					<div class="bg-card border border-border rounded-2xl p-6">
+						<h4 class="font-bold mb-4">Break-Even Analysis</h4>
+						<div class="space-y-2 text-sm">
+							<div class="flex justify-between text-muted-foreground">
+								<span>Total Cost:</span>
+                                <span id="total-cost-result">$34.45</span>
+							</div>
+							<div class="flex justify-between text-muted-foreground">
+								<span>Break-Even Price:</span>
+                                <span id="breakeven-result">$33.50</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const inputs = ['price', 'cost', 'shipping', 'ads', 'fee'];
+		const els = {};
+		inputs.forEach(i => els[i] = document.getElementById(i));
+
+		const profitRes = document.getElementById('profit-result');
+		const marginRes = document.getElementById('margin-result');
+		const totalCostRes = document.getElementById('total-cost-result');
+		const breakevenRes = document.getElementById('breakeven-result');
+
+		function update() {
+			const price = parseFloat(els.price.value) || 0;
+			const cost = parseFloat(els.cost.value) || 0;
+			const shipping = parseFloat(els.shipping.value) || 0;
+			const ads = parseFloat(els.ads.value) || 0;
+			const feePct = (parseFloat(els.fee.value) || 0) / 100;
+
+			const transactionFee = price * feePct + 0.30; // standard stripe-like fee
+			const totalCost = cost + shipping + ads + transactionFee;
+			const profit = price - totalCost;
+			const margin = price > 0 ? (profit / price) * 100 : 0;
+
+			profitRes.textContent = '$' + profit.toFixed(2);
+			marginRes.textContent = Math.round(margin) + '% Margin';
+			totalCostRes.textContent = '$' + totalCost.toFixed(2);
+			breakevenRes.textContent = '$' + (cost + shipping + 0.30).toFixed(2);
+            
+            marginRes.className = margin > 0 ? "mt-4 inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-500 font-bold text-sm" : "mt-4 inline-block px-3 py-1 rounded-full bg-red-500/20 text-red-500 font-bold text-sm";
+		}
+
+		inputs.forEach(i => els[i].addEventListener('input', update));
+		update();
+	});
+</script>

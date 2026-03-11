@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Side Hustle Idea Generator | Hustle Teacher"
+	description="Discover your next income stream. Generate unique side hustle ideas based on your skills and available time."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container text-center">
+			<div class="mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					💡 Discovery Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					Side Hustle <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Idea</span> Generator
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					Enter your primary skill or interest, and we'll match you with a profitable side hustle idea.
+				</p>
+			</div>
+
+			<div class="max-w-3xl mx-auto space-y-10">
+				<div class="bg-card border border-border rounded-3xl p-10 shadow-2xl space-y-8">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+						<div class="space-y-3">
+							<label class="font-bold">What are you good at?</label>
+							<select id="skill" class="w-full bg-background border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary">
+								<option value="writing">Writing / Content</option>
+								<option value="tech">Tech / Coding</option>
+								<option value="design">Design / Art</option>
+								<option value="marketing">Marketing / Social Media</option>
+								<option value="manual">Hands-on / Physical</option>
+							</select>
+						</div>
+						<div class="space-y-3">
+							<label class="font-bold">Time Commitment</label>
+							<select id="time" class="w-full bg-background border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary">
+								<option value="low">1-5 hours / week</option>
+								<option value="med">5-15 hours / week</option>
+								<option value="high">15+ hours / week</option>
+							</select>
+						</div>
+					</div>
+					<button id="genBtn" class="w-full bg-primary hover:bg-primary/95 text-white font-black py-5 rounded-2xl shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]">
+						FIND MY SIDE HUSTLE
+					</button>
+				</div>
+
+				<div id="result-box" class="hidden animate-fade-in-up">
+					<div class="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 rounded-3xl p-10 relative overflow-hidden">
+						<div class="absolute -right-8 -bottom-8 text-9xl opacity-5">🚀</div>
+						<h3 class="text-2xl font-bold text-primary mb-4" id="idea-title">The Idea</h3>
+						<p class="text-lg text-foreground leading-relaxed mb-6" id="idea-desc">Idea description goes here.</p>
+						<div class="flex flex-wrap justify-center gap-4">
+							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="diff-tag">Difficulty: Low</span>
+							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="profit-tag">Profit Potential: High</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	const ideas = {
+		writing: [
+			{ title: "Ghostwriting for CEOs", desc: "Write LinkedIn and Twitter/X threads for busy executives who want to build personal brands.", diff: "Med", profit: "Very High" },
+			{ title: "Niche Newsletter Curator", desc: "Start a weekly newsletter aggregating news in a specific industry like AI or Green Energy.", diff: "Low", profit: "Med" }
+		],
+		tech: [
+			{ title: "No-Code Automator", desc: "Help small businesses automate their workflows using Zapier, Make, or Airtable.", diff: "Med", profit: "High" },
+			{ title: "Niche SaaS Micro-Tool", desc: "Build a simple browser extension or Shopify app that solves one specific problem.", diff: "High", profit: "Unlimited" }
+		],
+		design: [
+			{ title: "Youtube Thumbnail Designer", desc: "Create high-CTR thumbnails for creators. One good designer can manage 5-10 channels.", diff: "Med", profit: "High" },
+			{ title: "Digital Planner Creator", desc: "Design aesthetic planners and sell them on Etsy for passive income.", diff: "Low", profit: "Med" }
+		],
+		marketing: [
+			{ title: "UGC Content Creator", desc: "Make short video ads for brands to use in their TikTok and Instagram campaigns.", diff: "Low", profit: "High" },
+			{ title: "SEO Auditor", desc: "Use tools to find technical SEO errors for local businesses and charge for a report/fix.", diff: "High", profit: "High" }
+		],
+		manual: [
+			{ title: "Car Detailing", desc: "Mobile car washing and waxing. High demand and low startup costs.", diff: "Low", profit: "Med" },
+			{ title: "Vintage Reseller", desc: "Find unique items at thrift stores and flip them on eBay or Depop.", diff: "Med", profit: "High" }
+		]
+	};
+
+	document.getElementById('genBtn').addEventListener('click', () => {
+		const skill = document.getElementById('skill').value;
+		const pool = ideas[skill];
+		const idea = pool[Math.floor(Math.random() * pool.length)];
+
+		document.getElementById('idea-title').textContent = idea.title;
+		document.getElementById('idea-desc').textContent = idea.desc;
+		document.getElementById('diff-tag').textContent = `Difficulty: ${idea.diff}`;
+		document.getElementById('profit-tag').textContent = `Profit Potential: ${idea.profit}`;
+		document.getElementById('result-box').classList.remove('hidden');
+	});
+</script>

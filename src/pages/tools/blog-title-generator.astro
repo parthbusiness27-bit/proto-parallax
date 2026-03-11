@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Blog Title Generator | Hustle Teacher"
+	description="Create catchy, SEO-friendly headlines for your blog posts and articles instantly."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container text-center">
+			<div class="mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					✍️ Writing Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					Blog <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Title</span> Generator
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					Turn boring keywords into irresistible headlines that rank on Google and get clicked.
+				</p>
+			</div>
+
+			<div class="max-w-3xl mx-auto space-y-12">
+				<div class="bg-card border border-border rounded-3xl p-8 shadow-xl">
+					<div class="flex flex-col gap-4">
+						<input id="keyword" type="text" placeholder="Enter your topic (e.g. Side Hustles, Vegan Cooking)..." class="w-full bg-background border border-border rounded-xl px-6 py-4 text-lg" />
+						<button id="genBtn" class="bg-emerald-500 hover:bg-emerald-600 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-emerald-500/20">
+							GENERATE BLOG TITLES
+						</button>
+					</div>
+				</div>
+
+				<div id="results" class="hidden grid grid-cols-1 gap-4 text-left">
+					<!-- Titles -->
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const btn = document.getElementById('genBtn');
+		const input = document.getElementById('keyword');
+		const results = document.getElementById('results');
+
+		const patterns = [
+			"The Ultimate Guide to {x}: Everything You Need to Know",
+			"7 Proven Ways to {x} (Even if You're a Beginner)",
+			"Why {x} is the Future of Digital Business",
+			"The Shocking Truth About {x} Revealed",
+			"How to Start {x} with Zero Experience",
+			"Is {x} Worth It? An Honest Breakdown",
+			"10 Tools That Will Explode Your {x} Growth",
+			"How I Transformed My Life Through {x}",
+			"Common {x} Myths Debunked",
+			"The Step-by-Step {x} Roadmap for 2026"
+		];
+
+		btn.addEventListener('click', () => {
+			const x = input.value.trim();
+			if(!x) return;
+			results.innerHTML = '';
+			patterns.forEach(p => {
+				const title = p.replace(/{x}/g, x);
+				const div = document.createElement('div');
+				div.className = "bg-card/50 border border-border rounded-xl p-4 flex justify-between items-center group hover:border-emerald-500/50 cursor-pointer";
+				div.innerHTML = `
+					<span class="font-bold text-lg group-hover:text-emerald-500 transition-colors">${title}</span>
+					<span class="text-2xl">👉</span>
+				`;
+				div.onclick = () => {
+					navigator.clipboard.writeText(title);
+					alert('Title copied!');
+				};
+				results.appendChild(div);
+			});
+			results.classList.remove('hidden');
+		});
+	});
+</script>

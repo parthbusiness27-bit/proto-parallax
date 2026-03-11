@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+	title="Freelance Hourly Rate Calculator | Hustle Teacher"
+	description="Calculate your ideal freelance hourly rate based on desired income, monthly expenses, and billable hours."
+>
+	<main class="flex-grow pt-24 pb-20">
+		<div class="docs-site-container">
+			<div class="text-center mb-16 animate-fade-in-down">
+				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
+					💼 Freelance Tools
+				</div>
+				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
+					Freelance <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Hourly Rate</span> Calculator
+				</h1>
+				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+					Don't undersell yourself. Calculate exactly what you need to charge to live your desired lifestyle.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+				<div class="lg:col-span-2 space-y-8 animate-fade-in-up">
+					<div class="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 shadow-2xl space-y-10">
+						<!-- Desired Income -->
+						<div class="space-y-4">
+							<div class="flex justify-between items-end">
+								<label class="text-lg font-bold">Desired Net Monthly Income ($)</label>
+								<span class="text-2xl font-black text-primary" id="income-display">$5,000</span>
+							</div>
+							<input type="range" id="income-slider" min="1000" max="50000" step="500" value="5000" class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-primary" />
+							<input id="income" type="number" value="5000" class="w-full bg-background/50 border border-border rounded-xl px-4 py-2" />
+						</div>
+
+						<!-- Monthly Expenses -->
+						<div class="space-y-4">
+							<div class="flex justify-between items-end">
+								<label class="text-lg font-bold">Monthly Business Expenses & Taxes ($)</label>
+								<span class="text-2xl font-black text-emerald-500" id="expenses-display">$1,500</span>
+							</div>
+							<input type="range" id="expenses-slider" min="0" max="20000" step="100" value="1500" class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-emerald-500" />
+							<input id="expenses" type="number" value="1500" class="w-full bg-background/50 border border-border rounded-xl px-4 py-2" />
+						</div>
+
+						<!-- Billable Hours -->
+						<div class="space-y-4">
+							<div class="flex justify-between items-end">
+								<label class="text-lg font-bold">Billable Hours Per Week</label>
+								<span class="text-2xl font-black text-indigo-400" id="hours-display">25</span>
+							</div>
+							<input type="range" id="hours-slider" min="1" max="80" step="1" value="25" class="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-indigo-400" />
+							<input id="hours" type="number" value="25" class="w-full bg-background/50 border border-border rounded-xl px-4 py-2" />
+						</div>
+					</div>
+				</div>
+
+				<div class="space-y-6 animate-fade-in-up" style="animation-delay: 300ms;">
+					<h2 class="text-2xl font-bold px-2">Your Rates</h2>
+					
+					<div class="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 rounded-3xl p-8 shadow-xl text-center">
+						<span class="text-sm font-bold uppercase tracking-widest text-primary">Recommended Hourly Rate</span>
+						<div class="text-6xl font-black text-foreground mt-2" id="hourly-result">$65</div>
+						<p class="text-xs text-muted-foreground mt-4">Based on 4 weeks per month</p>
+					</div>
+
+					<div class="bg-card border border-border rounded-2xl p-6 shadow-lg">
+						<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Required Monthly Revenue</span>
+						<div class="text-3xl font-bold text-foreground mt-1" id="revenue-result">$6,500</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		const inputs = ['income', 'expenses', 'hours'];
+		const els = {};
+		inputs.forEach(i => {
+			els[i] = document.getElementById(i);
+			els[i+'Slider'] = document.getElementById(i+'-slider');
+			els[i+'Display'] = document.getElementById(i+'-display');
+		});
+
+		const hourlyRes = document.getElementById('hourly-result');
+		const revenueRes = document.getElementById('revenue-result');
+
+		function update() {
+			const income = parseFloat(els.income.value) || 0;
+			const expenses = parseFloat(els.expenses.value) || 0;
+			const hours = parseFloat(els.hours.value) || 1;
+
+			els.incomeDisplay.textContent = '$' + income.toLocaleString();
+			els.expensesDisplay.textContent = '$' + expenses.toLocaleString();
+			els.hoursDisplay.textContent = hours;
+
+			const totalNeeded = income + expenses;
+			const hourly = totalNeeded / (hours * 4);
+
+			hourlyRes.textContent = '$' + Math.ceil(hourly);
+			revenueRes.textContent = '$' + totalNeeded.toLocaleString();
+		}
+
+		inputs.forEach(i => {
+			[els[i], els[i+'Slider']].forEach(el => {
+				el.addEventListener('input', () => {
+					if (el === els[i]) els[i+'Slider'].value = el.value;
+					else els[i].value = el.value;
+					update();
+				});
+			});
+		});
+		update();
+	});
+</script>
