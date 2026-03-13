@@ -8,18 +8,35 @@ export async function getStaticPaths() {
 	// Include all known category slugs so that pages always exist
 	// even if no posts exist for a category yet
 	const allKnownCategories = [
-		'side-hustles',
-		'skill-based',
-		'tech-programming',
-		'content-creator',
-		'digital-products',
-		'online-business',
-		'ai-income',
-		'virtual-assistant',
-		'affiliate',
-		'digital-assets',
-		'automation',
+		"freelancing",
+		"social-media-services",
+		"programming-development",
+		"content-creation",
+		"digital-marketing",
+		"automation-agencies",
+		"ecommerce",
+		"digital-products",
+		"stock-content",
+		"ai-services",
+		"software-saas",
+		"virtual-assistance",
+		"website-businesses",
+		"affiliate-marketing",
+		"online-research-testing",
+		"automation-tools",
+		"trading-investing",
+		"side-hustles",
+		"skill-based",
+		"tech-programming",
+		"content-creator",
+		"online-business",
+		"ai-income",
+		"virtual-assistant",
+		"affiliate",
+		"digital-assets",
+		"automation"
 	];
+
 
 	const allPosts = await getCollection('blog');
 

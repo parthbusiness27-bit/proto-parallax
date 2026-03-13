@@ -44,10 +44,10 @@ const { title, description, url, icon, isPremium = false, price } = Astro.props;
     </p>
 
     <!-- Action Button -->
-    <div class="w-full mt-2">
-      <div class={`w-full py-2.5 rounded-xl border text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all duration-300 ${isPremium ? 'bg-primary/10 border-primary/30 text-primary-300 group-hover:bg-primary group-hover:text-white group-hover:border-primary' : 'bg-white/5 border-white/10 text-white group-hover:bg-emerald-500 group-hover:border-emerald-500'}`}>
+    <div class="w-full mt-3">
+      <div class={`w-full py-3 md:py-2.5 rounded-xl border text-[11px] md:text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all duration-300 ${isPremium ? 'bg-primary/10 border-primary/30 text-primary-300 group-hover:bg-primary group-hover:text-white group-hover:border-primary' : 'bg-white/5 border-white/10 text-white group-hover:bg-emerald-500 group-hover:border-emerald-500'}`}>
         Explore Tool
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="md:w-3 md:h-3"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </div>
     </div>
   </div>

@@ -5,14 +5,17 @@ export const SITE_TITLE = 'Hustle Teacher';
 export const SITE_DESCRIPTION = 'Learn proven ways to earn money from home. Simple guides for students and beginners. Start your side hustle today and grow your digital income step by step.';
 export const SITE_URL = 'https://hustleteacher.vercel.app';
 export const SITE_AUTHOR = 'Parth';
-export const SITE_EMAIL = 'parthbusiness27@gmail.com';
+export const SITE_EMAIL = 'thehustleteacher@gmail.com';
 
 // SEO & Social
-export const SOCIAL_TWITTER = '@HustleTeacher';
-export const SOCIAL_FACEBOOK = 'hustleteacher';
-export const SOCIAL_LINKEDIN = 'hustle-teacher';
-export const SOCIAL_YOUTUBE = '@hustleteacher';
-export const SOCIAL_INSTAGRAM = '@hustleteacher';
+export const SOCIAL_TWITTER = 'https://x.com/thustleteacher';
+export const SOCIAL_FACEBOOK = 'hustle.teacher';
+export const SOCIAL_LINKEDIN = 'hustle.teacher';
+export const SOCIAL_YOUTUBE = 'https://www.youtube.com/@TheHustleTeacher';
+export const SOCIAL_INSTAGRAM = 'https://www.instagram.com/hustle.teacher';
+export const SOCIAL_PINTEREST = 'https://www.pinterest.com/thehustleteacher';
+export const SOCIAL_WHATSAPP = 'https://wa.me/919041890565';
+
 
 // Content
 export const POSTS_PER_PAGE = 10;
@@ -35,8 +38,12 @@ export const ORGANIZATION = {
 	logo: `${SITE_URL}/logo.png`,
 	email: SITE_EMAIL,
 	sameAs: [
-		`https://twitter.com/${SOCIAL_TWITTER}`,
+		SOCIAL_TWITTER,
 		`https://facebook.com/${SOCIAL_FACEBOOK}`,
+		SOCIAL_INSTAGRAM,
+		SOCIAL_PINTEREST,
+		SOCIAL_YOUTUBE,
 	],
 };
+
 

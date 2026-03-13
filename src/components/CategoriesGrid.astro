@@ -1,84 +1,15 @@
 ---
-const categories = [
-  {
-    title: "Side Hustles for Students 📚",
-    slug: "side-hustles",
-    description: "Good for low experience, flexible hours, phone/laptop work.",
-    skills: ["Data Entry", "Transcription", "Social Media", "Surveys", "Tutoring", "Gaming"]
-  },
-  {
-    title: "Skill-Based Income 🎯",
-    slug: "skill-based",
-    description: "Requires learning a specific high-demand skill.",
-    skills: ["Graphic Design", "Video Editing", "Copywriting", "SEO Writing", "Marketing"]
-  },
-  {
-    title: "Tech & Programming 👨‍💻",
-    slug: "tech-programming",
-    description: "For people who learn coding or technical skills.",
-    skills: ["Web Dev", "App Dev", "WordPress", "Shopify", "API & SaaS Dev"],
-    image: "tech_programming_category.png"
-  },
-  {
-    title: "Content Creator Income 🎥",
-    slug: "content-creator",
-    description: "Making money by building an audience online.",
-    skills: ["YouTube", "Shorts/TikToks", "Podcasting", "Blogging", "Tech Reviews"],
-    image: "content_creator_category.png"
-  },
-  {
-    title: "Digital Product Businesses 📦",
-    slug: "digital-products",
-    description: "Create once → sell many times (highly scalable).",
-    skills: ["E-books", "Online Courses", "Notion Templates", "Stock Media"]
-  },
-  {
-    title: "Online Business Models 🏪",
-    slug: "online-business",
-    description: "E-commerce and scalable digital businesses.",
-    skills: ["Dropshipping", "Print-on-demand", "Niche Blogs", "Directories"],
-    image: "ecommerce_category.png"
-  },
-  {
-    title: "AI-Powered Income 🤖",
-    slug: "ai-income",
-    description: "The fastest growing sector in online earning.",
-    skills: ["Prompt Engineering", "AI Chatbots", "AI Images", "AI Video Editing"]
-  },
-  {
-    title: "Virtual Assistant & Support 🧑‍💻",
-    slug: "virtual-assistant",
-    description: "Admin, business support, and operations management.",
-    skills: ["Calendar Mgmt", "Customer Support", "Research", "Lead Gen"]
-  },
-  {
-    title: "Affiliate & Monetization 💸",
-    slug: "affiliate",
-    description: "Earn passive commissions and monetize audiences.",
-    skills: ["Review Blogs", "Coupon Sites", "Paid Newsletters", "Paid Communities"]
-  },
-  {
-    title: "Digital Assets & Trading 📈",
-    slug: "digital-assets",
-    description: "Higher risk but massive scalability.",
-    skills: ["Crypto & Stocks", "Domain Flipping", "Website Flipping"]
-  },
-  {
-    title: "Automation & Tools ⚙️",
-    slug: "automation",
-    description: "Perfect for developers and technical entrepreneurs.",
-    skills: ["Chrome extensions", "Scrapers", "Micro SaaS", "Workflow Bots"]
-  }
-];
 import { Image } from 'astro:assets';
+import { categories } from '../../scripts/categories.js';
+
 import techImg from '../assets/tech_programming_category.png';
 import creatorImg from '../assets/content_creator_category.png';
 import ecomImg from '../assets/ecommerce_category.png';
 
 const imageMap: Record<string, any> = {
-    "tech_programming_category.png": techImg,
-    "content_creator_category.png": creatorImg,
-    "ecommerce_category.png": ecomImg
+    "programming-development": techImg,
+    "content-creation": creatorImg,
+    "ecommerce": ecomImg
 };
 ---
 
@@ -89,21 +20,21 @@ const imageMap: Record<string, any> = {
                 Where do you want to start?
             </h2>
             <p class="text-muted-foreground text-xl max-w-2xl mx-auto">
-                Explore the top 11 proven pathways to generating an online income. Find your niche, develop your skills, and start building your empire today.
+                Explore the top {categories.length} proven pathways to generating an online income. Find your niche, develop your skills, and start building your empire today.
             </p>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {categories.map((category, i) => (
                 <a 
                     href={`/blog/category/${category.slug}`}
                     class={`group relative p-5 md:p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1 flex flex-col h-full animate-fade-in-up`}
                     style={`animation-delay: ${i * 50}ms;`}
                 >
-                    {category.image && imageMap[category.image] && (
+                    {imageMap[category.slug] && (
                         <div class="mb-4 overflow-hidden rounded-xl aspect-[16/6] md:aspect-video w-full bg-muted">
                             <Image 
-                                src={imageMap[category.image]} 
+                                src={imageMap[category.slug]} 
                                 alt={`${category.title} overview graphic`}
                                 width={400}
                                 height={225}
@@ -115,10 +46,12 @@ const imageMap: Record<string, any> = {
                     )}
                     <div class="flex-grow">
                         <h3 class="text-lg md:text-xl font-bold mb-2 text-foreground tracking-tight group-hover:text-primary transition-colors">{category.title}</h3>
-                        <p class="text-sm text-muted-foreground mb-4 leading-relaxed flex-grow">{category.description}</p>
+                        <p class="text-sm text-muted-foreground mb-4 leading-relaxed flex-grow">
+                            Explore guides covering everything from {category.subcategories[0].toLowerCase()} to {category.subcategories[category.subcategories.length - 1].toLowerCase()}.
+                        </p>
                         
                         <div class="flex flex-wrap gap-1.5 mb-2">
-                            {category.skills.map(skill => (
+                            {category.subcategories.slice(0, 4).map(skill => (
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary-600 dark:text-primary-400 border border-primary/20 transition-colors group-hover:bg-primary/20">
                                     {skill}
                                 </span>
