@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hustleteacher.vercel.app',
+	site: 'https://hustle-teacher.vercel.app',
 
 	integrations: [
 		mdx(),
@@ -30,7 +30,10 @@ export default defineConfig({
 		},
 	},
 	vite: {
-		plugins: [tailwindcss()],
+		plugins: [
+			// @ts-ignore - mismatch between Astro's internal Vite types and Tailwind's Vite types
+			tailwindcss()
+		],
 		build: {
 			minify: 'terser',
 			terserOptions: {

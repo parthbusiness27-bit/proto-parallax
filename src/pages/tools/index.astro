@@ -6,21 +6,31 @@ import { SITE_TITLE } from '../../consts';
 
 const allTools = await getCollection('tools');
 
-// Categorization Logic
-const categories = [
-    { id: 'bio', name: 'Bio Generators', icon: '📸' },
-    { id: 'description', name: 'Description Generators', icon: '📝' },
-    { id: 'name', name: 'Name Generators', icon: '🚀' },
-    { id: 'idea', name: 'Idea Generators', icon: '💡' },
-    { id: 'revenue', name: 'Revenue Generators', icon: '💹' },
-	{ id: 'writing', name: 'Writing Generators', icon: '✍️' },
-    { id: 'seo', name: 'SEO Generators', icon: '📈' }
-];
+// Get unique categories from tools
+const toolCategories = [...new Set(allTools.map(t => t.data.category))];
 
-const groupedTools = categories.map(cat => ({
-    ...cat,
-    tools: allTools.filter(t => t.data.category === cat.name)
-})).filter(g => g.tools.length > 0);
+// Categorization Logic - mapping tool categories to display names
+const categoryMap: Record<string, { id: string; name: string; icon: string }> = {
+    'Bio Gens': { id: 'bio', name: 'Bio Generators', icon: '📸' },
+    'Description Gens': { id: 'description', name: 'Description Generators', icon: '📝' },
+    'Name Gens': { id: 'name', name: 'Name Generators', icon: '🚀' },
+    'Idea Gens': { id: 'idea', name: 'Idea Generators', icon: '💡' },
+    'Revenue Gens': { id: 'revenue', name: 'Revenue Calculators', icon: '💹' },
+    'Writing Gens': { id: 'writing', name: 'Writing Generators', icon: '✍️' },
+    'SEO Gens': { id: 'seo', name: 'SEO Generators', icon: '📈' }
+};
+
+// Group tools by their category
+const groupedTools = toolCategories.map(catName => {
+    const config = categoryMap[catName] || { id: catName.toLowerCase().replace(/\s+/g, '-'), name: catName, icon: '🔧' };
+    return {
+        ...config,
+        id: config.id,
+        name: config.name,
+        icon: config.icon,
+        tools: allTools.filter(t => t.data.category === catName)
+    };
+}).filter(g => g.tools.length > 0);
 
 const title = "Tools Directory";
 const description = "The ultimate creator toolkit. 25+ free and premium tools to grow your digital income.";

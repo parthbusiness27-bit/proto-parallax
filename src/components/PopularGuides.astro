@@ -1,8 +1,8 @@
 ---
 const guides = [
-  { title: "How To Start Dropshipping", description: "Learn the exact step-by-step process to build your first store.", icon: "🛍️" },
-  { title: "How To Start Freelancing", description: "Land your first high-paying client in 30 days.", icon: "💻" },
-  { title: "How To Make Money With YouTube", description: "Grow your channel and monetize your audience.", icon: "▶️" },
+  { title: "How To Start Dropshipping", description: "Learn the exact step-by-step process to build your first store.", icon: "🛍️", slug: "ecommerce" },
+  { title: "How To Start Freelancing", description: "Land your first high-paying client in 30 days.", icon: "💻", slug: "freelancing" },
+  { title: "How To Make Money With YouTube", description: "Grow your channel and monetize your audience.", icon: "▶️", slug: "content-creator" },
   { title: "Best Side Hustles For Beginners", description: "Easy and quick ways to start earning your first $100.", icon: "🚀", slug: "side-hustles" },
   { title: "Start Affiliate Marketing", description: "Promote products and earn passive commissions.", icon: "🔗", slug: "affiliate", image: "affiliate_marketing_guide.png" },
   { title: "Become a Virtual Assistant", description: "Learn how to provide admin support from home.", icon: "☎️", slug: "virtual-assistant", image: "virtual_assistant_guide.png" },
@@ -36,7 +36,7 @@ const imageMap: Record<string, any> = {
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {guides.map((guide, i) => (
-                <a href={guide.slug ? `/blog/category/${guide.slug}` : "/guides"} class={`group block p-6 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 100}ms;`}>
+                <a href={guide.slug ? `/blog/category/${guide.slug}` : "/blog"} class={`group block p-6 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 100}ms;`}>
                     {guide.image && imageMap[guide.image] ? (
                         <div class="mb-4 overflow-hidden rounded-xl aspect-video w-full bg-muted">
                             <Image 
