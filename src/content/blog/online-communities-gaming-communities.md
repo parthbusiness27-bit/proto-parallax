@@ -2,7 +2,7 @@
 title: 'Communities Gaming Communities For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Want to succeed with Communities Gaming Communities? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 09, 2024'
-heroImage: '../../assets/blog/online-communities-gaming-communities.jpg'
+heroImage: '../../assets/blog/online-communities-gaming-communities.svg'
 category: 'online-communities'
 ---
 

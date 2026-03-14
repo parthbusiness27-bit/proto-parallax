@@ -2,7 +2,7 @@
 title: 'Zero Investment Trading Forex Trading Strategy for Complete Beginners'
 description: 'Discover the exact step-by-step framework to master Trading Forex Trading and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 26, 2024'
-heroImage: '../../assets/blog/online-trading-forex-trading.jpg'
+heroImage: '../../assets/blog/online-trading-forex-trading.svg'
 category: 'online-trading'
 ---
 

@@ -2,7 +2,7 @@
 title: 'How I Make Money With Testing Online Surveys (Complete Breakdown)'
 description: 'Learn the hidden strategies behind Testing Online Surveys that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'May 28, 2024'
-heroImage: '../../assets/blog/online-research-testing-online-surveys.jpg'
+heroImage: '../../assets/blog/online-research-testing-online-surveys.svg'
 category: 'online-research-testing'
 ---
 

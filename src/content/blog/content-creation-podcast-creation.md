@@ -2,7 +2,7 @@
 title: 'How To Build a Passive Income Empire With Creation Podcast Creation'
 description: 'Stop guessing and start executing. Follow our complete guide to Creation Podcast Creation designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Feb 07, 2024'
-heroImage: '../../assets/blog/content-creation-podcast-creation.jpg'
+heroImage: '../../assets/blog/content-creation-podcast-creation.svg'
 category: 'content-creation'
 ---
 

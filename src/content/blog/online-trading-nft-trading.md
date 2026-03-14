@@ -2,7 +2,7 @@
 title: 'Zero Investment Trading Nft Trading Strategy for Complete Beginners'
 description: 'Learn the hidden strategies behind Trading Nft Trading that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 27, 2024'
-heroImage: '../../assets/blog/online-trading-nft-trading.jpg'
+heroImage: '../../assets/blog/online-trading-nft-trading.svg'
 category: 'online-trading'
 ---
 

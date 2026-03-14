@@ -2,7 +2,7 @@
 title: 'Development Saas Development Masterclass: Everything You Need to Know'
 description: 'Stop guessing and start executing. Follow our complete guide to Development Saas Development designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jan 24, 2024'
-heroImage: '../../assets/blog/programming-development-saas-development.jpg'
+heroImage: '../../assets/blog/programming-development-saas-development.svg'
 category: 'programming-development'
 ---
 

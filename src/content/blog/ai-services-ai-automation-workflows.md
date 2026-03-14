@@ -2,7 +2,7 @@
 title: 'How to Start Ai Automation Workflows in 2026 With Zero Experience'
 description: 'Unlock the ultimate growth strategies for Ai Automation Workflows. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Apr 17, 2024'
-heroImage: '../../assets/blog/ai-services-ai-automation-workflows.jpg'
+heroImage: '../../assets/blog/ai-services-ai-automation-workflows.svg'
 category: 'ai-services'
 ---
 

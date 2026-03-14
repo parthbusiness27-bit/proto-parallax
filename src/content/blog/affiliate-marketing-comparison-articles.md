@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Marketing Comparison Articles — High Income Strategy'
 description: 'Stop guessing and start executing. Follow our complete guide to Marketing Comparison Articles designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'May 19, 2024'
-heroImage: '../../assets/blog/affiliate-marketing-comparison-articles.jpg'
+heroImage: '../../assets/blog/affiliate-marketing-comparison-articles.svg'
 category: 'affiliate-marketing'
 ---
 

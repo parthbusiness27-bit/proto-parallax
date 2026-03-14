@@ -2,7 +2,7 @@
 title: 'Saas Shopify Apps Income Tutorial: From $0 to $10,000/Month'
 description: 'Learn the hidden strategies behind Saas Shopify Apps that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 07, 2024'
-heroImage: '../../assets/blog/software-saas-shopify-apps.jpg'
+heroImage: '../../assets/blog/software-saas-shopify-apps.svg'
 category: 'software-saas'
 ---
 

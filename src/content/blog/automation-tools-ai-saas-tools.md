@@ -2,7 +2,7 @@
 title: 'Ai Saas Tools For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Discover the exact step-by-step framework to master Ai Saas Tools and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jul 12, 2024'
-heroImage: '../../assets/blog/automation-tools-ai-saas-tools.jpg'
+heroImage: '../../assets/blog/automation-tools-ai-saas-tools.svg'
 category: 'automation-tools'
 ---
 

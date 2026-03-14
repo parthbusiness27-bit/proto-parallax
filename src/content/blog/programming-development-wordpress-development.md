@@ -2,7 +2,7 @@
 title: 'How to Start Development Wordpress Development in 2026 With Zero Experience'
 description: 'Unlock the ultimate growth strategies for Development Wordpress Development. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jan 18, 2024'
-heroImage: '../../assets/blog/programming-development-wordpress-development.jpg'
+heroImage: '../../assets/blog/programming-development-wordpress-development.svg'
 category: 'programming-development'
 ---
 

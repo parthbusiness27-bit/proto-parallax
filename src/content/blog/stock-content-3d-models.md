@@ -2,7 +2,7 @@
 title: 'How To Build a Passive Income Empire With Content 3d Models'
 description: 'Unlock the ultimate growth strategies for Content 3d Models. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Apr 09, 2024'
-heroImage: '../../assets/blog/stock-content-3d-models.jpg'
+heroImage: '../../assets/blog/stock-content-3d-models.svg'
 category: 'stock-content'
 ---
 

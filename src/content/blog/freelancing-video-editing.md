@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Freelancing Video Editing (And How To Win)'
 description: 'Learn the hidden strategies behind Freelancing Video Editing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 05, 2024'
-heroImage: '../../assets/blog/freelancing-video-editing.jpg'
+heroImage: '../../assets/blog/freelancing-video-editing.svg'
 category: 'freelancing'
 ---
 

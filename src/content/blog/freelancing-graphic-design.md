@@ -2,7 +2,7 @@
 title: 'Top 5 Freelancing Graphic Design Strategies That Actually Work in 2026'
 description: 'Discover the exact step-by-step framework to master Freelancing Graphic Design and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 02, 2024'
-heroImage: '../../assets/blog/freelancing-graphic-design.jpg'
+heroImage: '../../assets/blog/freelancing-graphic-design.svg'
 category: 'freelancing'
 ---
 

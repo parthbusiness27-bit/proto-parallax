@@ -2,7 +2,7 @@
 title: 'How to Start Freelancing Seo Writing in 2026 With Zero Experience'
 description: 'Stop guessing and start executing. Follow our complete guide to Freelancing Seo Writing designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jan 10, 2024'
-heroImage: '../../assets/blog/freelancing-seo-writing.jpg'
+heroImage: '../../assets/blog/freelancing-seo-writing.svg'
 category: 'freelancing'
 ---
 

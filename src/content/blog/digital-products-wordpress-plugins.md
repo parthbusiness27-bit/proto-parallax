@@ -2,7 +2,7 @@
 title: 'Products Wordpress Plugins Income Tutorial: From $0 to $10,000/Month'
 description: 'Unlock the ultimate growth strategies for Products Wordpress Plugins. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Mar 31, 2024'
-heroImage: '../../assets/blog/digital-products-wordpress-plugins.jpg'
+heroImage: '../../assets/blog/digital-products-wordpress-plugins.svg'
 category: 'digital-products'
 ---
 

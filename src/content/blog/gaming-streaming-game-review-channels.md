@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Game Review Channels — High Income Strategy'
 description: 'Unlock the ultimate growth strategies for Game Review Channels. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jun 21, 2024'
-heroImage: '../../assets/blog/gaming-streaming-game-review-channels.jpg'
+heroImage: '../../assets/blog/gaming-streaming-game-review-channels.svg'
 category: 'gaming-streaming'
 ---
 

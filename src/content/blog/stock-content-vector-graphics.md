@@ -2,7 +2,7 @@
 title: 'Content Vector Graphics Masterclass: Everything You Need to Know'
 description: 'Learn the hidden strategies behind Content Vector Graphics that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 10, 2024'
-heroImage: '../../assets/blog/stock-content-vector-graphics.jpg'
+heroImage: '../../assets/blog/stock-content-vector-graphics.svg'
 category: 'stock-content'
 ---
 

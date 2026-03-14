@@ -2,7 +2,7 @@
 title: 'How to Start Community Management Bots in 2026 With Zero Experience'
 description: 'Discover the exact step-by-step framework to master Community Management Bots and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Mar 15, 2024'
-heroImage: '../../assets/blog/software-saas-community-management-bots.jpg'
+heroImage: '../../assets/blog/software-saas-community-management-bots.svg'
 category: 'software-saas'
 ---
 

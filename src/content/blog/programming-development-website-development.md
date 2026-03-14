@@ -2,7 +2,7 @@
 title: 'How To Build a Passive Income Empire With Development Website Development'
 description: 'Learn the hidden strategies behind Development Website Development that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 14, 2024'
-heroImage: '../../assets/blog/programming-development-website-development.jpg'
+heroImage: '../../assets/blog/programming-development-website-development.svg'
 category: 'programming-development'
 ---
 

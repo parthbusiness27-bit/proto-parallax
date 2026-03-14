@@ -2,7 +2,7 @@
 title: 'How I Make Money With Ai Script Writing (Complete Breakdown)'
 description: 'Unlock the ultimate growth strategies for Ai Script Writing. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Apr 24, 2024'
-heroImage: '../../assets/blog/ai-services-ai-script-writing.jpg'
+heroImage: '../../assets/blog/ai-services-ai-script-writing.svg'
 category: 'ai-services'
 ---
 

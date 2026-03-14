@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Paid Ads Agency (And How To Win)'
 description: 'Want to succeed with Paid Ads Agency? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 03, 2024'
-heroImage: '../../assets/blog/automation-agencies-paid-ads-agency.jpg'
+heroImage: '../../assets/blog/automation-agencies-paid-ads-agency.svg'
 category: 'automation-agencies'
 ---
 

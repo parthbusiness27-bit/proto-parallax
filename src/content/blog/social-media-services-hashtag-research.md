@@ -2,7 +2,7 @@
 title: 'How I Make Money With Services Hashtag Research (Complete Breakdown)'
 description: 'Learn the hidden strategies behind Services Hashtag Research that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 21, 2024'
-heroImage: '../../assets/blog/social-media-services-hashtag-research.jpg'
+heroImage: '../../assets/blog/social-media-services-hashtag-research.svg'
 category: 'social-media-services'
 ---
 

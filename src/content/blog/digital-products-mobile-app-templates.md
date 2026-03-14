@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Mobile App Templates (And How To Win)'
 description: 'Unlock the ultimate growth strategies for Mobile App Templates. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Apr 01, 2024'
-heroImage: '../../assets/blog/digital-products-mobile-app-templates.jpg'
+heroImage: '../../assets/blog/digital-products-mobile-app-templates.svg'
 category: 'digital-products'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Development Api Development — High Income Strategy'
 description: 'Unlock the ultimate growth strategies for Development Api Development. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jan 23, 2024'
-heroImage: '../../assets/blog/programming-development-api-development.jpg'
+heroImage: '../../assets/blog/programming-development-api-development.svg'
 category: 'programming-development'
 ---
 

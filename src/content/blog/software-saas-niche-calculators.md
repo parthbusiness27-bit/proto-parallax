@@ -2,7 +2,7 @@
 title: 'Saas Niche Calculators Masterclass: Everything You Need to Know'
 description: 'Want to succeed with Saas Niche Calculators? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 09, 2024'
-heroImage: '../../assets/blog/software-saas-niche-calculators.jpg'
+heroImage: '../../assets/blog/software-saas-niche-calculators.svg'
 category: 'software-saas'
 ---
 

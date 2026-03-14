@@ -2,7 +2,7 @@
 title: 'How I Make Money With Ecommerce Reselling Products (Complete Breakdown)'
 description: 'Learn the hidden strategies behind Ecommerce Reselling Products that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 21, 2024'
-heroImage: '../../assets/blog/ecommerce-reselling-products.jpg'
+heroImage: '../../assets/blog/ecommerce-reselling-products.svg'
 category: 'ecommerce'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Print On Demand Masterclass: Everything You Need to Know'
 description: 'Want to succeed with Print On Demand? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 18, 2024'
-heroImage: '../../assets/blog/ecommerce-print-on-demand.jpg'
+heroImage: '../../assets/blog/ecommerce-print-on-demand.svg'
 category: 'ecommerce'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Zero Investment Game Mod Creation Strategy for Complete Beginners'
 description: 'Stop guessing and start executing. Follow our complete guide to Game Mod Creation designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jun 19, 2024'
-heroImage: '../../assets/blog/gaming-streaming-game-mod-creation.jpg'
+heroImage: '../../assets/blog/gaming-streaming-game-mod-creation.svg'
 category: 'gaming-streaming'
 ---
 

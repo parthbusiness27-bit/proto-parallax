@@ -2,7 +2,7 @@
 title: 'Freelancing Logo Design Masterclass: Everything You Need to Know'
 description: 'Want to succeed with Freelancing Logo Design? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jan 03, 2024'
-heroImage: '../../assets/blog/freelancing-logo-design.jpg'
+heroImage: '../../assets/blog/freelancing-logo-design.svg'
 category: 'freelancing'
 ---
 

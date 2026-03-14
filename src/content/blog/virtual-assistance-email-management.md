@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Assistance Email Management — High Income Strategy'
 description: 'Discover the exact step-by-step framework to master Assistance Email Management and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Apr 25, 2024'
-heroImage: '../../assets/blog/virtual-assistance-email-management.jpg'
+heroImage: '../../assets/blog/virtual-assistance-email-management.svg'
 category: 'virtual-assistance'
 ---
 

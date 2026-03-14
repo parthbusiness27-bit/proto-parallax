@@ -2,7 +2,7 @@
 title: 'Zero Investment Creation Reaction Videos Strategy for Complete Beginners'
 description: 'Stop guessing and start executing. Follow our complete guide to Creation Reaction Videos designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Feb 12, 2024'
-heroImage: '../../assets/blog/content-creation-reaction-videos.jpg'
+heroImage: '../../assets/blog/content-creation-reaction-videos.svg'
 category: 'content-creation'
 ---
 

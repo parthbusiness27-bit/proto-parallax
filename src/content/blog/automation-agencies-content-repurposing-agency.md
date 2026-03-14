@@ -2,7 +2,7 @@
 title: 'Content Repurposing Agency For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Learn the hidden strategies behind Content Repurposing Agency that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 29, 2024'
-heroImage: '../../assets/blog/automation-agencies-content-repurposing-agency.jpg'
+heroImage: '../../assets/blog/automation-agencies-content-repurposing-agency.svg'
 category: 'automation-agencies'
 ---
 

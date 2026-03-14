@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Lead List Building (And How To Win)'
 description: 'Learn the hidden strategies behind Lead List Building that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'May 02, 2024'
-heroImage: '../../assets/blog/virtual-assistance-lead-list-building.jpg'
+heroImage: '../../assets/blog/virtual-assistance-lead-list-building.svg'
 category: 'virtual-assistance'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Services Profile Optimization For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Want to succeed with Services Profile Optimization? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Feb 24, 2024'
-heroImage: '../../assets/blog/social-media-services-profile-optimization.jpg'
+heroImage: '../../assets/blog/social-media-services-profile-optimization.svg'
 category: 'social-media-services'
 ---
 

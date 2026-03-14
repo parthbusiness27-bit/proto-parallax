@@ -2,7 +2,7 @@
 title: 'Zero Investment Ai Thumbnail Creation Strategy for Complete Beginners'
 description: 'Learn the hidden strategies behind Ai Thumbnail Creation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 23, 2024'
-heroImage: '../../assets/blog/ai-services-ai-thumbnail-creation.jpg'
+heroImage: '../../assets/blog/ai-services-ai-thumbnail-creation.svg'
 category: 'ai-services'
 ---
 

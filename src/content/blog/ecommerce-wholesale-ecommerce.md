@@ -2,7 +2,7 @@
 title: 'Zero Investment Ecommerce Wholesale Ecommerce Strategy for Complete Beginners'
 description: 'Discover the exact step-by-step framework to master Ecommerce Wholesale Ecommerce and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Mar 23, 2024'
-heroImage: '../../assets/blog/ecommerce-wholesale-ecommerce.jpg'
+heroImage: '../../assets/blog/ecommerce-wholesale-ecommerce.svg'
 category: 'ecommerce'
 ---
 

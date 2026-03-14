@@ -2,7 +2,7 @@
 title: 'How To Build a Passive Income Empire With Saas Chrome Extensions'
 description: 'Stop guessing and start executing. Follow our complete guide to Saas Chrome Extensions designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Mar 06, 2024'
-heroImage: '../../assets/blog/software-saas-chrome-extensions.jpg'
+heroImage: '../../assets/blog/software-saas-chrome-extensions.svg'
 category: 'software-saas'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Zero Investment Streaming Speedrunning Content Strategy for Complete Beginners'
 description: 'Want to succeed with Streaming Speedrunning Content? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 22, 2024'
-heroImage: '../../assets/blog/gaming-streaming-speedrunning-content.jpg'
+heroImage: '../../assets/blog/gaming-streaming-speedrunning-content.svg'
 category: 'gaming-streaming'
 ---
 

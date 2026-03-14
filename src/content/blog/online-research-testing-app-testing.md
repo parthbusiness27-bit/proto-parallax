@@ -2,7 +2,7 @@
 title: 'How I Make Money With Testing App Testing (Complete Breakdown)'
 description: 'Discover the exact step-by-step framework to master Testing App Testing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'May 26, 2024'
-heroImage: '../../assets/blog/online-research-testing-app-testing.jpg'
+heroImage: '../../assets/blog/online-research-testing-app-testing.svg'
 category: 'online-research-testing'
 ---
 

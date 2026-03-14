@@ -2,7 +2,7 @@
 title: 'Assistance File Organization For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Stop guessing and start executing. Follow our complete guide to Assistance File Organization designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'May 03, 2024'
-heroImage: '../../assets/blog/virtual-assistance-file-organization.jpg'
+heroImage: '../../assets/blog/virtual-assistance-file-organization.svg'
 category: 'virtual-assistance'
 ---
 

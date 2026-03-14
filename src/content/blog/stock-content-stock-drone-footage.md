@@ -2,7 +2,7 @@
 title: 'How I Make Money With Stock Drone Footage (Complete Breakdown)'
 description: 'Learn the hidden strategies behind Stock Drone Footage that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 13, 2024'
-heroImage: '../../assets/blog/stock-content-stock-drone-footage.jpg'
+heroImage: '../../assets/blog/stock-content-stock-drone-footage.svg'
 category: 'stock-content'
 ---
 

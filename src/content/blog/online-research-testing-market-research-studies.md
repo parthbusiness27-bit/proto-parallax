@@ -2,7 +2,7 @@
 title: 'Market Research Studies Income Tutorial: From $0 to $10,000/Month'
 description: 'Discover the exact step-by-step framework to master Market Research Studies and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'May 29, 2024'
-heroImage: '../../assets/blog/online-research-testing-market-research-studies.jpg'
+heroImage: '../../assets/blog/online-research-testing-market-research-studies.svg'
 category: 'online-research-testing'
 ---
 

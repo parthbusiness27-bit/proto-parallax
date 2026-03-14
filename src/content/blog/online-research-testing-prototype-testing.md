@@ -2,7 +2,7 @@
 title: 'Testing Prototype Testing Income Tutorial: From $0 to $10,000/Month'
 description: 'Discover the exact step-by-step framework to master Testing Prototype Testing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 03, 2024'
-heroImage: '../../assets/blog/online-research-testing-prototype-testing.jpg'
+heroImage: '../../assets/blog/online-research-testing-prototype-testing.svg'
 category: 'online-research-testing'
 ---
 

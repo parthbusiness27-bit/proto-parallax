@@ -2,7 +2,7 @@
 title: 'Media Marketing Agency For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Discover the exact step-by-step framework to master Media Marketing Agency and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Feb 26, 2024'
-heroImage: '../../assets/blog/automation-agencies-social-media-marketing-agency.jpg'
+heroImage: '../../assets/blog/automation-agencies-social-media-marketing-agency.svg'
 category: 'automation-agencies'
 ---
 

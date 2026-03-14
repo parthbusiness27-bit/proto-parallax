@@ -2,7 +2,7 @@
 title: 'How to Start Streaming Esports Tournaments in 2026 With Zero Experience'
 description: 'Want to succeed with Streaming Esports Tournaments? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 15, 2024'
-heroImage: '../../assets/blog/gaming-streaming-esports-tournaments.jpg'
+heroImage: '../../assets/blog/gaming-streaming-esports-tournaments.svg'
 category: 'gaming-streaming'
 ---
 

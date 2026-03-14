@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Discord Community Creation — High Income Strategy'
 description: 'Stop guessing and start executing. Follow our complete guide to Discord Community Creation designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jun 04, 2024'
-heroImage: '../../assets/blog/online-communities-discord-community-creation.jpg'
+heroImage: '../../assets/blog/online-communities-discord-community-creation.svg'
 category: 'online-communities'
 ---
 

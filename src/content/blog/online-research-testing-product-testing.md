@@ -2,7 +2,7 @@
 title: 'Top 5 Testing Product Testing Strategies That Actually Work in 2026'
 description: 'Learn the hidden strategies behind Testing Product Testing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'May 30, 2024'
-heroImage: '../../assets/blog/online-research-testing-product-testing.jpg'
+heroImage: '../../assets/blog/online-research-testing-product-testing.svg'
 category: 'online-research-testing'
 ---
 

@@ -2,7 +2,7 @@
 title: 'How I Make Money With Job Board Website (Complete Breakdown)'
 description: 'Want to succeed with Job Board Website? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'May 07, 2024'
-heroImage: '../../assets/blog/website-businesses-job-board-website.jpg'
+heroImage: '../../assets/blog/website-businesses-job-board-website.svg'
 category: 'website-businesses'
 ---
 

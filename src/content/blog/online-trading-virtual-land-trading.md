@@ -2,7 +2,7 @@
 title: 'Virtual Land Trading Masterclass: Everything You Need to Know'
 description: 'Learn the hidden strategies behind Virtual Land Trading that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jul 03, 2024'
-heroImage: '../../assets/blog/online-trading-virtual-land-trading.jpg'
+heroImage: '../../assets/blog/online-trading-virtual-land-trading.svg'
 category: 'online-trading'
 ---
 

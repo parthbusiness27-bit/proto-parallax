@@ -2,7 +2,7 @@
 title: 'How To Build a Passive Income Empire With Testing Ad Testing'
 description: 'Discover the exact step-by-step framework to master Testing Ad Testing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 02, 2024'
-heroImage: '../../assets/blog/online-research-testing-ad-testing.jpg'
+heroImage: '../../assets/blog/online-research-testing-ad-testing.svg'
 category: 'online-research-testing'
 ---
 

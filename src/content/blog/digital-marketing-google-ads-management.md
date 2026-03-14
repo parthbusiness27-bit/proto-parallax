@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Google Ads Management (And How To Win)'
 description: 'Want to succeed with Google Ads Management? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jan 30, 2024'
-heroImage: '../../assets/blog/digital-marketing-google-ads-management.jpg'
+heroImage: '../../assets/blog/digital-marketing-google-ads-management.svg'
 category: 'digital-marketing'
 ---
 

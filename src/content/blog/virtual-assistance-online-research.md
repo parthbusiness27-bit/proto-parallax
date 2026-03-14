@@ -2,7 +2,7 @@
 title: 'Assistance Online Research Income Tutorial: From $0 to $10,000/Month'
 description: 'Learn the hidden strategies behind Assistance Online Research that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 30, 2024'
-heroImage: '../../assets/blog/virtual-assistance-online-research.jpg'
+heroImage: '../../assets/blog/virtual-assistance-online-research.svg'
 category: 'virtual-assistance'
 ---
 

@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Niche Blog Website (And How To Win)'
 description: 'Unlock the ultimate growth strategies for Niche Blog Website. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'May 05, 2024'
-heroImage: '../../assets/blog/website-businesses-niche-blog-website.jpg'
+heroImage: '../../assets/blog/website-businesses-niche-blog-website.svg'
 category: 'website-businesses'
 ---
 

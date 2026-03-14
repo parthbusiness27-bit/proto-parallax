@@ -2,7 +2,7 @@
 title: 'Tools Productivity Tools Masterclass: Everything You Need to Know'
 description: 'Stop guessing and start executing. Follow our complete guide to Tools Productivity Tools designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jul 09, 2024'
-heroImage: '../../assets/blog/automation-tools-productivity-tools.jpg'
+heroImage: '../../assets/blog/automation-tools-productivity-tools.svg'
 category: 'automation-tools'
 ---
 

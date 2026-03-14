@@ -2,7 +2,7 @@
 title: 'Marketing Email Marketing Masterclass: Everything You Need to Know'
 description: 'Unlock the ultimate growth strategies for Marketing Email Marketing. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jan 31, 2024'
-heroImage: '../../assets/blog/digital-marketing-email-marketing.jpg'
+heroImage: '../../assets/blog/digital-marketing-email-marketing.svg'
 category: 'digital-marketing'
 ---
 

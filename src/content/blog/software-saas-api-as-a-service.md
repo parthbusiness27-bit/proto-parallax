@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating As A Service — High Income Strategy'
 description: 'Learn the hidden strategies behind As A Service that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 10, 2024'
-heroImage: '../../assets/blog/software-saas-api-as-a-service.jpg'
+heroImage: '../../assets/blog/software-saas-api-as-a-service.svg'
 category: 'software-saas'
 ---
 

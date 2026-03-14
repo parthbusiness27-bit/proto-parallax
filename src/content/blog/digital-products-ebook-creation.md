@@ -2,7 +2,7 @@
 title: 'Zero Investment Products Ebook Creation Strategy for Complete Beginners'
 description: 'Learn the hidden strategies behind Products Ebook Creation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 26, 2024'
-heroImage: '../../assets/blog/digital-products-ebook-creation.jpg'
+heroImage: '../../assets/blog/digital-products-ebook-creation.svg'
 category: 'digital-products'
 ---
 

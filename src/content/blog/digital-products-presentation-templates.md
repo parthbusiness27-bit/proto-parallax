@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Products Presentation Templates — High Income Strategy'
 description: 'Discover the exact step-by-step framework to master Products Presentation Templates and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Apr 02, 2024'
-heroImage: '../../assets/blog/digital-products-presentation-templates.jpg'
+heroImage: '../../assets/blog/digital-products-presentation-templates.svg'
 category: 'digital-products'
 ---
 

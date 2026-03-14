@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Businesses Tool Website (And How To Win)'
 description: 'Stop guessing and start executing. Follow our complete guide to Businesses Tool Website designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'May 09, 2024'
-heroImage: '../../assets/blog/website-businesses-tool-website.jpg'
+heroImage: '../../assets/blog/website-businesses-tool-website.svg'
 category: 'website-businesses'
 ---
 

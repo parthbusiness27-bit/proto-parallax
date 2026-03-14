@@ -2,7 +2,7 @@
 title: 'How to Start Digital Asset Flipping in 2026 With Zero Experience'
 description: 'Want to succeed with Digital Asset Flipping? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 30, 2024'
-heroImage: '../../assets/blog/online-trading-digital-asset-flipping.jpg'
+heroImage: '../../assets/blog/online-trading-digital-asset-flipping.svg'
 category: 'online-trading'
 ---
 

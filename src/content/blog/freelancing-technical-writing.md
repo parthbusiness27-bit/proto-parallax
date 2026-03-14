@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Freelancing Technical Writing (And How To Win)'
 description: 'Discover the exact step-by-step framework to master Freelancing Technical Writing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 09, 2024'
-heroImage: '../../assets/blog/freelancing-technical-writing.jpg'
+heroImage: '../../assets/blog/freelancing-technical-writing.svg'
 category: 'freelancing'
 ---
 

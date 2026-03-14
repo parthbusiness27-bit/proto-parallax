@@ -2,7 +2,7 @@
 title: 'How to Start Agencies Seo Agency in 2026 With Zero Experience'
 description: 'Stop guessing and start executing. Follow our complete guide to Agencies Seo Agency designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Mar 02, 2024'
-heroImage: '../../assets/blog/automation-agencies-seo-agency.jpg'
+heroImage: '../../assets/blog/automation-agencies-seo-agency.svg'
 category: 'automation-agencies'
 ---
 

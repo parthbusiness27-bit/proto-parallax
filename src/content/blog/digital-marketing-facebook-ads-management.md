@@ -2,7 +2,7 @@
 title: 'Top 5 Facebook Ads Management Strategies That Actually Work in 2026'
 description: 'Learn the hidden strategies behind Facebook Ads Management that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 29, 2024'
-heroImage: '../../assets/blog/digital-marketing-facebook-ads-management.jpg'
+heroImage: '../../assets/blog/digital-marketing-facebook-ads-management.svg'
 category: 'digital-marketing'
 ---
 

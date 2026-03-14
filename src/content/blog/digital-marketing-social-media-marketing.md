@@ -2,7 +2,7 @@
 title: 'Social Media Marketing For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Discover the exact step-by-step framework to master Social Media Marketing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 28, 2024'
-heroImage: '../../assets/blog/digital-marketing-social-media-marketing.jpg'
+heroImage: '../../assets/blog/digital-marketing-social-media-marketing.svg'
 category: 'digital-marketing'
 ---
 

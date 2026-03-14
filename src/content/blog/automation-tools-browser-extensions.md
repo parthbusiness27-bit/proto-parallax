@@ -2,7 +2,7 @@
 title: 'Zero Investment Tools Browser Extensions Strategy for Complete Beginners'
 description: 'Unlock the ultimate growth strategies for Tools Browser Extensions. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jul 06, 2024'
-heroImage: '../../assets/blog/automation-tools-browser-extensions.jpg'
+heroImage: '../../assets/blog/automation-tools-browser-extensions.svg'
 category: 'automation-tools'
 ---
 

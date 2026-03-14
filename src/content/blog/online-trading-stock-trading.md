@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Trading Stock Trading — High Income Strategy'
 description: 'Discover the exact step-by-step framework to master Trading Stock Trading and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 24, 2024'
-heroImage: '../../assets/blog/online-trading-stock-trading.jpg'
+heroImage: '../../assets/blog/online-trading-stock-trading.svg'
 category: 'online-trading'
 ---
 

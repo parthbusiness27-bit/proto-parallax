@@ -2,7 +2,7 @@
 title: 'Instagram Affiliate Pages Income Tutorial: From $0 to $10,000/Month'
 description: 'Discover the exact step-by-step framework to master Instagram Affiliate Pages and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'May 17, 2024'
-heroImage: '../../assets/blog/affiliate-marketing-instagram-affiliate-pages.jpg'
+heroImage: '../../assets/blog/affiliate-marketing-instagram-affiliate-pages.svg'
 category: 'affiliate-marketing'
 ---
 

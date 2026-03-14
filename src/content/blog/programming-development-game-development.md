@@ -2,7 +2,7 @@
 title: 'Development Game Development Income Tutorial: From $0 to $10,000/Month'
 description: 'Want to succeed with Development Game Development? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jan 21, 2024'
-heroImage: '../../assets/blog/programming-development-game-development.jpg'
+heroImage: '../../assets/blog/programming-development-game-development.svg'
 category: 'programming-development'
 ---
 

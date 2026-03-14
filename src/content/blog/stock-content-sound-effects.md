@@ -2,7 +2,7 @@
 title: 'How to Start Content Sound Effects in 2026 With Zero Experience'
 description: 'Want to succeed with Content Sound Effects? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Apr 08, 2024'
-heroImage: '../../assets/blog/stock-content-sound-effects.jpg'
+heroImage: '../../assets/blog/stock-content-sound-effects.svg'
 category: 'stock-content'
 ---
 

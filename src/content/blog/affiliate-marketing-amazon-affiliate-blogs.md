@@ -2,7 +2,7 @@
 title: 'How to Start Amazon Affiliate Blogs in 2026 With Zero Experience'
 description: 'Stop guessing and start executing. Follow our complete guide to Amazon Affiliate Blogs designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'May 22, 2024'
-heroImage: '../../assets/blog/affiliate-marketing-amazon-affiliate-blogs.jpg'
+heroImage: '../../assets/blog/affiliate-marketing-amazon-affiliate-blogs.svg'
 category: 'affiliate-marketing'
 ---
 

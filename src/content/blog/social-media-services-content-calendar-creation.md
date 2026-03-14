@@ -2,7 +2,7 @@
 title: 'Content Calendar Creation Masterclass: Everything You Need to Know'
 description: 'Learn the hidden strategies behind Content Calendar Creation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 22, 2024'
-heroImage: '../../assets/blog/social-media-services-content-calendar-creation.jpg'
+heroImage: '../../assets/blog/social-media-services-content-calendar-creation.svg'
 category: 'social-media-services'
 ---
 

@@ -2,7 +2,7 @@
 title: 'How I Make Money With Ai Voice Generation (Complete Breakdown)'
 description: 'Want to succeed with Ai Voice Generation? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Apr 20, 2024'
-heroImage: '../../assets/blog/ai-services-ai-voice-generation.jpg'
+heroImage: '../../assets/blog/ai-services-ai-voice-generation.svg'
 category: 'ai-services'
 ---
 

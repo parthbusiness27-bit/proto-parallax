@@ -2,7 +2,7 @@
 title: 'Instagram Page Management For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Stop guessing and start executing. Follow our complete guide to Instagram Page Management designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Feb 15, 2024'
-heroImage: '../../assets/blog/social-media-services-instagram-page-management.jpg'
+heroImage: '../../assets/blog/social-media-services-instagram-page-management.svg'
 category: 'social-media-services'
 ---
 

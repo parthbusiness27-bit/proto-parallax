@@ -2,7 +2,7 @@
 title: 'Services Dm Outreach Income Tutorial: From $0 to $10,000/Month'
 description: 'Discover the exact step-by-step framework to master Services Dm Outreach and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Feb 20, 2024'
-heroImage: '../../assets/blog/social-media-services-dm-outreach.jpg'
+heroImage: '../../assets/blog/social-media-services-dm-outreach.svg'
 category: 'social-media-services'
 ---
 

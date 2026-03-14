@@ -2,7 +2,7 @@
 title: 'Game Account Trading For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Discover the exact step-by-step framework to master Game Account Trading and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 18, 2024'
-heroImage: '../../assets/blog/gaming-streaming-game-account-trading.jpg'
+heroImage: '../../assets/blog/gaming-streaming-game-account-trading.svg'
 category: 'gaming-streaming'
 ---
 

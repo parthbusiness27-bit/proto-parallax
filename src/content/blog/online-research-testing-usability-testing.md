@@ -2,7 +2,7 @@
 title: 'Testing Usability Testing Masterclass: Everything You Need to Know'
 description: 'Learn the hidden strategies behind Testing Usability Testing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 01, 2024'
-heroImage: '../../assets/blog/online-research-testing-usability-testing.jpg'
+heroImage: '../../assets/blog/online-research-testing-usability-testing.svg'
 category: 'online-research-testing'
 ---
 

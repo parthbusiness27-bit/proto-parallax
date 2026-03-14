@@ -2,7 +2,7 @@
 title: 'Premium Telegram Channels Income Tutorial: From $0 to $10,000/Month'
 description: 'Unlock the ultimate growth strategies for Premium Telegram Channels. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jun 06, 2024'
-heroImage: '../../assets/blog/online-communities-premium-telegram-channels.jpg'
+heroImage: '../../assets/blog/online-communities-premium-telegram-channels.svg'
 category: 'online-communities'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Top 5 Linkedin Content Creation Strategies That Actually Work in 2026'
 description: 'Discover the exact step-by-step framework to master Linkedin Content Creation and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Feb 17, 2024'
-heroImage: '../../assets/blog/social-media-services-linkedin-content-creation.jpg'
+heroImage: '../../assets/blog/social-media-services-linkedin-content-creation.svg'
 category: 'social-media-services'
 ---
 

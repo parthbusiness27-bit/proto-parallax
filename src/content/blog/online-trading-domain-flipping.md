@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Trading Domain Flipping (And How To Win)'
 description: 'Stop guessing and start executing. Follow our complete guide to Trading Domain Flipping designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jun 28, 2024'
-heroImage: '../../assets/blog/online-trading-domain-flipping.jpg'
+heroImage: '../../assets/blog/online-trading-domain-flipping.svg'
 category: 'online-trading'
 ---
 

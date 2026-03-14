@@ -2,7 +2,7 @@
 title: 'How I Make Money With Streaming Game Streaming (Complete Breakdown)'
 description: 'Discover the exact step-by-step framework to master Streaming Game Streaming and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 14, 2024'
-heroImage: '../../assets/blog/gaming-streaming-game-streaming.jpg'
+heroImage: '../../assets/blog/gaming-streaming-game-streaming.svg'
 category: 'gaming-streaming'
 ---
 

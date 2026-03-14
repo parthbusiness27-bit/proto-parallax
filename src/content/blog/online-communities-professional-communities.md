@@ -2,7 +2,7 @@
 title: 'Zero Investment Communities Professional Communities Strategy for Complete Beginners'
 description: 'Unlock the ultimate growth strategies for Communities Professional Communities. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jun 08, 2024'
-heroImage: '../../assets/blog/online-communities-professional-communities.jpg'
+heroImage: '../../assets/blog/online-communities-professional-communities.svg'
 category: 'online-communities'
 ---
 

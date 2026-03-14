@@ -2,7 +2,7 @@
 title: 'Content Stock Music Masterclass: Everything You Need to Know'
 description: 'Discover the exact step-by-step framework to master Content Stock Music and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Apr 07, 2024'
-heroImage: '../../assets/blog/stock-content-stock-music.jpg'
+heroImage: '../../assets/blog/stock-content-stock-music.svg'
 category: 'stock-content'
 ---
 

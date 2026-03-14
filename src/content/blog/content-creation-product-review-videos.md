@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Product Review Videos — High Income Strategy'
 description: 'Discover the exact step-by-step framework to master Product Review Videos and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Feb 13, 2024'
-heroImage: '../../assets/blog/content-creation-product-review-videos.jpg'
+heroImage: '../../assets/blog/content-creation-product-review-videos.svg'
 category: 'content-creation'
 ---
 

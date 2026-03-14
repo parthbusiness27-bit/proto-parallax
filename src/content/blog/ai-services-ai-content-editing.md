@@ -2,7 +2,7 @@
 title: 'Top 5 Ai Content Editing Strategies That Actually Work in 2026'
 description: 'Want to succeed with Ai Content Editing? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Apr 18, 2024'
-heroImage: '../../assets/blog/ai-services-ai-content-editing.jpg'
+heroImage: '../../assets/blog/ai-services-ai-content-editing.svg'
 category: 'ai-services'
 ---
 

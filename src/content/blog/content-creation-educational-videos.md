@@ -2,7 +2,7 @@
 title: 'Stop Overcomplicating Creation Educational Videos — High Income Strategy'
 description: 'Learn the hidden strategies behind Creation Educational Videos that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 10, 2024'
-heroImage: '../../assets/blog/content-creation-educational-videos.jpg'
+heroImage: '../../assets/blog/content-creation-educational-videos.svg'
 category: 'content-creation'
 ---
 

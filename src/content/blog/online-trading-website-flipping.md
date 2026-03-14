@@ -2,7 +2,7 @@
 title: 'Trading Website Flipping Income Tutorial: From $0 to $10,000/Month'
 description: 'Learn the hidden strategies behind Trading Website Flipping that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 29, 2024'
-heroImage: '../../assets/blog/online-trading-website-flipping.jpg'
+heroImage: '../../assets/blog/online-trading-website-flipping.svg'
 category: 'online-trading'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Content Creation Blogging Masterclass: Everything You Need to Know'
 description: 'Stop guessing and start executing. Follow our complete guide to Content Creation Blogging designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Feb 08, 2024'
-heroImage: '../../assets/blog/content-creation-blogging.jpg'
+heroImage: '../../assets/blog/content-creation-blogging.svg'
 category: 'content-creation'
 ---
 

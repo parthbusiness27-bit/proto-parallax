@@ -2,7 +2,7 @@
 title: 'Game Item Trading Masterclass: Everything You Need to Know'
 description: 'Want to succeed with Game Item Trading? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jul 01, 2024'
-heroImage: '../../assets/blog/online-trading-in-game-item-trading.jpg'
+heroImage: '../../assets/blog/online-trading-in-game-item-trading.svg'
 category: 'online-trading'
 ---
 

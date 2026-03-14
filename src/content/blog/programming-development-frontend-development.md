@@ -2,7 +2,7 @@
 title: 'Zero Investment Development Frontend Development Strategy for Complete Beginners'
 description: 'Stop guessing and start executing. Follow our complete guide to Development Frontend Development designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Jan 15, 2024'
-heroImage: '../../assets/blog/programming-development-frontend-development.jpg'
+heroImage: '../../assets/blog/programming-development-frontend-development.svg'
 category: 'programming-development'
 ---
 

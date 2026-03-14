@@ -2,7 +2,7 @@
 title: 'How to Start Stock Graphics Packs in 2026 With Zero Experience'
 description: 'Stop guessing and start executing. Follow our complete guide to Stock Graphics Packs designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Apr 04, 2024'
-heroImage: '../../assets/blog/digital-products-stock-graphics-packs.jpg'
+heroImage: '../../assets/blog/digital-products-stock-graphics-packs.svg'
 category: 'digital-products'
 ---
 

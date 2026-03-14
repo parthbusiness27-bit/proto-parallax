@@ -2,7 +2,7 @@
 title: 'Micro Saas Website For Beginners: The Ultimate Step-by-Step Blueprint'
 description: 'Want to succeed with Micro Saas Website? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'May 12, 2024'
-heroImage: '../../assets/blog/website-businesses-micro-saas-website.jpg'
+heroImage: '../../assets/blog/website-businesses-micro-saas-website.svg'
 category: 'website-businesses'
 ---
 

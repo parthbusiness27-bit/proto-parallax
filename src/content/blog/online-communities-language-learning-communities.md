@@ -2,7 +2,7 @@
 title: 'Zero Investment Language Learning Communities Strategy for Complete Beginners'
 description: 'Want to succeed with Language Learning Communities? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 12, 2024'
-heroImage: '../../assets/blog/online-communities-language-learning-communities.jpg'
+heroImage: '../../assets/blog/online-communities-language-learning-communities.svg'
 category: 'online-communities'
 ---
 

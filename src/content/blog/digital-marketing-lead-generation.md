@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Marketing Lead Generation (And How To Win)'
 description: 'Learn the hidden strategies behind Marketing Lead Generation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 01, 2024'
-heroImage: '../../assets/blog/digital-marketing-lead-generation.jpg'
+heroImage: '../../assets/blog/digital-marketing-lead-generation.svg'
 category: 'digital-marketing'
 ---
 

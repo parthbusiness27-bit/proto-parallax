@@ -2,7 +2,7 @@
 title: 'Ai Chatbot Creation Masterclass: Everything You Need to Know'
 description: 'Learn the hidden strategies behind Ai Chatbot Creation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 16, 2024'
-heroImage: '../../assets/blog/ai-services-ai-chatbot-creation.jpg'
+heroImage: '../../assets/blog/ai-services-ai-chatbot-creation.svg'
 category: 'ai-services'
 ---
 

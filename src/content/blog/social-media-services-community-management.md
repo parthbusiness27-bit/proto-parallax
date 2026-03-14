@@ -2,7 +2,7 @@
 title: 'Zero Investment Services Community Management Strategy for Complete Beginners'
 description: 'Unlock the ultimate growth strategies for Services Community Management. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Feb 19, 2024'
-heroImage: '../../assets/blog/social-media-services-community-management.jpg'
+heroImage: '../../assets/blog/social-media-services-community-management.svg'
 category: 'social-media-services'
 ---
 

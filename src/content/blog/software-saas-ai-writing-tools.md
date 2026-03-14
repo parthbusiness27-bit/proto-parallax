@@ -2,7 +2,7 @@
 title: 'How I Make Money With Ai Writing Tools (Complete Breakdown)'
 description: 'Stop guessing and start executing. Follow our complete guide to Ai Writing Tools designed specifically to help beginners earn their first high-income paycheck online.'
 pubDate: 'Mar 08, 2024'
-heroImage: '../../assets/blog/software-saas-ai-writing-tools.jpg'
+heroImage: '../../assets/blog/software-saas-ai-writing-tools.svg'
 category: 'software-saas'
 ---
 

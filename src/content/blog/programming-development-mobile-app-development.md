@@ -2,7 +2,7 @@
 title: 'The Dark Truth About Mobile App Development (And How To Win)'
 description: 'Discover the exact step-by-step framework to master Mobile App Development and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 20, 2024'
-heroImage: '../../assets/blog/programming-development-mobile-app-development.jpg'
+heroImage: '../../assets/blog/programming-development-mobile-app-development.svg'
 category: 'programming-development'
 ---
 

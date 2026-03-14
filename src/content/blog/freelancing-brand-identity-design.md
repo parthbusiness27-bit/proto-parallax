@@ -2,7 +2,7 @@
 title: 'Top 5 Brand Identity Design Strategies That Actually Work in 2026'
 description: 'Unlock the ultimate growth strategies for Brand Identity Design. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jan 04, 2024'
-heroImage: '../../assets/blog/freelancing-brand-identity-design.jpg'
+heroImage: '../../assets/blog/freelancing-brand-identity-design.svg'
 category: 'freelancing'
 ---
 
