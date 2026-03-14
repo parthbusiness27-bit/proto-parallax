@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Coaching Communities'
-description: 'A comprehensive masterclass analyzing Coaching Communities opportunities in the Online Communities space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Communities Coaching Communities For Beginners: The Ultimate Step-by-Step Blueprint'
+description: 'Discover the exact step-by-step framework to master Communities Coaching Communities and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jun 13, 2024'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog/online-communities-coaching-communities.jpg'
 category: 'online-communities'
 ---
 
-# Introduction to Coaching Communities
+# The Blueprint for Communities Coaching Communities
 
 Welcome to our definitive guide on **Coaching Communities**, a core component of Online Communities. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

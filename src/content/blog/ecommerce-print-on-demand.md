@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Print on Demand'
-description: 'A comprehensive masterclass analyzing Print on Demand opportunities in the Ecommerce space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Print On Demand Masterclass: Everything You Need to Know'
+description: 'Want to succeed with Print On Demand? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 18, 2024'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog/ecommerce-print-on-demand.jpg'
 category: 'ecommerce'
 ---
 
-# Introduction to Print on Demand
+# The Blueprint for Print On Demand
 
 Welcome to our definitive guide on **Print on Demand**, a core component of Ecommerce. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

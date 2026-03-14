@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Influencer Marketing'
-description: 'A comprehensive masterclass analyzing Influencer Marketing opportunities in the Digital Marketing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Marketing Influencer Marketing For Beginners: The Ultimate Step-by-Step Blueprint'
+description: 'Learn the hidden strategies behind Marketing Influencer Marketing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 04, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/digital-marketing-influencer-marketing.jpg'
 category: 'digital-marketing'
 ---
 
-# Introduction to Influencer Marketing
+# The Blueprint for Marketing Influencer Marketing
 
 Welcome to our definitive guide on **Influencer Marketing**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

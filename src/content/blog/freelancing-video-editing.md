@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Video Editing'
-description: 'A comprehensive masterclass analyzing Video Editing opportunities in the Freelancing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'The Dark Truth About Freelancing Video Editing (And How To Win)'
+description: 'Learn the hidden strategies behind Freelancing Video Editing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 05, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/freelancing-video-editing.jpg'
 category: 'freelancing'
 ---
 
-# Introduction to Video Editing
+# The Blueprint for Freelancing Video Editing
 
 Welcome to our definitive guide on **Video Editing**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

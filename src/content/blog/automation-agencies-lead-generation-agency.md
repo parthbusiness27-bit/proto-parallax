@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Lead Generation Agency'
-description: 'A comprehensive masterclass analyzing Lead Generation Agency opportunities in the Automation & Agencies space. Learn how to launch, scale, and monetize this workflow.'
+title: 'How I Make Money With Lead Generation Agency (Complete Breakdown)'
+description: 'Want to succeed with Lead Generation Agency? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Feb 27, 2024'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog/automation-agencies-lead-generation-agency.jpg'
 category: 'automation-agencies'
 ---
 
-# Introduction to Lead Generation Agency
+# The Blueprint for Lead Generation Agency
 
 Welcome to our definitive guide on **Lead Generation Agency**, a core component of Automation & Agencies. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

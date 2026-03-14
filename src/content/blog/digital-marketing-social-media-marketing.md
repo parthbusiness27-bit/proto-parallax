@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Social Media Marketing'
-description: 'A comprehensive masterclass analyzing Social Media Marketing opportunities in the Digital Marketing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Social Media Marketing For Beginners: The Ultimate Step-by-Step Blueprint'
+description: 'Discover the exact step-by-step framework to master Social Media Marketing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 28, 2024'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog/digital-marketing-social-media-marketing.jpg'
 category: 'digital-marketing'
 ---
 
-# Introduction to Social Media Marketing
+# The Blueprint for Social Media Marketing
 
 Welcome to our definitive guide on **Social Media Marketing**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

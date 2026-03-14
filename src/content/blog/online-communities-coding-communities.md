@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Coding Communities'
-description: 'A comprehensive masterclass analyzing Coding Communities opportunities in the Online Communities space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Communities Coding Communities Income Tutorial: From $0 to $10,000/Month'
+description: 'Learn the hidden strategies behind Communities Coding Communities that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 11, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/online-communities-coding-communities.jpg'
 category: 'online-communities'
 ---
 
-# Introduction to Coding Communities
+# The Blueprint for Communities Coding Communities
 
 Welcome to our definitive guide on **Coding Communities**, a core component of Online Communities. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

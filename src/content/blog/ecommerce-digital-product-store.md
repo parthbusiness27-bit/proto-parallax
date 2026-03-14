@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Digital Product Store'
-description: 'A comprehensive masterclass analyzing Digital Product Store opportunities in the Ecommerce space. Learn how to launch, scale, and monetize this workflow.'
+title: 'How To Build a Passive Income Empire With Digital Product Store'
+description: 'Want to succeed with Digital Product Store? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 19, 2024'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog/ecommerce-digital-product-store.jpg'
 category: 'ecommerce'
 ---
 
-# Introduction to Digital Product Store
+# The Blueprint for Digital Product Store
 
 Welcome to our definitive guide on **Digital Product Store**, a core component of Ecommerce. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

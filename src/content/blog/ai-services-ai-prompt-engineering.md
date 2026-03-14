@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to AI Prompt Engineering'
-description: 'A comprehensive masterclass analyzing AI Prompt Engineering opportunities in the AI Services space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Ai Prompt Engineering Masterclass: Everything You Need to Know'
+description: 'Learn the hidden strategies behind Ai Prompt Engineering that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 15, 2024'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog/ai-services-ai-prompt-engineering.jpg'
 category: 'ai-services'
 ---
 
-# Introduction to AI Prompt Engineering
+# The Blueprint for Ai Prompt Engineering
 
 Welcome to our definitive guide on **AI Prompt Engineering**, a core component of AI Services. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

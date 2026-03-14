@@ -9,7 +9,6 @@ import PopularPlatforms from '../components/PopularPlatforms.astro';
 import FreeToolsHub from '../components/FreeToolsHub.astro';
 import DigitalProducts from '../components/DigitalProducts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_INSTAGRAM, SOCIAL_YOUTUBE, SOCIAL_TWITTER, SOCIAL_FACEBOOK, SOCIAL_LINKEDIN, SOCIAL_PINTEREST } from '../consts';
-import { Image } from 'astro:assets';
 import logoImage from '../assets/logo.png';
 ---
 <BaseLayout title={`${SITE_TITLE} | Master Making Money Online`} description={SITE_DESCRIPTION}>
@@ -89,13 +88,12 @@ import logoImage from '../assets/logo.png';
                             <!-- Glowing background aura -->
                             <div class="absolute inset-0 bg-gradient-to-r from-primary to-emerald-500 rounded-full blur-[80px] opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
                             
-                            <!-- Full Hero Logo -->
                             <div class="relative flex-shrink-0 mx-auto w-full max-w-[280px] lg:max-w-[380px] aspect-square animate-pulse" style="animation-duration: 4s;">
-                                <Image
-                                    src={logoImage}
+                                <img
+                                    src={logoImage.src}
                                     alt="Hustle Teacher Logo - Wealth and Success Icon" 
-                                    width={380} 
-                                    height={380} 
+                                    width="380" 
+                                    height="380" 
                                     fetchpriority="high"
                                     loading="eager"
                                     decoding="async" 

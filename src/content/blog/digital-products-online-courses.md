@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Online Courses'
-description: 'A comprehensive masterclass analyzing Online Courses opportunities in the Digital Products space. Learn how to launch, scale, and monetize this workflow.'
+title: 'How I Make Money With Products Online Courses (Complete Breakdown)'
+description: 'Learn the hidden strategies behind Products Online Courses that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 27, 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog/digital-products-online-courses.jpg'
 category: 'digital-products'
 ---
 
-# Introduction to Online Courses
+# The Blueprint for Products Online Courses
 
 Welcome to our definitive guide on **Online Courses**, a core component of Digital Products. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

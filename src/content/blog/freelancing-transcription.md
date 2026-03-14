@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Transcription'
-description: 'A comprehensive masterclass analyzing Transcription opportunities in the Freelancing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Stop Overcomplicating Freelancing Transcription — High Income Strategy'
+description: 'Discover the exact step-by-step framework to master Freelancing Transcription and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 12, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/freelancing-transcription.jpg'
 category: 'freelancing'
 ---
 
-# Introduction to Transcription
+# The Blueprint for Freelancing Transcription
 
 Welcome to our definitive guide on **Transcription**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

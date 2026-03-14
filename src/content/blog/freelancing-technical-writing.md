@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Technical Writing'
-description: 'A comprehensive masterclass analyzing Technical Writing opportunities in the Freelancing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'The Dark Truth About Freelancing Technical Writing (And How To Win)'
+description: 'Discover the exact step-by-step framework to master Freelancing Technical Writing and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jan 09, 2024'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog/freelancing-technical-writing.jpg'
 category: 'freelancing'
 ---
 
-# Introduction to Technical Writing
+# The Blueprint for Freelancing Technical Writing
 
 Welcome to our definitive guide on **Technical Writing**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

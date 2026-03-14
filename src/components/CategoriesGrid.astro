@@ -1,16 +1,5 @@
 ---
-import { Image } from 'astro:assets';
 import { categories } from '../../scripts/categories.js';
-
-import techImg from '../assets/tech_programming_category.png';
-import creatorImg from '../assets/content_creator_category.png';
-import ecomImg from '../assets/ecommerce_category.png';
-
-const imageMap: Record<string, any> = {
-    "programming-development": techImg,
-    "content-creation": creatorImg,
-    "ecommerce": ecomImg
-};
 ---
 
 <section id="pathways" class="docs-site-container border-x py-24 bg-card/30">
@@ -31,19 +20,17 @@ const imageMap: Record<string, any> = {
                     class={`group relative p-5 md:p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1 flex flex-col h-full animate-fade-in-up`}
                     style={`animation-delay: ${i * 50}ms;`}
                 >
-                    {imageMap[category.slug] && (
-                        <div class="mb-4 overflow-hidden rounded-xl aspect-[16/6] md:aspect-video w-full bg-muted">
-                            <Image 
-                                src={imageMap[category.slug]} 
-                                alt={`${category.title} overview graphic`}
-                                width={400}
-                                height={225}
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
-                    )}
+                    <div class="mb-4 overflow-hidden rounded-xl aspect-[16/6] md:aspect-video w-full bg-muted">
+                        <img 
+                            src={`/assets/categories/${category.slug}.jpg`} 
+                            alt={`${category.title} overview graphic`}
+                            width="400"
+                            height="225"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </div>
                     <div class="flex-grow">
                         <h3 class="text-lg md:text-xl font-bold mb-2 text-foreground tracking-tight group-hover:text-primary transition-colors">{category.title}</h3>
                         <p class="text-sm text-muted-foreground mb-4 leading-relaxed flex-grow">

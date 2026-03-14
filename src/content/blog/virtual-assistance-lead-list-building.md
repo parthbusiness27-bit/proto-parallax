@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Lead List Building'
-description: 'A comprehensive masterclass analyzing Lead List Building opportunities in the Virtual Assistance space. Learn how to launch, scale, and monetize this workflow.'
+title: 'The Dark Truth About Lead List Building (And How To Win)'
+description: 'Learn the hidden strategies behind Lead List Building that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'May 02, 2024'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../assets/blog/virtual-assistance-lead-list-building.jpg'
 category: 'virtual-assistance'
 ---
 
-# Introduction to Lead List Building
+# The Blueprint for Lead List Building
 
 Welcome to our definitive guide on **Lead List Building**, a core component of Virtual Assistance. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Online Research'
-description: 'A comprehensive masterclass analyzing Online Research opportunities in the Virtual Assistance space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Assistance Online Research Income Tutorial: From $0 to $10,000/Month'
+description: 'Learn the hidden strategies behind Assistance Online Research that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 30, 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog/virtual-assistance-online-research.jpg'
 category: 'virtual-assistance'
 ---
 
-# Introduction to Online Research
+# The Blueprint for Assistance Online Research
 
 Welcome to our definitive guide on **Online Research**, a core component of Virtual Assistance. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Usability Testing'
-description: 'A comprehensive masterclass analyzing Usability Testing opportunities in the Online Research & Testing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Testing Usability Testing Masterclass: Everything You Need to Know'
+description: 'Learn the hidden strategies behind Testing Usability Testing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 01, 2024'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/blog/online-research-testing-usability-testing.jpg'
 category: 'online-research-testing'
 ---
 
-# Introduction to Usability Testing
+# The Blueprint for Testing Usability Testing
 
 Welcome to our definitive guide on **Usability Testing**, a core component of Online Research & Testing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

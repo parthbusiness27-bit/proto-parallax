@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Game Coaching'
-description: 'A comprehensive masterclass analyzing Game Coaching opportunities in the Gaming & Streaming space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Stop Overcomplicating Streaming Game Coaching — High Income Strategy'
+description: 'Learn the hidden strategies behind Streaming Game Coaching that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 16, 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog/gaming-streaming-game-coaching.jpg'
 category: 'gaming-streaming'
 ---
 
-# Introduction to Game Coaching
+# The Blueprint for Streaming Game Coaching
 
 Welcome to our definitive guide on **Game Coaching**, a core component of Gaming & Streaming. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

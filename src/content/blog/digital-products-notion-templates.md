@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Notion Templates'
-description: 'A comprehensive masterclass analyzing Notion Templates opportunities in the Digital Products space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Products Notion Templates Masterclass: Everything You Need to Know'
+description: 'Learn the hidden strategies behind Products Notion Templates that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 29, 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog/digital-products-notion-templates.jpg'
 category: 'digital-products'
 ---
 
-# Introduction to Notion Templates
+# The Blueprint for Products Notion Templates
 
 Welcome to our definitive guide on **Notion Templates**, a core component of Digital Products. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

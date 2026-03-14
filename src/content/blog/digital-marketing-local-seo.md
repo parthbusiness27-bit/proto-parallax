@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Local SEO'
-description: 'A comprehensive masterclass analyzing Local SEO opportunities in the Digital Marketing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Marketing Local Seo For Beginners: The Ultimate Step-by-Step Blueprint'
+description: 'Want to succeed with Marketing Local Seo? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jan 26, 2024'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../assets/blog/digital-marketing-local-seo.jpg'
 category: 'digital-marketing'
 ---
 
-# Introduction to Local SEO
+# The Blueprint for Marketing Local Seo
 
 Welcome to our definitive guide on **Local SEO**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

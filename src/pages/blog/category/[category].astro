@@ -51,7 +51,18 @@ export async function getStaticPaths() {
 	});
 }
 
-const { posts, category } = Astro.props;
+const { category } = Astro.props;
+let { posts } = Astro.props;
+
+// --- CONFIGURATION ---
+// Set this to true to show all guides in a category.
+// Set to false to limit to 4 guides per category.
+const SHOW_ALL_POSTS = false;
+// ---------------------
+
+if (!SHOW_ALL_POSTS) {
+    posts = posts.slice(0, 4);
+}
 
 // Category metadata — emoji, label, and subtitle for each slug
 const categoryMeta: Record<string, { emoji: string; label: string; subtitle: string }> = {

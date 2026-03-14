@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Lead Generation'
-description: 'A comprehensive masterclass analyzing Lead Generation opportunities in the Digital Marketing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'The Dark Truth About Marketing Lead Generation (And How To Win)'
+description: 'Learn the hidden strategies behind Marketing Lead Generation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 01, 2024'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../assets/blog/digital-marketing-lead-generation.jpg'
 category: 'digital-marketing'
 ---
 
-# Introduction to Lead Generation
+# The Blueprint for Marketing Lead Generation
 
 Welcome to our definitive guide on **Lead Generation**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Copywriting'
-description: 'A comprehensive masterclass analyzing Copywriting opportunities in the Freelancing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'How To Build a Passive Income Empire With Freelancing Copywriting'
+description: 'Learn the hidden strategies behind Freelancing Copywriting that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 08, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/freelancing-copywriting.jpg'
 category: 'freelancing'
 ---
 
-# Introduction to Copywriting
+# The Blueprint for Freelancing Copywriting
 
 Welcome to our definitive guide on **Copywriting**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

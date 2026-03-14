@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Marketing Automation'
-description: 'A comprehensive masterclass analyzing Marketing Automation opportunities in the Digital Marketing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Marketing Marketing Automation For Beginners: The Ultimate Step-by-Step Blueprint'
+description: 'Learn the hidden strategies behind Marketing Marketing Automation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 03, 2024'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog/digital-marketing-marketing-automation.jpg'
 category: 'digital-marketing'
 ---
 
-# Introduction to Marketing Automation
+# The Blueprint for Marketing Marketing Automation
 
 Welcome to our definitive guide on **Marketing Automation**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

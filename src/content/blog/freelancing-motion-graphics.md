@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Motion Graphics'
-description: 'A comprehensive masterclass analyzing Motion Graphics opportunities in the Freelancing space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Freelancing Motion Graphics Income Tutorial: From $0 to $10,000/Month'
+description: 'Unlock the ultimate growth strategies for Freelancing Motion Graphics. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jan 06, 2024'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog/freelancing-motion-graphics.jpg'
 category: 'freelancing'
 ---
 
-# Introduction to Motion Graphics
+# The Blueprint for Freelancing Motion Graphics
 
 Welcome to our definitive guide on **Motion Graphics**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

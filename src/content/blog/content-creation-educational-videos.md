@@ -1,12 +1,12 @@
 ---
-title: 'Complete Guide to Educational Videos'
-description: 'A comprehensive masterclass analyzing Educational Videos opportunities in the Content Creation space. Learn how to launch, scale, and monetize this workflow.'
+title: 'Stop Overcomplicating Creation Educational Videos — High Income Strategy'
+description: 'Learn the hidden strategies behind Creation Educational Videos that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 10, 2024'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog/content-creation-educational-videos.jpg'
 category: 'content-creation'
 ---
 
-# Introduction to Educational Videos
+# The Blueprint for Creation Educational Videos
 
 Welcome to our definitive guide on **Educational Videos**, a core component of Content Creation. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
