@@ -9,8 +9,8 @@ export const SITE_EMAIL = 'thehustleteacher@gmail.com';
 
 // SEO & Social
 export const SOCIAL_TWITTER = 'https://x.com/thustleteacher';
-export const SOCIAL_FACEBOOK = 'hustle.teacher';
-export const SOCIAL_LINKEDIN = 'hustle.teacher';
+export const SOCIAL_FACEBOOK = 'https://www.facebook.com/hustle.teacher';
+export const SOCIAL_LINKEDIN = 'https://www.linkedin.com/in/hustle.teacher';
 export const SOCIAL_YOUTUBE = 'https://www.youtube.com/@TheHustleTeacher';
 export const SOCIAL_INSTAGRAM = 'https://www.instagram.com/hustle.teacher';
 export const SOCIAL_PINTEREST = 'https://www.pinterest.com/thehustleteacher';
@@ -39,7 +39,7 @@ export const ORGANIZATION = {
 	email: SITE_EMAIL,
 	sameAs: [
 		SOCIAL_TWITTER,
-		`https://facebook.com/${SOCIAL_FACEBOOK}`,
+		SOCIAL_FACEBOOK,
 		SOCIAL_INSTAGRAM,
 		SOCIAL_PINTEREST,
 		SOCIAL_YOUTUBE,
