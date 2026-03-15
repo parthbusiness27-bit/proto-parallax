@@ -1,47 +1,34 @@
 ---
 const guides = [
-  { title: "How To Start Dropshipping", description: "Learn the exact step-by-step process to build your first store.", icon: "🛍️", slug: "ecommerce", image: "ecommerce" },
-  { title: "How To Start Freelancing", description: "Land your first high-paying client in 30 days.", icon: "💻", slug: "freelancing", image: "freelancing" },
-  { title: "How To Make Money With YouTube", description: "Grow your channel and monetize your audience.", icon: "▶️", slug: "content-creator", image: "content-creation" },
-  { title: "Best Side Hustles For Beginners", description: "Easy and quick ways to start earning your first $100.", icon: "🚀", slug: "side-hustles", image: "ecommerce" },
-  { title: "Start Affiliate Marketing", description: "Promote products and earn passive commissions.", icon: "🔗", slug: "affiliate", image: "affiliate-marketing" },
-  { title: "Become a Virtual Assistant", description: "Learn how to provide admin support from home.", icon: "☎️", slug: "virtual-assistant", image: "virtual-assistance" },
-  { title: "Create & Sell Digital Products", description: "Turn your knowledge into courses and templates.", icon: "📦", slug: "digital-products", image: "digital-products" },
-  { title: "Make Money with AI Automation", description: "Use AI bots and scripts to automate businesses.", icon: "🤖", slug: "ai-income", image: "ai-services" }
+  { title: "How To Start Dropshipping", description: "Learn the exact step-by-step process to build your first store.", icon: "🛍️", slug: "ecommerce", color: "from-orange-500/20 to-amber-500/10", border: "hover:border-orange-500/50" },
+  { title: "How To Start Freelancing", description: "Land your first high-paying client in 30 days.", icon: "💻", slug: "freelancing", color: "from-blue-500/20 to-cyan-500/10", border: "hover:border-blue-500/50" },
+  { title: "Make Money With YouTube", description: "Grow your channel and monetize your audience.", icon: "▶️", slug: "content-creator", color: "from-red-500/20 to-pink-500/10", border: "hover:border-red-500/50" },
+  { title: "Best Side Hustles For Beginners", description: "Easy ways to start earning your first $100.", icon: "🚀", slug: "side-hustles", color: "from-primary/20 to-indigo-500/10", border: "hover:border-primary/50" },
+  { title: "Start Affiliate Marketing", description: "Promote products and earn passive commissions.", icon: "🔗", slug: "affiliate", color: "from-emerald-500/20 to-green-500/10", border: "hover:border-emerald-500/50" },
+  { title: "Become a Virtual Assistant", description: "Provide admin support to clients from home.", icon: "☎️", slug: "virtual-assistant", color: "from-purple-500/20 to-violet-500/10", border: "hover:border-purple-500/50" },
+  { title: "Create & Sell Digital Products", description: "Turn your knowledge into courses and templates.", icon: "📦", slug: "digital-products", color: "from-yellow-500/20 to-orange-500/10", border: "hover:border-yellow-500/50" },
+  { title: "Make Money with AI", description: "Use AI tools and scripts to build income streams.", icon: "🤖", slug: "ai-income", color: "from-teal-500/20 to-cyan-500/10", border: "hover:border-teal-500/50" }
 ];
 ---
 
-<section class="docs-site-container border-x py-24 bg-card/30">
+<section class="docs-site-container border-x py-16 md:py-24 bg-card/30">
     <div class="mx-auto max-w-7xl px-4">
-        <div class="text-center mb-16 animate-fade-in-up">
+        <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
             <h2 class="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 mb-4 tracking-tight">
                 Popular Guides
             </h2>
-            <p class="text-muted-foreground text-xl max-w-2xl mx-auto">
+            <p class="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
                 Step-by-step blueprints to start your online business.
             </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {guides.map((guide, i) => (
-                <a href={guide.slug ? `/blog/category/${guide.slug}` : "/blog"} class={`group block p-6 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 100}ms;`}>
-                    {guide.image ? (
-                        <div class="mb-4 overflow-hidden rounded-xl aspect-video w-full bg-muted">
-                            <img 
-                                src={`/assets/categories/${guide.image}.jpg`} 
-                                alt={`${guide.title} overview graphic`}
-                                width="400"
-                                height="225"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
-                    ) : (
-                        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">{guide.icon}</div>
-                    )}
-                    <h3 class="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{guide.title}</h3>
-                    <p class="text-muted-foreground text-sm">{guide.description}</p>
+                <a href={`/blog/category/${guide.slug}`} class={`group block p-5 md:p-6 bg-gradient-to-br ${guide.color} border border-border rounded-2xl ${guide.border} transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 80}ms;`}>
+                    <div class="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">{guide.icon}</div>
+                    <h3 class="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-2 text-foreground group-hover:text-primary transition-colors leading-snug">{guide.title}</h3>
+                    <p class="text-muted-foreground text-xs md:text-sm line-clamp-2 hidden sm:block">{guide.description}</p>
+                    <span class="inline-flex items-center text-xs font-bold text-primary mt-2 md:mt-3 group-hover:translate-x-1 transition-transform">Read guides →</span>
                 </a>
             ))}
         </div>

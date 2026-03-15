@@ -12,7 +12,6 @@ export const SOCIAL_TWITTER = 'https://x.com/thustleteacher';
 export const SOCIAL_YOUTUBE = 'https://www.youtube.com/@TheHustleTeacher';
 export const SOCIAL_INSTAGRAM = 'https://www.instagram.com/hustle.teacher';
 export const SOCIAL_PINTEREST = 'https://www.pinterest.com/thehustleteacher';
-export const SOCIAL_WHATSAPP = 'https://wa.me/919041890565';
 
 
 // Content

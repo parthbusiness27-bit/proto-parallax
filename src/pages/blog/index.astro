@@ -54,6 +54,7 @@ const formatCategoryTitle = (slug: string) => {
 						</svg>
 					</div>
 					<input 
+						id="blog-search"
 						type="text" 
 						placeholder="Search for articles, guides, strategies..." 
 						class="block w-full pl-11 pr-4 py-4 border border-border rounded-xl leading-5 bg-card/60 backdrop-blur text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-lg transition-all shadow-sm hover:border-primary/50"
@@ -70,9 +71,13 @@ const formatCategoryTitle = (slug: string) => {
 							<div class="flex flex-col lg:flex-row">
 								<div class="lg:w-3/5 overflow-hidden relative aspect-video lg:aspect-auto">
 									<img 
-										src={featuredPost.data.heroImage?.src || featuredPost.data.heroImage} 
-										alt={featuredPost.data.title} 
+										src={featuredPost.data.heroImage?.src ?? (featuredPost.data.heroImage as unknown as string)} 
+										alt={featuredPost.data.title}
+										width="1020"
+										height="510"
 										class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+										loading="lazy"
+										decoding="async"
 									/>
 									<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent lg:hidden"></div>
 								</div>
@@ -115,10 +120,15 @@ const formatCategoryTitle = (slug: string) => {
 				</div>
 
 				<!-- Grid for Remaining Posts -->
-				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="post-grid">
 					{
 						remainingPosts.map((post, i) => (
-							<a href={`/blog/${post.id}/`} class="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-fade-in-up" style={`animation-delay: ${400 + (i * 100)}ms;`}>
+							<a
+								href={`/blog/${post.id}/`}
+								data-post-card
+								data-title={post.data.title}
+								data-desc={post.data.description}
+								class="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-fade-in-up" style={`animation-delay: ${400 + (i * 100)}ms;`}>
 								<!-- Image Container -->
 								<div class="aspect-[16/10] overflow-hidden relative bg-muted">
 									<img 
@@ -149,6 +159,12 @@ const formatCategoryTitle = (slug: string) => {
 						))
 					}
 				</div>
+				<!-- Search no-results message -->
+				<div id="blog-no-results" style="display:none" class="text-center py-20 text-muted-foreground">
+					<p class="text-5xl mb-4">🔍</p>
+					<p class="text-lg font-bold text-foreground">No articles found</p>
+					<p class="text-sm mt-2">Try a different keyword or browse the categories above.</p>
+				</div>
 			</div>
 		</main>
 		<Footer />
@@ -164,3 +180,30 @@ const formatCategoryTitle = (slug: string) => {
   scrollbar-width: none;
 }
 </style>
+
+<script is:inline>
+  (function () {
+    const searchInput = document.getElementById('blog-search');
+    const postGrid   = document.getElementById('post-grid');
+    const noResults  = document.getElementById('blog-no-results');
+    if (!searchInput || !postGrid) return;
+
+    searchInput.addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      const cards = postGrid.querySelectorAll('[data-post-card]');
+      let visible = 0;
+
+      cards.forEach(function (card) {
+        const title = (card.dataset.title || '').toLowerCase();
+        const desc  = (card.dataset.desc  || '').toLowerCase();
+        const match = !q || title.includes(q) || desc.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      if (noResults) {
+        noResults.style.display = visible === 0 && q ? '' : 'none';
+      }
+    });
+  })();
+</script>

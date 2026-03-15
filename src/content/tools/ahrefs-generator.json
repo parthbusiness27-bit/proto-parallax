@@ -1,9 +1,9 @@
 {
-  "title": "Ahrefs Keyword Generator",
-  "description": "Find thousands of related keyword ideas.",
-  "longDescription": "Extract thousands of keyword ideas with search volume and difficulty scores. Powered by Ahrefs data for maximum SEO impact.",
+  "title": "Keyword Idea Generator",
+  "description": "Generate targeted keyword ideas for your niche content and SEO strategy.",
+  "longDescription": "Enter a topic or niche and get a list of keyword ideas you can target on your blog, YouTube channel, or website to drive organic traffic.",
   "category": "SEO Gens",
-  "icon": "📈",
+  "icon": "🔑",
   "url": "/tools/hashtag-generator",
-  "isPremium": true
+  "isPremium": false
 }

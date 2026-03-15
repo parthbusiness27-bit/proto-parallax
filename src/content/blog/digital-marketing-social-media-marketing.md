@@ -1,13 +1,10 @@
 ---
 title: 'Social Media Marketing For Beginners: The Ultimate Step-by-Step Blueprint'
-description: 'Discover the exact step-by-step framework to master Social Media Marketing and start generating reliable online income this year. Perfect for complete beginners.'
+description: 'Discover the exact step-by-step framework to master Social Media Marketing and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'Jan 28, 2024'
 heroImage: '../../assets/blog/digital-marketing-social-media-marketing.svg'
 category: 'digital-marketing'
 ---
-
-# The Blueprint for Social Media Marketing
-
 Welcome to our definitive guide on **Social Media Marketing**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
 Generating income through Social Media Marketing is one of the most reliable pathways in the modern digital economy. Whether you have zero technical experience or you're an established professional looking to pivot, this guide breaks down the exact framework required.

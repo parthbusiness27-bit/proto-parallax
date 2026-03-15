@@ -50,11 +50,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 				<div id="result-box" class="hidden animate-fade-in-up">
 					<div class="bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 rounded-3xl p-10 relative overflow-hidden">
 						<div class="absolute -right-8 -bottom-8 text-9xl opacity-5">🚀</div>
-						<h3 class="text-2xl font-bold text-primary mb-4" id="idea-title">The Idea</h3>
-						<p class="text-lg text-foreground leading-relaxed mb-6" id="idea-desc">Idea description goes here.</p>
+						<h3 class="text-2xl font-bold text-primary mb-4" id="idea-title"></h3>
+						<p class="text-lg text-foreground leading-relaxed mb-6" id="idea-desc"></p>
 						<div class="flex flex-wrap justify-center gap-4">
-							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="diff-tag">Difficulty: Low</span>
-							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="profit-tag">Profit Potential: High</span>
+							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="diff-tag"></span>
+							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="profit-tag"></span>
 						</div>
 					</div>
 				</div>
@@ -65,36 +65,87 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <script is:inline>
 	const ideas = {
-		writing: [
-			{ title: "Ghostwriting for CEOs", desc: "Write LinkedIn and Twitter/X threads for busy executives who want to build personal brands.", diff: "Med", profit: "Very High" },
-			{ title: "Niche Newsletter Curator", desc: "Start a weekly newsletter aggregating news in a specific industry like AI or Green Energy.", diff: "Low", profit: "Med" }
-		],
-		tech: [
-			{ title: "No-Code Automator", desc: "Help small businesses automate their workflows using Zapier, Make, or Airtable.", diff: "Med", profit: "High" },
-			{ title: "Niche SaaS Micro-Tool", desc: "Build a simple browser extension or Shopify app that solves one specific problem.", diff: "High", profit: "Unlimited" }
-		],
-		design: [
-			{ title: "Youtube Thumbnail Designer", desc: "Create high-CTR thumbnails for creators. One good designer can manage 5-10 channels.", diff: "Med", profit: "High" },
-			{ title: "Digital Planner Creator", desc: "Design aesthetic planners and sell them on Etsy for passive income.", diff: "Low", profit: "Med" }
-		],
-		marketing: [
-			{ title: "UGC Content Creator", desc: "Make short video ads for brands to use in their TikTok and Instagram campaigns.", diff: "Low", profit: "High" },
-			{ title: "SEO Auditor", desc: "Use tools to find technical SEO errors for local businesses and charge for a report/fix.", diff: "High", profit: "High" }
-		],
-		manual: [
-			{ title: "Car Detailing", desc: "Mobile car washing and waxing. High demand and low startup costs.", diff: "Low", profit: "Med" },
-			{ title: "Vintage Reseller", desc: "Find unique items at thrift stores and flip them on eBay or Depop.", diff: "Med", profit: "High" }
-		]
+		writing: {
+			low:  [
+				{ title: "Niche Newsletter", desc: "Start a weekly email newsletter in a specific niche (AI, finance, fitness). Use Beehiiv or Substack — grow to 1k subscribers and monetize with sponsorships.", diff: "Low", profit: "Med" },
+				{ title: "Twitter/X Thread Writer", desc: "Write viral threads for personal brands and experts. Charge $50–$200/thread. Requires just 1–2 hours per thread.", diff: "Low", profit: "Med" }
+			],
+			med: [
+				{ title: "Ghostwriting for Executives", desc: "Write LinkedIn posts, Twitter threads, and articles for busy professionals who want to build a personal brand. Rates: $500–$3,000/month retainer.", diff: "Med", profit: "Very High" },
+				{ title: "SEO Blog Writing Service", desc: "Offer done-for-you SEO blog posts for SaaS or e-commerce companies. Use tools like Surfer SEO. Charge $150–$500 per article.", diff: "Med", profit: "High" }
+			],
+			high: [
+				{ title: "Content Agency", desc: "Build a small team of writers and manage content for 5-10 clients. Charge $2,000–$8,000/month per client. Extremely scalable.", diff: "High", profit: "Unlimited" },
+				{ title: "Copywriting & Sales Funnels", desc: "Write high-converting landing pages, email sequences, and ad copy for e-commerce brands. Top copywriters earn $5k–$20k/project.", diff: "High", profit: "Unlimited" }
+			]
+		},
+		tech: {
+			low: [
+				{ title: "No-Code Automation Consultant", desc: "Help small businesses automate repetitive tasks using Zapier or Make. Charge $50–$150/hour. No coding needed — just logic.", diff: "Low", profit: "High" },
+				{ title: "Tech Tutorial YouTube Channel", desc: "Create tutorials for beginner developers or tool users. Monetize with ads, affiliate links (Hostinger, Notion), and digital products.", diff: "Low", profit: "Med" }
+			],
+			med: [
+				{ title: "Freelance Web Developer", desc: "Build websites for local businesses or startups using React, Next.js, or WordPress. Charge $500–$5,000 per site.", diff: "Med", profit: "High" },
+				{ title: "WordPress Plugin Developer", desc: "Create a niche plugin solving a specific business problem. Sell on CodeCanyon or through your own site. Passive income once built.", diff: "Med", profit: "High" }
+			],
+			high: [
+				{ title: "Micro-SaaS Tool", desc: "Build a simple subscription software that solves one specific problem — like a rank tracker, invoice generator, or AI writing helper. Even $29/month × 200 users = $5,800 MRR.", diff: "High", profit: "Unlimited" },
+				{ title: "AI Automation Agency", desc: "Build custom AI workflows, chatbots, and integrations for businesses using OpenAI, n8n, and Make. Charge $2,000–$10,000 per project.", diff: "High", profit: "Unlimited" }
+			]
+		},
+		design: {
+			low: [
+				{ title: "Digital Planner Creator", desc: "Design aesthetic Notion or PDF planners and sell them on Etsy. Low effort to make, passive income once listed. $5–$30 per sale.", diff: "Low", profit: "Med" },
+				{ title: "Canva Template Seller", desc: "Create and sell Canva templates for social media, resumes, or presentations on Etsy or Gumroad. Fully passive once uploaded.", diff: "Low", profit: "Med" }
+			],
+			med: [
+				{ title: "YouTube Thumbnail Designer", desc: "Create high-CTR thumbnails for content creators. One in-demand designer can manage 5–10 YouTube channels at $50–$200 per thumbnail set.", diff: "Med", profit: "High" },
+				{ title: "Logo & Brand Identity Freelancer", desc: "Design logos and brand kits for startups and small businesses. Use Fiverr or Upwork to start, then get referrals. Charge $200–$2,000 per project.", diff: "Med", profit: "High" }
+			],
+			high: [
+				{ title: "Design Agency", desc: "Serve multiple clients with a team of junior designers. Offer branding, social media creatives, and web UI. Charge $1,500–$5,000/month retainers.", diff: "High", profit: "Unlimited" },
+				{ title: "UI/UX Freelancer", desc: "Design app interfaces and user experiences for startups. Figma skills required. Top UI freelancers earn $75–$200/hour.", diff: "High", profit: "Unlimited" }
+			]
+		},
+		marketing: {
+			low: [
+				{ title: "UGC Content Creator", desc: "Film short product demo videos for brands to use in TikTok and Instagram ads. No following needed — just a phone camera. Earn $100–$500 per video.", diff: "Low", profit: "High" },
+				{ title: "Affiliate Blogger", desc: "Start a niche blog and promote affiliate products (Amazon, Clickbank, or SaaS tools). Takes 3–6 months but builds passive income at scale.", diff: "Low", profit: "Med" }
+			],
+			med: [
+				{ title: "Social Media Manager", desc: "Manage Instagram, TikTok, or LinkedIn pages for local businesses or coaches. Charge $500–$2,500/month per client.", diff: "Med", profit: "High" },
+				{ title: "Email Marketing Specialist", desc: "Set up Klaviyo or Mailchimp flows, write campaigns, and grow lists for e-commerce brands. High demand, $1,000–$4,000/month retainers.", diff: "Med", profit: "High" }
+			],
+			high: [
+				{ title: "Paid Ads Agency", desc: "Run Facebook, TikTok, or Google ads for e-commerce and service businesses. Charge 10–15% of ad spend. $10k/month ad budget = $1,000–$1,500/month per client.", diff: "High", profit: "Unlimited" },
+				{ title: "SEO Consultant", desc: "Help businesses rank on Google with technical SEO, content strategy, and link building. Charge $1,500–$8,000/month. Very high lifetime client value.", diff: "High", profit: "Unlimited" }
+			]
+		},
+		manual: {
+			low: [
+				{ title: "Vintage Reseller", desc: "Source unique items at thrift stores or Facebook Marketplace and flip them on eBay, Depop, or Vinted. Can earn $200–$1,000/month part-time.", diff: "Low", profit: "Med" },
+				{ title: "Errand & Delivery Service", desc: "Offer grocery shopping, delivery, or moving help through TaskRabbit or local Facebook groups. $15–$30/hour with no special skills.", diff: "Low", profit: "Med" }
+			],
+			med: [
+				{ title: "Mobile Car Detailing", desc: "Offer professional car washing and interior detailing at clients' homes or offices. Equipment costs ~$200. Charge $80–$250 per car.", diff: "Med", profit: "High" },
+				{ title: "Handmade Products on Etsy", desc: "Create and sell handmade candles, jewelry, or home decor on Etsy. Takes time to set up but very scalable with good product photography.", diff: "Med", profit: "High" }
+			],
+			high: [
+				{ title: "Cleaning or Landscaping Business", desc: "Launch a recurring service business (cleaning or lawn care) with a small team. Recurring contracts = predictable income. Scale to $10k–$30k/month.", diff: "High", profit: "Unlimited" },
+				{ title: "Print-on-Demand Brand", desc: "Design and sell custom T-shirts, mugs, and phone cases via Printify + Etsy or Shopify. No inventory, fulfilled automatically. High profit once you find winning designs.", diff: "High", profit: "Unlimited" }
+			]
+		}
 	};
 
 	document.getElementById('genBtn').addEventListener('click', () => {
 		const skill = document.getElementById('skill').value;
-		const pool = ideas[skill];
-		const idea = pool[Math.floor(Math.random() * pool.length)];
+		const time  = document.getElementById('time').value;
+		const pool  = ideas[skill][time];
+		const idea  = pool[Math.floor(Math.random() * pool.length)];
 
 		document.getElementById('idea-title').textContent = idea.title;
-		document.getElementById('idea-desc').textContent = idea.desc;
-		document.getElementById('diff-tag').textContent = `Difficulty: ${idea.diff}`;
+		document.getElementById('idea-desc').textContent  = idea.desc;
+		document.getElementById('diff-tag').textContent   = `Difficulty: ${idea.diff}`;
 		document.getElementById('profit-tag').textContent = `Profit Potential: ${idea.profit}`;
 		document.getElementById('result-box').classList.remove('hidden');
 	});

@@ -5,9 +5,6 @@ pubDate: 'Jan 31, 2024'
 heroImage: '../../assets/blog/digital-marketing-email-marketing.svg'
 category: 'digital-marketing'
 ---
-
-# The Blueprint for Marketing Email Marketing
-
 Welcome to our definitive guide on **Email Marketing**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
 Generating income through Email Marketing is one of the most reliable pathways in the modern digital economy. Whether you have zero technical experience or you're an established professional looking to pivot, this guide breaks down the exact framework required.

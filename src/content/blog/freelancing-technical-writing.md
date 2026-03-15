@@ -1,13 +1,10 @@
 ---
 title: 'The Dark Truth About Freelancing Technical Writing (And How To Win)'
-description: 'Discover the exact step-by-step framework to master Freelancing Technical Writing and start generating reliable online income this year. Perfect for complete beginners.'
+description: 'Discover the exact step-by-step framework to master Freelancing Technical Writing and start generating reliable online income this year. Perfect for...'
 pubDate: 'Jan 09, 2024'
 heroImage: '../../assets/blog/freelancing-technical-writing.svg'
 category: 'freelancing'
 ---
-
-# The Blueprint for Freelancing Technical Writing
-
 Welcome to our definitive guide on **Technical Writing**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
 Generating income through Technical Writing is one of the most reliable pathways in the modern digital economy. Whether you have zero technical experience or you're an established professional looking to pivot, this guide breaks down the exact framework required.

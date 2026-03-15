@@ -5,9 +5,6 @@ pubDate: 'Feb 03, 2024'
 heroImage: '../../assets/blog/digital-marketing-marketing-automation.svg'
 category: 'digital-marketing'
 ---
-
-# The Blueprint for Marketing Marketing Automation
-
 Welcome to our definitive guide on **Marketing Automation**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
 Generating income through Marketing Automation is one of the most reliable pathways in the modern digital economy. Whether you have zero technical experience or you're an established professional looking to pivot, this guide breaks down the exact framework required.

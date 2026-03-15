@@ -5,9 +5,6 @@ pubDate: 'Feb 01, 2024'
 heroImage: '../../assets/blog/digital-marketing-lead-generation.svg'
 category: 'digital-marketing'
 ---
-
-# The Blueprint for Marketing Lead Generation
-
 Welcome to our definitive guide on **Lead Generation**, a core component of Digital Marketing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
 Generating income through Lead Generation is one of the most reliable pathways in the modern digital economy. Whether you have zero technical experience or you're an established professional looking to pivot, this guide breaks down the exact framework required.
