@@ -1,11 +1,8 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import "../../styles/starwind.css";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -25,13 +22,7 @@ const formatCategoryTitle = (slug: string) => {
 };
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-	<head>
-		<BaseHead title={`Blog | ${SITE_TITLE}`} description="Latest strategies and guides on making money online." />
-	</head>
-	<body class="bg-background text-foreground scheme-dark min-h-screen flex flex-col">
-		<Header />
+<BaseLayout title={`Blog | ${SITE_TITLE}`} description="Latest strategies and guides on making money online.">
 		<main class="flex-grow docs-site-container border-x pb-24">
 			
 			<!-- Blog Hero -->
@@ -166,44 +157,43 @@ const formatCategoryTitle = (slug: string) => {
 					<p class="text-sm mt-2">Try a different keyword or browse the categories above.</p>
 				</div>
 			</div>
-		</main>
-		<Footer />
-	</body>
-</html>
-<style>
-/* Hide scrollbar for category pills wrapper */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>
+	</main>
 
-<script is:inline>
-  (function () {
-    const searchInput = document.getElementById('blog-search');
-    const postGrid   = document.getElementById('post-grid');
-    const noResults  = document.getElementById('blog-no-results');
-    if (!searchInput || !postGrid) return;
+	<style>
+		/* Hide scrollbar for category pills wrapper */
+		.no-scrollbar::-webkit-scrollbar {
+			display: none;
+		}
+		.no-scrollbar {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
+	</style>
 
-    searchInput.addEventListener('input', function () {
-      const q = this.value.trim().toLowerCase();
-      const cards = postGrid.querySelectorAll('[data-post-card]');
-      let visible = 0;
+	<script is:inline>
+		(function () {
+			const searchInput = document.getElementById('blog-search');
+			const postGrid   = document.getElementById('post-grid');
+			const noResults  = document.getElementById('blog-no-results');
+			if (!searchInput || !postGrid) return;
 
-      cards.forEach(function (card) {
-        const title = (card.dataset.title || '').toLowerCase();
-        const desc  = (card.dataset.desc  || '').toLowerCase();
-        const match = !q || title.includes(q) || desc.includes(q);
-        card.style.display = match ? '' : 'none';
-        if (match) visible++;
-      });
+			searchInput.addEventListener('input', function () {
+				const q = this.value.trim().toLowerCase();
+				const cards = postGrid.querySelectorAll('[data-post-card]');
+				let visible = 0;
 
-      if (noResults) {
-        noResults.style.display = visible === 0 && q ? '' : 'none';
-      }
-    });
-  })();
-</script>
+				cards.forEach(function (card) {
+					const title = (card.dataset.title || '').toLowerCase();
+					const desc  = (card.dataset.desc  || '').toLowerCase();
+					const match = !q || title.includes(q) || desc.includes(q);
+					card.style.display = match ? '' : 'none';
+					if (match) visible++;
+				});
+
+				if (noResults) {
+					noResults.style.display = visible === 0 && q ? '' : 'none';
+				}
+			});
+		})();
+	</script>
+</BaseLayout>

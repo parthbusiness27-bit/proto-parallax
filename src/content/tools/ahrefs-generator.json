@@ -1,9 +1,9 @@
 {
-  "title": "Keyword Idea Generator",
-  "description": "Generate targeted keyword ideas for your niche content and SEO strategy.",
-  "longDescription": "Enter a topic or niche and get a list of keyword ideas you can target on your blog, YouTube channel, or website to drive organic traffic.",
+  "title": "Keyword & Hashtag Finder",
+  "description": "Generate viral hashtags and keyword ideas for social media growth.",
+  "longDescription": "Enter a topic and get a set of optimized hashtags and keyword variations for Instagram, TikTok, and more.",
   "category": "SEO Gens",
-  "icon": "🔑",
+  "icon": "＃",
   "url": "/tools/hashtag-generator",
   "isPremium": false
 }

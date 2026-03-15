@@ -1,10 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
 import { SITE_AUTHOR } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -16,124 +14,86 @@ const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(p => p.data.category === category && p.data.title !== title)
   .slice(0, 3);
-
-import "@/styles/starwind.css";
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-	<head>
-		<BaseHead title={title} seoTitle={seoTitle} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
-
-	<body class="bg-background text-foreground scheme-dark min-h-screen flex flex-col">
-		<Header />
-		<main class="flex-grow docs-site-container border-x">
-			<article class="prose prose-invert prose-lg max-w-4xl mx-auto py-16 px-4">
-				<div class="w-full mb-8">
-					{heroImage && <img width="1020" height="510" src={typeof heroImage === 'string' ? heroImage : heroImage?.src} alt={title} class="w-full object-cover rounded-2xl shadow-lg border border-border" loading="lazy" decoding="async" />}
-				</div>
-				<div>
-					<div class="text-center mb-12">
-						<div class="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="italic mt-1">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1 class="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">{title}</h1>
-						<!-- Author byline -->
-						<div class="flex items-center justify-center gap-3 mt-6">
-							<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0" aria-hidden="true">
-								{SITE_AUTHOR.charAt(0).toUpperCase()}
-							</div>
-							<div class="text-left">
-								<p class="text-sm font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
-								<p class="text-xs text-muted-foreground"><FormattedDate date={pubDate} /></p>
-							</div>
-						</div>
-						<hr class="border-t border-border mt-8" />
-					</div>
-					<slot />
-				</div>
-			</article>
-
-			<!-- Related Posts Section: fixes orphan pages and internal link issues -->
-			{relatedPosts.length > 0 && (
-				<section class="max-w-4xl mx-auto px-4 pb-16">
-					<hr class="border-t border-border mb-12" />
-					<h2 class="text-2xl font-bold text-foreground mb-8">More Guides in This Category</h2>
-					<div class="grid gap-6 md:grid-cols-3">
-						{relatedPosts.map(post => (
-							<a
-								href={`/blog/${post.id}/`}
-								class="group block rounded-xl border border-border bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 overflow-hidden"
-							>
-								{post.data.heroImage && (
-									<div class="aspect-video overflow-hidden">
-										<img
-											src={typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage?.src}
-											alt={post.data.title}
-											class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-											loading="lazy"
-											decoding="async"
-										/>
-									</div>
-								)}
-								<div class="p-5">
-									<h3 class="text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2">{post.data.title}</h3>
-									<p class="text-sm text-muted-foreground mt-2 line-clamp-2">{post.data.description}</p>
-									<span class="inline-flex items-center text-xs font-bold text-primary mt-4 group-hover:translate-x-1 transition-transform">Read guide →</span>
+<BaseLayout title={title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate}>
+	<main class="flex-grow docs-site-container border-x px-4 py-8 md:py-16">
+		<article class="prose prose-invert prose-lg max-w-4xl mx-auto">
+			<div class="w-full mb-8">
+				{heroImage && <img width="1020" height="510" src={typeof heroImage === 'string' ? heroImage : heroImage?.src} alt={title} class="w-full object-cover rounded-2xl shadow-lg border border-border" loading="lazy" decoding="async" />}
+			</div>
+			<div>
+				<div class="text-center mb-12">
+					<div class="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+						<FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<div class="italic mt-1">
+									Last updated on <FormattedDate date={updatedDate} />
 								</div>
-							</a>
-						))}
+							)
+						}
 					</div>
-				</section>
-			)}
-		</main>
-		<Footer />
-	</body>
-</html>
+					<h1 class="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">{title}</h1>
+					<!-- Author byline -->
+					<div class="flex items-center justify-center gap-3 mt-6">
+						<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0" aria-hidden="true">
+							{SITE_AUTHOR.charAt(0).toUpperCase()}
+						</div>
+						<div class="text-left">
+							<p class="text-sm font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
+							<p class="text-xs text-muted-foreground"><FormattedDate date={pubDate} /></p>
+						</div>
+					</div>
+					<hr class="border-t border-border mt-8" />
+				</div>
+				<slot />
+			</div>
+		</article>
+
+		<!-- Related Posts Section: fixes orphan pages and internal link issues -->
+		{relatedPosts.length > 0 && (
+			<section class="max-w-4xl mx-auto px-0 pb-16 mt-16">
+				<hr class="border-t border-border mb-12" />
+				<h2 class="text-2xl font-bold text-foreground mb-8">More Guides in This Category</h2>
+				<div class="grid gap-6 md:grid-cols-3">
+					{relatedPosts.map(post => (
+						<a
+							href={`/blog/${post.id}/`}
+							class="group block rounded-xl border border-border bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 overflow-hidden"
+						>
+							{post.data.heroImage && (
+								<div class="aspect-video overflow-hidden">
+									<img
+										src={typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage?.src}
+										alt={post.data.title}
+										class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+							)}
+							<div class="p-5">
+								<h3 class="text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2">{post.data.title}</h3>
+								<p class="text-sm text-muted-foreground mt-2 line-clamp-2">{post.data.description}</p>
+								<span class="inline-flex items-center text-xs font-bold text-primary mt-4 group-hover:translate-x-1 transition-transform">Read guide →</span>
+							</div>
+						</a>
+					))}
+				</div>
+			</section>
+		)}
+	</main>
+</BaseLayout>
+
+<style>
+	.prose {
+		color: rgb(var(--gray-dark));
+	}
+	.hero-image img {
+		display: block;
+		margin: 0 auto;
+		border-radius: 12px;
+		box-shadow: var(--box-shadow);
+	}
+</style>
