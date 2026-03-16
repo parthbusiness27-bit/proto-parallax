@@ -32,6 +32,7 @@ User-agent: AhrefsBot
 Disallow: /
 
 # Sitemaps
+Sitemap: https://hustle-teacher.vercel.app/sitemap-index.xml
 Sitemap: https://hustle-teacher.vercel.app/sitemap.xml
 
 # Important paths (Fallback to all bots)

@@ -18,7 +18,7 @@ const relatedPosts = allPosts
 
 <BaseLayout title={title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate}>
 	<main class="flex-grow docs-site-container border-x px-4 py-8 md:py-16">
-		<article class="prose prose-invert prose-lg max-w-4xl mx-auto">
+		<article class="prose prose-invert prose-base md:prose-lg max-w-4xl mx-auto">
 			<div class="w-full mb-8">
 				{heroImage && <img width="1020" height="510" src={typeof heroImage === 'string' ? heroImage : heroImage?.src} alt={title} class="w-full object-cover rounded-2xl shadow-lg border border-border" loading="lazy" decoding="async" />}
 			</div>
@@ -34,7 +34,7 @@ const relatedPosts = allPosts
 							)
 						}
 					</div>
-					<h1 class="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">{title}</h1>
+					<h1 class="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">{title}</h1>
 					<!-- Author byline -->
 					<div class="flex items-center justify-center gap-3 mt-6">
 						<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0" aria-hidden="true">
