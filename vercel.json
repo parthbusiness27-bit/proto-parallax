@@ -6,6 +6,16 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/blog/freelancing-seo-writing",
+      "destination": "/blog/freelancing-seo-writing-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/freelancing-seo-writing/",
+      "destination": "/blog/freelancing-seo-writing-guide/",
+      "permanent": true
+    },
+    {
       "source": "/guides",
       "destination": "/blog/",
       "permanent": true
