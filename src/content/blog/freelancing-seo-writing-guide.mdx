@@ -2,7 +2,7 @@
 title: "7 Steps to Start Freelance SEO Writing & Make Money in 2026"
 description: "Master the art of SEO writing and build a profitable freelance business. Learn how to rank content and land high-paying clients."
 metaDescription: "Want to make money online? Discover how to start freelance SEO writing in 2026. Learn the exact steps to rank on Google and get high-paying clients today!"
-pubDate: "Mar 17, 2026"
+pubDate: "Mar 12, 2026"
 heroImage: "../../assets/blog/freelancing-content-writing.svg"
 category: "freelancing"
 # SEO Keywords
@@ -23,24 +23,39 @@ import BlogComparisonTable from '../../components/BlogComparisonTable.astro';
 import BlogFAQ from '../../components/BlogFAQ.astro';
 import BlogMonetization from '../../components/BlogMonetization.astro';
 import BlogCTA from '../../components/BlogCTA.astro';
+import BlogTableOfContents from '../../components/BlogTableOfContents.astro';
 
 <BlogQuickSummary 
   items={[
-    "What SEO writing is and why businesses pay for it",
-    "Essential keyword research techniques",
-    "7-step guide to writing ranking content",
-    "Where to find your first high-paying clients"
+"What You’ll Learn In This Guide:",
+"What SEO writing actually is",
+"How to structure articles for Google",
+"A step-by-step guide to getting your first client",
+"The best tools for beginners",
+"How to price your work and make money",
+"Common mistakes to avoid"
   ]} 
 />
 
+{/* 6. Table of Contents (SEO + UX) */}
+<BlogTableOfContents 
+  items={[
+    { label: "The Writing Paradox", targetId: "intro" },
+    { label: "What is SEO Writing?", targetId: "what-is" },
+    { label: "7 Steps to Start", targetId: "guide" },
+    { label: "Monetization Methods", targetId: "monetization" },
+    { label: "Common Mistakes", targetId: "mistakes" },
+    { label: "Tools for Writers", targetId: "tools" },
+    { label: "FAQs", targetId: "faq" }
+  ]}
+/>
+
 <div id="intro">
-## The Writing Paradox: Amazing Content, Zero Views
+## Do you love writing but struggle to make good money? You are not alone.
 
-Do you love writing but struggle to make good money? You are not alone.
+Many writers feel stuck. They write amazing articles. But nobody reads them. Why? Because the content doesn't rank on Google.
 
-Many writers feel stuck. They write amazing articles, but nobody reads them. Why? Because the content doesn't rank on Google.
-
-This is where **freelance SEO writing** changes the game. Every business wants to be on the first page of Google. They are willing to pay top dollar for writers who can get them there. In this guide, you will learn exactly how to start freelance SEO writing and build a highly profitable online business today.
+This is where freelance SEO writing changes the game. Every business wants to be on the first page of Google. They are willing to pay top dollar for writers who can get them there. In this guide, you will learn exactly how to start freelance SEO writing and build a highly profitable online business today.
 </div>
 
 <BlogComparisonTable 
@@ -79,6 +94,7 @@ Don't undersell yourself. Start at $0.05/word minimum.
 Reach out to marketing agencies that need reliable content partners.
 </div>
 
+<div id="monetization">
 <BlogMonetization 
   title="How to Monetize Your SEO Writing Skills"
   description="There are multiple ways to turn your writing ability into a recurring income stream."
@@ -88,6 +104,7 @@ Reach out to marketing agencies that need reliable content partners.
     { name: "Content Strategy Consulting", potential: "Medium", description: "Charge businesses to plan their content calendar and keywords." }
   ]}
 />
+</div>
 
 <div id="mistakes">
 ## 3 Common Mistakes New Writers Make

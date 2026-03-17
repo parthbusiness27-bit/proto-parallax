@@ -26,6 +26,7 @@ import BlogComparisonTable from '../../components/BlogComparisonTable.astro';
 import BlogFAQ from '../../components/BlogFAQ.astro';
 import BlogMonetization from '../../components/BlogMonetization.astro';
 import BlogCTA from '../../components/BlogCTA.astro';
+import BlogTableOfContents from '../../components/BlogTableOfContents.astro';
 
 {/* 25. Quick Summary Box (Early in article) */}
 <BlogQuickSummary 
@@ -35,6 +36,19 @@ import BlogCTA from '../../components/BlogCTA.astro';
     "How to make your first $100+ revenue",
     "Best tools to automate your workflow"
   ]} 
+/>
+
+{/* 6. Table of Contents (SEO + UX) */}
+<BlogTableOfContents 
+  items={[
+    { label: "Why [Primary Keyword] matters", targetId: "intro" },
+    { label: "What is [Primary Keyword]?", targetId: "what-is" },
+    { label: "Step-by-Step Guide", targetId: "guide" },
+    { label: "Monetization Strategies", targetId: "monetization" },
+    { label: "Common Mistakes", targetId: "mistakes" },
+    { label: "Tools Needed", targetId: "tools" },
+    { label: "FAQs", targetId: "faq" }
+  ]}
 />
 
 <div id="intro">
@@ -78,6 +92,7 @@ Details...
 </div>
 
 {/* 27. Monetization Section (Very Important) */}
+<div id="monetization">
 <BlogMonetization 
   title="How to Make Money with [Primary Keyword]"
   description="Explain exactly how the revenue flows in this business model."
@@ -86,6 +101,7 @@ Details...
     { name: "Affiliate Income", potential: "Medium", description: "Earn commissions from tools you recommend." }
   ]}
 />
+</div>
 
 <div id="mistakes">
 {/* 28. Common Mistakes Section (Problem-Solution Content) */}
