@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Assistance Customer Support (Complete Breakdown)'
+title: 'How I Make Money With Assistance Customer Support...'
 description: 'Stop guessing and start executing. Follow our complete guide to Assistance Customer Support designed specifically to help beginners earn their first...'
 pubDate: 'Apr 27, 2024'
 heroImage: '../../assets/blog/virtual-assistance-customer-support.svg'

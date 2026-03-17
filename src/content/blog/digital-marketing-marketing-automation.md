@@ -1,5 +1,5 @@
 ---
-title: 'Marketing Marketing Automation For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Marketing Marketing Automation For Beginners: The...'
 description: 'Learn the hidden strategies behind Marketing Marketing Automation that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 03, 2024'
 heroImage: '../../assets/blog/digital-marketing-marketing-automation.svg'

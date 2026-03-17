@@ -1,5 +1,5 @@
 ---
-title: 'Zero Investment Saas Notion Widgets Strategy for Complete Beginners'
+title: 'Zero Investment Saas Notion Widgets Strategy for...'
 description: 'Discover the exact step-by-step framework to master Saas Notion Widgets and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Mar 11, 2024'
 heroImage: '../../assets/blog/software-saas-notion-widgets.svg'

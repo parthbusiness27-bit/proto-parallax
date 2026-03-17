@@ -1,5 +1,5 @@
 ---
-title: 'Assistance Calendar Management For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Assistance Calendar Management For Beginners: The...'
 description: 'Want to succeed with Assistance Calendar Management? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Apr 26, 2024'
 heroImage: '../../assets/blog/virtual-assistance-calendar-management.svg'

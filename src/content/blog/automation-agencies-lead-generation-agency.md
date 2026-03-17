@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Lead Generation Agency (Complete Breakdown)'
+title: 'How I Make Money With Lead Generation Agency (Complete...'
 description: 'Want to succeed with Lead Generation Agency? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Feb 27, 2024'
 heroImage: '../../assets/blog/automation-agencies-lead-generation-agency.svg'

@@ -1,5 +1,5 @@
 ---
-title: 'Tools Analytics Tools Masterclass: Everything You Need to Know'
+title: 'Tools Analytics Tools Masterclass: Everything You Need...'
 description: 'Discover the exact step-by-step framework to master Tools Analytics Tools and start generating reliable online income this year. Perfect for complete beginners.'
 pubDate: 'Jul 11, 2024'
 heroImage: '../../assets/blog/automation-tools-analytics-tools.svg'

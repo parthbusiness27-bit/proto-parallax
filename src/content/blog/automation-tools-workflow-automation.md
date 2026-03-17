@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Tools Workflow Automation — High Income Strategy'
+title: 'Stop Overcomplicating Tools Workflow Automation — High...'
 description: 'Want to succeed with Tools Workflow Automation? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jul 07, 2024'
 heroImage: '../../assets/blog/automation-tools-workflow-automation.svg'

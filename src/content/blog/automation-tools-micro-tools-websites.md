@@ -1,5 +1,5 @@
 ---
-title: 'Micro Tools Websites Income Tutorial: From $0 to $10,000/Month'
+title: 'Micro Tools Websites Income Tutorial: From $0 to...'
 description: 'Learn the hidden strategies behind Micro Tools Websites that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jul 13, 2024'
 heroImage: '../../assets/blog/automation-tools-micro-tools-websites.svg'

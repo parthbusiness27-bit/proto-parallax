@@ -1,5 +1,5 @@
 ---
-title: 'Assistance Crm Management Income Tutorial: From $0 to $10,000/Month'
+title: 'Assistance Crm Management Income Tutorial: From $0 to...'
 description: 'Want to succeed with Assistance Crm Management? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'May 01, 2024'
 heroImage: '../../assets/blog/virtual-assistance-crm-management.svg'

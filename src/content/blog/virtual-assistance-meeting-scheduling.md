@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Assistance Meeting Scheduling (Complete Breakdown)'
+title: 'How I Make Money With Assistance Meeting Scheduling...'
 description: 'Learn the hidden strategies behind Assistance Meeting Scheduling that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'May 04, 2024'
 heroImage: '../../assets/blog/virtual-assistance-meeting-scheduling.svg'

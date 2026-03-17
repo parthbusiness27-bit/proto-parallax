@@ -1,5 +1,5 @@
 ---
-title: 'How To Build a Passive Income Empire With Content Animation Clips'
+title: 'How To Build a Passive Income Empire With Content...'
 description: 'Unlock the ultimate growth strategies for Content Animation Clips. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Apr 12, 2024'
 heroImage: '../../assets/blog/stock-content-animation-clips.svg'

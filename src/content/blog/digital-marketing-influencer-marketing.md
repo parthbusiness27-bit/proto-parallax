@@ -1,5 +1,5 @@
 ---
-title: 'Marketing Influencer Marketing For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Marketing Influencer Marketing For Beginners: The...'
 description: 'Learn the hidden strategies behind Marketing Influencer Marketing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 04, 2024'
 heroImage: '../../assets/blog/digital-marketing-influencer-marketing.svg'

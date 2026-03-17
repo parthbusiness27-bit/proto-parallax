@@ -1,5 +1,5 @@
 ---
-title: 'Product Review Websites Masterclass: Everything You Need to Know'
+title: 'Product Review Websites Masterclass: Everything You Need...'
 description: 'Discover the exact step-by-step framework to master Product Review Websites and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'May 15, 2024'
 heroImage: '../../assets/blog/affiliate-marketing-product-review-websites.svg'

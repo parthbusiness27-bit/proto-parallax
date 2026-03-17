@@ -1,5 +1,5 @@
 ---
-title: 'Zero Investment Saas Analytics Dashboards Strategy for Complete Beginners'
+title: 'Zero Investment Saas Analytics Dashboards Strategy for...'
 description: 'Unlock the ultimate growth strategies for Saas Analytics Dashboards. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Mar 12, 2024'
 heroImage: '../../assets/blog/software-saas-analytics-dashboards.svg'

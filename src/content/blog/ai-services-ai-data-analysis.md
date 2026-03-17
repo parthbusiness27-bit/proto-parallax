@@ -1,5 +1,5 @@
 ---
-title: 'Ai Data Analysis For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Ai Data Analysis For Beginners: The Ultimate...'
 description: 'Learn the hidden strategies behind Ai Data Analysis that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 21, 2024'
 heroImage: '../../assets/blog/ai-services-ai-data-analysis.svg'

@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Conversion Rate Optimization (Complete Breakdown)'
+title: 'How I Make Money With Conversion Rate Optimization...'
 description: 'Want to succeed with Conversion Rate Optimization? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Feb 02, 2024'
 heroImage: '../../assets/blog/digital-marketing-conversion-rate-optimization.svg'

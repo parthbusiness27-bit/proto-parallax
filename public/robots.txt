@@ -11,14 +11,11 @@ Sitemap: https://hustle-teacher.vercel.app/sitemap.xml
 # Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
-Request-rate: 30/1m
 
 # Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
-Request-rate: 30/1m
 
 # Disallow bad bots and scrapers
 User-agent: SemrushBot

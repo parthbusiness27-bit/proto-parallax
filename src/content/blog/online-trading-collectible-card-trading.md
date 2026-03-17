@@ -1,5 +1,5 @@
 ---
-title: 'Collectible Card Trading Income Tutorial: From $0 to $10,000/Month'
+title: 'Collectible Card Trading Income Tutorial: From $0 to...'
 description: 'Want to succeed with Collectible Card Trading? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jul 02, 2024'
 heroImage: '../../assets/blog/online-trading-collectible-card-trading.svg'

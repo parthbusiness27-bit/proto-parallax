@@ -1,5 +1,5 @@
 ---
-title: 'Zero Investment Youtube Affiliate Channels Strategy for Complete Beginners'
+title: 'Zero Investment Youtube Affiliate Channels Strategy for...'
 description: 'Unlock the ultimate growth strategies for Youtube Affiliate Channels. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'May 16, 2024'
 heroImage: '../../assets/blog/affiliate-marketing-youtube-affiliate-channels.svg'

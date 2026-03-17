@@ -1,5 +1,5 @@
 ---
-title: 'Selling Handmade Products For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Selling Handmade Products For Beginners: The Ultimate...'
 description: 'Stop guessing and start executing. Follow our complete guide to Selling Handmade Products designed specifically to help beginners earn their first...'
 pubDate: 'Mar 16, 2024'
 heroImage: '../../assets/blog/ecommerce-selling-handmade-products.svg'

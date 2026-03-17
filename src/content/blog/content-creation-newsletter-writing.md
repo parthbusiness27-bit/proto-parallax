@@ -1,5 +1,5 @@
 ---
-title: 'The Dark Truth About Creation Newsletter Writing (And How To Win)'
+title: 'The Dark Truth About Creation Newsletter Writing (And...'
 description: 'Learn the hidden strategies behind Creation Newsletter Writing that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 09, 2024'
 heroImage: '../../assets/blog/content-creation-newsletter-writing.svg'

@@ -1,5 +1,5 @@
 ---
-title: 'Zero Investment Creation Reaction Videos Strategy for Complete Beginners'
+title: 'Zero Investment Creation Reaction Videos Strategy for...'
 description: 'Stop guessing and start executing. Follow our complete guide to Creation Reaction Videos designed specifically to help beginners earn their first...'
 pubDate: 'Feb 12, 2024'
 heroImage: '../../assets/blog/content-creation-reaction-videos.svg'

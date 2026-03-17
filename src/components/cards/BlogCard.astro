@@ -4,12 +4,11 @@ import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../FormattedDate.astro';
 
 interface Props {
-  post: CollectionEntry<'blog' | 'guides'>;
+  post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-// Dynamic route based on collection type
-const routeBase = post.collection === 'blog' ? '/blog/' : '/guides/';
+const routeBase = '/blog/';
 ---
 
 <a href={`${routeBase}${post.id}/`} class="group block relative rounded-2xl border border-border bg-card overflow-hidden hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
@@ -49,7 +48,7 @@ const routeBase = post.collection === 'blog' ? '/blog/' : '/guides/';
         </p>
         
         <div class="flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform">
-            Read {post.collection === 'blog' ? 'Article' : 'Guide'} <span class="ml-1">→</span>
+            Read Article <span class="ml-1">→</span>
         </div>
     </div>
 </a>

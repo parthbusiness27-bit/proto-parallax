@@ -1,5 +1,5 @@
 ---
-title: 'Voice Over Services Income Tutorial: From $0 to $10,000/Month'
+title: 'Voice Over Services Income Tutorial: From $0 to...'
 description: 'Learn the hidden strategies behind Voice Over Services that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 13, 2024'
 heroImage: '../../assets/blog/freelancing-voice-over-services.svg'

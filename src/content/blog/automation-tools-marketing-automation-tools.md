@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Marketing Automation Tools — High Income Strategy'
+title: 'Stop Overcomplicating Marketing Automation Tools — High...'
 description: 'Want to succeed with Marketing Automation Tools? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jul 10, 2024'
 heroImage: '../../assets/blog/automation-tools-marketing-automation-tools.svg'

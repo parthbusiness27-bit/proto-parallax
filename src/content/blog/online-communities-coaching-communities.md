@@ -1,5 +1,5 @@
 ---
-title: 'Communities Coaching Communities For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Communities Coaching Communities For Beginners: The...'
 description: 'Discover the exact step-by-step framework to master Communities Coaching Communities and start generating reliable online income this year. Perfect for...'
 pubDate: 'Jun 13, 2024'
 heroImage: '../../assets/blog/online-communities-coaching-communities.svg'

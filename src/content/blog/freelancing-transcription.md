@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Freelancing Transcription — High Income Strategy'
+title: 'Stop Overcomplicating Freelancing Transcription — High...'
 description: 'Discover the exact step-by-step framework to master Freelancing Transcription and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'Jan 12, 2024'
 heroImage: '../../assets/blog/freelancing-transcription.svg'

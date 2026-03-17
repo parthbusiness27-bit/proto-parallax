@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Streaming Game Coaching — High Income Strategy'
+title: 'Stop Overcomplicating Streaming Game Coaching — High...'
 description: 'Learn the hidden strategies behind Streaming Game Coaching that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jun 16, 2024'
 heroImage: '../../assets/blog/gaming-streaming-game-coaching.svg'

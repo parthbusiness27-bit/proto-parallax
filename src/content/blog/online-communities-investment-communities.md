@@ -1,5 +1,5 @@
 ---
-title: 'Top 5 Communities Investment Communities Strategies That Actually Work in 2026'
+title: 'Top 5 Communities Investment Communities Strategies That...'
 description: 'Want to succeed with Communities Investment Communities? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jun 10, 2024'
 heroImage: '../../assets/blog/online-communities-investment-communities.svg'

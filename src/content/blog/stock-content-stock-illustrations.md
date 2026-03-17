@@ -1,5 +1,5 @@
 ---
-title: 'Content Stock Illustrations For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Content Stock Illustrations For Beginners: The Ultimate...'
 description: 'Learn the hidden strategies behind Content Stock Illustrations that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Apr 14, 2024'
 heroImage: '../../assets/blog/stock-content-stock-illustrations.svg'

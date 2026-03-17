@@ -1,5 +1,5 @@
 ---
-title: 'Content Background Textures Masterclass: Everything You Need to Know'
+title: 'Content Background Textures Masterclass: Everything You...'
 description: 'Discover the exact step-by-step framework to master Content Background Textures and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'Apr 11, 2024'
 heroImage: '../../assets/blog/stock-content-background-textures.svg'

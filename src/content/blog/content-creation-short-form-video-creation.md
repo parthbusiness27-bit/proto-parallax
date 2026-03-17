@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Form Video Creation — High Income Strategy'
+title: 'Stop Overcomplicating Form Video Creation — High Income...'
 description: 'Unlock the ultimate growth strategies for Form Video Creation. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Feb 06, 2024'
 heroImage: '../../assets/blog/content-creation-short-form-video-creation.svg'

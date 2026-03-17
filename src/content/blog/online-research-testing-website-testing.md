@@ -1,5 +1,5 @@
 ---
-title: 'Testing Website Testing Income Tutorial: From $0 to $10,000/Month'
+title: 'Testing Website Testing Income Tutorial: From $0 to...'
 description: 'Discover the exact step-by-step framework to master Testing Website Testing and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'May 25, 2024'
 heroImage: '../../assets/blog/online-research-testing-website-testing.svg'

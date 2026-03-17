@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Products Online Courses (Complete Breakdown)'
+title: 'How I Make Money With Products Online Courses (Complete...'
 description: 'Learn the hidden strategies behind Products Online Courses that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Mar 27, 2024'
 heroImage: '../../assets/blog/digital-products-online-courses.svg'

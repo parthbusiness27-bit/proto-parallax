@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Software Affiliate Marketing — High Income Strategy'
+title: 'Stop Overcomplicating Software Affiliate Marketing —...'
 description: 'Want to succeed with Software Affiliate Marketing? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'May 21, 2024'
 heroImage: '../../assets/blog/affiliate-marketing-software-affiliate-marketing.svg'

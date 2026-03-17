@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Code Automation Consulting (Complete Breakdown)'
+title: 'How I Make Money With Code Automation Consulting...'
 description: 'Stop guessing and start executing. Follow our complete guide to Code Automation Consulting designed specifically to help beginners earn their first...'
 pubDate: 'Feb 28, 2024'
 heroImage: '../../assets/blog/automation-agencies-no-code-automation-consulting.svg'

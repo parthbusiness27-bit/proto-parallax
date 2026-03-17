@@ -1,5 +1,5 @@
 ---
-title: 'How To Build a Passive Income Empire With Freelancing Copywriting'
+title: 'How To Build a Passive Income Empire With Freelancing...'
 description: 'Learn the hidden strategies behind Freelancing Copywriting that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Jan 08, 2024'
 heroImage: '../../assets/blog/freelancing-copywriting.svg'

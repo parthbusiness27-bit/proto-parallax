@@ -1,5 +1,5 @@
 ---
-title: 'Subscription Box Business Income Tutorial: From $0 to $10,000/Month'
+title: 'Subscription Box Business Income Tutorial: From $0 to...'
 description: 'Discover the exact step-by-step framework to master Subscription Box Business and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'Mar 20, 2024'
 heroImage: '../../assets/blog/ecommerce-subscription-box-business.svg'

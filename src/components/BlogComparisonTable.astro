@@ -1,0 +1,33 @@
+---
+interface Props {
+	title?: string;
+	headers: string[];
+	rows: string[][];
+}
+
+const { title, headers = [], rows = [] } = Astro.props;
+---
+
+<div class="my-10 overflow-hidden">
+	{title && <h3 class="text-xl font-bold text-foreground mb-4">{title}</h3>}
+	<div class="overflow-x-auto rounded-xl border border-border shadow-sm">
+		<table class="w-full border-collapse text-left text-sm md:text-base">
+			<thead class="bg-secondary/50">
+				<tr>
+					{headers.map((header) => (
+						<th class="px-4 py-3 font-bold text-foreground border-b border-border">{header}</th>
+					))}
+				</tr>
+			</thead>
+			<tbody class="divide-y divide-border bg-card">
+				{rows.map((row) => (
+					<tr class="hover:bg-secondary/20 transition-colors">
+						{row.map((cell) => (
+							<td class="px-4 py-3 text-muted-foreground" set:html={cell}></td>
+						))}
+					</tr>
+				))}
+			</tbody>
+		</table>
+	</div>
+</div>

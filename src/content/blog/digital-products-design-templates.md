@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Products Design Templates (Complete Breakdown)'
+title: 'How I Make Money With Products Design Templates...'
 description: 'Want to succeed with Products Design Templates? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Mar 28, 2024'
 heroImage: '../../assets/blog/digital-products-design-templates.svg'

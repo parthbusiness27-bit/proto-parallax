@@ -1,5 +1,5 @@
 ---
-title: 'The Dark Truth About Focus Group Participation (And How To Win)'
+title: 'The Dark Truth About Focus Group Participation (And How...'
 description: 'Unlock the ultimate growth strategies for Focus Group Participation. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'May 31, 2024'
 heroImage: '../../assets/blog/online-research-testing-focus-group-participation.svg'

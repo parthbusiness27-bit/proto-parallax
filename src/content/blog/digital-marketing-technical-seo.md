@@ -1,5 +1,5 @@
 ---
-title: 'Zero Investment Marketing Technical Seo Strategy for Complete Beginners'
+title: 'Zero Investment Marketing Technical Seo Strategy for...'
 description: 'Stop guessing and start executing. Follow our complete guide to Marketing Technical Seo designed specifically to help beginners earn their first high-income...'
 pubDate: 'Jan 27, 2024'
 heroImage: '../../assets/blog/digital-marketing-technical-seo.svg'

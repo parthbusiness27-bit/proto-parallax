@@ -1,5 +1,5 @@
 ---
-title: 'Top 5 Social Media Analytics Strategies That Actually Work in 2026'
+title: 'Top 5 Social Media Analytics Strategies That Actually...'
 description: 'Stop guessing and start executing. Follow our complete guide to Social Media Analytics designed specifically to help beginners earn their first high-income...'
 pubDate: 'Feb 23, 2024'
 heroImage: '../../assets/blog/social-media-services-social-media-analytics.svg'

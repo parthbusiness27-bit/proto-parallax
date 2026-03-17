@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	buttonText: string;
+	buttonUrl: string;
+	type?: 'newsletter' | 'download' | 'generic';
+}
+
+const { title, description, buttonText, buttonUrl, type = 'generic' } = Astro.props;
+---
+
+<div class="my-12 p-8 md:p-12 rounded-3xl bg-primary text-primary-foreground text-center relative overflow-hidden shadow-2xl">
+	{/* Abstract pattern bg */}
+	<div class="absolute inset-0 opacity-10 pointer-events-none">
+		<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+					<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"/>
+				</pattern>
+			</defs>
+			<rect width="100%" height="100%" fill="url(#grid)" />
+		</svg>
+	</div>
+
+	<div class="relative z-10 max-w-2xl mx-auto">
+		<div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+			{type === 'newsletter' && (
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+			)}
+			{type === 'download' && (
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+			)}
+			{type === 'generic' && (
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+			)}
+		</div>
+		<h3 class="text-2xl md:text-4xl font-black mb-4 leading-tight">{title}</h3>
+		<p class="text-primary-foreground/80 md:text-lg mb-8">{description}</p>
+		<a 
+			href={buttonUrl} 
+			class="inline-flex items-center px-8 py-4 bg-white text-primary font-black rounded-full hover:scale-105 transition-transform shadow-xl no-underline"
+		>
+			{buttonText}
+		</a>
+	</div>
+</div>

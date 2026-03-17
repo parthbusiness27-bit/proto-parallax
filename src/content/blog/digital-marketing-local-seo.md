@@ -1,5 +1,5 @@
 ---
-title: 'Marketing Local Seo For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Marketing Local Seo For Beginners: The Ultimate...'
 description: 'Want to succeed with Marketing Local Seo? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
 pubDate: 'Jan 26, 2024'
 heroImage: '../../assets/blog/digital-marketing-local-seo.svg'

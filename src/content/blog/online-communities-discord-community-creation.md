@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overcomplicating Discord Community Creation — High Income Strategy'
+title: 'Stop Overcomplicating Discord Community Creation — High...'
 description: 'Stop guessing and start executing. Follow our complete guide to Discord Community Creation designed specifically to help beginners earn their first...'
 pubDate: 'Jun 04, 2024'
 heroImage: '../../assets/blog/online-communities-discord-community-creation.svg'

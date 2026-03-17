@@ -1,11 +1,12 @@
 ---
 const trendingItems = [
-  { name: "Dropshipping", icon: "📦", glow: "from-blue-500" },
-  { name: "Crypto Trading", icon: "📈", glow: "from-green-500" },
-  { name: "AI Automation", icon: "🤖", glow: "from-purple-500" },
-  { name: "YouTube Shorts", icon: "📱", glow: "from-red-500" },
-  { name: "SaaS Builders", icon: "💻", glow: "from-sky-500" },
-  { name: "Digital Products", icon: "🎨", glow: "from-fuchsia-500" },
+  { name: "Dropshipping Business", icon: "📦", glow: "from-blue-500", link: "/blog/category/ecommerce" },
+  { name: "Crypto Trading", icon: "📈", glow: "from-green-500", link: "/blog/category/online-trading" },
+  { name: "AI Automation", icon: "🤖", glow: "from-purple-500", link: "/blog/category/ai-services" },
+  { name: "Content Creation", icon: "🎬", glow: "from-red-500", link: "/blog/category/content-creation" },
+  { name: "SaaS Builders", icon: "💻", glow: "from-sky-500", link: "/blog/category/software-saas" },
+  { name: "Digital Products", icon: "🎨", glow: "from-fuchsia-500", link: "/blog/category/digital-products" },
+  { name: "Affiliate Marketing", icon: "💸", glow: "from-emerald-500", link: "/blog/category/affiliate-marketing" },
 ];
 ---
 
@@ -22,7 +23,7 @@ const trendingItems = [
         <div class="flex flex-wrap justify-center gap-4">
             {trendingItems.map((item, i) => (
                 <a 
-                    href="#pathways"
+                    href={item.link}
                     class={`group relative flex items-center gap-3 px-6 py-4 bg-card border border-border rounded-full hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] hover:shadow-primary/20 animate-zoom-in cursor-pointer`}
                     style={`animation-delay: ${i * 100}ms;`}
                 >

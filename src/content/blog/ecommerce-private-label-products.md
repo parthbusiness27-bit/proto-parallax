@@ -1,5 +1,5 @@
 ---
-title: 'Private Label Products For Beginners: The Ultimate Step-by-Step Blueprint'
+title: 'Private Label Products For Beginners: The Ultimate...'
 description: 'Discover the exact step-by-step framework to master Private Label Products and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'Mar 22, 2024'
 heroImage: '../../assets/blog/ecommerce-private-label-products.svg'

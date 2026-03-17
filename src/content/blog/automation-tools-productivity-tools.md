@@ -1,5 +1,5 @@
 ---
-title: 'Tools Productivity Tools Masterclass: Everything You Need to Know'
+title: 'Tools Productivity Tools Masterclass: Everything You...'
 description: 'Stop guessing and start executing. Follow our complete guide to Tools Productivity Tools designed specifically to help beginners earn their first...'
 pubDate: 'Jul 09, 2024'
 heroImage: '../../assets/blog/automation-tools-productivity-tools.svg'

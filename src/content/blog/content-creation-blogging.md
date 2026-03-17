@@ -1,5 +1,5 @@
 ---
-title: 'Content Creation Blogging Masterclass: Everything You Need to Know'
+title: 'Content Creation Blogging Masterclass: Everything You...'
 description: 'Stop guessing and start executing. Follow our complete guide to Content Creation Blogging designed specifically to help beginners earn their first...'
 pubDate: 'Feb 08, 2024'
 heroImage: '../../assets/blog/content-creation-blogging.svg'

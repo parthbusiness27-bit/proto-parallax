@@ -1,5 +1,5 @@
 ---
-title: 'How To Build a Passive Income Empire With Assistance Travel Booking'
+title: 'How To Build a Passive Income Empire With Assistance...'
 description: 'Stop guessing and start executing. Follow our complete guide to Assistance Travel Booking designed specifically to help beginners earn their first...'
 pubDate: 'Apr 29, 2024'
 heroImage: '../../assets/blog/virtual-assistance-travel-booking.svg'

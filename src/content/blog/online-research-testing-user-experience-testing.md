@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With User Experience Testing (Complete Breakdown)'
+title: 'How I Make Money With User Experience Testing (Complete...'
 description: 'Discover the exact step-by-step framework to master User Experience Testing and start generating reliable online income this year. Perfect for complete...'
 pubDate: 'May 27, 2024'
 heroImage: '../../assets/blog/online-research-testing-user-experience-testing.svg'

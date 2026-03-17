@@ -6,6 +6,66 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/guides",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/content-creator",
+      "destination": "/blog/category/content-creation/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/side-hustles",
+      "destination": "/blog/category/website-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/affiliate",
+      "destination": "/blog/category/affiliate-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/virtual-assistant",
+      "destination": "/blog/category/virtual-assistance/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/ai-income",
+      "destination": "/blog/category/ai-services/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/:path*",
+      "destination": "/blog/category/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/content-creator",
+      "destination": "/blog/category/content-creation/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/side-hustles",
+      "destination": "/blog/category/website-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/affiliate",
+      "destination": "/blog/category/affiliate-marketing/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/virtual-assistant",
+      "destination": "/blog/category/virtual-assistance/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/ai-income",
+      "destination": "/blog/category/ai-services/",
+      "permanent": true
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true

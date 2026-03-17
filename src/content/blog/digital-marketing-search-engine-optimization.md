@@ -1,5 +1,5 @@
 ---
-title: 'Search Engine Optimization Masterclass: Everything You Need to Know'
+title: 'Search Engine Optimization Masterclass: Everything You...'
 description: 'Stop guessing and start executing. Follow our complete guide to Search Engine Optimization designed specifically to help beginners earn their first...'
 pubDate: 'Jan 25, 2024'
 heroImage: '../../assets/blog/digital-marketing-search-engine-optimization.svg'

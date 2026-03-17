@@ -1,5 +1,5 @@
 ---
-title: 'Development Saas Development Masterclass: Everything You Need to Know'
+title: 'Development Saas Development Masterclass: Everything You...'
 description: 'Stop guessing and start executing. Follow our complete guide to Development Saas Development designed specifically to help beginners earn their first...'
 pubDate: 'Jan 24, 2024'
 heroImage: '../../assets/blog/programming-development-saas-development.svg'

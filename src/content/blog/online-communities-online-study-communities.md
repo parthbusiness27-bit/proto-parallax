@@ -1,5 +1,5 @@
 ---
-title: 'The Dark Truth About Online Study Communities (And How To Win)'
+title: 'The Dark Truth About Online Study Communities (And How...'
 description: 'Unlock the ultimate growth strategies for Online Study Communities. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'Jun 07, 2024'
 heroImage: '../../assets/blog/online-communities-online-study-communities.svg'

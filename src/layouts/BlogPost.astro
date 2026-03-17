@@ -3,21 +3,32 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import { SITE_AUTHOR } from '../consts';
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_URL } from '../consts';
 import { Image } from 'astro:assets';
+import SEOSchema from '../components/SEOSchema.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, seoTitle, description, pubDate, updatedDate, heroImage, category } = Astro.props;
+const { title, seoTitle, description, pubDate, updatedDate, heroImage, category, faqs = [] } = Astro.props;
 
-// Fetch related posts from the same category (excludes this page by title match)
+// Fetch related posts from the same category
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
   .filter(p => p.data.category === category && p.data.title !== title)
   .slice(0, 3);
 ---
 
-<BaseLayout title={title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp">
+<BaseLayout title={seoTitle || title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp">
+	{/* Inject Article Schema with FAQ if available */}
+	<SEOSchema 
+		type="BlogPosting" 
+		title={title} 
+		description={description} 
+		image={heroImage?.src ? `${SITE_URL}${heroImage.src}` : undefined}
+		publishedDate={pubDate}
+		updatedDate={updatedDate}
+		faqs={faqs}
+	/>
 	<main class="flex-grow docs-site-container border-x px-4 py-8 md:py-16">
 		<article class="prose prose-invert prose-base md:prose-lg max-w-4xl mx-auto">
 			<div class="w-full mb-8">
@@ -59,7 +70,51 @@ const relatedPosts = allPosts
 					</div>
 					<hr class="border-t border-border mt-8" />
 				</div>
-				<slot />
+
+				{/* Affiliate Disclaimer */}
+				<div class="mb-10 p-4 rounded-xl bg-secondary/30 border border-border text-xs text-muted-foreground italic">
+					<strong>Affiliate Disclosure:</strong> This post may contain affiliate links, which means we may receive a commission, at no cost to you, if you make a purchase through a link. We only recommend products we believe in.
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12 items-start">
+					<div class="blog-content">
+						<slot />
+					</div>
+					
+					{/* Sticky Table of Contents for Desktop */}
+					<aside class="hidden lg:block sticky top-24 self-start">
+						<div class="p-6 rounded-2xl bg-card border border-border">
+							<h3 class="text-sm font-bold uppercase tracking-widest text-foreground mb-4">Table of Contents</h3>
+							<div id="toc" class="text-sm space-y-3 text-muted-foreground">
+								{/* TOC will be hydrated via client-side script if needed or plain CSS */}
+								<ul class="list-none p-0 m-0 space-y-2">
+									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#intro">Introduction</a></li>
+									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#guide">Step-by-Step Guide</a></li>
+									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#monetization">Monetization</a></li>
+									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#tools">Recommended Tools</a></li>
+									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#faq">FAQs</a></li>
+								</ul>
+							</div>
+						</div>
+					</aside>
+				</div>
+				
+				{/* Author Box (E-E-A-T) */}
+				<div class="mt-16 p-8 rounded-3xl bg-secondary/20 border border-border flex flex-col md:flex-row gap-8 items-center md:items-start">
+					<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-3xl shadow-xl transform rotate-3">
+						{SITE_AUTHOR.charAt(0).toUpperCase()}
+					</div>
+					<div class="text-center md:text-left">
+						<h3 class="text-xl font-bold text-foreground mb-2">About the Author: {SITE_AUTHOR}</h3>
+						<p class="text-muted-foreground leading-relaxed mb-4">
+							{SITE_AUTHOR} is a digital entrepreneur and the founder of <strong>Hustle Teacher</strong>. With years of experience in online business, he specializes in helping students and beginners build sustainable income streams through proven side hustles.
+						</p>
+						<div class="flex flex-wrap justify-center md:justify-start gap-4">
+							<a href="/about" class="text-sm font-bold text-primary hover:underline">Full Bio →</a>
+							<a href="/" class="text-sm font-bold text-primary hover:underline">More Guides →</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</article>
 

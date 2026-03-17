@@ -1,5 +1,5 @@
 ---
-title: 'How to Start Email Affiliate Funnels in 2026 With Zero Experience'
+title: 'How to Start Email Affiliate Funnels in 2026 With Zero...'
 description: 'Unlock the ultimate growth strategies for Email Affiliate Funnels. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
 pubDate: 'May 18, 2024'
 heroImage: '../../assets/blog/affiliate-marketing-email-affiliate-funnels.svg'

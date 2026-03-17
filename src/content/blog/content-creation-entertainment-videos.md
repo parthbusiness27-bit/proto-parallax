@@ -1,5 +1,5 @@
 ---
-title: 'How I Make Money With Creation Entertainment Videos (Complete Breakdown)'
+title: 'How I Make Money With Creation Entertainment Videos...'
 description: 'Learn the hidden strategies behind Creation Entertainment Videos that industry experts use to scale their side hustles into full-time internet businesses.'
 pubDate: 'Feb 11, 2024'
 heroImage: '../../assets/blog/content-creation-entertainment-videos.svg'

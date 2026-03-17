@@ -1,0 +1,33 @@
+---
+import SEOSchema from './SEOSchema.astro';
+
+interface Props {
+	faqs: Array<{ question: string; answer: string }>;
+	title?: string;
+}
+
+const { faqs = [], title = "Frequently Asked Questions" } = Astro.props;
+---
+
+{faqs.length > 0 && (
+	<section class="my-12 p-8 rounded-2xl bg-card border border-border border-l-4 border-l-primary shadow-sm">
+		<h2 class="text-2xl font-bold text-foreground mb-8 text-center">{title}</h2>
+		<div class="space-y-6">
+			{faqs.map((faq) => (
+				<div class="faq-item group">
+					<h3 class="text-lg font-bold text-foreground mb-3 flex items-start gap-3">
+						<span class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs flex-shrink-0 mt-0.5">Q</span>
+						{faq.question}
+					</h3>
+					<div class="pl-9 text-muted-foreground leading-relaxed">
+						{faq.answer}
+					</div>
+					<hr class="mt-6 border-border group-last:hidden" />
+				</div>
+			))}
+		</div>
+
+		{/* Inject FAQ Schema */}
+		<SEOSchema type="FAQPage" faqs={faqs} />
+	</section>
+)}
