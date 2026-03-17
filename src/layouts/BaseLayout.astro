@@ -25,6 +25,8 @@ interface Props {
 	updatedDate?: Date;
 	/** Extra classes applied to <body> e.g. a specific page color scheme */
 	bodyClass?: string;
+	/** Custom robots meta tag content forwarded to BaseHead */
+	robotsMeta?: string;
 }
 
 const {
@@ -35,6 +37,7 @@ const {
 	publishedDate,
 	updatedDate,
 	bodyClass = '',
+	robotsMeta,
 } = Astro.props;
 ---
 
@@ -48,6 +51,7 @@ const {
 			author={author}
 			publishedDate={publishedDate}
 			updatedDate={updatedDate}
+			robotsMeta={robotsMeta}
 		/>
 		<!-- Named slot for per-page head injections (SEO schemas, preloads, etc.) -->
 		<slot name="head" />

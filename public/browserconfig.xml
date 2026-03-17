@@ -2,15 +2,15 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/favicon.svg"/>
+            <square150x150logo src="/logo.png"/>
             <TileColor>#4338ca</TileColor>
         </tile>
         <notification>
-            <polling-uri src="https://HustleTeacher.vercel.app/"/>
-            <polling-uri2 src="https://HustleTeacher.vercel.app/"/>
-            <polling-uri3 src="https://HustleTeacher.vercel.app/"/>
-            <polling-uri4 src="https://HustleTeacher.vercel.app/"/>
-            <polling-uri5 src="https://HustleTeacher.vercel.app/"/>
+            <polling-uri src="https://hustle-teacher.vercel.app/"/>
+            <polling-uri2 src="https://hustle-teacher.vercel.app/"/>
+            <polling-uri3 src="https://hustle-teacher.vercel.app/"/>
+            <polling-uri4 src="https://hustle-teacher.vercel.app/"/>
+            <polling-uri5 src="https://hustle-teacher.vercel.app/"/>
             <frequency>30</frequency>
             <circleCount>1</circleCount>
         </notification>

@@ -1,6 +1,6 @@
-Contact: security@HustleTeacher.vercel.app
+Contact: mailto:thehustleteacher@gmail.com
 Expires: 2027-03-09T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://HustleTeacher.vercel.app/.well-known/security.txt
-Policy: https://HustleTeacher.vercel.app/privacy-policy/
-Acknowledgments: https://HustleTeacher.vercel.app/security/
+Canonical: https://hustle-teacher.vercel.app/.well-known/security.txt
+Policy: https://hustle-teacher.vercel.app/privacy-policy/
+Acknowledgments: https://hustle-teacher.vercel.app/about/

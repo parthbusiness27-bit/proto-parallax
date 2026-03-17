@@ -1,7 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ResourceCard from '../../components/cards/ResourceCard.astro';
 import { SITE_TITLE } from '../../consts';
+
+/**
+ * RESOURCES PAGE - TEMPORARY "COMING SOON" VERSION
+ * 
+ * Note for Parth: I have commented out the dynamic resource fetching logic below.
+ * When you are ready to add resources, simply uncomment the logic and restore the 
+ * original grid implementation.
+ */
+
+/*
+import ResourceCard from '../../components/cards/ResourceCard.astro';
 import { getCollection } from 'astro:content';
 
 // Fetch all resource entries
@@ -10,74 +20,69 @@ const allResources = await getCollection('resources');
 // Separate into Free and Premium arrays
 const freeResources = allResources.filter(res => !res.data.isPremium);
 const premiumResources = allResources.filter(res => res.data.isPremium);
+*/
 ---
 
-<BaseLayout title={`Downloads & Templates | ${SITE_TITLE}`} description="Free templates, Notion trackers, and premium digital products to accelerate your online business journey.">
-	<main class="flex-grow pt-24 pb-20">
-        <div class="docs-site-container">
-                            
-            <!-- Header Section -->
-            <div class="mb-16">
-                <div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm animate-fade-in-down">
-                    📦 Digital Arsenal
+<BaseLayout title={`Resources & Templates | ${SITE_TITLE}`} description="Free templates, Notion trackers, and premium digital products to accelerate your online business journey. Coming soon!">
+	<main class="flex-grow flex items-center justify-center py-20 md:py-32">
+        <div class="docs-site-container w-full">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Icon Aura -->
+                <div class="relative inline-block mb-10 group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary to-emerald-500 rounded-full blur-[60px] opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                    <div class="relative bg-card border border-border w-24 h-24 md:w-32 md:h-32 rounded-3xl flex items-center justify-center text-4xl md:text-6xl shadow-2xl transform group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+                        <span class="animate-bounce">📦</span>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up tracking-tight uppercase">
-                    Creator <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Resources</span>
+
+                <!-- Label -->
+                <div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-bold mb-8 border border-primary/50 shadow-sm animate-fade-in-down">
+                    DIGITAL ARSENAL
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-4xl md:text-7xl font-black mb-8 animate-fade-in-up tracking-tighter uppercase leading-tight">
+                    Premium <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Resources</span> <br/>
+                    <span class="text-white/40">Coming Soon</span>
                 </h1>
-                <p class="text-xl text-muted-foreground max-w-2xl animate-fade-in-up" style="animation-delay: 150ms;">
-                    Grab our highest-converting Notion templates, checklists, and premium ebooks to jumpstart your hustle today.
+
+                <!-- Description -->
+                <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 animate-fade-in-up leading-relaxed" style="animation-delay: 150ms;">
+                    We are currently hand-crafting the ultimate collection of Notion templates, side-hustle trackers, and high-converting checklists to help you grow your digital income.
                 </p>
+
+                <!-- Action / CTA -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up" style="animation-delay: 300ms;">
+                    <a href="/start-here/" class="group relative inline-flex items-center justify-center rounded-2xl text-lg font-black transition-all bg-primary text-white h-14 md:h-16 px-8 md:px-12 duration-300 hover:scale-[1.05] hover:shadow-[0_0_50px_rgba(79,70,229,0.4)] overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-3">
+                            Read Latest Guides <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </span>
+                    </a>
+                    <a href="/#newsletter" class="group inline-flex items-center justify-center rounded-2xl text-lg font-black transition-all border-2 border-primary/30 hover:border-primary text-white bg-white/5 backdrop-blur h-14 md:h-16 px-8 md:px-12 duration-300 hover:scale-[1.05]">
+                        Notify Me
+                    </a>
+                </div>
+
+                <!-- Status Tags -->
+                <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up" style="animation-delay: 450ms;">
+                    <div class="bg-card/30 border border-border p-4 rounded-2xl backdrop-blur-sm">
+                        <div class="text-primary font-black text-xl mb-1">90%</div>
+                        <div class="text-xs text-muted-foreground uppercase tracking-widest">Built</div>
+                    </div>
+                    <div class="bg-card/30 border border-border p-4 rounded-2xl backdrop-blur-sm">
+                        <div class="text-emerald-400 font-black text-xl mb-1">Free</div>
+                        <div class="text-xs text-muted-foreground uppercase tracking-widest">Templates</div>
+                    </div>
+                    <div class="bg-card/30 border border-border p-4 rounded-2xl backdrop-blur-sm">
+                        <div class="text-purple-400 font-black text-xl mb-1">Pro</div>
+                        <div class="text-xs text-muted-foreground uppercase tracking-widest">Trackers</div>
+                    </div>
+                    <div class="bg-card/30 border border-border p-4 rounded-2xl backdrop-blur-sm">
+                        <div class="text-blue-400 font-black text-xl mb-1">VIP</div>
+                        <div class="text-xs text-muted-foreground uppercase tracking-widest">Strategies</div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Free Resources Section -->
-            {freeResources.length > 0 && (
-                <div class="mb-20 animate-fade-in-up" style="animation-delay: 300ms;">
-                    <h2 class="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
-                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">🎁</span>
-                        Free Downloads
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {freeResources.map(res => (
-                            <ResourceCard 
-                                title={res.data.title}
-                                description={res.data.description}
-                                url={res.data.url}
-                                icon={res.data.icon}
-                                isPremium={false}
-                            />
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            <!-- Premium Resources Section -->
-            {premiumResources.length > 0 && (
-                <div class="animate-fade-in-up" style="animation-delay: 450ms;">
-                    <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-primary">
-                        <span class="bg-primary/20 text-primary w-10 h-10 rounded-full flex items-center justify-center text-xl">💎</span>
-                        Premium Products
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {premiumResources.map(res => (
-                            <ResourceCard 
-                                title={res.data.title}
-                                description={res.data.description}
-                                url={res.data.url}
-                                icon={res.data.icon}
-                                isPremium={true}
-                                price={res.data.price}
-                            />
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {allResources.length === 0 && (
-                <div class="py-20 text-center border border-dashed border-border rounded-2xl bg-muted/30">
-                    <p class="text-muted-foreground">Resources are currently being updated. Check back soon!</p>
-                </div>
-            )}
-
         </div>
 	</main>
 </BaseLayout>

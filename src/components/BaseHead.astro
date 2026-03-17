@@ -4,7 +4,7 @@
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
-import { SITE_TITLE, SITE_AUTHOR } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_AUTHOR, SITE_URL } from '../consts';
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 
@@ -16,6 +16,8 @@ interface Props {
 	author?: string;
 	publishedDate?: Date;
 	updatedDate?: Date;
+	/** Custom robots meta tag content. Defaults to full-index for home/posts, noindex for archives/search. */
+	robotsMeta?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -28,6 +30,7 @@ const {
 	author = SITE_AUTHOR,
 	publishedDate,
 	updatedDate,
+	robotsMeta = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 } = Astro.props;
 
 const gaId = import.meta.env.PUBLIC_GA_ID || "G-HG27BZGSGX";
@@ -40,7 +43,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="robots" content={robotsMeta} />
 
 <!-- Security Headers (Content Security Policy) -->
 <meta http-equiv="Content-Security-Policy" content="
@@ -58,13 +61,15 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta name="color-scheme" content="light dark" />
 
 <!-- Favicon & Icons -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/logo.png" />
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="manifest" href="/manifest.json" />
 <meta name="msapplication-config" content="/browserconfig.xml" />
 <meta name="theme-color" content="#4338ca" />
+
+<!-- Preloads -->
+<link rel="preload" href="/logo.png" as="image" type="image/png" fetchpriority="high" />
 
 <!-- Feeds & Documentation -->
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -73,7 +78,19 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://assets.mlcdn.com">
+<link rel="preconnect" href="https://fonts.mailerlite.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://assets.mlcdn.com">
+<link rel="dns-prefetch" href="https://fonts.mailerlite.com">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://assets.mlcdn.com/fonts.css?version=1773240" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.mailerlite.com/css?family=Open+Sans:300,400,600,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://assets.mlcdn.com/fonts.css?version=1773240" rel="stylesheet">
+</noscript>
 
 <!-- ======================== -->
 <!-- SEO META TAGS            -->
@@ -82,27 +99,87 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Structured Data -->
+<!-- WebSite & Brand Schemas -->
 <script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "Hustle Teacher",
-  "url": "https://hustle-teacher.vercel.app/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://hustle-teacher.vercel.app/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": SITE_TITLE,
+      "alternateName": "The Hustle Teacher",
+      "description": SITE_DESCRIPTION,
+      "publisher": {
+        "@id": `${SITE_URL}/#organization`
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${SITE_URL}/search?q={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": SITE_TITLE,
+      "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "inLanguage": "en-US",
+        "@id": `${SITE_URL}/#logo`,
+        "url": `${SITE_URL}/logo.png`,
+        "contentUrl": `${SITE_URL}/logo.png`,
+        "width": 512,
+        "height": 512,
+        "caption": SITE_TITLE
+      },
+      "image": {
+        "@id": `${SITE_URL}/#logo`
+      },
+      "sameAs": [
+        "https://x.com/thustleteacher",
+        "https://www.youtube.com/@TheHustleTeacher",
+        "https://www.instagram.com/hustle.teacher",
+        "https://www.pinterest.com/thehustleteacher"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#author`,
+      "name": author,
+      "url": SITE_URL,
+      "image": {
+        "@type": "ImageObject",
+        "inLanguage": "en-US",
+        "@id": `${SITE_URL}/#authorlogo`,
+        "url": `${SITE_URL}/logo.png`,
+        "contentUrl": `${SITE_URL}/logo.png`,
+        "caption": author
+      },
+      "description": "Founder of Hustle Teacher, dedicated to helping students and beginners earn money online."
+    }
+  ]
 })} />
 
 <!-- Primary Meta Tags -->
 <title>{seoTitle || title}</title>
 <meta name="title" content={seoTitle || title} />
+<meta name="application-name" content={SITE_TITLE} />
+<meta name="apple-mobile-web-app-title" content={SITE_TITLE} />
 <meta name="description" content={description} />
 <meta name="author" content={author} />
 <meta name="keywords" content="online earning, side hustle, student jobs, work from home, digital skills" />
 <meta name="google-site-verification" content="3EdmATvJBUdbugqzo9-OtVXX2XRzn3FAZeajRzC5X58" />
 <meta name="msvalidate.01" content="93CA3B3F5B43B0F1DE57B1A0E055E5C7" />
+<meta name="yandex-verification" content="90b95e4715d20bef" />
+<meta name="google-site-name" content="Hustle Teacher" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -116,6 +193,8 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@thustleteacher" />
+<meta name="twitter:creator" content="@thustleteacher" />
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
@@ -138,8 +217,8 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 {gaId && (
 	<>
 		<!-- Google tag (gtag.js) -->
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-		<script define:vars={{ gaId }}>
+		<script type="text/partytown" async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+		<script type="text/partytown" define:vars={{ gaId }}>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
@@ -167,7 +246,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta name="generator" content={Astro.generator} />
 
 <!-- Ahrefs Analytics -->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="ABvv/lPKJqYU90luw2eHUg" defer></script>
+<script type="text/partytown" src="https://analytics.ahrefs.com/analytics.js" data-key="ABvv/lPKJqYU90luw2eHUg" defer></script>
 
 <!-- Service Worker Registration -->
 <script>

@@ -8,7 +8,7 @@
 
   <!-- MailerLite Styles -->
   <style is:global>
-    @import url("https://assets.mlcdn.com/fonts.css?version=1773240");
+    /* Removed blocking @import, moved to BaseHead */
 
     .ml-form-embedSubmitLoad {
       display: inline-block;
@@ -150,7 +150,7 @@
               <div class="ml-form-fieldRow ml-last-item">
                 <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                   <input
-                    aria-label="email"
+                    aria-label="Email Address for newsletter"
                     aria-required="true"
                     type="email"
                     class="form-control"
@@ -173,7 +173,7 @@
 
             <div class="ml-form-embedSubmit">
               <button type="submit" class="primary">Start My Journey →</button>
-              <button disabled="disabled" style="display: none;" type="button" class="loading">
+              <button disabled="disabled" style="display: none;" type="button" class="loading" aria-label="Processing subscription">
                 <div class="ml-form-embedSubmitLoad"></div>
                 <span class="sr-only">Loading...</span>
               </button>
@@ -199,15 +199,23 @@
 
 <!-- MailerLite Scripts -->
 <script is:inline>
-  function ml_webform_success_38488920() {
-    try {
-      window.top.location.href = 'https://hustle-teacher.vercel.app/';
-    } catch (e) {
-      window.location.href = 'https://hustle-teacher.vercel.app/';
-    }
-  }
-</script>
-<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" is:inline type="text/javascript"></script>
-<script is:inline>
-  fetch("https://assets.mailerlite.com/jsonp/2192818/forms/182016183496606864/takel");
+  window.addEventListener('load', function() {
+    // Dynamic script injection to ensure zero render blocking
+    const script = document.createElement('script');
+    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    // Form success callback
+    window.ml_webform_success_38488920 = function() {
+      try {
+        window.top.location.href = 'https://hustle-teacher.vercel.app/';
+      } catch (e) {
+        window.location.href = 'https://hustle-teacher.vercel.app/';
+      }
+    };
+
+    // Tracking call
+    fetch("https://assets.mailerlite.com/jsonp/2192818/forms/182016183496606864/takel");
+  });
 </script>

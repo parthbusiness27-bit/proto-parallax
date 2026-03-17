@@ -24,7 +24,7 @@ const guides = [
         
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {guides.map((guide, i) => (
-                <a href={`/blog/category/${guide.slug}`} class={`group block p-5 md:p-6 bg-gradient-to-br ${guide.color} border border-border rounded-2xl ${guide.border} transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 80}ms;`}>
+                <a href={`/blog/category/${guide.slug}/`} class={`group block p-5 md:p-6 bg-gradient-to-br ${guide.color} border border-border rounded-2xl ${guide.border} transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`} style={`animation-delay: ${i * 80}ms;`}>
                     <div class="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">{guide.icon}</div>
                     <h3 class="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-2 text-foreground group-hover:text-primary transition-colors leading-snug">{guide.title}</h3>
                     <p class="text-muted-foreground text-xs md:text-sm line-clamp-2 hidden sm:block">{guide.description}</p>

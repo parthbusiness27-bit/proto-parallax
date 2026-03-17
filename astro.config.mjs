@@ -19,7 +19,11 @@ export default defineConfig({
 		}),
 		partytown({
 			config: {
-				forward: ["dataLayer.push"],
+				forward: ["dataLayer.push", "gtag"],
+				loadScriptsOnMainThread: [
+					"https://www.google-analytics.com",
+					"https://www.clarity.ms"
+				]
 			},
 		}),
 	],
