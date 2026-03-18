@@ -79,6 +79,11 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/tools/ahrefs-generator",
+      "destination": "/tools/hashtag-generator/",
+      "permanent": true
     }
   ],
   "headers": [
