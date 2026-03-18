@@ -11,15 +11,13 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, seoTitle, description, pubDate, updatedDate, heroImage, category, faqs = [] } = Astro.props;
 
-// Fetch related posts from the same category
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(p => p.data.category === category && p.data.title !== title)
+  .filter(p => p.data.category === category && p.data.title !== title && !p.data.hidden)
   .slice(0, 3);
 ---
 
-<BaseLayout title={seoTitle || title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp" theme="light">
-	{/* Inject Article Schema with FAQ if available */}
+<BaseLayout title={seoTitle || title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp" theme="dark">
 	<SEOSchema 
 		type="BlogPosting" 
 		title={title} 
@@ -29,16 +27,16 @@ const relatedPosts = allPosts
 		updatedDate={updatedDate}
 		faqs={faqs}
 	/>
-	<main class="flex-grow docs-site-container border-x px-4 py-8 md:py-16">
-		<article class="prose prose-base md:prose-lg max-w-4xl mx-auto">
-			<div class="w-full mb-8">
+	<main class="flex-grow docs-site-container border-x px-4 md:px-6 py-8 md:py-12 lg:py-16">
+		<article class="prose prose-base md:prose-lg lg:prose-xl max-w-4xl mx-auto">
+			<div class="w-full mb-6 md:mb-8">
 				{heroImage && (
 					<Image 
 						width={1020} 
 						height={510} 
 						src={heroImage} 
 						alt={title} 
-						class="w-full object-cover rounded-2xl shadow-lg border border-border" 
+						class="w-full object-cover rounded-xl md:rounded-2xl shadow-lg border border-border" 
 						loading="eager" 
 						fetchpriority="high"
 						decoding="async" 
@@ -46,84 +44,61 @@ const relatedPosts = allPosts
 				)}
 			</div>
 			<div>
-				<div class="text-center mb-12">
-					<div class="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+				<div class="text-center mb-8 md:mb-12">
+					<div class="text-xs md:text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 md:mb-4">
 						<FormattedDate date={pubDate} />
 						{
 							updatedDate && (
-								<div class="italic mt-1">
+								<div class="italic mt-1 text-[10px] md:text-xs">
 									Last updated on <FormattedDate date={updatedDate} />
 								</div>
 							)
 						}
 					</div>
-					<h1 class="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight leading-tight">{title}</h1>
-					<!-- Author byline -->
-					<div class="flex items-center justify-center gap-3 mt-6">
-						<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0" aria-hidden="true">
+					<h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight px-2">{title}</h1>
+					<div class="flex items-center justify-center gap-2 md:gap-3 mt-4 md:mt-6">
+						<div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-xs md:text-sm flex-shrink-0" aria-hidden="true">
 							{SITE_AUTHOR.charAt(0).toUpperCase()}
 						</div>
 						<div class="text-left">
-							<p class="text-sm font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
-							<p class="text-xs text-muted-foreground"><FormattedDate date={pubDate} /></p>
+							<p class="text-xs md:text-sm font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
+							<p class="text-[10px] md:text-xs text-muted-foreground"><FormattedDate date={pubDate} /></p>
 						</div>
 					</div>
-					<hr class="border-t border-border mt-8" />
+					<hr class="border-t border-border mt-6 md:mt-8" />
 				</div>
 
-				{/* Affiliate Disclaimer */}
-				<div class="mb-10 p-4 rounded-xl bg-secondary/30 border border-border text-xs text-muted-foreground italic">
+				<div class="mb-8 md:mb-10 p-3 md:p-4 rounded-lg md:rounded-xl bg-secondary/20 border border-border text-[11px] md:text-xs text-muted-foreground italic">
 					<strong>Affiliate Disclosure:</strong> This post may contain affiliate links, which means we may receive a commission, at no cost to you, if you make a purchase through a link. We only recommend products we believe in.
 				</div>
 
-				<div class="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12 items-start">
-					<div class="blog-content">
-						<slot />
-					</div>
-					
-					{/* Sticky Table of Contents for Desktop */}
-					<aside class="hidden lg:block sticky top-24 self-start">
-						<div class="p-6 rounded-2xl bg-card border border-border">
-							<h3 class="text-sm font-bold uppercase tracking-widest text-foreground mb-4">Table of Contents</h3>
-							<div id="toc" class="text-sm space-y-3 text-muted-foreground">
-								{/* TOC will be hydrated via client-side script if needed or plain CSS */}
-								<ul class="list-none p-0 m-0 space-y-2">
-									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#intro">Introduction</a></li>
-									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#guide">Step-by-Step Guide</a></li>
-									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#monetization">Monetization</a></li>
-									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#tools">Recommended Tools</a></li>
-									<li class="hover:text-primary transition-colors cursor-pointer"><a href="#faq">FAQs</a></li>
-								</ul>
-							</div>
-						</div>
-					</aside>
+				<div class="blog-content px-1 md:px-0">
+					<slot />
 				</div>
 				
-				{/* Author Box (E-E-A-T) */}
-				<div class="mt-16 p-8 rounded-3xl bg-secondary/20 border border-border flex flex-col md:flex-row gap-8 items-center md:items-start">
-					<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-3xl shadow-xl transform rotate-3">
+				<div class="mt-12 md:mt-16 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-secondary/10 border border-border flex flex-col md:flex-row gap-5 md:gap-8 items-center md:items-start">
+					<div class="w-16 md:w-24 h-16 md:h-24 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-2xl md:text-3xl shadow-xl transform rotate-3 flex-shrink-0">
 						{SITE_AUTHOR.charAt(0).toUpperCase()}
 					</div>
 					<div class="text-center md:text-left">
-						<h3 class="text-xl font-bold text-foreground mb-2">About the Author: {SITE_AUTHOR}</h3>
-						<p class="text-muted-foreground leading-relaxed mb-4">
+						<h3 class="text-base md:text-xl font-bold text-foreground mb-2">About the Author: {SITE_AUTHOR}</h3>
+						<p class="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
 							{SITE_AUTHOR} is a digital entrepreneur and the founder of <strong>Hustle Teacher</strong>. With years of experience in online business, he specializes in helping students and beginners build sustainable income streams through proven side hustles.
 						</p>
-						<div class="flex flex-wrap justify-center md:justify-start gap-4">
-							<a href="/about" class="text-sm font-bold text-primary hover:underline">Full Bio →</a>
-							<a href="/" class="text-sm font-bold text-primary hover:underline">More Guides →</a>
+						<div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+							<a href="/about/" class="text-xs md:text-sm font-bold text-primary hover:underline">Full Bio →</a>
+							<a href="/" class="text-xs md:text-sm font-bold text-primary hover:underline">More Guides →</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</article>
 
-		<!-- Related Posts Section: fixes orphan pages and internal link issues -->
 		{relatedPosts.length > 0 && (
-			<section class="max-w-4xl mx-auto px-0 pb-16 mt-16">
-				<hr class="border-t border-border mb-12" />
-				<h2 class="text-2xl font-bold text-foreground mb-8">More Guides in This Category</h2>
-				<div class="grid gap-6 md:grid-cols-3">
+			<section class="max-w-4xl mx-auto px-0 pb-12 md:pb-16 mt-12 md:mt-16">
+				<hr class="border-t border-border mb-8 md:mb-12" />
+				<h2 class="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8">More Guides in This Category</h2>
+				<div class="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 					{relatedPosts.map(post => (
 						<a
 							href={`/blog/${post.id}/`}
@@ -142,10 +117,10 @@ const relatedPosts = allPosts
 									/>
 								</div>
 							)}
-							<div class="p-5">
-								<h3 class="text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2">{post.data.title}</h3>
-								<p class="text-sm text-muted-foreground mt-2 line-clamp-2">{post.data.description}</p>
-								<span class="inline-flex items-center text-xs font-bold text-primary mt-4 group-hover:translate-x-1 transition-transform">Read guide →</span>
+							<div class="p-4 md:p-5">
+								<h3 class="text-sm md:text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2 mb-2">{post.data.title}</h3>
+								<p class="text-xs md:text-sm text-muted-foreground line-clamp-2">{post.data.description}</p>
+								<span class="inline-flex items-center text-[10px] md:text-xs font-bold text-primary mt-3 group-hover:translate-x-1 transition-transform">Read guide →</span>
 							</div>
 						</a>
 					))}
@@ -156,13 +131,49 @@ const relatedPosts = allPosts
 </BaseLayout>
 
 <style>
-	.prose {
-		color: rgb(var(--gray-dark));
+	.prose :global(h2),
+	.prose :global(h3),
+	.prose :global(h4) {
+		color: var(--foreground);
 	}
-	.hero-image img {
-		display: block;
-		margin: 0 auto;
-		border-radius: 12px;
-		box-shadow: var(--box-shadow);
+	.prose :global(p),
+	.prose :global(li) {
+		color: var(--foreground);
+	}
+	.prose :global(h2) {
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+	.prose :global(h3) {
+		font-size: 1.25rem;
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+	.prose :global(p) {
+		font-size: 0.95rem;
+		line-height: 1.75;
+		margin-bottom: 1.25rem;
+	}
+	.prose :global(ul),
+	.prose :global(ol) {
+		padding-left: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+	.prose :global(li) {
+		font-size: 0.95rem;
+		margin-bottom: 0.5rem;
+	}
+	@media (min-width: 768px) {
+		.prose :global(h2) {
+			font-size: 1.875rem;
+		}
+		.prose :global(h3) {
+			font-size: 1.5rem;
+		}
+		.prose :global(p),
+		.prose :global(li) {
+			font-size: 1rem;
+		}
 	}
 </style>

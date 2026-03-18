@@ -102,13 +102,13 @@
   }
   
   #mlb2-38488920 .ml-form-embedWrapper {
-    background: linear-gradient(135deg, rgba(26,26,26,0.6) 0%, rgba(11,11,11,0.8) 100%);
+    background: var(--card);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--border);
     border-radius: 2rem;
     padding: 3rem 2rem;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
   }
 
@@ -146,9 +146,9 @@
   }
 
   #mlb2-38488920 .form-control {
-    background-color: rgba(255,255,255,0.05) !important;
+    background-color: var(--muted) !important;
     color: var(--foreground) !important;
-    border: 1px solid rgba(255,255,255,0.1) !important;
+    border: 1px solid var(--border) !important;
     border-radius: 1rem !important;
     padding: 1.25rem 1.5rem !important;
     width: 100% !important;
@@ -157,10 +157,10 @@
   }
 
   #mlb2-38488920 .form-control:focus {
-    background-color: rgba(255,255,255,0.08) !important;
+    background-color: var(--muted) !important;
     border-color: var(--primary) !important;
     outline: none !important;
-    box-shadow: 0 0 0 4px rgba(182, 255, 0, 0.1) !important;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 20%, transparent) !important;
   }
 
   #mlb2-38488920 .ml-form-embedSubmit button {
@@ -181,7 +181,7 @@
 
   #mlb2-38488920 .ml-form-embedSubmit button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px -5px rgba(182, 255, 0, 0.4) !important;
+    box-shadow: 0 10px 20px -5px color-mix(in srgb, var(--primary) 40%, transparent) !important;
     filter: brightness(1.1);
   }
 
