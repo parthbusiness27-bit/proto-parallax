@@ -102,49 +102,7 @@
 }
 
 :root {
-  --background: var(--color-white);
-  --foreground: var(--color-neutral-950);
-  --card: var(--color-white);
-  --card-foreground: var(--color-neutral-950);
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-neutral-950);
-  --primary: var(--color-indigo-600);
-  --primary-foreground: var(--color-neutral-50);
-  --primary-accent: var(--color-indigo-600);
-  --secondary: var(--color-emerald-500);
-  --secondary-foreground: var(--color-neutral-950);
-  --secondary-accent: var(--color-emerald-500);
-  --muted: var(--color-neutral-100);
-  --muted-foreground: var(--color-neutral-600);
-  --accent: var(--color-neutral-100);
-  --accent-foreground: var(--color-neutral-900);
-  --info: var(--color-sky-300);
-  --info-foreground: var(--color-sky-950);
-  --success: var(--color-green-300);
-  --success-foreground: var(--color-green-950);
-  --warning: var(--color-amber-300);
-  --warning-foreground: var(--color-amber-950);
-  --error: var(--color-red-700);
-  --error-foreground: var(--color-neutral-50);
-  --border: var(--color-neutral-200);
-  --input: var(--color-neutral-200);
-  --outline: var(--color-neutral-400);
-
-  --radius: 0.625rem;
-
-  /* sidebar variables */
-  --sidebar-background: var(--color-neutral-50);
-  --sidebar-foreground: var(--color-neutral-950);
-  --sidebar-primary: var(--color-blue-700);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: var(--color-neutral-100);
-  --sidebar-accent-foreground: var(--color-neutral-900);
-  --sidebar-border: var(--color-neutral-200);
-  --sidebar-outline: var(--color-neutral-400);
-}
-
-.dark {
-  --background: var(--color-neutral-950);
+  --background: #000000;
   --foreground: var(--color-neutral-50);
   --card: var(--color-neutral-900);
   --card-foreground: var(--color-neutral-50);
@@ -172,7 +130,9 @@
   --input: oklch(from var(--color-neutral-50) l c h / 15%);
   --outline: var(--color-neutral-500);
 
-  /* sidebars variables */
+  --radius: 0.625rem;
+
+  /* sidebar variables */
   --sidebar-background: var(--color-neutral-900);
   --sidebar-foreground: var(--color-neutral-50);
   --sidebar-primary: var(--color-blue-700);
@@ -182,6 +142,8 @@
   --sidebar-border: var(--color-neutral-800);
   --sidebar-outline: var(--color-neutral-600);
 }
+
+
 
 @layer base {
   * {
