@@ -5,9 +5,9 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog'))
+	.filter((post) => !post.data.hidden)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const featuredPost = posts[0];
 const remainingPosts = posts.slice(1);

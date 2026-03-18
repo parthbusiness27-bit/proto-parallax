@@ -20,6 +20,7 @@ const blog = defineCollection({
 			updatedDate: z.coerce.date().optional(),
 			heroImage: image().optional(),
 			category: z.string().default('Uncategorized'),
+			hidden: z.boolean().default(false),
 			// FAQ Schema
 			faqs: z.array(z.object({
 				question: z.string(),

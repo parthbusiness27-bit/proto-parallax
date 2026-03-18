@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 
 	return allKnownCategories.map((category) => {
 		const filteredPosts = allPosts
-			.filter((post) => post.data.category === category)
+			.filter((post) => post.data.category === category && !post.data.hidden)
 			.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 		return {
 			params: { category },

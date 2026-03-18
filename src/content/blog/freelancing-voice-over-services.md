@@ -4,6 +4,7 @@ description: 'Learn the hidden strategies behind Voice Over Services that indust
 pubDate: 'Jan 13, 2024'
 heroImage: '../../assets/blog/freelancing-voice-over-services.svg'
 category: 'freelancing'
+hidden: true
 ---
 Welcome to our definitive guide on **Voice Over Services**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

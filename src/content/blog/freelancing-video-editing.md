@@ -4,6 +4,7 @@ description: 'Learn the hidden strategies behind Freelancing Video Editing that 
 pubDate: 'Jan 05, 2024'
 heroImage: '../../assets/blog/freelancing-video-editing.svg'
 category: 'freelancing'
+hidden: false
 ---
 Welcome to our definitive guide on **Video Editing**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

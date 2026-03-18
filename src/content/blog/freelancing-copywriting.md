@@ -4,6 +4,7 @@ description: 'Learn the hidden strategies behind Freelancing Copywriting that in
 pubDate: 'Jan 08, 2024'
 heroImage: '../../assets/blog/freelancing-copywriting.svg'
 category: 'freelancing'
+hidden: false
 ---
 Welcome to our definitive guide on **Copywriting**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -4,6 +4,7 @@ description: 'Unlock the ultimate growth strategies for Brand Identity Design. W
 pubDate: 'Jan 04, 2024'
 heroImage: '../../assets/blog/freelancing-brand-identity-design.svg'
 category: 'freelancing'
+hidden: true
 ---
 Welcome to our definitive guide on **Brand Identity Design**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

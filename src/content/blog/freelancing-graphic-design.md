@@ -4,6 +4,7 @@ description: 'Discover the exact step-by-step framework to master Freelancing Gr
 pubDate: 'Jan 02, 2024'
 heroImage: '../../assets/blog/freelancing-graphic-design.svg'
 category: 'freelancing'
+hidden: true
 ---
 Welcome to our definitive guide on **Graphic Design**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

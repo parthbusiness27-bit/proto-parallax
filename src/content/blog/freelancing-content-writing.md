@@ -4,6 +4,7 @@ description: 'Discover the exact step-by-step framework to master Freelancing Co
 pubDate: 'Jan 07, 2024'
 heroImage: '../../assets/blog/freelancing-content-writing.svg'
 category: 'freelancing'
+hidden: false
 ---
 Welcome to our definitive guide on **Content Writing**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

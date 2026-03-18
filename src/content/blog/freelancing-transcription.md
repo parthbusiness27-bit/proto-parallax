@@ -4,6 +4,7 @@ description: 'Discover the exact step-by-step framework to master Freelancing Tr
 pubDate: 'Jan 12, 2024'
 heroImage: '../../assets/blog/freelancing-transcription.svg'
 category: 'freelancing'
+hidden: true
 ---
 Welcome to our definitive guide on **Transcription**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

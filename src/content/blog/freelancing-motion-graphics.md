@@ -4,6 +4,7 @@ description: 'Unlock the ultimate growth strategies for Freelancing Motion Graph
 pubDate: 'Jan 06, 2024'
 heroImage: '../../assets/blog/freelancing-motion-graphics.svg'
 category: 'freelancing'
+hidden: true
 ---
 Welcome to our definitive guide on **Motion Graphics**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 

@@ -4,6 +4,7 @@ description: 'Want to succeed with Freelancing Logo Design? This comprehensive b
 pubDate: 'Jan 03, 2024'
 heroImage: '../../assets/blog/freelancing-logo-design.svg'
 category: 'freelancing'
+hidden: false
 ---
 Welcome to our definitive guide on **Logo Design**, a core component of Freelancing. This masterclass is designed to take you from a complete beginner to confidently executing this business model. 
 
