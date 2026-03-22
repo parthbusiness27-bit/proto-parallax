@@ -1,6 +1,7 @@
 ---
 title: 'Stop Overcomplicating Creation Educational Videos — High...'
-description: 'Learn the hidden strategies behind Creation Educational Videos that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Everything you need to know about starting in Stop Overcomplicating Creation Educational. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Stop Overcomplicating Creation Educational. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Feb 10, 2024'
 heroImage: '../../assets/blog/content-creation-educational-videos.svg'
 category: 'content-creation'

@@ -1,6 +1,7 @@
 ---
 title: 'Search Engine Optimization Masterclass: Everything You...'
-description: 'Stop guessing and start executing. Follow our complete guide to Search Engine Optimization designed specifically to help beginners earn their first...'
+description: "The 2026 playbook for Search Engine Optimization Masterclass. Unlock the secrets to mastering this high-demand skill and take your online earning potential to the next level."
+metaDescription: "The 2026 playbook for Search Engine Optimization Masterclass. Unlock the secrets to mastering this high-demand skill and take your online earning potential to the next level."
 pubDate: 'Jan 25, 2024'
 heroImage: '../../assets/blog/digital-marketing-search-engine-optimization.svg'
 category: 'digital-marketing'

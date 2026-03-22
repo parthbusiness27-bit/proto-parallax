@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Creation...'
-description: 'Stop guessing and start executing. Follow our complete guide to Creation Podcast Creation designed specifically to help beginners earn their first...'
+description: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Feb 07, 2024'
 heroImage: '../../assets/blog/content-creation-podcast-creation.svg'
 category: 'content-creation'

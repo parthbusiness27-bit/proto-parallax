@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Game Asset Selling'
-description: 'Discover the exact step-by-step framework to master Game Asset Selling and start generating reliable online income this year. Perfect for complete beginners.'
+description: "Ready to excel at Build a Passive Income? Read our latest deep dive into the industry's best practices, essential tools, and insider tips for rapid career growth."
+metaDescription: "Ready to excel at Build a Passive Income? Read our latest deep dive into the industry's best practices, essential tools, and insider tips for rapid career growth."
 pubDate: 'Jun 17, 2024'
 heroImage: '../../assets/blog/gaming-streaming-game-asset-selling.svg'
 category: 'gaming-streaming'

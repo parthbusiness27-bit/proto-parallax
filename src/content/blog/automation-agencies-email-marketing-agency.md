@@ -1,6 +1,7 @@
 ---
 title: 'Stop Overcomplicating Email Marketing Agency — High...'
-description: 'Learn the hidden strategies behind Email Marketing Agency that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Your ultimate roadmap to Stop Overcomplicating Email Marketing. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Stop Overcomplicating Email Marketing. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Mar 01, 2024'
 heroImage: '../../assets/blog/automation-agencies-email-marketing-agency.svg'
 category: 'automation-agencies'

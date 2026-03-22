@@ -1,6 +1,7 @@
 ---
 title: 'Top 5 Communities Investment Communities Strategies That...'
-description: 'Want to succeed with Communities Investment Communities? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "Your ultimate roadmap to 5 Communities Investment Communities. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to 5 Communities Investment Communities. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Jun 10, 2024'
 heroImage: '../../assets/blog/online-communities-investment-communities.svg'
 category: 'online-communities'

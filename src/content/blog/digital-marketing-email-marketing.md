@@ -1,6 +1,7 @@
 ---
 title: 'Marketing Email Marketing Masterclass: Everything You...'
-description: 'Unlock the ultimate growth strategies for Marketing Email Marketing. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
+description: "Your ultimate roadmap to Marketing Email Marketing Masterclass. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Marketing Email Marketing Masterclass. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Jan 31, 2024'
 heroImage: '../../assets/blog/digital-marketing-email-marketing.svg'
 category: 'digital-marketing'

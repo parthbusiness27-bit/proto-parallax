@@ -1,6 +1,7 @@
 ---
 title: 'Content Creation Blogging Masterclass: Everything You...'
-description: 'Stop guessing and start executing. Follow our complete guide to Content Creation Blogging designed specifically to help beginners earn their first...'
+description: "A complete beginner's guide to dominating Content Creation Blogging Masterclass. Avoid common pitfalls and discover the proven methods for securing high-paying clients in this niche."
+metaDescription: "A complete beginner's guide to dominating Content Creation Blogging Masterclass. Avoid common pitfalls and discover the proven methods for securing high-paying clients in this niche."
 pubDate: 'Feb 08, 2024'
 heroImage: '../../assets/blog/content-creation-blogging.svg'
 category: 'content-creation'

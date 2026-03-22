@@ -1,6 +1,7 @@
 ---
 title: 'Top 5 Ai Automation Agency Strategies That Actually Work...'
-description: 'Learn the hidden strategies behind Ai Automation Agency that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Explore the most effective 5 Ai Automation Agency techniques used by top professionals today. Find out how to consistently generate revenue and stand out in the freelance market."
+metaDescription: "Explore the most effective 5 Ai Automation Agency techniques used by top professionals today. Find out how to consistently generate revenue and stand out in the freelance market."
 pubDate: 'Feb 25, 2024'
 heroImage: '../../assets/blog/automation-agencies-ai-automation-agency.svg'
 category: 'automation-agencies'

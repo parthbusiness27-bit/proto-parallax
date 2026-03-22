@@ -1,6 +1,7 @@
 ---
 title: 'The Dark Truth About Freelancing Technical Writing (And...'
-description: 'Discover the exact step-by-step framework to master Freelancing Technical Writing and start generating reliable online income this year. Perfect for...'
+description: "Everything you need to know about starting in The Dark Truth About. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in The Dark Truth About. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Jan 09, 2024'
 heroImage: '../../assets/blog/freelancing-technical-writing.svg'
 category: 'freelancing'

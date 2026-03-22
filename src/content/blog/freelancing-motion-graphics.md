@@ -1,6 +1,7 @@
 ---
 title: 'Freelancing Motion Graphics Income Tutorial: From $0 to...'
-description: 'Unlock the ultimate growth strategies for Freelancing Motion Graphics. We break down the exact software, tactics, and zero-effort shortcuts to maximize your...'
+description: "Your ultimate roadmap to Freelancing Motion Graphics Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Freelancing Motion Graphics Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Jan 06, 2024'
 heroImage: '../../assets/blog/freelancing-motion-graphics.svg'
 category: 'freelancing'

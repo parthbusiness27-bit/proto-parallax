@@ -1,6 +1,7 @@
 ---
 title: 'How I Make Money With Products Online Courses (Complete...'
-description: 'Learn the hidden strategies behind Products Online Courses that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Everything you need to know about starting in How I Make Money. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in How I Make Money. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Mar 27, 2024'
 heroImage: '../../assets/blog/digital-products-online-courses.svg'
 category: 'digital-products'

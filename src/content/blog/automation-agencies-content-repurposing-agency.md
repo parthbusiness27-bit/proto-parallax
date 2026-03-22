@@ -1,6 +1,7 @@
 ---
 title: 'Content Repurposing Agency For Beginners: The Ultimate...'
-description: 'Learn the hidden strategies behind Content Repurposing Agency that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Everything you need to know about starting in Content Repurposing Agency For. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Content Repurposing Agency For. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Feb 29, 2024'
 heroImage: '../../assets/blog/automation-agencies-content-repurposing-agency.svg'
 category: 'automation-agencies'

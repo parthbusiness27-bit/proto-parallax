@@ -1,6 +1,7 @@
 ---
 title: 'Instagram Affiliate Pages Income Tutorial: From $0 to...'
-description: 'Discover the exact step-by-step framework to master Instagram Affiliate Pages and start generating reliable online income this year. Perfect for complete...'
+description: "Your ultimate roadmap to Instagram Affiliate Pages Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Instagram Affiliate Pages Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'May 17, 2024'
 heroImage: '../../assets/blog/affiliate-marketing-instagram-affiliate-pages.svg'
 category: 'affiliate-marketing'

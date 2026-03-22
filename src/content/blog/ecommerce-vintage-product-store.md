@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Vintage...'
-description: 'Discover the exact step-by-step framework to master Vintage Product Store and start generating reliable online income this year. Perfect for complete beginners.'
+description: "Your ultimate roadmap to Build a Passive Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Build a Passive Income. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Mar 24, 2024'
 heroImage: '../../assets/blog/ecommerce-vintage-product-store.svg'
 category: 'ecommerce'

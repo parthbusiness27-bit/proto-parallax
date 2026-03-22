@@ -1,6 +1,7 @@
 ---
 title: 'Content Vector Graphics Masterclass: Everything You Need...'
-description: 'Learn the hidden strategies behind Content Vector Graphics that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Your ultimate roadmap to Content Vector Graphics Masterclass. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Content Vector Graphics Masterclass. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Apr 10, 2024'
 heroImage: '../../assets/blog/stock-content-vector-graphics.svg'
 category: 'stock-content'

@@ -1,6 +1,7 @@
 ---
 title: 'Marketing Influencer Marketing For Beginners: The...'
-description: 'Learn the hidden strategies behind Marketing Influencer Marketing that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Transform your understanding of Marketing Influencer Marketing For. This in-depth article provides actionable steps to elevate your skills and secure long-term freelance success."
+metaDescription: "Transform your understanding of Marketing Influencer Marketing For. This in-depth article provides actionable steps to elevate your skills and secure long-term freelance success."
 pubDate: 'Feb 04, 2024'
 heroImage: '../../assets/blog/digital-marketing-influencer-marketing.svg'
 category: 'digital-marketing'

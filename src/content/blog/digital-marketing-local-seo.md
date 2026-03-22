@@ -1,6 +1,7 @@
 ---
 title: 'Marketing Local Seo For Beginners: The Ultimate...'
-description: 'Want to succeed with Marketing Local Seo? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "A complete beginner's guide to dominating Marketing Local Seo For. Avoid common pitfalls and discover the proven methods for securing high-paying clients in this niche."
+metaDescription: "A complete beginner's guide to dominating Marketing Local Seo For. Avoid common pitfalls and discover the proven methods for securing high-paying clients in this niche."
 pubDate: 'Jan 26, 2024'
 heroImage: '../../assets/blog/digital-marketing-local-seo.svg'
 category: 'digital-marketing'

@@ -1,6 +1,7 @@
 ---
 title: 'Zero Investment Social Media Schedulers Strategy for...'
-description: 'Unlock the ultimate growth strategies for Social Media Schedulers. We break down the exact software, tactics, and zero-effort shortcuts to maximize your ROI.'
+description: "Your ultimate roadmap to Zero Investment Social Media. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
+metaDescription: "Your ultimate roadmap to Zero Investment Social Media. We cover the core fundamentals, advanced tactics, and everything you need to start scaling your digital business fast."
 pubDate: 'Mar 13, 2024'
 heroImage: '../../assets/blog/software-saas-social-media-schedulers.svg'
 category: 'software-saas'

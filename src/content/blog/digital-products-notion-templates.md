@@ -1,6 +1,7 @@
 ---
 title: 'Products Notion Templates Masterclass: Everything You...'
-description: 'Learn the hidden strategies behind Products Notion Templates that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "A practical, no-fluff guide to Products Notion Templates Masterclass. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
+metaDescription: "A practical, no-fluff guide to Products Notion Templates Masterclass. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
 pubDate: 'Mar 29, 2024'
 heroImage: '../../assets/blog/digital-products-notion-templates.svg'
 category: 'digital-products'

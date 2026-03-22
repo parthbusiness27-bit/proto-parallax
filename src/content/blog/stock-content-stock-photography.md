@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Content Stock...'
-description: 'Want to succeed with Content Stock Photography? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Apr 05, 2024'
 heroImage: '../../assets/blog/stock-content-stock-photography.svg'
 category: 'stock-content'

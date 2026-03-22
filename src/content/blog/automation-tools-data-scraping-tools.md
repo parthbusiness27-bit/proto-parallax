@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Data Scraping...'
-description: 'Want to succeed with Data Scraping Tools? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Build a Passive Income. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Jul 05, 2024'
 heroImage: '../../assets/blog/automation-tools-data-scraping-tools.svg'
 category: 'automation-tools'

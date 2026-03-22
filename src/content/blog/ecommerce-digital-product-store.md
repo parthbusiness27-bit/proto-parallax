@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Digital...'
-description: 'Want to succeed with Digital Product Store? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "Transform your understanding of Build a Passive Income. This in-depth article provides actionable steps to elevate your skills and secure long-term freelance success."
+metaDescription: "Transform your understanding of Build a Passive Income. This in-depth article provides actionable steps to elevate your skills and secure long-term freelance success."
 pubDate: 'Mar 19, 2024'
 heroImage: '../../assets/blog/ecommerce-digital-product-store.svg'
 category: 'ecommerce'

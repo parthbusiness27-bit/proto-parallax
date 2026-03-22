@@ -1,6 +1,7 @@
 ---
 title: 'Stop Overcomplicating Streaming Game Coaching — High...'
-description: 'Learn the hidden strategies behind Streaming Game Coaching that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Everything you need to know about starting in Stop Overcomplicating Streaming Game. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Stop Overcomplicating Streaming Game. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Jun 16, 2024'
 heroImage: '../../assets/blog/gaming-streaming-game-coaching.svg'
 category: 'gaming-streaming'

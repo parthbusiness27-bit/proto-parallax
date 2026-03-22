@@ -1,6 +1,7 @@
 ---
 title: 'How To Build a Passive Income Empire With Ecommerce...'
-description: 'Want to succeed with Ecommerce Custom Merchandise? This comprehensive blueprint reveals the low-cost strategies you need to launch and grow fast.'
+description: "A practical, no-fluff guide to Build a Passive Income. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
+metaDescription: "A practical, no-fluff guide to Build a Passive Income. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
 pubDate: 'Mar 25, 2024'
 heroImage: '../../assets/blog/ecommerce-custom-merchandise.svg'
 category: 'ecommerce'

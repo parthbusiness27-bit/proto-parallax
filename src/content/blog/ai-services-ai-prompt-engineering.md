@@ -1,6 +1,7 @@
 ---
 title: 'Ai Prompt Engineering Masterclass: Everything You Need...'
-description: 'Learn the hidden strategies behind Ai Prompt Engineering that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "Everything you need to know about starting in Ai Prompt Engineering Masterclass. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
+metaDescription: "Everything you need to know about starting in Ai Prompt Engineering Masterclass. Learn how to leverage modern strategies to boost your hourly rate and build a reliable client base."
 pubDate: 'Apr 15, 2024'
 heroImage: '../../assets/blog/ai-services-ai-prompt-engineering.svg'
 category: 'ai-services'

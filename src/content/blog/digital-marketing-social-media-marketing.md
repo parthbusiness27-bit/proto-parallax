@@ -1,6 +1,7 @@
 ---
 title: 'Social Media Marketing For Beginners: The Ultimate...'
-description: 'Discover the exact step-by-step framework to master Social Media Marketing and start generating reliable online income this year. Perfect for complete...'
+description: "Looking to start with Social Media Marketing For? Our step-by-step breakdown explains exactly how beginners can transition from zero experience into high-value expertise."
+metaDescription: "Looking to start with Social Media Marketing For? Our step-by-step breakdown explains exactly how beginners can transition from zero experience into high-value expertise."
 pubDate: 'Jan 28, 2024'
 heroImage: '../../assets/blog/digital-marketing-social-media-marketing.svg'
 category: 'digital-marketing'

@@ -1,6 +1,7 @@
 ---
 title: 'Marketing Marketing Automation For Beginners: The...'
-description: 'Learn the hidden strategies behind Marketing Marketing Automation that industry experts use to scale their side hustles into full-time internet businesses.'
+description: "A practical, no-fluff guide to Marketing Marketing Automation For. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
+metaDescription: "A practical, no-fluff guide to Marketing Marketing Automation For. Discover exact workflows and premium strategies that top earners use to stay ahead of the digital competition."
 pubDate: 'Feb 03, 2024'
 heroImage: '../../assets/blog/digital-marketing-marketing-automation.svg'
 category: 'digital-marketing'
