@@ -29,7 +29,7 @@ const relatedPosts = allPosts
 	/>
 	<main class="flex-grow docs-site-container border-x px-4 md:px-6 py-8 md:py-12 lg:py-16">
 		<article class="prose prose-base md:prose-lg lg:prose-xl max-w-4xl mx-auto">
-			<div class="w-full mb-6 md:mb-8">
+			<div class="w-full max-w-3xl mx-auto mb-6 md:mb-8">
 				{heroImage && (
 					<Image 
 						width={1020} 
@@ -66,10 +66,6 @@ const relatedPosts = allPosts
 						</div>
 					</div>
 					<hr class="border-t border-border mt-6 md:mt-8" />
-				</div>
-
-				<div class="mb-8 md:mb-10 p-3 md:p-4 rounded-lg md:rounded-xl bg-secondary/20 border border-border text-[11px] md:text-xs text-muted-foreground italic">
-					<strong>Affiliate Disclosure:</strong> This post may contain affiliate links, which means we may receive a commission, at no cost to you, if you make a purchase through a link. We only recommend products we believe in.
 				</div>
 
 				<div class="blog-content px-1 md:px-0">
@@ -167,15 +163,25 @@ const relatedPosts = allPosts
 		line-height: 1.75;
 		margin-bottom: 1.25rem;
 	}
-	.prose :global(ul),
-	.prose :global(ol) {
-		padding-left: 1.25rem;
-		margin-bottom: 1.25rem;
+	.prose :global(ul) {
+		list-style: none;
+		padding-left: 0;
+	}
+	.prose :global(ul > li) {
+		padding-left: 1.75rem;
+		margin-bottom: 0.75rem;
+		position: relative;
+	}
+	.prose :global(ul > li::before) {
+		content: "✅";
+		position: absolute;
+		left: 0;
+		top: 0.1rem;
+		font-size: 1.1rem;
 	}
 	.prose :global(li) {
 		font-size: 0.95rem;
-		margin-bottom: 0.5rem;
-		position: relative;
+		line-height: 1.6;
 	}
 	.prose :global(strong) {
 		color: hsl(var(--foreground));
@@ -183,8 +189,11 @@ const relatedPosts = allPosts
 	}
 	.prose :global(img) {
 		border-radius: 12px;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 		border: 1px solid hsl(var(--border));
+		max-width: 80%;
+		margin: 2.5rem auto;
+		display: block;
 	}
 	@media (min-width: 768px) {
 		.prose :global(h2) {
