@@ -58,6 +58,10 @@ filesToProcess.forEach(file => {
   
   let content = fs.readFileSync(fullPath, 'utf8');
   
+  // Extract title for SVG text
+  const titleMatch = content.match(/^title:\s*["']?([^"'\n]+)["']?/m);
+  const title = titleMatch ? titleMatch[1] : file;
+
   // Find all image tags like ![alt text](../../assets/blog/old-image.png)
   const imgRegex = /!\[(.*?)\]\(\.\.\/\.\.\/assets\/blog\/(.*?)\)/g;
   
@@ -88,6 +92,22 @@ filesToProcess.forEach(file => {
   if (updated) {
     fs.writeFileSync(fullPath, newContent, 'utf8');
     console.log(`Updated images for ${file}`);
+  }
+
+  // Handle Hero Image specifically
+  const heroMatch = newContent.match(/^heroImage:\s*["']?\.\.\/\.\.\/assets\/blog\/(.*?\.svg)["']?/m);
+  if (heroMatch) {
+    const oldHero = heroMatch[1];
+    const baseName = file.replace('.mdx', '');
+    const newHeroName = `${baseName}-hero-unique.svg`;
+    
+    // Generate a higher-end Hero SVG
+    const heroContent = createSVG(title.toUpperCase(), "OFFICIAL MASTERCLASS GUIDE 2026");
+    fs.writeFileSync(path.join(assetsDir, newHeroName), heroContent);
+    
+    newContent = newContent.replace(`heroImage: "../../assets/blog/${oldHero}"`, `heroImage: "../../assets/blog/${newHeroName}"`);
+    fs.writeFileSync(fullPath, newContent, 'utf8');
+    console.log(`Updated Hero Image for ${file}`);
   }
 });
 
