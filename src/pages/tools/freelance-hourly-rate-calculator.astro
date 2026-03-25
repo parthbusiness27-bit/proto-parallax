@@ -1,27 +1,24 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolLayout from '../../layouts/ToolLayout.astro';
+
+const title = "Freelance Hourly Rate Calculator";
+const description = "Free tools and resources for Freelance Hourly Rate Calculator.";
 ---
 
-<BaseLayout
-	title="Freelance Hourly Rate Calculator | Hustle Teacher"
-	description="Calculate your ideal freelance hourly rate based on desired income, monthly expenses, and billable hours."
-	theme="dark"
+<ToolLayout 
+	title={title} 
+	description={description} 
+	emoji="🧮"
+	category="Financial Calculators"
+	subtitle={description}
+	conceptTitle="What is {title}?"
+	conceptDescription={[
+		"This tool helps you accurately calculate and generate insights for " + title + ".",
+		"By using this free utility, you can streamline your digital hustle and make more informed decisions."
+	]}
 >
-	<main class="flex-grow pt-24 pb-20">
-		<div class="docs-site-container">
-			<div class="text-center mb-16 animate-fade-in-down">
-				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
-					💼 Freelance Tools
-				</div>
-				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
-					Freelance <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Hourly Rate</span> Calculator
-				</h1>
-				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-					Don't undersell yourself. Calculate exactly what you need to charge to live your desired lifestyle.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+	<div class="w-full space-y-8 relative z-20">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 				<div class="lg:col-span-2 space-y-8 animate-fade-in-up">
 					<div class="bg-card/50 backdrop-blur-xl border border-border rounded-3xl p-8 shadow-2xl space-y-10">
 						<!-- Desired Income -->
@@ -69,11 +66,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 						<span class="text-xs font-bold uppercase tracking-widest text-muted-foreground">Required Monthly Revenue</span>
 						<div class="text-3xl font-bold text-foreground mt-1" id="revenue-result">$6,500</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-</BaseLayout>
+				
+	</div>
+</ToolLayout>
 
 <script is:inline>
 	document.addEventListener('DOMContentLoaded', () => {

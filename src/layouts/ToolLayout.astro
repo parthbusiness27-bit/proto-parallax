@@ -1,0 +1,175 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+
+export interface Props {
+	title: string;
+	description: string;
+	emoji: string;
+	category?: string;
+	subtitle: string;
+	conceptTitle?: string;
+	conceptDescription?: string[];
+	faqs?: { q: string; a: string }[];
+	howToSteps?: string[];
+}
+
+const {
+	title,
+	description,
+	emoji,
+	category = "Finance",
+	subtitle,
+	conceptTitle = "What is this metric?",
+	conceptDescription = ["This tool was built to help you calculate important metrics for your business to stay profitable and grow sustainably. Understanding this fundamental concept is key before you run any campaigns or change your pricing models."],
+	faqs = [
+        { q: "Is this tool free to use?", a: "Yes, all calculators and generators on Hustle Teacher are 100% free with no sign-up required." },
+        { q: "Are the results accurate?", a: "The calculations follow standard industry formulas. However, always consult with a financial advisor for official business accounting." },
+        { q: "Do you store my data?", a: "No. All calculations are performed directly in your browser. No data is stored or transmitted." }
+    ],
+	howToSteps = [
+		"Input your primary metrics into the fields provided in the workspace.",
+		"Click the primary neon-accented action button to process your data.",
+		"Review your results instantly and analyze the feedback."
+	]
+} = Astro.props;
+---
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description} theme="dark">
+	<main class="flex-grow pt-24 pb-20 relative overflow-hidden bg-background">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 pointer-events-none -z-10 bg-[#0a0a0a]">
+			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/10 rounded-full blur-[160px] animate-pulse opacity-50"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
+		</div>
+
+		<div class="docs-site-container relative z-10 max-w-[1200px] mx-auto px-4 md:px-6">
+			<!-- Breadcrumbs -->
+			<nav class="text-xs font-medium text-muted-foreground mb-12 mt-8">
+				<ol class="flex items-center space-x-2">
+					<li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+					<li><span class="mx-1">/</span></li>
+					<li><a href="/tools" class="hover:text-primary transition-colors">Tools</a></li>
+					<li><span class="mx-1">/</span></li>
+					<li><span class="text-primary">{category}</span></li>
+					<li><span class="mx-1">/</span></li>
+					<li class="text-foreground">{title}</li>
+				</ol>
+			</nav>
+
+			<!-- 1. The Header Area (Full Width) -->
+			<div class="text-center md:text-left mb-16 max-w-4xl">
+				<h1 class="heading-gold text-4xl md:text-6xl mb-6 leading-tight">
+					<span class="mr-3">{emoji}</span>{title}
+				</h1>
+				<p class="prose-italic text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+					{subtitle}
+				</p>
+			</div>
+
+			<!-- Two-Column Layout -->
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 mb-24">
+				
+				<!-- 2. The Main Workspace (Left Column - 60% width roughly 7 spans) -->
+				<div class="lg:col-span-7 space-y-8">
+					<slot />
+				</div>
+
+				<!-- 3. The Context & Conversion Sidebar (Right Column - 40% width roughly 5 spans) -->
+				<div class="lg:col-span-5 space-y-8">
+					<!-- 'How to Use' Section -->
+					<div class="bg-card/50 border border-border backdrop-blur-xl rounded-3xl p-8 shadow-xl">
+						<h3 class="heading-gold text-2xl mb-6">How to Use</h3>
+						<ol class="space-y-6">
+							{howToSteps.map((step, index) => (
+								<li class="flex gap-4 items-start">
+									<div class="w-8 h-8 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center flex-shrink-0 border border-primary/30">
+										{index + 1}
+									</div>
+									<p class="text-foreground text-sm leading-relaxed pt-1.5">{step}</p>
+								</li>
+							))}
+						</ol>
+					</div>
+
+					<!-- Sticky CTA Card -->
+					<div class="sticky top-24">
+						<div class="bg-gradient-to-br from-card to-background border border-primary/40 rounded-3xl p-8 shadow-[0_0_30px_rgba(201,162,39,0.15)] text-center relative overflow-hidden group">
+							<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+							<div class="relative z-10">
+								<div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">💌</div>
+								<h3 class="heading-gold text-xl mb-3">Join the Hustle</h3>
+								<p class="text-sm text-muted-foreground mb-6 prose-italic">Get free premium guides, exclusive tools, and business strategies delivered weekly.</p>
+								<a href="/#newsletter" class="btn-gold w-full block py-4 text-sm font-bold shadow-lg shadow-primary/20">Subscribe Free</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- 4. The SEO & Education Section (Below the Fold - Full Width) -->
+			<hr class="border-t border-border mb-16 shadow-[0_1px_10px_rgba(201,162,39,0.1)]" />
+			
+			<div class="max-w-4xl mx-auto space-y-16">
+				<!-- What is [Concept]? -->
+				<section class="content-area">
+					<h2 class="heading-gold text-3xl mb-6">{conceptTitle}</h2>
+					<div class="prose prose-invert max-w-none prose-lg text-muted-foreground leading-relaxed">
+						{conceptDescription.map((paragraph) => (
+							<p>{paragraph}</p>
+						))}
+					</div>
+				</section>
+
+				<!-- FAQ Accordion -->
+				{faqs && faqs.length > 0 && (
+					<section class="pb-10">
+						<h2 class="heading-gold text-3xl mb-8">Frequently Asked Questions</h2>
+						<div class="space-y-4">
+							{faqs.map((faq) => (
+								<details class="group bg-card border border-border rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+									<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-foreground hover:bg-white/5 transition-colors">
+										<span>{faq.q}</span>
+										<span class="transition group-open:rotate-180 text-primary">
+											<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><polyline points="6 9 12 15 18 9"></polyline></svg>
+										</span>
+									</summary>
+									<div class="p-6 pt-0 text-muted-foreground text-sm leading-relaxed border-t border-border/50 bg-background/50">
+										{faq.a}
+									</div>
+								</details>
+							))}
+						</div>
+					</section>
+				)}
+			</div>
+
+			<!-- 5. Footer Grid: Related Tools -->
+			<hr class="border-t border-border mt-10 mb-16" />
+			<section>
+				<div class="text-center mb-10">
+					<h2 class="heading-gold text-3xl mb-4">Explore More Tools</h2>
+					<p class="text-muted-foreground prose-italic text-lg">Discover other calculators and generators to build your business.</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<!-- Related tools -->
+					<a href="/tools/profit-margin-calculator" class="bg-card border border-border p-6 rounded-2xl hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(201,162,39,0.1)] group">
+						<div class="text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">💹</div>
+						<h3 class="heading-gold text-lg mb-2 group-hover:text-primary transition-colors">Profit Margin Calculator</h3>
+						<p class="text-xs text-muted-foreground leading-relaxed">Calculate your net profit margins and markup efficiently.</p>
+					</a>
+					<a href="/tools/blog-title-generator" class="bg-card border border-border p-6 rounded-2xl hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(45,106,45,0.1)] group">
+						<div class="text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">✍️</div>
+						<h3 class="heading-gold text-lg mb-2 group-hover:text-secondary-accent transition-colors">Blog Title Generator</h3>
+						<p class="text-xs text-muted-foreground leading-relaxed">Create catchy, SEO-friendly headlines for your articles.</p>
+					</a>
+					<a href="/tools/freelance-hourly-rate-calculator" class="bg-card border border-border p-6 rounded-2xl hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(201,162,39,0.1)] group">
+						<div class="text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">⏱️</div>
+						<h3 class="heading-gold text-lg mb-2 group-hover:text-primary transition-colors">Hourly Rate Calculator</h3>
+						<p class="text-xs text-muted-foreground leading-relaxed">Determine your perfect freelance hourly rate based on expenses.</p>
+					</a>
+				</div>
+			</section>
+		</div>
+	</main>
+</BaseLayout>

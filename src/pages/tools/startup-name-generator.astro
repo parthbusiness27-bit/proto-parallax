@@ -1,35 +1,24 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SITE_TITLE } from '../../consts';
+import ToolLayout from '../../layouts/ToolLayout.astro';
 
 const title = "Startup Name Generator";
 const description = "Generate powerful, creative, and brandable names for your next startup or business.";
 ---
 
-<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description} theme="dark">
-	<main class="flex-grow pt-32 pb-20 relative overflow-hidden bg-[#030303]">
-		<!-- Animated Background -->
-		<div class="absolute inset-0 pointer-events-none -z-10">
-			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] animate-pulse opacity-50"></div>
-			<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/15 rounded-full blur-[140px] animate-pulse opacity-40"></div>
-		</div>
-
-		<div class="docs-site-container relative z-10 max-w-4xl mx-auto px-4">
-			<!-- Header -->
-			<div class="text-center mb-16">
-				<div class="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-xs font-black mb-6 border border-blue-500/20 uppercase tracking-widest shadow-[0_0_20px_rgba(59,130,246,0.1)]">
-					🚀 Launch Engine
-				</div>
-				<h1 class="text-4xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
-					Startup <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Name</span>
-				</h1>
-				<p class="text-lg text-gray-400 max-w-2xl mx-auto font-medium">
-					Every unicorn starts with a name. Generate unique, industry-appropriate, and creative brand ideas that stick.
-				</p>
-			</div>
-
-			<!-- Tool UI -->
-			<div class="space-y-8">
+<ToolLayout 
+	title={title} 
+	description={description} 
+	emoji="✍️"
+	category="Growth Generators"
+	subtitle={description}
+	conceptTitle="What is {title}?"
+	conceptDescription={[
+		"This tool helps you accurately calculate and generate insights for " + title + ".",
+		"By using this free utility, you can streamline your digital hustle and make more informed decisions."
+	]}
+>
+	<div class="w-full space-y-8 relative z-20">
+		<div class="space-y-8">
 				<div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
 					<div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 					
@@ -63,11 +52,9 @@ const description = "Generate powerful, creative, and brandable names for your n
 							<!-- Names injected here -->
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-</BaseLayout>
+				
+	</div>
+</ToolLayout>
 
 <script is:inline>
 	document.addEventListener('DOMContentLoaded', () => {

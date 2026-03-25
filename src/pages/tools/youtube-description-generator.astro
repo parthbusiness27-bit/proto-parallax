@@ -1,24 +1,24 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolLayout from '../../layouts/ToolLayout.astro';
+
+const title = "Youtube Description Generator";
+const description = "Free tools and resources for Youtube Description Generator.";
 ---
 
-<BaseLayout
-	title="YouTube Description Generator | Hustle Teacher"
-	description="Quickly create optimized, structured YouTube descriptions that rank higher in search."
-	theme="dark"
+<ToolLayout 
+	title={title} 
+	description={description} 
+	emoji="▶️"
+	category="YouTube Growth"
+	subtitle={description}
+	conceptTitle="What is {title}?"
+	conceptDescription={[
+		"This tool helps you accurately calculate and generate insights for " + title + ".",
+		"By using this free utility, you can streamline your digital hustle and make more informed decisions."
+	]}
 >
-	<main class="flex-grow pt-24 pb-20">
-		<div class="docs-site-container">
-			<div class="text-center mb-16 animate-fade-in-down">
-				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
-					📄 SEO Tools
-				</div>
-				<h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
-					YouTube <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Description</span> Generator
-				</h1>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+	<div class="w-full space-y-8 relative z-20">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 				<div class="bg-card border border-border rounded-3xl p-8 shadow-xl space-y-6">
 					<div class="space-y-4">
 						<label class="font-bold">What is this video about?</label>
@@ -37,11 +37,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 						<button id="copyBtn" class="text-primary font-bold hover:underline">Copy All</button>
 					</div>
 					<textarea id="output" readonly class="w-full h-[500px] bg-background/50 border border-border rounded-xl p-6 font-mono text-sm leading-relaxed resize-none"></textarea>
-				</div>
-			</div>
-		</div>
-	</main>
-</BaseLayout>
+				
+	</div>
+</ToolLayout>
 
 <script is:inline>
 	document.addEventListener('DOMContentLoaded', () => {

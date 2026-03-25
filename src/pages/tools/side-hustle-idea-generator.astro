@@ -1,29 +1,24 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolLayout from '../../layouts/ToolLayout.astro';
+
+const title = "Side Hustle Idea Generator";
+const description = "Free tools and resources for Side Hustle Idea Generator.";
 ---
 
-<BaseLayout
-	title="Side Hustle Idea Generator | Hustle Teacher"
-	description="Discover your next income stream. Generate unique side hustle ideas based on your skills and available time."
-	theme="dark"
+<ToolLayout 
+	title={title} 
+	description={description} 
+	emoji="✍️"
+	category="Growth Generators"
+	subtitle={description}
+	conceptTitle="What is {title}?"
+	conceptDescription={[
+		"This tool helps you accurately calculate and generate insights for " + title + ".",
+		"By using this free utility, you can streamline your digital hustle and make more informed decisions."
+	]}
 >
-	<main class="flex-grow pt-24 pb-20">
-		<div class="docs-site-container text-center">
-			<div class="mb-16 animate-fade-in-down">
-				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
-					💡 Discovery Tools
-				</div>
-				<h1 class="text-3xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
-					Side Hustle <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Idea</span> Generator
-				</h1>
-				<p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-					Enter your primary skill or interest, and we'll match you with a profitable side hustle idea.
-				</p>
-			</div>
-
-			<div class="max-w-3xl mx-auto space-y-10">
-				<div class="bg-card border border-border rounded-3xl p-6 md:p-10 shadow-2xl space-y-8">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+	<div class="w-full space-y-8 relative z-20">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
 						<div class="space-y-3">
 							<label class="font-bold">What are you good at?</label>
 							<select id="skill" class="w-full bg-background border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary">
@@ -58,11 +53,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 							<span class="px-4 py-2 bg-card border border-border rounded-full text-sm font-bold" id="profit-tag"></span>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-</BaseLayout>
+				
+	</div>
+</ToolLayout>
 
 <script is:inline>
 	const ideas = {

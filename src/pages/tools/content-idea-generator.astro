@@ -1,13 +1,23 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolLayout from '../../layouts/ToolLayout.astro';
+
+const title = "Content Idea Generator";
+const description = "Free tools and resources for Content Idea Generator.";
 ---
 
-<BaseLayout
-	title="Content Idea Generator | Hustle Teacher"
-	description="Never run out of post ideas. Generate content topics for your blog, social media, or YouTube channel."
-	theme="dark"
+<ToolLayout 
+	title={title} 
+	description={description} 
+	emoji="✍️"
+	category="Growth Generators"
+	subtitle={description}
+	conceptTitle="What is {title}?"
+	conceptDescription={[
+		"This tool helps you accurately calculate and generate insights for " + title + ".",
+		"By using this free utility, you can streamline your digital hustle and make more informed decisions."
+	]}
 >
-	<main class="flex-grow pt-24 pb-20">
+	<div class="w-full space-y-8 relative z-20">
 		<div class="docs-site-container text-center">
 			<div class="mb-16 animate-fade-in-down">
 				<div class="inline-block bg-primary/20 text-primary-400 px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/50 shadow-sm">
@@ -26,11 +36,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 				<div id="results" class="hidden space-y-3 text-left">
 					<!-- Ideas -->
-				</div>
-			</div>
-		</div>
-	</main>
-</BaseLayout>
+				
+	</div>
+</ToolLayout>
 
 <script is:inline>
 	const patterns = [
