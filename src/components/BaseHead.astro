@@ -3,7 +3,6 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_AUTHOR, SITE_URL } from '../consts';
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
@@ -12,7 +11,7 @@ interface Props {
 	title: string;
 	seoTitle?: string;
 	description: string;
-	image?: ImageMetadata;
+	image?: string | ImageMetadata;
 	author?: string;
 	publishedDate?: Date;
 	updatedDate?: Date;
@@ -26,7 +25,7 @@ const {
 	title, 
 	seoTitle,
 	description, 
-	image = FallbackImage, 
+	image = '/logo.png', 
 	author = SITE_AUTHOR,
 	publishedDate,
 	updatedDate,
@@ -186,7 +185,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={new URL(typeof image === 'string' ? image : (image?.src || '/logo.png'), Astro.url)} />
 <meta property="og:image:alt" content={title} />
 <meta property="og:site_name" content={SITE_TITLE} />
 {author && <meta property="article:author" content={author} />}
@@ -198,7 +197,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta name="twitter:image" content={new URL(typeof image === 'string' ? image : (image?.src || '/logo.png'), Astro.url)} />
 
 <!-- Additional SEO -->
 <meta name="mobile-web-app-capable" content="yes" />

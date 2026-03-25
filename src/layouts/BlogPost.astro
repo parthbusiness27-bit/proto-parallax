@@ -17,7 +17,7 @@ const relatedPosts = allPosts
   .slice(0, 3);
 ---
 
-<BaseLayout title={seoTitle || title} description={description} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp" theme="dark">
+<BaseLayout title={seoTitle || title} description={description} image={heroImage} author={SITE_AUTHOR} publishedDate={pubDate} updatedDate={updatedDate} robotsMeta="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noodp" theme="dark">
 	<SEOSchema 
 		type="BlogPosting" 
 		title={title} 
