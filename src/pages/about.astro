@@ -9,20 +9,46 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date('January 01 2024')}
 	heroImage={AboutHeroImage}
 >
-	<h2 class="text-3xl font-bold mb-6 text-foreground">My Story</h2>
-	<p class="text-lg leading-relaxed mb-6">
+	<h2 class="heading-gold text-4xl mb-6 mt-12 text-center reveal">My Story</h2>
+	
+	<div class="divider reveal">
+	  <div class="divider-line"></div>
+	  <div class="divider-coin">$</div>
+	  <div class="divider-line"></div>
+	</div>
+
+	<p class="prose-italic text-xl text-center max-w-2xl mx-auto mb-10 reveal">
 		Hi, I'm <strong>Parth</strong>, the founder of Hustle Teacher. I started this platform with one simple mission: to demystify the process of making money online and empower everyday people to build their own digital income streams. 
 	</p>
 
-	<p class="text-lg leading-relaxed mb-6">
-		The internet is full of noise—get-rich-quick schemes, overpriced courses, and confusing jargon. I created Hustle Teacher to cut through that noise. My philosophy is straightforward: <strong>Learn → Start → Earn</strong>. We focus on proven, actionable strategies that actually work in today's digital economy.
+	<div class="stats-bar reveal rounded-2xl mb-12 mt-8">
+		<div class="stats-item">
+			<span class="stats-val">50+</span>
+			<span class="stats-label">Guides</span>
+		</div>
+		<div class="stats-item">
+			<span class="stats-val">10k</span>
+			<span class="stats-label">Readers</span>
+		</div>
+		<div class="stats-item">
+			<span class="stats-val">24/7</span>
+			<span class="stats-label">Hustle</span>
+		</div>
+	</div>
+
+	<p class="prose-italic text-lg mb-6 reveal">
+		The internet is full of noise—get-rich-quick schemes, overpriced courses, and confusing jargon. I created Hustle Teacher to cut through that noise. My philosophy is straightforward: <strong class="text-gold">Learn → Start → Earn</strong>. We focus on proven, actionable strategies that actually work in today's digital economy.
 	</p>
 
-	<p class="text-lg leading-relaxed mb-6">
+	<p class="prose-italic text-lg mb-6 reveal">
 		Whether you're a student looking for a side gig, a professional wanting to transition into freelancing, or an aspiring entrepreneur ready to launch a scalable online business, I've designed this space for you. I spend countless hours researching and testing the methods we recommend, so you don't have to guess what works.
 	</p>
 
-	<p class="text-lg leading-relaxed mb-6">
+	<p class="prose-italic text-lg mb-12 reveal">
 		From detailed blueprints on dropshipping and YouTube automation to carefully curated free tools and premium digital products, our goal is to provide everything you need under one roof. I believe that with the right guidance and a bit of hustle, financial independence is within everyone's reach. Let's start building your empire today.
 	</p>
+
+	<div class="flex justify-center reveal mb-12">
+		<a href="/start-here/" class="btn-gold">Start Your Journey</a>
+	</div>
 </Layout>

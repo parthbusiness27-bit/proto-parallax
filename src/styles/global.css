@@ -170,3 +170,213 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   HUSTLE TEACHER THEME — CSS
+════════════════════════════════════════════════════════════ */
+
+/* ── CUSTOM GOLD CURSOR ──────────────────────────────── */
+.cursor {
+  width: 28px; height: 28px;
+  border: 3px solid var(--gold-bright);
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s, background 0.2s;
+  mix-blend-mode: difference;
+}
+.cursor-dot {
+  width: 6px; height: 6px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── TYPOGRAPHY HELPERS ──────────────────────────────── */
+.heading-gold {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-bright) 0%, #fff 40%, var(--gold-bright) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(255,215,0,0.3));
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 6px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.prose-italic {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  color: var(--green-pale);
+  line-height: 1.8;
+}
+
+.section-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.section-tag::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── NAVBAR (Theme specifics) ──────────────────────────────────────────── */
+.nav-logo {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-bright), var(--green-light), var(--gold-bright));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  color: var(--black);
+  border: none;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  cursor: pointer;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(201,162,39,0.4);
+}
+.nav-cta:hover { box-shadow: 0 0 40px rgba(255,215,0,0.7); transform: scale(1.05); }
+
+/* ── BACKGROUNDS & DIVIDERS ─────────────────────────────── */
+.bg-hero { background: radial-gradient(ellipse at center, #1a2e1a 0%, #0a0a0a 70%); }
+.bg-green-tint { background: linear-gradient(180deg, #0a0a0a 0%, #0d1a0d 50%, #0a0a0a 100%); }
+.bg-amber-tint { background: linear-gradient(180deg, #0a0a0a 0%, #1a0d00 50%, #0a0a0a 100%); }
+.bg-yellow-tint { background: linear-gradient(180deg, #0a0a0a 0%, #1a1a00 50%, #0a0a0a 100%); }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 3rem;
+  justify-content: center;
+}
+.divider-line {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+}
+.divider-coin {
+  width: 40px; height: 40px;
+  background: radial-gradient(circle at 35% 35%, #FFD700, #c9a227);
+  border: 3px solid var(--outline);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--outline);
+  animation: dividerSpin 6s linear infinite;
+}
+
+/* ── GOLD BUTTONS ────────────────────────────────────── */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright)) !important;
+  color: var(--black) !important;
+  border: none;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 2px;
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  transition: all 0.3s;
+  box-shadow: 0 0 40px rgba(255,215,0,0.4);
+  text-transform: uppercase;
+}
+.btn-gold:hover {
+  box-shadow: 0 0 80px rgba(255,215,0,0.8);
+  transform: scale(1.05);
+}
+
+/* ── STATS BAR ───────────────────────────────────────── */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0d1a0d, #1a1a0d);
+  border-top: 2px solid var(--gold-dark);
+  border-bottom: 2px solid var(--gold-dark);
+  flex-wrap: wrap;
+}
+.stats-item { text-align: center; }
+.stats-val {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  display: block;
+}
+.stats-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--green-pale);
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ── SCROLL REVEAL ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── FOOTER overrides ─────────────────────────────────────────── */
+.footer-brand {
+  font-family: 'Cinzel Decorative', serif;
+  background: linear-gradient(135deg, var(--gold-bright), var(--green-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+/* ── KEYFRAME ANIMATIONS ────────────────────────────── */
+@keyframes dividerSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── HERO CANVAS BACKGROUND ─────────────────────────── */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
