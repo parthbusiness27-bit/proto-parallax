@@ -7,9 +7,11 @@ import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_URL } from '../consts';
 import { Image } from 'astro:assets';
 import SEOSchema from '../components/SEOSchema.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & {
+	headings?: { depth: number; slug: string; text: string }[];
+};
 
-const { title, seoTitle, description, pubDate, updatedDate, heroImage, category, faqs = [] } = Astro.props;
+const { title, seoTitle, description, pubDate, updatedDate, heroImage, category, faqs = [], headings = [] } = Astro.props;
 
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
@@ -28,98 +30,156 @@ const relatedPosts = allPosts
 		faqs={faqs}
 	/>
 	<main class="flex-grow docs-site-container border-x px-4 md:px-6 py-8 md:py-12 lg:py-16">
-		<article class="prose prose-base md:prose-lg lg:prose-xl max-w-4xl mx-auto">
-			<div class="w-full max-w-3xl mx-auto mb-6 md:mb-8">
-				{heroImage && (
-					<Image 
-						width={1020} 
-						height={510} 
-						src={heroImage} 
-						alt={title} 
-						class="w-full object-cover rounded-xl md:rounded-2xl shadow-lg border border-border" 
-						loading="eager" 
-						fetchpriority="high"
-						decoding="async" 
-					/>
-				)}
-			</div>
-			<div>
-				<div class="text-center mb-8 md:mb-12">
-					<div class="text-xs md:text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 md:mb-4">
-						<FormattedDate date={pubDate} />
-						{
-							updatedDate && (
-								<div class="italic mt-1 text-[10px] md:text-xs">
-									Last updated on <FormattedDate date={updatedDate} />
-								</div>
-							)
-						}
+		<div class="max-w-[1400px] mx-auto lg:grid lg:grid-cols-12 gap-8 xl:gap-12 relative">
+			
+			<!-- Left Sidebar: Sticky Table of Contents -->
+			<aside class="hidden lg:block lg:col-span-3">
+				<div class="sticky top-24">
+					<div class="p-6 bg-card border border-border rounded-2xl shadow-lg relative overflow-hidden group">
+						<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+						<h3 class="text-sm font-bold text-foreground mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+							In This Guide
+						</h3>
+						<nav id="toc-container">
+							<ul class="space-y-3 text-sm">
+								{headings.filter(h => h.depth === 2 || h.depth === 3).map(heading => (
+									<li class={`${heading.depth === 3 ? 'pl-4 border-l border-border' : ''}`}>
+										<a 
+											href={`#${heading.slug}`} 
+											class="text-muted-foreground hover:text-primary transition-colors block py-1 toc-link font-medium leading-snug"
+											data-target={heading.slug}
+										>
+											{heading.text}
+										</a>
+									</li>
+								))}
+							</ul>
+						</nav>
 					</div>
-					<h1 class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight px-2">{title}</h1>
-					<div class="flex items-center justify-center gap-2 md:gap-3 mt-4 md:mt-6">
-						<div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-xs md:text-sm flex-shrink-0" aria-hidden="true">
+				</div>
+			</aside>
+
+			<!-- Main Content Area -->
+			<article class="lg:col-span-6 w-full max-w-full">
+				<div class="w-full mb-8 md:mb-12">
+					{heroImage && (
+						<Image 
+							width={1020} 
+							height={510} 
+							src={heroImage} 
+							alt={title} 
+							class="w-full object-cover rounded-xl md:rounded-2xl shadow-[0_0_40px_rgba(201,162,39,0.1)] border border-primary/20 bg-card p-1 md:p-2" 
+							loading="eager" 
+							fetchpriority="high"
+							decoding="async" 
+						/>
+					)}
+				</div>
+				<div class="text-center md:text-left mb-10 md:mb-12">
+					<div class="flex items-center justify-center md:justify-start gap-4 mb-4 md:mb-6">
+						<div class="text-xs md:text-sm font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+							<FormattedDate date={pubDate} />
+						</div>
+					</div>
+					<h1 class="heading-gold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">{title}</h1>
+					<div class="flex items-center justify-center md:justify-start gap-3 md:gap-4 mt-6 md:mt-8">
+						<div class="w-10 md:w-14 h-10 md:h-14 rounded-full bg-gradient-to-br from-primary to-primary-accent flex items-center justify-center text-black font-black text-sm md:text-xl flex-shrink-0 border-2 border-primary/30 shadow-lg" aria-hidden="true">
 							{SITE_AUTHOR.charAt(0).toUpperCase()}
 						</div>
 						<div class="text-left">
-							<p class="text-xs md:text-sm font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
-							<p class="text-[10px] md:text-xs text-muted-foreground"><FormattedDate date={pubDate} /></p>
+							<p class="text-sm md:text-base font-bold text-foreground">{SITE_AUTHOR} — Hustle Teacher</p>
+							<p class="prose-italic text-[10px] md:text-xs text-muted-foreground mt-0.5">Masterclass Guide</p>
 						</div>
 					</div>
-					<hr class="border-t border-border mt-6 md:mt-8" />
+					<hr class="border-t border-border mt-8 md:mt-10" />
 				</div>
 
-				<div class="blog-content px-1 md:px-0">
+				<div class="prose prose-invert prose-base md:prose-lg max-w-none text-foreground leading-relaxed content-area px-1 md:px-0">
 					<slot />
 				</div>
 				
-				<div class="mt-12 md:mt-16 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-r from-secondary/40 to-background border border-border flex flex-col md:flex-row gap-5 md:gap-8 items-center md:items-start shadow-sm relative overflow-hidden">
-					<div class="absolute -top-4 -right-4 text-primary/5 pointer-events-none">
+				<div class="mt-12 md:mt-16 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-card to-background border border-primary/30 shadow-xl relative overflow-hidden group">
+					<div class="absolute -top-4 -right-4 text-primary/10 pointer-events-none group-hover:scale-110 transition-transform duration-500">
 						<svg class="w-48 h-48" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.570 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
 					</div>
-					<div class="z-10 w-16 md:w-24 h-16 md:h-24 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary to-emerald-500 flex items-center justify-center text-white font-black text-2xl md:text-3xl shadow-xl transform rotate-3 flex-shrink-0">
-						{SITE_AUTHOR.charAt(0).toUpperCase()}
-					</div>
-					<div class="text-center md:text-left">
-						<h3 class="text-base md:text-xl font-bold text-foreground mb-2">About the Author: {SITE_AUTHOR}</h3>
-						<p class="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
-							{SITE_AUTHOR} is a digital entrepreneur and the founder of <strong>Hustle Teacher</strong>. With years of experience in online business, he specializes in helping students and beginners build sustainable income streams through proven side hustles.
-						</p>
-						<div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
-							<a href="/about/" class="text-xs md:text-sm font-bold text-primary hover:underline">Full Bio →</a>
-							<a href="/" class="text-xs md:text-sm font-bold text-primary hover:underline">More Guides →</a>
+					<div class="flex flex-col md:flex-row gap-5 md:gap-8 items-center md:items-start relative z-10">
+						<div class="w-16 md:w-24 h-16 md:h-24 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary to-primary-accent flex items-center justify-center text-black font-black text-2xl md:text-4xl shadow-xl transform rotate-3 flex-shrink-0 group-hover:rotate-6 transition-transform">
+							{SITE_AUTHOR.charAt(0).toUpperCase()}
+						</div>
+						<div class="text-center md:text-left">
+							<h3 class="heading-gold text-lg md:text-2xl mb-2">About the Author: {SITE_AUTHOR}</h3>
+							<p class="prose-italic text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
+								{SITE_AUTHOR} is a digital entrepreneur and the founder of <strong>Hustle Teacher</strong>. With years of experience in online business, he specializes in helping students and beginners build sustainable income streams.
+							</p>
+							<div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
+								<a href="/about/" class="text-xs md:text-sm font-bold text-primary hover:text-primary-accent transition-colors">Full Bio →</a>
+								<a href="/" class="text-xs md:text-sm font-bold text-primary hover:text-primary-accent transition-colors">More Guides →</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</article>
+			</article>
+
+			<!-- Right Sidebar: Floating Newsletter CTA -->
+			<aside class="hidden lg:block lg:col-span-3">
+				<div class="sticky top-24">
+					<div class="p-8 bg-card border border-primary/50 rounded-3xl shadow-[0_0_40px_rgba(201,162,39,0.15)] text-center relative overflow-hidden group">
+						<div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+						<div class="relative z-10">
+							<div class="text-5xl mb-5 drop-shadow-lg transform group-hover:-translate-y-1 transition-transform">💌</div>
+							<h3 class="heading-gold text-2xl mb-3 leading-tight">Join the Hustle</h3>
+							<p class="prose-italic text-sm text-muted-foreground mb-8">Get premium side-hustle guides sent directly to you every single week.</p>
+							<a href="/#newsletter" class="btn-gold w-full block py-4 text-sm shadow-xl">Subscribe Free</a>
+						</div>
+					</div>
+					
+					<!-- Popular Categories snippet -->
+					<div class="mt-8 p-6 bg-card/50 border border-border rounded-2xl">
+						<h3 class="text-sm font-bold text-foreground mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+							Topics
+						</h3>
+						<div class="flex flex-wrap gap-2">
+							<a href="/blog/category/freelancing/" class="text-xs px-3 py-1.5 bg-background border border-border rounded-lg hover:border-primary text-muted-foreground hover:text-primary transition-colors">Freelancing</a>
+							<a href="/blog/category/digital-marketing/" class="text-xs px-3 py-1.5 bg-background border border-border rounded-lg hover:border-primary text-muted-foreground hover:text-primary transition-colors">Marketing</a>
+							<a href="/blog/category/automation-tools/" class="text-xs px-3 py-1.5 bg-background border border-border rounded-lg hover:border-primary text-muted-foreground hover:text-primary transition-colors">Automation</a>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
 
 		{relatedPosts.length > 0 && (
-			<section class="max-w-4xl mx-auto px-0 pb-12 md:pb-16 mt-12 md:mt-16">
-				<hr class="border-t border-border mb-8 md:mb-12" />
-				<h2 class="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8">More Guides in This Category</h2>
-				<div class="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+			<section class="max-w-[1400px] mx-auto px-0 pb-12 md:pb-16 mt-16 md:mt-24">
+				<hr class="border-t border-border mb-10 md:mb-16" />
+				<div class="text-center mb-10 md:mb-12">
+					<h2 class="heading-gold text-3xl md:text-4xl text-foreground mb-4">Explore More Guides</h2>
+					<p class="prose-italic text-muted-foreground text-lg">Continue expanding your knowledge in this category.</p>
+				</div>
+				<div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 					{relatedPosts.map(post => (
 						<a
 							href={`/blog/${post.id}/`}
-							class="group block rounded-xl border border-border bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 overflow-hidden"
+							class="group block rounded-2xl border border-border bg-card hover:border-primary/50 hover:shadow-[0_0_30px_rgba(201,162,39,0.1)] transition-all duration-500 overflow-hidden"
 						>
 							{post.data.heroImage && (
-								<div class="aspect-video overflow-hidden">
+								<div class="aspect-video overflow-hidden border-b border-border">
 									<Image
 										width={600}
 										height={338}
 										src={post.data.heroImage}
 										alt={post.data.title}
-										class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+										class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
 										loading="lazy"
 										decoding="async"
 									/>
 								</div>
 							)}
-							<div class="p-4 md:p-5">
-								<h3 class="text-sm md:text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2 mb-2">{post.data.title}</h3>
-								<p class="text-xs md:text-sm text-muted-foreground line-clamp-2">{post.data.description}</p>
-								<span class="inline-flex items-center text-[10px] md:text-xs font-bold text-primary mt-3 group-hover:translate-x-1 transition-transform">Read guide →</span>
+							<div class="p-6 md:p-8">
+								<h3 class="heading-gold text-lg md:text-xl text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2 mb-3">{post.data.title}</h3>
+								<p class="text-sm text-muted-foreground line-clamp-2 mb-6">{post.data.description}</p>
+								<span class="inline-flex items-center text-xs font-bold text-primary group-hover:translate-x-2 transition-transform uppercase tracking-widest">Read guide →</span>
 							</div>
 						</a>
 					))}
@@ -127,84 +187,125 @@ const relatedPosts = allPosts
 			</section>
 		)}
 	</main>
+	
+	<!-- Client Script for Highlight ToC Active Item -->
+	<script is:inline>
+		document.addEventListener("DOMContentLoaded", () => {
+			const links = document.querySelectorAll(".toc-link");
+			const sections = Array.from(links).map(link => document.getElementById(link.dataset.target));
+			
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						links.forEach(l => l.classList.remove("text-primary", "font-bold", "translate-x-1"));
+						const activeLink = document.querySelector(`.toc-link[data-target="${entry.target.id}"]`);
+						if(activeLink) {
+							activeLink.classList.add("text-primary", "font-bold", "translate-x-1");
+						}
+					}
+				});
+			}, { rootMargin: "-100px 0px -40% 0px" });
+
+			sections.forEach(sec => sec && observer.observe(sec));
+		});
+	</script>
 </BaseLayout>
 
 <style>
-	.prose :global(h2),
-	.prose :global(h3),
-	.prose :global(h4) {
-		color: var(--foreground);
+	.content-area :global(h2),
+	.content-area :global(h3),
+	.content-area :global(h4) {
+		color: var(--gold);
+        font-family: 'Cinzel', serif;
 	}
-	.prose :global(p),
-	.prose :global(li),
-	.prose :global(blockquote) {
+	.content-area :global(p),
+	.content-area :global(li),
+	.content-area :global(blockquote) {
 		color: var(--foreground);
+        max-width: 65ch;
 	}
-	.prose :global(blockquote) {
-		border-left: 4px solid hsl(var(--primary));
-		background: linear-gradient(to right, hsla(var(--primary), 0.1), transparent);
-		padding: 1rem 1.5rem;
-		margin: 1.5rem 0;
+	.content-area :global(blockquote) {
+		border-left: 4px solid var(--gold);
+		background: linear-gradient(to right, rgba(201,162,39,0.1), transparent);
+		padding: 1.5rem 2rem;
+		margin: 2rem 0;
 		font-style: italic;
-		border-radius: 0 8px 8px 0;
+		border-radius: 0 16px 16px 0;
+        font-family: 'IM Fell English', serif;
+        font-size: 1.1rem;
 	}
-	.prose :global(h2) {
-		font-size: 1.5rem;
+	.content-area :global(h2) {
+		font-size: 1.8rem;
+		margin-top: 3rem;
+		margin-bottom: 1.25rem;
+        letter-spacing: 0.5px;
+	}
+	.content-area :global(h3) {
+		font-size: 1.4rem;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
 	}
-	.prose :global(h3) {
-		font-size: 1.25rem;
-		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
+	.content-area :global(p) {
+		font-size: 1rem;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
 	}
-	.prose :global(p) {
-		font-size: 0.95rem;
-		line-height: 1.75;
-		margin-bottom: 1.25rem;
-	}
-	.prose :global(ul) {
+	.content-area :global(ul) {
 		list-style: none;
 		padding-left: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
 	}
-	.prose :global(ul > li) {
-		padding-left: 1.75rem;
-		margin-bottom: 0.75rem;
+	.content-area :global(ul > li) {
+		padding-left: 2rem;
+		margin-bottom: 1rem;
 		position: relative;
 	}
-	.prose :global(ul > li::before) {
-		content: "✅";
+	.content-area :global(ul > li::before) {
+		content: "✦";
 		position: absolute;
 		left: 0;
 		top: 0.1rem;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
+        color: var(--gold);
 	}
-	.prose :global(li) {
-		font-size: 0.95rem;
-		line-height: 1.6;
+	.content-area :global(li) {
+		font-size: 1rem;
+		line-height: 1.7;
 	}
-	.prose :global(strong) {
-		color: hsl(var(--foreground));
+	.content-area :global(strong) {
+		color: var(--gold-bright);
 		font-weight: 800;
 	}
-	.prose :global(img) {
-		border-radius: 12px;
-		box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-		border: 1px solid hsl(var(--border));
-		max-width: 80%;
-		margin: 2.5rem auto;
+	.content-area :global(img) {
+		border-radius: 16px;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+		border: 1px solid var(--border);
+		max-width: 100%;
+		margin: 3rem auto;
 		display: block;
 	}
+	.content-area :global(a) {
+		color: var(--gold);
+		text-decoration: underline;
+		text-decoration-color: var(--gold-dark);
+		text-underline-offset: 4px;
+		transition: all 0.2s;
+	}
+	.content-area :global(a:hover) {
+		color: var(--gold-bright);
+		text-decoration-color: var(--gold-bright);
+	}
 	@media (min-width: 768px) {
-		.prose :global(h2) {
-			font-size: 1.875rem;
+		.content-area :global(h2) {
+			font-size: 2.2rem;
 		}
-		.prose :global(h3) {
-			font-size: 1.5rem;
+		.content-area :global(h3) {
+			font-size: 1.6rem;
 		}
-		.prose :global(p),
-		.prose :global(li) {
-			font-size: 1rem;
+		.content-area :global(p),
+		.content-area :global(li) {
+			font-size: 1.1rem;
 		}
 	}
 </style>
