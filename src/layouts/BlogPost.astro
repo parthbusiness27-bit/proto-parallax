@@ -222,17 +222,16 @@ const relatedPosts = allPosts
 	.content-area :global(li),
 	.content-area :global(blockquote) {
 		color: var(--foreground);
-        max-width: 65ch;
 	}
 	.content-area :global(blockquote) {
 		border-left: 4px solid var(--gold);
 		background: linear-gradient(to right, rgba(201,162,39,0.1), transparent);
-		padding: 1.5rem 2rem;
-		margin: 2rem 0;
+		padding: 1rem 1.25rem;
+		margin: 1.5rem 0;
 		font-style: italic;
 		border-radius: 0 16px 16px 0;
         font-family: 'IM Fell English', serif;
-        font-size: 1.1rem;
+        font-size: 1rem;
 	}
 	.content-area :global(h2) {
 		font-size: 1.8rem;
@@ -305,6 +304,15 @@ const relatedPosts = allPosts
 		}
 		.content-area :global(p),
 		.content-area :global(li) {
+			font-size: 1.1rem;
+		}
+		.content-area :global(p),
+		.content-area :global(li) {
+			max-width: 65ch;
+		}
+		.content-area :global(blockquote) {
+			padding: 1.5rem 2rem;
+			margin: 2rem 0;
 			font-size: 1.1rem;
 		}
 	}

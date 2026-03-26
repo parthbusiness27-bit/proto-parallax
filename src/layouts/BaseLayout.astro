@@ -59,7 +59,7 @@ const {
 		<!-- Named slot for per-page head injections (SEO schemas, preloads, etc.) -->
 		<slot name="head" />
 	</head>
-	<body class={`bg-background text-foreground scheme-dark min-h-screen flex flex-col ${bodyClass}`} style="cursor: none;">
+		<body class={`bg-background text-foreground scheme-dark min-h-screen flex flex-col ${bodyClass}`}>
 		<div class="cursor" id="cursor"></div>
 		<div class="cursor-dot" id="cursorDot"></div>
 		<Header />
@@ -89,35 +89,37 @@ const {
 			}, { threshold: 0.15 });
 			reveals.forEach(el => revealObserver.observe(el));
 
-			// ── COIN BURST ON CLICK ──────────────────────────────────
-			document.addEventListener('click', e => {
-			  for (let i = 0; i < 8; i++) {
-			    const coin = document.createElement('div');
-			    coin.style.cssText = `
-			      position:fixed;left:${e.clientX-15}px;top:${e.clientY-15}px;
-			      width:30px;height:30px;border-radius:50%;
-			      background:radial-gradient(circle at 35% 35%,#FFD700,#8B6914);
-			      border:3px solid #0a0a0a;display:flex;align-items:center;
-			      justify-content:center;font-family:Cinzel,serif;font-weight:700;
-			      font-size:0.7rem;color:#0a0a0a;z-index:9998;pointer-events:none;
-			    `;
-			    coin.textContent = '$';
-			    document.body.appendChild(coin);
-			    const angle = (Math.PI * 2 / 8) * i;
-			    const speed = Math.random() * 3 + 2;
-			    let vx = Math.cos(angle) * speed;
-			    let vy = Math.sin(angle) * speed;
-			    let x = e.clientX - 15, y = e.clientY - 15, opacity = 1;
-			    (function animCoin() {
-			      x += vx; y += vy; vy += 0.2; opacity -= 0.025;
-			      coin.style.left    = x + 'px';
-			      coin.style.top     = y + 'px';
-			      coin.style.opacity = opacity;
-			      if (opacity > 0) requestAnimationFrame(animCoin);
-			      else coin.remove();
-			    })();
-			  }
-			});
+			// ── COIN BURST ON CLICK (desktop pointer only) ──────────
+			if (!window.matchMedia('(pointer: coarse)').matches) {
+			  document.addEventListener('click', e => {
+			    for (let i = 0; i < 8; i++) {
+			      const coin = document.createElement('div');
+			      coin.style.cssText = `
+			        position:fixed;left:${e.clientX-15}px;top:${e.clientY-15}px;
+			        width:30px;height:30px;border-radius:50%;
+			        background:radial-gradient(circle at 35% 35%,#FFD700,#8B6914);
+			        border:3px solid #0a0a0a;display:flex;align-items:center;
+			        justify-content:center;font-family:Cinzel,serif;font-weight:700;
+			        font-size:0.7rem;color:#0a0a0a;z-index:9998;pointer-events:none;
+			      `;
+			      coin.textContent = '$';
+			      document.body.appendChild(coin);
+			      const angle = (Math.PI * 2 / 8) * i;
+			      const speed = Math.random() * 3 + 2;
+			      let vx = Math.cos(angle) * speed;
+			      let vy = Math.sin(angle) * speed;
+			      let x = e.clientX - 15, y = e.clientY - 15, opacity = 1;
+			      (function animCoin() {
+			        x += vx; y += vy; vy += 0.2; opacity -= 0.025;
+			        coin.style.left    = x + 'px';
+			        coin.style.top     = y + 'px';
+			        coin.style.opacity = opacity;
+			        if (opacity > 0) requestAnimationFrame(animCoin);
+			        else coin.remove();
+			      })();
+			    }
+			  });
+			}
 		</script>
 	</body>
 </html>
