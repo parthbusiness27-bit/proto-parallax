@@ -33,7 +33,7 @@ const today = new Date();
 
 			<!-- Core Links -->
 			<div>
-				<h4 class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Explore</h4>
+				<p class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Explore</p>
 				<ul class="space-y-2 md:space-y-3 text-sm">
 					<li><a href="/start-here/" class="hover:text-primary transition-colors">Start Here</a></li>
 					<li><a href="/blog/" class="hover:text-primary transition-colors">All Guides</a></li>
@@ -44,7 +44,7 @@ const today = new Date();
 
 			<!-- Pathways -->
 			<div>
-				<h4 class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Pathways</h4>
+				<p class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Pathways</p>
 				<ul class="space-y-2 md:space-y-3 text-sm">
 					{categories.slice(0, 6).map(cat => (
 						<li><a href={`/blog/category/${cat.slug}/`} class="hover:text-primary transition-colors">{cat.title}</a></li>
@@ -55,7 +55,7 @@ const today = new Date();
 
 			<!-- Connect -->
 			<div>
-				<h4 class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Connect</h4>
+				<p class="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Connect</p>
 				<ul class="space-y-2 md:space-y-3 text-sm">
 					<li><a href="/contact/" class="hover:text-primary transition-colors">Contact Us</a></li>
 					<li><a href="/#newsletter" class="hover:text-primary transition-colors">Join Newsletter</a></li>

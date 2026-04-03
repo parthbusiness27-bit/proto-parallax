@@ -19,7 +19,8 @@ interface Props {
 	robotsMeta?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalPathname = Astro.url.pathname.endsWith('/') || Astro.url.pathname === '' ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonicalURL = new URL(canonicalPathname, Astro.site);
 
 const { 
 	title, 
@@ -34,6 +35,10 @@ const {
 
 const gaId = import.meta.env.PUBLIC_GA_ID || "G-HG27BZGSGX";
 const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
+
+const safeDescription = description && description.length >= 100 
+	? description 
+	: `${description} ${SITE_DESCRIPTION}`.substring(0, 160);
 ---
 
 <!-- ======================== -->
@@ -92,9 +97,10 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 </noscript>
 
 <!-- Hustle Teacher Custom Theme Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+</noscript>
 
 <!-- ======================== -->
 <!-- SEO META TAGS            -->
@@ -177,7 +183,7 @@ const clarityId = import.meta.env.PUBLIC_CLARITY_ID || "vtxphchxvm";
 <meta name="title" content={seoTitle || title} />
 <meta name="application-name" content={SITE_TITLE} />
 <meta name="apple-mobile-web-app-title" content={SITE_TITLE} />
-<meta name="description" content={description} />
+<meta name="description" content={safeDescription} />
 <meta name="author" content={author} />
 <meta name="keywords" content="online earning, side hustle, student jobs, work from home, digital skills" />
 <meta name="google-site-verification" content="3EdmATvJBUdbugqzo9-OtVXX2XRzn3FAZeajRzC5X58" />

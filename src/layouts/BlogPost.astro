@@ -37,10 +37,10 @@ const relatedPosts = allPosts
 				<div class="sticky top-24">
 					<div class="p-6 bg-card border border-border rounded-2xl shadow-lg relative overflow-hidden group">
 						<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-						<h3 class="text-sm font-bold text-foreground mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
+						<span class="text-sm font-bold text-foreground mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
 							<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
 							In This Guide
-						</h3>
+						</span>
 						<nav id="toc-container">
 							<ul class="space-y-3 text-sm">
 								{headings.filter(h => h.depth === 2 || h.depth === 3).map(heading => (
