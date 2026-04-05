@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import { roles } from '../../../scripts/roles.js';
+import SEOSchema from '../../components/SEOSchema.astro';
+---
+
+<BaseLayout 
+    title={`Role Blueprints | ${SITE_TITLE}`} 
+    description="Discover the core archetypes of the online money-making world. Find your identity and start executing your master plan."
+    theme="dark">
+    <Fragment slot="head">
+        <SEOSchema type="CollectionPage" />
+        <style>
+            .role-card {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+                transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .role-card.visible {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        </style>
+    </Fragment>
+
+    <main class="docs-site-container border-x overflow-hidden flex-grow bg-background">
+        <!-- Hero Section -->
+        <section class="relative py-16 md:py-24 text-center px-4 border-b border-border bg-black">
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-foreground tracking-tight mb-5 md:mb-6 animate-fade-in-up">
+                    Choose Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Identity</span>
+                </h1>
+                <p class="text-base md:text-xl text-muted-foreground mx-auto max-w-2xl leading-relaxed animate-fade-in-up" style="animation-delay: 200ms;">
+                    Don't just pick a side-hustle. Pick a professional identity. Browse the core archetypes below to understand what these experts actually do every day.
+                </p>
+            </div>
+        </section>
+
+        <!-- Roles Grid -->
+        <section class="py-16 md:py-24 bg-card/10">
+            <div class="max-w-7xl mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    
+                    {roles.map((role, i) => (
+                        <a href={`/roles/${role.id}/`} class={`role-card bg-card border border-border rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,0,0,0.1)] transition-all duration-300 group flex flex-col h-full ${role.borderColor}`} style={`animation-delay: ${i * 100}ms`}>
+                            <!-- Card Header Glow -->
+                            <div class={`h-2 w-full bg-gradient-to-r ${role.color}`}></div>
+                            
+                            <div class="p-6 md:p-8 flex flex-col flex-grow relative">
+                                <!-- Top: Icon & Title -->
+                                <div class="flex items-center gap-4 mb-5">
+                                    <div class="w-12 h-12 rounded-xl bg-black border border-border flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                        <Fragment set:html={role.icon} />
+                                    </div>
+                                    <h2 class="text-xl font-bold text-foreground leading-tight tracking-tight">{role.title}</h2>
+                                </div>
+
+                                <!-- Mission -->
+                                <p class="text-sm md:text-base text-muted-foreground mb-6 line-clamp-3">
+                                    {role.mission}
+                                </p>
+
+                                <!-- Tech Stack & Difficulty Grid -->
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-black/50 p-3 rounded-lg border border-border/50">
+                                        <span class="text-[10px] uppercase font-bold text-muted-foreground block mb-2 tracking-wider">Difficulty</span>
+                                        <div class="flex gap-1">
+                                            {[1,2,3,4,5].map((star) => (
+                                                <div class={`w-2.5 h-2.5 rounded-full ${star <= role.difficulty ? 'bg-primary shadow-[0_0_8px_var(--color-primary)]' : 'bg-muted'}`}></div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div class="bg-black/50 p-3 rounded-lg border border-border/50">
+                                        <span class="text-[10px] uppercase font-bold text-muted-foreground block mb-1 tracking-wider">Income Limit</span>
+                                        <div class="text-xs font-bold text-foreground">{role.income}</div>
+                                    </div>
+                                </div>
+
+                                <!-- Daily Stack -->
+                                <div class="mb-6 flex-grow">
+                                    <span class="text-[10px] uppercase font-bold text-muted-foreground block mb-2 tracking-wider">Daily Stack</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        {role.dailyStack.map(tool => (
+                                            <span class="text-xs bg-muted text-foreground px-2 py-1 rounded-md font-medium border border-border/50">{tool}</span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <!-- Pathways (Categories) -->
+                                <div class="mt-auto pt-5 border-t border-border">
+                                    <span class="text-[10px] uppercase font-bold text-muted-foreground block mb-3 tracking-wider">Connected Learning Paths</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        {role.categories.map(cat => (
+                                            <span class="text-[11px] font-semibold text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full group-hover:bg-primary group-hover:text-black transition-colors">{cat.name}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Foundation CTA -->
+        <section class="py-20 md:py-24 bg-black text-center px-4 border-t border-border">
+            <div class="max-w-2xl mx-auto role-card">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-foreground tracking-tight">Not sure which role fits you?</h2>
+                <p class="text-muted-foreground mb-8 text-lg">Before you pick an execution pathway, you need to understand the realities of internet business.</p>
+                <a href="/the-mindset-blueprint/" class="inline-flex items-center justify-center rounded-xl border border-primary text-primary hover:bg-primary hover:text-black h-14 px-8 text-base font-bold transition-all duration-300 group shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:shadow-[0_0_40px_rgba(16,185,129,0.3)]">
+                    Read The Mindset Blueprint
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" class="ml-2 group-hover:translate-x-1 transition-transform" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const cards = document.querySelectorAll('.role-card');
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</BaseLayout>
