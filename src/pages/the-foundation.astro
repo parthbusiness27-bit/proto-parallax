@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+import SEOSchema from '../components/SEOSchema.astro';
+---
+
+<BaseLayout 
+    title={`The Mindset Blueprint | ${SITE_TITLE}`} 
+    description="Discover the 10 mental and physical requirements of starting an online business. Master your foundation before exploring earning methods."
+    theme="dark">
+    <Fragment slot="head">
+        <SEOSchema type="WebPage" />
+        <style>
+            .blueprint-card {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .blueprint-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </Fragment>
+
+    <main class="docs-site-container border-x overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative py-20 md:py-32 flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-border bg-black">
+            <!-- Background Glow -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-900/10 blur-[150px] rounded-full mix-blend-screen animate-pulse duration-[10s]"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-sm font-bold tracking-wide animate-fade-in-down">
+                    MODULE 0
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-foreground tracking-tight mb-6 animate-fade-in-up">
+                    The Mindset <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">Blueprint</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-muted-foreground mx-auto max-w-2xl leading-relaxed animate-fade-in-up" style="animation-delay: 200ms;">
+                    Before you look at a single earning method, you must master the mental and physical requirements of building an online business.
+                </p>
+            </div>
+        </section>
+
+        <!-- 10 Rules Section -->
+        <section class="py-16 md:py-24 bg-card/30">
+            <div class="max-w-4xl mx-auto px-4 md:px-8 space-y-12 md:space-y-20 relative">
+                
+                <!-- Vertical Line linking sections (Desktop only) -->
+                <div class="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent"></div>
+
+                <!-- 1. Consistency -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">1</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">1</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Consistency</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Showing up every day even when you don't feel like it.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            Motivation is a myth. Inspiration fades. True business builders rely entirely on consistency. It doesn't matter if you have a headache, if you're tired, or if your friends are going out. You must show up.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> It’s like going to the gym. Working on your business for just 1 hour every single night compounds significantly faster and builds stronger habits than an exhausted 8-hour binge once a month.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Single-Tasking -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">2</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">2</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Single-Tasking</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Committing to ONE niche (avoiding Shiny Object Syndrome).</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            The internet is incredibly noisy. Tomorrow, you will see a TikTok about a "new secretly profitable side hustle." If you jump from idea to idea every week, you will stay a beginner forever. You need to commit to one path for at least 6 months.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> Even if eCommerce starts sounding tedious after a month, do not switch to Crypto. Stick to eCommerce. Mastery comes from navigating the boring, difficult parts, not escaping them.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Raw Effort -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">3</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">3</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Raw Effort</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Hard work and putting in the hours after your obligations.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            There are no shortcuts or fully-automated magic buttons to build wealth from zero. Building a real online income stream requires grinding and losing sleep initially. It requires raw, unapologetic hustle.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> While everyone else is relaxing on the couch watching Netflix after their 9-to-5 job or after school, you are at your desk building your automation agency until 1:00 AM.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Self-Management -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">4</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">4</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Self-Management</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Being your own boss without supervision.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            In a normal job, your boss tells you what to do. If you fail, you get warned. In your own digital business, absolutely no one will text you to wake up. No one will check if you sent your 50 emails. You have to aggressively manage your own time.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> Treat your business calendar like absolute law. If you schedule "Outreach from 7PM to 9PM", you sit down at 7PM exactly and don't stop until 9PM.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. The Client Hunt -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">5</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">5</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">The Client Hunt</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">The reality of cold outreach and lead generation.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            Your product or service will not sell itself. Building an agency or freelancing gig requires a massive volume of manual outreach. You will face overwhelming silence and "No's" before you ever get a "Yes." You are exchanging the comfort of a paycheck for the hunt.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> Sending 10 cold DMs on Twitter and giving up because you got ignored is not a hunt. Real hunting is sending 50 personalized cold emails every day for a month until the math works in your favor.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Resilience -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">6</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">6</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Resilience</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Not giving up when the first project fails.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            Your first product might not sell. Your first client might request a refund. Your ad account might get banned. These are not signs that you are meant to quit; they are universally guaranteed rites of passage. Expect things to break.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> Every successful founder has had a devastating setback. When a client fires you unnecessarily, you don't panic. You evaluate the process objectively, tweak your offer, and hunt for a better client the next morning.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Delayed Gratification -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">7</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">7</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Delayed Gratification</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Working for free now to get paid substantially later.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            When you start with absolutely zero proof of your skills, your reputation is worth $0. You have to build leverage. This often means working entirely for free in the beginning just to gather case studies and testimonials.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> Offering to build a local restaurant's website for free. In return, you ask for a glowing 5-star video testimonial. You then use that exact video to immediately close a $1,500 paying client the next week.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Constant Learning -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">8</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">8</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Constant Learning</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Staying ahead of AI and rapid market trends.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            The digital economy moves at blistering speed. What worked in digital marketing 2 years ago might be completely obsolete tomorrow. You must possess an appetite for continuous, aggressive self-education. Read. Observe. Adapt.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> If you are a Copywriter and AI text generators become massive, you don't complain that the industry is dead. You immediately learn Prompt Engineering and pivot your agency to "AI-Enhanced Copy Delivery."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Thick Skin -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">9</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">9</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Thick Skin</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Handling rejection, trolls, and negative feedback.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            Opening an online venture means making yourself vulnerable to the internet. Your friends might mock your decision. Random users might leave hateful comments on your content. The highest earners in the world simply do not care about the opinions of those not in the arena.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> If someone comments "this is a scam" on your TikTok post promoting your legitimate digital product, do not engage in an emotional fight. You either ignore it, delete it, or recognize that controversy actually boots your algorithm reach.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Financial Discipline -->
+                <div class="blueprint-card relative flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+                    <div class="hidden md:flex flex-shrink-0 w-16 items-start justify-center relative translate-x-[-0.5px]">
+                        <div class="w-12 h-12 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] z-10">10</div>
+                    </div>
+                    <div class="flex-grow bg-black rounded-3xl p-8 md:p-10 border border-border shadow-2xl hover:border-emerald-500/30 transition-colors">
+                        <div class="md:hidden w-10 h-10 rounded-full bg-black border-2 border-emerald-500 flex items-center justify-center text-emerald-400 font-bold text-lg mb-4">10</div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">Financial Discipline</h2>
+                        <h3 class="text-emerald-500 font-medium mb-4 uppercase tracking-wider text-sm">Reinvesting your first profits back into growth.</h3>
+                        <p class="text-muted-foreground leading-relaxed text-base md:text-lg mb-4">
+                            Getting your first stripe payout of $1,000 feels incredible. The amateur takes that $1,000 and buys designer clothes. The professional takes that $1,000 and reinvests it into software, better tools, or delegated labor to turn it into $5,000 next month.
+                        </p>
+                        <div class="bg-muted/50 rounded-xl p-4 md:p-5 border-l-4 border-emerald-500 text-sm md:text-base">
+                            <strong class="text-foreground">Real Example:</strong> After closing a web design client, you don't blow the cash. You purchase a premium Webflow/Astro theme library, drastically cutting your development speed in half for the next 10 clients. Thus, scaling your bandwidth.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 md:py-32 bg-black text-center px-4">
+            <div class="max-w-3xl mx-auto blueprint-card">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-foreground">You know the rules now.</h2>
+                <a href="/start-here/" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)] h-16 px-10 text-xl font-bold transition-all duration-300 transform hover:-translate-y-1">
+                    I understand the work. Now show me the paths.
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const cards = document.querySelectorAll('.blueprint-card');
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</BaseLayout>
