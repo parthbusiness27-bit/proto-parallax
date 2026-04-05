@@ -4,28 +4,10 @@ import { SITE_TITLE } from '../../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
+import { categories as siteCategories } from '../../../../scripts/categories.js';
 
 export async function getStaticPaths() {
-	const allKnownCategories = [
-		"freelancing",
-		"programming-development",
-		"digital-marketing",
-		"content-creation",
-		"social-media-services",
-		"automation-agencies",
-		"software-saas",
-		"ecommerce",
-		"digital-products",
-		"stock-content",
-		"ai-services",
-		"virtual-assistance",
-		"website-businesses",
-		"affiliate-marketing",
-		"online-research-testing",
-		"online-communities",
-		"gaming-streaming",
-		"online-trading"
-	];
+	const allKnownCategories = siteCategories.map(c => c.slug);
 
 	const allPosts = await getCollection('blog');
 
@@ -49,24 +31,12 @@ if (!SHOW_ALL_POSTS) {
     posts = posts.slice(0, 6);
 }
 
-const categoryMeta: Record<string, { emoji: string; label: string; subtitle: string }> = {
-	'freelancing':             { emoji: '💻', label: 'Freelancing',               subtitle: 'Graphic design, writing, & dev services' },
-	'programming-development': { emoji: '👨‍💻', label: 'Programming & Development',  subtitle: 'Web, App & Shopify development' },
-	'digital-marketing':      { emoji: '🎯', label: 'Digital Marketing',         subtitle: 'SEO, Ads & Content marketing' },
-	'content-creation':       { emoji: '🎥', label: 'Content Creation',          subtitle: 'YouTube, Blogging & Social media' },
-	'digital-products':       { emoji: '📦', label: 'Digital Product Businesses', subtitle: 'E-books, courses & templates' },
-	'ecommerce':              { emoji: '🛍️', label: 'E-commerce',                subtitle: 'Dropshipping & digital stores' },
-	'ai-services':            { emoji: '🤖', label: 'AI-Powered Services',       subtitle: 'Prompt engineering & AI tools' },
-	'virtual-assistance':     { emoji: '🧑‍💻', label: 'Virtual Assistance',        subtitle: 'Admin, ops & lead generation' },
-	'affiliate-marketing':    { emoji: '💸', label: 'Affiliate Marketing',       subtitle: 'Passive commissions & audiences' },
-	'online-trading':         { emoji: '📈', label: 'Online Trading',            subtitle: 'Crypto, domains & flipping' },
-	'software-saas':          { emoji: '⚙️', label: 'Software & SaaS',            subtitle: 'SaaS, scrapers & bots' },
-};
+const siteCat = siteCategories.find(c => c.slug === category);
 
-const meta = categoryMeta[category] ?? {
-	emoji: '📖',
-	label: category.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-	subtitle: 'Explore guides in this category',
+const meta = {
+	emoji: siteCat?.emoji || '📖',
+	label: siteCat?.title || category.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+	subtitle: siteCat?.subcategories?.slice(0, 3).join(', ') || 'Explore guides in this category',
 };
 ---
 
