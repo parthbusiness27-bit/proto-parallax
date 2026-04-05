@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { SITE_TITLE } from '../../../consts';
-import { roles } from '../../../../scripts/roles.js';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import { roles } from '../../../scripts/roles.js';
 
 export async function getStaticPaths() {
     return roles.map((role) => ({
